@@ -1,6 +1,311 @@
 <!DOCTYPE html>
 <html>
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>suzuki-navi</title>
+<style>
+  body {
+    margin: 5px;
+    background-color: #eee;
+  }
+  h1 {
+    margin: 10px;
+    font-size: 1em;
+    font-weight: normal;
+  }
+  .card h1 {
+    margin-top: 0;
+  }
+  h2 {
+    margin: 10px;
+    font-size: 0.9em;
+    font-weight: normal;
+  }
+  p {
+    margin: 0;
+    font-size: 0.9em;
+  }
+  ul {
+    margin: 0;
+    font-size: 0.9em;
+    list-style: disc;
+    padding-inline-start: 20px;
+  }
+  .grid {
+  }
+  @media screen and (min-width: 790px) {
+    .grid {
+      display: grid;
+      grid-auto-rows: 1fr;
+      grid-gap: 0px;
+      /* grid-template-columns: repeat(auto-fit, minmax(390px, 1fr)); */
+      grid-template-columns: repeat(auto-fit, 390px);
+    }
+  }
+  .card {
+    margin: 5px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px #ccc;
+  }
+  .card-size1 {
+  }
+  .card-size2 {
+    grid-row: span 2;
+  }
+  .card-size3 {
+    grid-row: span 3;
+  }
+  .card-size4 {
+    grid-row: span 4;
+  }
+  .card-size5 {
+    grid-row: span 5;
+  }
+  .card-size6 {
+    grid-row: span 6;
+  }
+  .card.font-small p, .card.font-small ul, .card .font-small {
+    font-size: 0.7em;
+  }
+  .card.font-big p, .card.font-big ul {
+    font-size: 1.1em;
+  }
+  .card p.image {
+    margin: 1em 0 1em 0;
+    text-align: center;
+  }
+  .card p.youtube {
+    margin: 1em 0 1em 0;
+    text-align: center;
+  }
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+  $(function(){
+    var regexp = new RegExp('^https?://');
+    $('a').each(function() {
+      var href = $(this).attr('href');
+      if (regexp.test(href)) {
+        $(this).attr('target', '_blank');
+        $(this).attr('rel', 'noopener nofollow');
+      }
+    });
+  });
+  $(function(){
+    $('a[href^="#"]').click(function(){
+      var speed = 500;
+      var href= $(this).attr("href");
+      var target = $(href == "#" || href == "" ? 'html' : href);
+      var position = target.offset().top;
+      $("html, body").animate({scrollTop:position}, speed, "swing");
+      return false;
+    });
+  });
+</script>
+</head>
 <body>
-Hello
+<h1>これまでに書いたもの</h1>
+<div class="grid">
+  <section class="card card-size6">
+    <h1>機械学習の記事</h1>
+    <ul>
+      <li><a href="https://qiita.com/suzuki-navi/items/c380c73ad69ce32cf5fb">Scalaでの行列演算の計算速度</a> (2020/02/28)</li>
+      <li><a href="https://qiita.com/suzuki-navi/items/2581b3f4afeeabeacace">ソフトマックス関数と交差エントロピー誤差の可視化</a> (2020/02/26)</li>
+      <li><a href="https://qiita.com/suzuki-navi/items/3664bfbc102052717426">AWS Certified Machine Learning – Specialty 合格しました</a> (2019/12/04)</li>
+      <li><a href="https://qiita.com/suzuki-navi/items/d0e33a5379b4bfb848bc">Kaggleのタイタニック号のチュートリアルを試す</a> (2019/11/26)</li>
+      <li><a href="https://qiita.com/suzuki-navi/items/d7c27c9ce815750cdc59">混合ガウスモデルによるクラスタリングをJupyter Notebook上で試す</a> (2019/11/21)</li>
+      <li><a href="https://qiita.com/suzuki-navi/items/5745eff3392ec9f75249">SVMをJupyter Notebook上のscikit-learnで試す</a> (2019/11/18)</li>
+    </ul>
+    <p class="image">
+      <img src="ml.png">
+    </p>
+  </section>
+  <section class="card card-size1">
+    <h1>異常検知の記事</h1>
+    <ul>
+      <li><a href="https://qiita.com/suzuki-navi/items/90b9799bd9df3923dc3d">データの分布状況から異常検知</a> (2020/01/28)</li>
+    </ul>
+  </section>
+  <section class="card card-size2">
+    <h1>データ可視化の記事</h1>
+    <ul>
+      <li><a href="https://qiita.com/suzuki-navi/items/81494eb31212c0fe8efb">折れ線グラフをJupyter Notebook上でシンプルに表示する</a> (2020/05/02)</li>
+      <li><a href="https://qiita.com/suzuki-navi/items/9f5fd47734b22b4adf71">ヒストグラム・散布図をJupyter Notebook上で表示する</a> (2019/11/14)</li>
+    </ul>
+  </section>
+  <section class="card card-size3">
+    <h1>データ収集/保管フェーズの記事</h1>
+    <ul>
+      <li><a href="https://qiita.com/suzuki-navi/items/823aca8f55e30c0a7f87">PostgreSQLパーティショニングのTableau、DBeaver、Glue Crawlerでの対応状況調査</a> (2019/12/24)</li>
+      <li><a href="https://qiita.com/suzuki-navi/items/57ec168267466a343a8a">fluentdのoutputプラグインの作成</a> (2019/11/11)</li>
+      <li><a href="https://qiita.com/suzuki-navi/items/3014e9cb60c85b29fdff">fluentdのプラグインをgemでインストール</a> (2019/10/31)</li>
+      <li><a href="https://qiita.com/suzuki-navi/items/7879b708b4f38b003444">PostgreSQLのバルクインサートをRubyからPrepared Statementで実行</a> (2019/10/25)</li>
+    </ul>
+  </section>
+  <section class="card card-size1">
+    <h1>統計の記事</h1>
+    <ul>
+      <li><a href="https://tech.naviplus.co.jp/2014/02/27/%e4%b8%8d%e5%81%8f%e5%88%86%e6%95%a3%e3%81%af%e3%81%aa%e3%81%9c-n-1-%e3%81%a7%e5%89%b2%e3%82%8b%e3%81%ae%e3%81%8b%ef%bc%9f/">不偏分散はなぜ n – 1 で割るのか？</a>  (2014/02/27)</li>
+    </ul>
+  </section>
+  <section class="card card-size2">
+    <h1>数値計算/シミュレーションの記事</h1>
+    <ul>
+      <li><a href="https://qiita.com/suzuki-navi/items/f3b11058f1acc19ef8b1">ウイルス感染の簡単なシミュレーション</a> (2020/04/24)</li>
+      <li><a href="https://qiita.com/suzuki-navi/items/c380c73ad69ce32cf5fb">Scalaでの行列演算の計算速度</a> (2020/02/28)</li>
+      <li><a href="https://qiita.com/suzuki-navi/items/90b9799bd9df3923dc3d">データの分布状況から異常検知</a> (2020/01/28)</li>
+      <li><a href="https://qiita.com/suzuki-navi/items/1609cfaefb5b4c16133e">一様分布、正規分布、指数分布、ポアソン分布の乱数を生成する方法 (Scala)</a> (2020/01/09)</li>
+    </ul>
+  </section>
+  <section class="card card-size4">
+    <h1>数式が多めの記事</h1>
+    <ul>
+      <li><a href="https://qiita.com/suzuki-navi/items/2581b3f4afeeabeacace">ソフトマックス関数と交差エントロピー誤差の可視化</a> (2020/02/26)</li>
+      <li><a href="https://qiita.com/suzuki-navi/items/501cb84d154c53c6a25c">正規分布に従う乱数の生成方法(Box–Muller法)の数式による説明</a> (2020/01/23)</li>
+      <li><a href="https://tech.naviplus.co.jp/2014/02/27/%e4%b8%8d%e5%81%8f%e5%88%86%e6%95%a3%e3%81%af%e3%81%aa%e3%81%9c-n-1-%e3%81%a7%e5%89%b2%e3%82%8b%e3%81%ae%e3%81%8b%ef%bc%9f/">不偏分散はなぜ n – 1 で割るのか？</a>  (2014/02/27)</li>
+    </ul>
+    <p class="image">
+      <img src="math.png">
+    </p>
+  </section>
+  <section class="card card-size5">
+    <h1>Linuxコマンドの記事</h1>
+    <ul>
+      <li><a href="https://qiita.com/suzuki-navi/items/fdcb166f32b28bc0ff82">gitでよく使うコマンド (gitl, gitd, gits)</a> (2020/05/01)</li>
+      <li><a href="https://qiita.com/suzuki-navi/items/d9228fc776a571ef16c9">columnコマンドをUbuntuにインストール</a> (2020/03/10)</li>
+      <li><a href="https://qiita.com/suzuki-navi/items/3a3fd6ef736bc2a13036">PowerShellをLinuxにインストールして試す</a> (2020/03/09)</li>
+      <li><a href="https://qiita.com/suzuki-navi/items/9fdf34163b9915bcaeb7">S3にあるテキストファイルをサクッと編集するには</a> (2020/02/27)</li>
+      <li><a href="https://qiita.com/suzuki-navi/items/775b9f9029af19780be3">gsutil、aws s3での基本的なファイル操作（Google Cloud Storage、S3）</a> (2019/11/15)</li>
+      <li><a href="https://qiita.com/suzuki-navi/items/b18b92f15cf36a4a840a">ディレクトリの合計容量を確認するには(local, Gogle Cloud Storage, S3)</a> (2019/10/29)</li>
+      <li><a href="https://qiita.com/suzuki-navi/items/a851d9ec66d2cf4bf732">Linuxのパイプの流れの進捗を見守るには</a> (2019/10/21)</li>
+      <li><a href="https://qiita.com/suzuki-navi/items/cf92371e71cb4d106300">Google Cloud StorageとAWS S3との間でファイルをコピーするには</a> (2019/10/19)</li>
+    </ul>
+  </section>
+  <section class="card card-size3">
+    <h1>プログラミング言語比較の記事</h1>
+    <ul>
+      <li><a href="https://qiita.com/suzuki-navi/items/6611b9f16a391bac5ac5">インクリメント・デクリメントの書き方のまとめ(Scala、Java、Rust、C言語、C++、Go言語、PHP、Perl、Python、Ruby、JavaScript)</a> (2020/01/14)</li>
+      <li><a href="https://qiita.com/suzuki-navi/items/16793a5f5e67fb8d3fc2">if文の書き方のまとめ(Scala、Java、Rust、C言語、C++、Go言語、PHP、Perl、Python、Ruby)</a> (2019/11/22)</li>
+    </ul>
+  </section>
+  <section class="card card-size6">
+    <h1>AWS/GCP関係の記事</h1>
+    <ul>
+      <li><a href="https://qiita.com/suzuki-navi/items/9fdf34163b9915bcaeb7">S3にあるテキストファイルをサクッと編集するには</a> (2020/02/27)</li>
+      <li><a href="https://qiita.com/suzuki-navi/items/823aca8f55e30c0a7f87">PostgreSQLパーティショニングのTableau、DBeaver、Glue Crawlerでの対応状況調査</a> (2019/12/24)</li>
+      <li><a href="https://qiita.com/suzuki-navi/items/25e5b884fbced9f1c4d2">AWS SAMでの Lambda Functions with Node.js + API Gateway 最小構成</a> (2019/12/16)</li>
+      <li><a href="https://qiita.com/suzuki-navi/items/3664bfbc102052717426">AWS Certified Machine Learning – Specialty 合格しました</a> (2019/12/04)</li>
+      <li><a href="https://qiita.com/suzuki-navi/items/79aa5f156427c2149fbe">aws cliを自作しています</a> (2019/11/29)</li>
+      <li><a href="https://qiita.com/suzuki-navi/items/60c046c95c217487e4f4">AWS CloudFormationをちょっとだけ理解した</a> (2019/11/19)</li>
+      <li><a href="https://qiita.com/suzuki-navi/items/775b9f9029af19780be3">gsutil、aws s3での基本的なファイル操作（Google Cloud Storage、S3）</a> (2019/11/15)</li>
+      <li><a href="https://qiita.com/suzuki-navi/items/2647f1f65ef731d42aa4">言語の判定をGoogle Cloud TranslationとAmazon Comprehendとで比較してみる</a> (2019/11/08)</li>
+      <li><a href="https://qiita.com/suzuki-navi/items/8b2fe5a35a4439013461">AWS Certified Big Data - Specialty 合格しました</a> (2019/11/05)</li>
+      <li><a href="https://qiita.com/suzuki-navi/items/cf92371e71cb4d106300">Google Cloud StorageとAWS S3との間でファイルをコピーするには</a> (2019/10/19)</li>
+    </ul>
+  </section>
+  <section class="card card-size4">
+    <h1>Jupyter Notebook/Pandas/matplotlib - ソフトウェア別記事</h1>
+    <ul>
+      <li><a href="https://qiita.com/suzuki-navi/items/81494eb31212c0fe8efb">折れ線グラフをJupyter Notebook上でシンプルに表示する</a> (2020/05/02)</li>
+      <li><a href="https://qiita.com/suzuki-navi/items/d7c27c9ce815750cdc59">混合ガウスモデルによるクラスタリングをJupyter Notebook上で試す</a> (2019/11/21)</li>
+      <li><a href="https://qiita.com/suzuki-navi/items/5745eff3392ec9f75249">SVMをJupyter Notebook上のscikit-learnで試す</a> (2019/11/18)</li>
+      <li><a href="https://qiita.com/suzuki-navi/items/9f5fd47734b22b4adf71">ヒストグラム・散布図をJupyter Notebook上で表示する</a> (2019/11/14)</li>
+      <li><a href="https://qiita.com/suzuki-navi/items/6bd8377ca7974779a822">PandasのDataFrameに対する基本操作をJupyter Notebook上で試す</a> (2019/11/12)</li>
+      <li><a href="https://qiita.com/suzuki-navi/items/37615024d4748aac6688">Jupyter NotebookをDockerを使って簡単にインストールし起動（nbextensions、Scalaにも対応）</a> (2019/11/06)</li>
+    </ul>
+  </section>
+  <section class="card card-size4">
+    <h1>Scala - 言語別記事</h1>
+    <ul>
+      <li><a href="https://qiita.com/suzuki-navi/items/c380c73ad69ce32cf5fb">Scalaでの行列演算の計算速度</a> (2020/02/28)</li>
+    </ul>
+    <h2>Scalaも登場する記事</h2>
+    <ul class="font-small">
+      <li><a href="https://qiita.com/suzuki-navi/items/f3b11058f1acc19ef8b1">ウイルス感染の簡単なシミュレーション</a> (2020/04/24)</li>
+      <li><a href="https://qiita.com/suzuki-navi/items/90b9799bd9df3923dc3d">データの分布状況から異常検知</a> (2020/01/28)</li>
+      <li><a href="https://qiita.com/suzuki-navi/items/6611b9f16a391bac5ac5">インクリメント・デクリメントの書き方のまとめ(Scala、Java、Rust、C言語、C++、Go言語、PHP、Perl、Python、Ruby、JavaScript)</a> (2020/01/14)</li>
+      <li><a href="https://qiita.com/suzuki-navi/items/1609cfaefb5b4c16133e">一様分布、正規分布、指数分布、ポアソン分布の乱数を生成する方法 (Scala)</a> (2020/01/09)</li>
+      <li><a href="https://qiita.com/suzuki-navi/items/16793a5f5e67fb8d3fc2">if文の書き方のまとめ(Scala、Java、Rust、C言語、C++、Go言語、PHP、Perl、Python、Ruby)</a> (2019/11/22)</li>
+      <li><a href="https://qiita.com/suzuki-navi/items/d7c27c9ce815750cdc59">混合ガウスモデルによるクラスタリングをJupyter Notebook上で試す</a> (2019/11/21)</li>
+      <li><a href="https://qiita.com/suzuki-navi/items/37615024d4748aac6688">Jupyter NotebookをDockerを使って簡単にインストールし起動（nbextensions、Scalaにも対応）</a> (2019/11/06)</li>
+    </ul>
+  </section>
+  <section class="card card-size3">
+    <h1>Java - 言語別記事</h1>
+    <p class="font-small">
+      もっとも古くから触っていた言語の1つですが記事はあまりありません。
+    </p>
+    <h2>Javaも登場する記事</h2>
+    <ul class="font-small">
+      <li><a href="https://qiita.com/suzuki-navi/items/6611b9f16a391bac5ac5">インクリメント・デクリメントの書き方のまとめ(Scala、Java、Rust、C言語、C++、Go言語、PHP、Perl、Python、Ruby、JavaScript)</a> (2020/01/14)</li>
+      <li><a href="https://qiita.com/suzuki-navi/items/16793a5f5e67fb8d3fc2">if文の書き方のまとめ(Scala、Java、Rust、C言語、C++、Go言語、PHP、Perl、Python、Ruby)</a> (2019/11/22)</li>
+    </ul>
+  </section>
+  <section class="card card-size3">
+    <h1>PHP - 言語別記事</h1>
+    <p class="font-small">
+      もっとも古くから触っていた言語の1つですが記事はあまりありません。
+    </p>
+    <h2>PHPも登場する記事</h2>
+    <ul class="font-small">
+      <li><a href="https://qiita.com/suzuki-navi/items/6611b9f16a391bac5ac5">インクリメント・デクリメントの書き方のまとめ(Scala、Java、Rust、C言語、C++、Go言語、PHP、Perl、Python、Ruby、JavaScript)</a> (2020/01/14)</li>
+      <li><a href="https://qiita.com/suzuki-navi/items/16793a5f5e67fb8d3fc2">if文の書き方のまとめ(Scala、Java、Rust、C言語、C++、Go言語、PHP、Perl、Python、Ruby)</a> (2019/11/22)</li>
+    </ul>
+  </section>
+  <section class="card card-size3">
+    <h1>Perl - 言語別記事</h1>
+    <ul>
+      <li><a href="https://qiita.com/suzuki-navi/items/b5f066db181092543854">Perlで warning: Setting locale failed. と警告された時の対処</a> (2020/01/13)</li>
+    </ul>
+    <h2>Perlも登場する記事</h2>
+    <ul class="font-small">
+      <li><a href="https://qiita.com/suzuki-navi/items/6611b9f16a391bac5ac5">インクリメント・デクリメントの書き方のまとめ(Scala、Java、Rust、C言語、C++、Go言語、PHP、Perl、Python、Ruby、JavaScript)</a> (2020/01/14)</li>
+      <li><a href="https://qiita.com/suzuki-navi/items/16793a5f5e67fb8d3fc2">if文の書き方のまとめ(Scala、Java、Rust、C言語、C++、Go言語、PHP、Perl、Python、Ruby)</a> (2019/11/22)</li>
+    </ul>
+  </section>
+  <section class="card card-size6">
+    <h1>Python - 言語別記事</h1>
+    <ul>
+      <li><a href="https://qiita.com/suzuki-navi/items/9ed7670aa4a93cf021d2">Pythonでのタイムゾーンの扱い(datetime,p pytz)</a> (2020/01/06)</li>
+    </ul>
+    <h2>Pythonも登場する記事</h2>
+    <ul class="font-small">
+      <li><a href="https://qiita.com/suzuki-navi/items/81494eb31212c0fe8efb">折れ線グラフをJupyter Notebook上でシンプルに表示する</a> (2020/05/02)</li>
+      <li><a href="https://qiita.com/suzuki-navi/items/2581b3f4afeeabeacace">ソフトマックス関数と交差エントロピー誤差の可視化</a> (2020/02/26)</li>
+      <li><a href="https://qiita.com/suzuki-navi/items/6611b9f16a391bac5ac5">インクリメント・デクリメントの書き方のまとめ(Scala、Java、Rust、C言語、C++、Go言語、PHP、Perl、Python、Ruby、JavaScript)</a> (2020/01/14)</li>
+      <li><a href="https://qiita.com/suzuki-navi/items/79aa5f156427c2149fbe">aws cliを自作しています</a> (2019/11/29)</li>
+      <li><a href="https://qiita.com/suzuki-navi/items/d0e33a5379b4bfb848bc">Kaggleのタイタニック号のチュートリアルを試す</a> (2019/11/26)</li>
+      <li><a href="https://qiita.com/suzuki-navi/items/16793a5f5e67fb8d3fc2">if文の書き方のまとめ(Scala、Java、Rust、C言語、C++、Go言語、PHP、Perl、Python、Ruby)</a> (2019/11/22)</li>
+      <li><a href="https://qiita.com/suzuki-navi/items/d7c27c9ce815750cdc59">混合ガウスモデルによるクラスタリングをJupyter Notebook上で試す</a> (2019/11/21)</li>
+      <li><a href="https://qiita.com/suzuki-navi/items/5745eff3392ec9f75249">SVMをJupyter Notebook上のscikit-learnで試す</a> (2019/11/18)</li>
+      <li><a href="https://qiita.com/suzuki-navi/items/9f5fd47734b22b4adf71">ヒストグラム・散布図をJupyter Notebook上で表示する</a> (2019/11/14)</li>
+      <li><a href="https://qiita.com/suzuki-navi/items/6bd8377ca7974779a822">PandasのDataFrameに対する基本操作をJupyter Notebook上で試す</a> (2019/11/12)</li>
+      <li><a href="https://qiita.com/suzuki-navi/items/37615024d4748aac6688">Jupyter NotebookをDockerを使って簡単にインストールし起動（nbextensions、Scalaにも対応）</a> (2019/11/06)</li>
+      <li><a href="https://tech.naviplus.co.jp/2014/07/23/raspberry-pi%e3%81%a7ad%e3%82%b3%e3%83%b3%e3%83%90%e3%83%bc%e3%82%bfmcp3208%e3%82%92%e4%bd%bf%e3%81%86/">Raspberry PiでADコンバータ(MCP3208)を使う</a> (2014/07/23)</li>
+    </ul>
+  </section>
+  <section class="card card-size3">
+    <h1>Ruby - 言語別記事</h1>
+    <ul>
+      <li><a href="https://qiita.com/suzuki-navi/items/7e85f55c2a25038816b3">privateなgemサーバの構築とgem作成から利用まで</a> (2019/11/01)</li>
+    </ul>
+    <h2>Rubyも登場する記事</h2>
+    <ul class="font-small">
+      <li><a href="https://qiita.com/suzuki-navi/items/6611b9f16a391bac5ac5">インクリメント・デクリメントの書き方のまとめ(Scala、Java、Rust、C言語、C++、Go言語、PHP、Perl、Python、Ruby、JavaScript)</a> (2020/01/14)</li>
+      <li><a href="https://qiita.com/suzuki-navi/items/16793a5f5e67fb8d3fc2">if文の書き方のまとめ(Scala、Java、Rust、C言語、C++、Go言語、PHP、Perl、Python、Ruby)</a> (2019/11/22)</li>
+      <li><a href="https://qiita.com/suzuki-navi/items/57ec168267466a343a8a">fluentdのoutputプラグインの作成</a> (2019/11/11)</li>
+      <li><a href="https://qiita.com/suzuki-navi/items/7879b708b4f38b003444">PostgreSQLのバルクインサートをRubyからPrepared Statementで実行</a> (2019/10/25)</li>
+    </ul>
+  </section>
+  <section class="card card-size2">
+    <h1>Raspberry Piの記事</h1>
+    <ul>
+      <li><a href="https://tech.naviplus.co.jp/2014/07/23/raspberry-pi%e3%81%a7ad%e3%82%b3%e3%83%b3%e3%83%90%e3%83%bc%e3%82%bfmcp3208%e3%82%92%e4%bd%bf%e3%81%86/">Raspberry PiでADコンバータ(MCP3208)を使う</a> (2014/07/23)</li>
+      <li><a href="https://tech.naviplus.co.jp/2014/07/04/raspberry-pi%e3%82%92%e8%b5%b0%e3%82%89%e3%81%9b%e3%82%8b/">Raspberry Piを走らせる</a> (2014/07/04)</li>
+    </ul>
+  </section>
+</div>
 </body>
 </html>
