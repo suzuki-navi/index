@@ -9,7 +9,7 @@
     background-color: #eee;
   }
   h1 {
-    margin: 10px;
+    margin: 10px 0 10px 0;
     font-size: 1em;
     font-weight: normal;
   }
@@ -17,7 +17,7 @@
     margin-top: 0;
   }
   h2 {
-    margin: 10px;
+    margin: 5px 0 5px 0;
     font-size: 0.9em;
     font-weight: normal;
   }
@@ -71,6 +71,9 @@
   }
   .card.font-big p, .card.font-big ul {
     font-size: 1.1em;
+  }
+  .card .tag {
+    font-size: 0.7em;
   }
   .card p.image {
     margin: 1em 0 1em 0;
@@ -170,17 +173,19 @@
       <img src="math.png">
     </p>
   </section>
-  <section class="card card-size5">
+  <section class="card card-size6">
     <h1>Linuxコマンドの記事</h1>
     <ul>
-      <li><a href="https://qiita.com/suzuki-navi/items/fdcb166f32b28bc0ff82">gitでよく使うコマンド (gitl, gitd, gits)</a> (2020/05/01)</li>
-      <li><a href="https://qiita.com/suzuki-navi/items/d9228fc776a571ef16c9">columnコマンドをUbuntuにインストール</a> (2020/03/10)</li>
-      <li><a href="https://qiita.com/suzuki-navi/items/3a3fd6ef736bc2a13036">PowerShellをLinuxにインストールして試す</a> (2020/03/09)</li>
-      <li><a href="https://qiita.com/suzuki-navi/items/9fdf34163b9915bcaeb7">S3にあるテキストファイルをサクッと編集するには</a> (2020/02/27)</li>
-      <li><a href="https://qiita.com/suzuki-navi/items/775b9f9029af19780be3">gsutil、aws s3での基本的なファイル操作（Google Cloud Storage、S3）</a> (2019/11/15)</li>
-      <li><a href="https://qiita.com/suzuki-navi/items/b18b92f15cf36a4a840a">ディレクトリの合計容量を確認するには(local, Gogle Cloud Storage, S3)</a> (2019/10/29)</li>
-      <li><a href="https://qiita.com/suzuki-navi/items/a851d9ec66d2cf4bf732">Linuxのパイプの流れの進捗を見守るには</a> (2019/10/21)</li>
-      <li><a href="https://qiita.com/suzuki-navi/items/cf92371e71cb4d106300">Google Cloud StorageとAWS S3との間でファイルをコピーするには</a> (2019/10/19)</li>
+      <li><a href="https://www.beex-inc.com/blog/aws-cloudwatch-logs-cli/">AWS CloudWatchログ容量の推移を確認するワンライナー</a> <span class="tag">[aws jq]</span> (2020/05/07)</li>
+      <li><a href="https://qiita.com/suzuki-navi/items/075ea29cdf481b711d0a">空のディレクトリを削除するには</a> <span class="tag">[find rm xargs]</span> (2020/05/06)</li>
+      <li><a href="https://qiita.com/suzuki-navi/items/fdcb166f32b28bc0ff82">gitでよく使うコマンド (gitl, gitd, gits)</a> <span class="tag">[git]</span> (2020/05/01)</li>
+      <li><a href="https://qiita.com/suzuki-navi/items/d9228fc776a571ef16c9">columnコマンドをUbuntuにインストール</a> <span class="tag">[column]</span> (2020/03/10)</li>
+      <li><a href="https://qiita.com/suzuki-navi/items/3a3fd6ef736bc2a13036">PowerShellをLinuxにインストールして試す</a> <span class="tag">[pwsh]</span> (2020/03/09)</li>
+      <li><a href="https://qiita.com/suzuki-navi/items/9fdf34163b9915bcaeb7">S3にあるテキストファイルをサクッと編集するには</a> <span class="tag">[vipe aws]</span> (2020/02/27)</li>
+      <li><a href="https://qiita.com/suzuki-navi/items/775b9f9029af19780be3">gsutil、aws s3での基本的なファイル操作（Google Cloud Storage、S3）</a> <span class="tag">[aws gsutil]</span> (2019/11/15)</li>
+      <li><a href="https://qiita.com/suzuki-navi/items/b18b92f15cf36a4a840a">ディレクトリの合計容量を確認するには(local, Gogle Cloud Storage, S3)</a> <span class="tag">[du aws gsutil]</span> (2019/10/29)</li>
+      <li><a href="https://qiita.com/suzuki-navi/items/a851d9ec66d2cf4bf732">Linuxのパイプの流れの進捗を見守るには</a> <span class="tag">[pv]</span> (2019/10/21)</li>
+      <li><a href="https://qiita.com/suzuki-navi/items/cf92371e71cb4d106300">Google Cloud StorageとAWS S3との間でファイルをコピーするには</a> <span class="tag">[aws gsutil]</span> (2019/10/19)</li>
     </ul>
   </section>
   <section class="card card-size3">
@@ -193,6 +198,7 @@
   <section class="card card-size6">
     <h1>AWS/GCP関係の記事</h1>
     <ul>
+      <li><a href="https://www.beex-inc.com/blog/aws-cloudwatch-logs-cli/">AWS CloudWatchログ容量の推移を確認するワンライナー</a> (2020/05/07)</li>
       <li><a href="https://qiita.com/suzuki-navi/items/9fdf34163b9915bcaeb7">S3にあるテキストファイルをサクッと編集するには</a> (2020/02/27)</li>
       <li><a href="https://qiita.com/suzuki-navi/items/823aca8f55e30c0a7f87">PostgreSQLパーティショニングのTableau、DBeaver、Glue Crawlerでの対応状況調査</a> (2019/12/24)</li>
       <li><a href="https://qiita.com/suzuki-navi/items/25e5b884fbced9f1c4d2">AWS SAMでの Lambda Functions with Node.js + API Gateway 最小構成</a> (2019/12/16)</li>
