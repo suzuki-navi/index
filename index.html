@@ -119,6 +119,9 @@
     .card-title {
       grid-column: 1 / 3;
     }
+    #card-jupyter {
+      grid-row: span 8;
+    }
   }
   @media screen and (min-width: 1180px) and (max-width: 1569px) {
     .grid {
@@ -126,6 +129,15 @@
     }
     .card-title {
       grid-column: 1 / 4;
+    }
+    #card-python {
+      grid-row: span 7;
+    }
+    #card-fluentd {
+      grid-row: span 4;
+    }
+    #card-jupyter {
+      grid-row: span 8;
     }
   }
   @media screen and (min-width: 1570px) {
@@ -198,10 +210,11 @@
       <li><a href="https://tech.naviplus.co.jp/2014/02/27/%e4%b8%8d%e5%81%8f%e5%88%86%e6%95%a3%e3%81%af%e3%81%aa%e3%81%9c-n-1-%e3%81%a7%e5%89%b2%e3%82%8b%e3%81%ae%e3%81%8b%ef%bc%9f/">不偏分散はなぜ n – 1 で割るのか？</a>  (2014/02/27)</li>
     </ul>
   </section>
-  <section class="card card-size3">
+  <section class="card card-size4">
     <h1>可視化 - データ活用フェーズの記事</h1>
     <ul>
-      <li><a href="https://qiita.com/suzuki-navi/items/c1ee94d66e77d2dbfdcb">Metabaseにあるチャート(Question)の種類のまとめ</a> (2020/05/23)</li>
+      <li><a href="https://qiita.com/suzuki-navi/items/6c43a555d74d4236e913">MetabaseのQuestion画面の使い方（チャート・グラフ・テーブル表示）</a> (2020/05/27)</li>
+      <li><a href="https://qiita.com/suzuki-navi/items/c1ee94d66e77d2dbfdcb">MetabaseにあるQuestion（チャート・グラフ・テーブル）の可視化種類のまとめ</a> (2020/05/23)</li>
       <li><a href="https://qiita.com/suzuki-navi/items/c3c9082725f653d2d53a">データ可視化ツール(Metabase, Redash, Superset)の比較メモ</a> (2020/05/11)</li>
       <li><a href="https://qiita.com/suzuki-navi/items/81494eb31212c0fe8efb">折れ線グラフをJupyter Notebook上でシンプルに表示する</a> (2020/05/02)</li>
       <li><a href="https://qiita.com/suzuki-navi/items/9f5fd47734b22b4adf71">ヒストグラム・散布図をJupyter Notebook上で表示する</a> (2019/11/14)</li>
@@ -299,7 +312,7 @@
       <li><a href="https://qiita.com/suzuki-navi/items/16793a5f5e67fb8d3fc2">if文の書き方のまとめ(Scala、Java、Rust、C言語、C++、Go言語、PHP、Perl、Python、Ruby)</a> (2019/11/22)</li>
     </ul>
   </section>
-  <section class="card card-size6">
+  <section id="card-python" class="card card-size6">
     <h1>Python - 言語別記事</h1>
     <ul>
       <li><a href="https://qiita.com/suzuki-navi/items/9ed7670aa4a93cf021d2">Pythonでのタイムゾーンの扱い(datetime,p pytz)</a> (2020/01/06)</li>
@@ -334,7 +347,7 @@
       <li><a href="https://tech.naviplus.co.jp/2014/02/27/%e4%b8%8d%e5%81%8f%e5%88%86%e6%95%a3%e3%81%af%e3%81%aa%e3%81%9c-n-1-%e3%81%a7%e5%89%b2%e3%82%8b%e3%81%ae%e3%81%8b%ef%bc%9f/">不偏分散はなぜ n – 1 で割るのか？</a>  (2014/02/27)</li>
     </ul>
   </section>
-  <section class="card card-size6">
+  <section id="card-jupyter" class="card card-size6">
     <h1>Jupyter Notebook/Pandas/matplotlib - ソフトウェア別記事</h1>
     <ul>
       <li><a href="https://qiita.com/suzuki-navi/items/81494eb31212c0fe8efb">折れ線グラフをJupyter Notebook上でシンプルに表示する</a> (2020/05/02)</li>
@@ -358,7 +371,7 @@
       <li><a href="https://qiita.com/suzuki-navi/items/7879b708b4f38b003444">PostgreSQLのバルクインサートをRubyからPrepared Statementで実行</a> (2019/10/25)</li>
     </ul>
   </section>
-  <section class="card card-size2">
+  <section id="card-fluentd" class="card card-size2">
     <h1>fluentd - ソフトウェア別記事</h1>
     <ul>
       <li><a href="https://qiita.com/suzuki-navi/items/2410ebdf92279996c516">fluentdのsyslogプラグインを使ってsyslogプロトコルでログを受け取る</a> (2020/05/15)</li>
@@ -366,10 +379,11 @@
       <li><a href="https://qiita.com/suzuki-navi/items/3014e9cb60c85b29fdff">fluentdのプラグインをgemでインストール</a> (2019/10/31)</li>
     </ul>
   </section>
-  <section class="card card-size2">
+  <section class="card card-size3">
     <h1>Metabase - ソフトウェア別記事</h1>
     <ul>
-      <li><a href="https://qiita.com/suzuki-navi/items/c1ee94d66e77d2dbfdcb">Metabaseにあるチャート(Question)の種類のまとめ</a> (2020/05/23)</li>
+      <li><a href="https://qiita.com/suzuki-navi/items/6c43a555d74d4236e913">MetabaseのQuestion画面の使い方（チャート・グラフ・テーブル表示）</a> (2020/05/27)</li>
+      <li><a href="https://qiita.com/suzuki-navi/items/c1ee94d66e77d2dbfdcb">MetabaseにあるQuestion（チャート・グラフ・テーブル）の可視化種類のまとめ</a> (2020/05/23)</li>
       <li><a href="https://qiita.com/suzuki-navi/items/c3c9082725f653d2d53a">データ可視化ツール(Metabase, Redash, Superset)の比較メモ</a> (2020/05/11)</li>
     </ul>
   </section>
@@ -496,13 +510,13 @@
   <section class="card card-size3">
     <h1>最近の記事</h1>
     <ul class="font-small">
+      <li><a href="https://qiita.com/suzuki-navi/items/6c43a555d74d4236e913">MetabaseのQuestion画面の使い方（チャート・グラフ・テーブル表示）</a> (2020/05/27)</li>
       <li><a href="https://suzuki-navi.hatenablog.com/entry/2020/05/26/204848">diffコマンドをカラー表示にして見やすくする方法</a> (2020/05/26)</li>
       <li><a href="https://suzuki-navi.hatenablog.com/entry/2020/05/25/173849">二項分布の極限がポアソン分布になることを数式変形によりイメージする</a> (2020/05/25)</li>
       <li><a href="https://suzuki-navi.hatenablog.com/entry/2020/05/24/190325">TeXで微分のときよく使う縦線の書き方</a> (2020/05/24)</li>
-      <li><a href="https://qiita.com/suzuki-navi/items/c1ee94d66e77d2dbfdcb">Metabaseにあるチャート(Question)の種類のまとめ</a> (2020/05/23)</li>
+      <li><a href="https://qiita.com/suzuki-navi/items/c1ee94d66e77d2dbfdcb">MetabaseにあるQuestion（チャート・グラフ・テーブル）の可視化種類のまとめ</a> (2020/05/23)</li>
       <li><a href="https://suzuki-navi.hatenablog.com/entry/2020/05/22/095655">二項分布の極限がポアソン分布になることを文章変形によりイメージする</a> (2020/05/22)</li>
       <li><a href="https://suzuki-navi.hatenablog.com/entry/2020/05/21/215928">勾配降下法の自作アルゴリズム</a> (2020/05/21)</li>
-      <li><a href="https://suzuki-navi.hatenablog.com/entry/2020/05/20/134615">勾配降下法のアルゴリズム一覧のメモ</a> (2020/05/20)</li>
     </ul>
   </section>
   <section class="card card-size2">
@@ -514,7 +528,7 @@
       </tr>
       <tr>
         <td><a href="https://qiita.com/suzuki-navi">Qiita</a>：</td>
-        <td>41</td>
+        <td>42</td>
       </tr>
       <tr>
         <td><a href="https://suzuki-navi.hatenablog.com/">はてなブログ</a>：</td>
