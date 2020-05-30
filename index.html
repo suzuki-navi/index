@@ -84,7 +84,7 @@
       grid-auto-rows: 1fr;
       grid-gap: 0px;
       /* grid-template-columns: repeat(auto-fit, 390px); */
-      /* grid-auto-flow: dense; */
+      grid-auto-flow: dense;
     }
     .card-size1 {
     }
@@ -131,8 +131,15 @@
     .card-title {
       grid-column: 1 / 3;
     }
+    #card-recent {
+      grid-column: 2;
+    }
+    #card-statistics {
+      grid-row: span 5;
+    }
     #card-jupyter {
-      grid-row: span 7;
+    }
+    #card-fluentd {
     }
   }
   @media screen and (min-width: 1180px) and (max-width: 1569px) {
@@ -142,6 +149,9 @@
     .card-title {
       grid-column: 1 / 4;
     }
+    #card-recent {
+      grid-column: 3;
+    }
     #card-python {
     }
     #card-fluentd {
@@ -149,10 +159,9 @@
     #card-jupyter {
     }
     #card-raspberry {
-      grid-row: span 7;
     }
     #card-opensource {
-      grid-row: span 4;
+      grid-row: span 3;
     }
   }
   @media screen and (min-width: 1570px) {
@@ -161,6 +170,12 @@
     }
     .card-title {
       grid-column: 1 / 5;
+    }
+    #card-recent {
+     grid-column: 4;
+    }
+    #card-fluentd {
+      grid-row: span 3;
     }
   }
 </style>
@@ -191,6 +206,23 @@
 <body>
 <h1>これまでに書いたもの/してきたこと</h1>
 <div class="grid">
+  <section id="card-recent" class="card card-size5">
+    <h1>最近の記事</h1>
+    <ul class="font-small">
+      <li><a href="https://suzuki-navi.hatenablog.com/entry/2020/05/30/120022">Jupyter Notebook上のmatplotlibのグラフを大きくするには</a> (2020/05/30)</li>
+      <li><a href="https://qiita.com/suzuki-navi/items/acb37f76152989156241">MetabaseのQuestion（チャート・グラフ・テーブル）の作成・保存方法</a> (2020/05/29)</li>
+      <li><a href="https://suzuki-navi.hatenablog.com/entry/2020/05/28/184300">二項分布の極限がポアソン分布になることをグラフによりイメージする</a> (2020/05/28)</li>
+      <li><a href="https://qiita.com/suzuki-navi/items/6c43a555d74d4236e913">MetabaseのQuestion画面の使い方（チャート・グラフ・テーブル表示）</a> (2020/05/27)</li>
+      <li><a href="https://suzuki-navi.hatenablog.com/entry/2020/05/26/204848">diffコマンドをカラー表示にして見やすくする方法</a> (2020/05/26)</li>
+      <li><a href="https://suzuki-navi.hatenablog.com/entry/2020/05/25/173849">二項分布の極限がポアソン分布になることを数式変形によりイメージする</a> (2020/05/25)</li>
+      <li><a href="https://suzuki-navi.hatenablog.com/entry/2020/05/24/190325">TeXで微分のときよく使う縦線の書き方</a> (2020/05/24)</li>
+      <li><a href="https://qiita.com/suzuki-navi/items/c1ee94d66e77d2dbfdcb">Metabaseにあるチャート(Question)の種類のまとめ</a> (2020/05/23)</li>
+      <li><a href="https://suzuki-navi.hatenablog.com/entry/2020/05/22/095655">二項分布の極限がポアソン分布になることを文章変形によりイメージする</a> (2020/05/22)</li>
+      <li><a href="https://suzuki-navi.hatenablog.com/entry/2020/05/21/215928">勾配降下法の自作アルゴリズム</a> (2020/05/21)</li>
+      <li><a href="https://suzuki-navi.hatenablog.com/entry/2020/05/20/134615">勾配降下法のアルゴリズム一覧のメモ</a> (2020/05/20)</li>
+      <li><a href="https://suzuki-navi.hatenablog.com/entry/2020/05/19/094020">はてなブログでのMarkdownでの数式の書き方 その2</a> (2020/05/19)</li>
+    </ul>
+  </section>
   <section class="card card-size5 card-col2">
     <h1>機械学習 - データ活用フェーズの記事</h1>
     <h2>異常検知</h2>
@@ -215,7 +247,7 @@
       <a href="https://qiita.com/suzuki-navi/items/2581b3f4afeeabeacace"><img src="ml.png"></a>
     </p>
   </section>
-  <section class="card card-size4">
+  <section id="card-statistics" class="card card-size4">
     <h1>統計 - データ活用フェーズの記事</h1>
     <ul>
       <li><a href="https://suzuki-navi.hatenablog.com/entry/2020/05/28/184300">二項分布の極限がポアソン分布になることをグラフによりイメージする</a> (2020/05/28)</li>
@@ -226,9 +258,10 @@
       <li><a href="https://tech.naviplus.co.jp/2014/02/27/%e4%b8%8d%e5%81%8f%e5%88%86%e6%95%a3%e3%81%af%e3%81%aa%e3%81%9c-n-1-%e3%81%a7%e5%89%b2%e3%82%8b%e3%81%ae%e3%81%8b%ef%bc%9f/">不偏分散はなぜ n – 1 で割るのか？</a>  (2014/02/27)</li>
     </ul>
   </section>
-  <section class="card card-size4">
+  <section class="card card-size5">
     <h1>可視化 - データ活用フェーズの記事</h1>
     <ul>
+      <li><a href="https://suzuki-navi.hatenablog.com/entry/2020/05/30/120022">Jupyter Notebook上のmatplotlibのグラフを大きくするには</a> (2020/05/30)</li>
       <li><a href="https://qiita.com/suzuki-navi/items/acb37f76152989156241">MetabaseのQuestion（チャート・グラフ・テーブル）の作成・保存方法</a> (2020/05/29)</li>
       <li><a href="https://qiita.com/suzuki-navi/items/6c43a555d74d4236e913">MetabaseのQuestion画面の使い方（チャート・グラフ・テーブル表示）</a> (2020/05/27)</li>
       <li><a href="https://qiita.com/suzuki-navi/items/c1ee94d66e77d2dbfdcb">MetabaseにあるQuestion（チャート・グラフ・テーブル）の可視化種類のまとめ</a> (2020/05/23)</li>
@@ -330,13 +363,14 @@
       <li><a href="https://qiita.com/suzuki-navi/items/16793a5f5e67fb8d3fc2">if文の書き方のまとめ(Scala、Java、Rust、C言語、C++、Go言語、PHP、Perl、Python、Ruby)</a> (2019/11/22)</li>
     </ul>
   </section>
-  <section id="card-python" class="card card-size6">
+  <section id="card-python" class="card card-size7">
     <h1>Python - 言語別記事</h1>
     <ul>
       <li><a href="https://qiita.com/suzuki-navi/items/9ed7670aa4a93cf021d2">Pythonでのタイムゾーンの扱い(datetime,p pytz)</a> (2020/01/06)</li>
     </ul>
     <h2>Pythonも登場する記事</h2>
     <ul class="font-small">
+      <li><a href="https://suzuki-navi.hatenablog.com/entry/2020/05/30/120022">Jupyter Notebook上のmatplotlibのグラフを大きくするには</a> (2020/05/30)</li>
       <li><a href="https://suzuki-navi.hatenablog.com/entry/2020/05/28/184300">二項分布の極限がポアソン分布になることをグラフによりイメージする</a> (2020/05/28)</li>
       <li><a href="https://qiita.com/suzuki-navi/items/81494eb31212c0fe8efb">折れ線グラフをJupyter Notebook上でシンプルに表示する</a> (2020/05/02)</li>
       <li><a href="https://qiita.com/suzuki-navi/items/2581b3f4afeeabeacace">ソフトマックス関数と交差エントロピー誤差の可視化</a> (2020/02/26)</li>
@@ -366,9 +400,10 @@
       <li><a href="https://tech.naviplus.co.jp/2014/02/27/%e4%b8%8d%e5%81%8f%e5%88%86%e6%95%a3%e3%81%af%e3%81%aa%e3%81%9c-n-1-%e3%81%a7%e5%89%b2%e3%82%8b%e3%81%ae%e3%81%8b%ef%bc%9f/">不偏分散はなぜ n – 1 で割るのか？</a>  (2014/02/27)</li>
     </ul>
   </section>
-  <section id="card-jupyter" class="card card-size6">
+  <section id="card-jupyter" class="card card-size7">
     <h1>Jupyter Notebook/Pandas/matplotlib - ソフトウェア別記事</h1>
     <ul>
+      <li><a href="https://suzuki-navi.hatenablog.com/entry/2020/05/30/120022">Jupyter Notebook上のmatplotlibのグラフを大きくするには</a> (2020/05/30)</li>
       <li><a href="https://qiita.com/suzuki-navi/items/81494eb31212c0fe8efb">折れ線グラフをJupyter Notebook上でシンプルに表示する</a> (2020/05/02)</li>
       <li><a href="https://qiita.com/suzuki-navi/items/d7c27c9ce815750cdc59">混合ガウスモデルによるクラスタリングをJupyter Notebook上で試す</a> (2019/11/21)</li>
       <li><a href="https://qiita.com/suzuki-navi/items/5745eff3392ec9f75249">SVMをJupyter Notebook上のscikit-learnで試す</a> (2019/11/18)</li>
@@ -534,17 +569,6 @@
       2020/05/23 まだ練習中の連弾(私は右)
     </p>
   </section>
-  <section class="card card-size3">
-    <h1>最近の記事</h1>
-    <ul class="font-small">
-      <li><a href="https://qiita.com/suzuki-navi/items/acb37f76152989156241">MetabaseのQuestion（チャート・グラフ・テーブル）の作成・保存方法</a> (2020/05/29)</li>
-      <li><a href="https://suzuki-navi.hatenablog.com/entry/2020/05/28/184300">二項分布の極限がポアソン分布になることをグラフによりイメージする</a> (2020/05/28)</li>
-      <li><a href="https://qiita.com/suzuki-navi/items/6c43a555d74d4236e913">MetabaseのQuestion画面の使い方（チャート・グラフ・テーブル表示）</a> (2020/05/27)</li>
-      <li><a href="https://suzuki-navi.hatenablog.com/entry/2020/05/26/204848">diffコマンドをカラー表示にして見やすくする方法</a> (2020/05/26)</li>
-      <li><a href="https://suzuki-navi.hatenablog.com/entry/2020/05/25/173849">二項分布の極限がポアソン分布になることを数式変形によりイメージする</a> (2020/05/25)</li>
-      <li><a href="https://suzuki-navi.hatenablog.com/entry/2020/05/24/190325">TeXで微分のときよく使う縦線の書き方</a> (2020/05/24)</li>
-    </ul>
-  </section>
   <section class="card card-size2">
     <h1>これまでに書いた記事数</h1>
     <table>
@@ -558,7 +582,7 @@
       </tr>
       <tr>
         <td><a href="https://suzuki-navi.hatenablog.com/">はてなブログ</a>：</td>
-        <td>11</td>
+        <td>12</td>
       </tr>
     </table>
   </section>
