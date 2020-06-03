@@ -141,7 +141,6 @@
     #card-fluentd {
     }
     #card-otherarticles {
-      grid-row: span 3;
     }
   }
   @media screen and (min-width: 1180px) and (max-width: 1569px) {
@@ -157,12 +156,11 @@
     #card-python {
     }
     #card-fluentd {
-      grid-row: span 3;
     }
     #card-jupyter {
     }
     #card-raspberry {
-      grid-row: span 6;
+      grid-row: span 7;
     }
   }
   @media screen and (min-width: 1570px) {
@@ -175,8 +173,10 @@
     #card-recent {
      grid-column: 4;
     }
+    #card-python {
+      grid-row: span 8;
+    }
     #card-fluentd {
-      grid-row: span 3;
     }
     #card-opensource {
       grid-row: span 3;
@@ -213,6 +213,7 @@
   <section id="card-recent" class="card card-size5">
     <h1>最近の記事</h1>
     <ul class="font-small">
+      <li><a href="https://suzuki-navi.hatenablog.com/entry/2020/06/03/211408">td-agentとrbenv/gemでインストールしたfluentdのディレクトリ構成の比較</a> (2020/06/03)</li>
       <li><a href="https://suzuki-navi.hatenablog.com/entry/2020/06/02/201648">平均・分散・共分散・相関係数の計算式</a> (2020/06/02)</li>
       <li><a href="https://qiita.com/suzuki-navi/items/e353b8dfbc6e872f9f41">統計検定2級に合格しました</a> (2020/06/01)</li>
       <li><a href="https://suzuki-navi.hatenablog.com/entry/2020/05/31/222942">平方根（ルート）のない電卓で平方根を計算するには</a> (2020/05/31)</li>
@@ -224,8 +225,6 @@
       <li><a href="https://suzuki-navi.hatenablog.com/entry/2020/05/25/173849">二項分布の極限がポアソン分布になることを数式変形によりイメージする</a> (2020/05/25)</li>
       <li><a href="https://suzuki-navi.hatenablog.com/entry/2020/05/24/190325">TeXで微分のときよく使う縦線の書き方</a> (2020/05/24)</li>
       <li><a href="https://qiita.com/suzuki-navi/items/c1ee94d66e77d2dbfdcb">Metabaseにあるチャート(Question)の種類のまとめ</a> (2020/05/23)</li>
-      <li><a href="https://suzuki-navi.hatenablog.com/entry/2020/05/22/095655">二項分布の極限がポアソン分布になることを文章変形によりイメージする</a> (2020/05/22)</li>
-      <li><a href="https://suzuki-navi.hatenablog.com/entry/2020/05/21/215928">勾配降下法の自作アルゴリズム</a> (2020/05/21)</li>
     </ul>
   </section>
   <section class="card card-size5 card-col2">
@@ -284,9 +283,10 @@
       <li><a href="https://qiita.com/suzuki-navi/items/8b2fe5a35a4439013461">AWS Certified Big Data - Specialty 合格しました</a> (2019/11/05)</li>
     </ul>
   </section>
-  <section class="card card-size3">
+  <section class="card card-size4">
     <h1>データ収集フェーズの記事</h1>
     <ul>
+      <li><a href="https://suzuki-navi.hatenablog.com/entry/2020/06/03/211408">td-agentとrbenv/gemでインストールしたfluentdのディレクトリ構成の比較</a> (2020/06/03)</li>
       <li><a href="https://qiita.com/suzuki-navi/items/2410ebdf92279996c516">fluentdのsyslogプラグインを使ってsyslogプロトコルでログを受け取る</a> (2020/05/15)</li>
       <li><a href="https://qiita.com/suzuki-navi/items/605f3de176871ab80757">Talend Open Studioのインストールからジョブ作成まで</a> (2020/05/08)</li>
       <li><a href="https://qiita.com/suzuki-navi/items/57ec168267466a343a8a">fluentdのoutputプラグインの作成</a> (2019/11/11)</li>
@@ -400,6 +400,7 @@
     </ul>
     <h2>Rubyも登場する記事</h2>
     <ul class="font-small">
+      <li><a href="https://suzuki-navi.hatenablog.com/entry/2020/06/03/211408">td-agentとrbenv/gemでインストールしたfluentdのディレクトリ構成の比較</a> (2020/06/03)</li>
       <li><a href="https://qiita.com/suzuki-navi/items/6611b9f16a391bac5ac5">インクリメント・デクリメントの書き方のまとめ(Scala、Java、Rust、C言語、C++、Go言語、PHP、Perl、Python、Ruby、JavaScript)</a> (2020/01/14)</li>
       <li><a href="https://qiita.com/suzuki-navi/items/16793a5f5e67fb8d3fc2">if文の書き方のまとめ(Scala、Java、Rust、C言語、C++、Go言語、PHP、Perl、Python、Ruby)</a> (2019/11/22)</li>
       <li><a href="https://qiita.com/suzuki-navi/items/57ec168267466a343a8a">fluentdのoutputプラグインの作成</a> (2019/11/11)</li>
@@ -433,9 +434,10 @@
       <li><a href="https://qiita.com/suzuki-navi/items/7879b708b4f38b003444">PostgreSQLのバルクインサートをRubyからPrepared Statementで実行</a> (2019/10/25)</li>
     </ul>
   </section>
-  <section id="card-fluentd" class="card card-size2">
+  <section id="card-fluentd" class="card card-size3">
     <h1>fluentd - ソフトウェア別記事</h1>
     <ul>
+      <li><a href="https://suzuki-navi.hatenablog.com/entry/2020/06/03/211408">td-agentとrbenv/gemでインストールしたfluentdのディレクトリ構成の比較</a> (2020/06/03)</li>
       <li><a href="https://qiita.com/suzuki-navi/items/2410ebdf92279996c516">fluentdのsyslogプラグインを使ってsyslogプロトコルでログを受け取る</a> (2020/05/15)</li>
       <li><a href="https://qiita.com/suzuki-navi/items/57ec168267466a343a8a">fluentdのoutputプラグインの作成</a> (2019/11/11)</li>
       <li><a href="https://qiita.com/suzuki-navi/items/3014e9cb60c85b29fdff">fluentdのプラグインをgemでインストール</a> (2019/10/31)</li>
@@ -595,7 +597,7 @@
       </tr>
       <tr>
         <td><a href="https://suzuki-navi.hatenablog.com/">はてなブログ</a>：</td>
-        <td>14</td>
+        <td>15</td>
       </tr>
     </table>
     <p class="font-small">
