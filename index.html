@@ -141,6 +141,7 @@
     #card-statistics {
     }
     #card-jupyter {
+      grid-row: span 9;
     }
     #card-fluentd {
     }
@@ -171,7 +172,7 @@
     #card-raspberry {
     }
     #card-otherarticles {
-      grid-row: span 5;
+      grid-row: span 6;
     }
   }
   @media screen and (min-width: 1570px) {
@@ -220,9 +221,10 @@
 <body>
 <h1>これまでに書いたもの/してきたこと</h1>
 <div class="grid">
-  <section id="card-recent" class="card card-size5">
+  <section id="card-recent" class="card card-size6">
     <h1>最近の記事</h1>
     <ul class="font-small">
+      <li><a href="https://suzuki-navi.hatenablog.com/entry/2020/06/16/195737">AWS RDS PostgreSQLのクエリログをawscliで取得するワンライナー</a> (2020/06/16)</li>
       <li><a href="https://suzuki-navi.hatenablog.com/entry/2020/06/15/194217">TCP/UDP/IPプロトコルの各レイヤーで処理しているパケットの情報</a> (2020/06/15)</li>
       <li><a href="https://suzuki-navi.hatenablog.com/entry/2020/06/14/121717">たくさんのAWS Glue Jobを実行している環境で実行履歴をまとめて見るワンライナー</a> (2020/06/14)</li>
       <li><a href="https://suzuki-navi.hatenablog.com/entry/2020/06/13/131412">AWS DocumentDBのクラスタ構築からmongoコマンドで接続するまで</a> (2020/06/13)</li>
@@ -237,6 +239,8 @@
       <li><a href="https://qiita.com/suzuki-navi/items/05c32d638725883bc14f">MetabaseのDashboard画面の使い方</a> (2020/06/04)</li>
       <li><a href="https://suzuki-navi.hatenablog.com/entry/2020/06/03/211408">td-agentとrbenv/gemでインストールしたfluentdのディレクトリ構成の比較</a> (2020/06/03)</li>
       <li><a href="https://suzuki-navi.hatenablog.com/entry/2020/06/02/201648">平均・分散・共分散・相関係数の計算式</a> (2020/06/02)</li>
+      <li><a href="https://qiita.com/suzuki-navi/items/e353b8dfbc6e872f9f41">統計検定2級に合格しました</a> (2020/06/01)</li>
+      <li><a href="https://suzuki-navi.hatenablog.com/entry/2020/05/31/222942">平方根（ルート）のない電卓で平方根を計算するには</a> (2020/05/31)</li>
     </ul>
   </section>
   <section class="card card-size5 card-col2">
@@ -298,6 +302,7 @@
   <section class="card card-size3">
     <h1>データ保管フェーズの記事</h1>
     <ul>
+      <li><a href="https://suzuki-navi.hatenablog.com/entry/2020/06/16/195737">AWS RDS PostgreSQLのクエリログをawscliで取得するワンライナー</a> (2020/06/16)</li>
       <li><a href="https://suzuki-navi.hatenablog.com/entry/2020/06/13/131412">AWS DocumentDBのクラスタ構築からmongoコマンドで接続するまで</a> (2020/06/13)</li>
       <li><a href="https://qiita.com/suzuki-navi/items/823aca8f55e30c0a7f87">PostgreSQLパーティショニングのTableau、DBeaver、Glue Crawlerでの対応状況調査</a> (2019/12/24)</li>
       <li><a href="https://qiita.com/suzuki-navi/items/8b2fe5a35a4439013461">AWS Certified Big Data - Specialty 合格しました</a> (2019/11/05)</li>
@@ -318,6 +323,7 @@
   <section class="card card-size8">
     <h1>AWS/GCP関係の記事</h1>
     <ul>
+      <li><a href="https://suzuki-navi.hatenablog.com/entry/2020/06/16/195737">AWS RDS PostgreSQLのクエリログをawscliで取得するワンライナー</a> (2020/06/16)</li>
       <li><a href="https://suzuki-navi.hatenablog.com/entry/2020/06/14/121717">たくさんのAWS Glue Jobを実行している環境で実行履歴をまとめて見るワンライナー</a> (2020/06/14)</li>
       <li><a href="https://suzuki-navi.hatenablog.com/entry/2020/06/13/131412">AWS DocumentDBのクラスタ構築からmongoコマンドで接続するまで</a> (2020/06/13)</li>
       <li><a href="https://www.beex-inc.com/blog/aws-cloudwatch-logs-cli/">AWS CloudWatchログ容量の推移を確認するワンライナー</a> (2020/05/07)</li>
@@ -452,9 +458,10 @@
       <li><a href="https://qiita.com/suzuki-navi/items/90b9799bd9df3923dc3d">データの分布状況から異常検知</a> (2020/01/28)</li>
     </ul>
   </section>
-  <section class="card card-size2">
+  <section class="card card-size3">
     <h1>PostgreSQL - ソフトウェア別記事</h1>
     <ul>
+      <li><a href="https://suzuki-navi.hatenablog.com/entry/2020/06/16/195737">AWS RDS PostgreSQLのクエリログをawscliで取得するワンライナー</a> (2020/06/16)</li>
       <li><a href="https://qiita.com/suzuki-navi/items/823aca8f55e30c0a7f87">PostgreSQLパーティショニングのTableau、DBeaver、Glue Crawlerでの対応状況調査</a> (2019/12/24)</li>
       <li><a href="https://qiita.com/suzuki-navi/items/7879b708b4f38b003444">PostgreSQLのバルクインサートをRubyからPrepared Statementで実行</a> (2019/10/25)</li>
     </ul>
@@ -484,6 +491,7 @@
   <section class="card card-size6 card-col2">
     <h1>Linuxコマンドの記事</h1>
     <ul>
+      <li><a href="https://suzuki-navi.hatenablog.com/entry/2020/06/16/195737">AWS RDS PostgreSQLのクエリログをawscliで取得するワンライナー</a> <span class="tag">[aws jq]</span> (2020/06/16)</li>
       <li><a href="https://suzuki-navi.hatenablog.com/entry/2020/06/14/121717">たくさんのAWS Glue Jobを実行している環境で実行履歴をまとめて見るワンライナー</a> <span class="tag">[aws jq]</span> (2020/06/14)</li>
       <li><a href="https://qiita.com/suzuki-navi/items/fb2126ef3ba31623e538">diff目的でExcelファイルをテキストにPythonで変換</a> <span class="tag">[diff]</span> (2020/06/11)</li>
       <li><a href="https://suzuki-navi.hatenablog.com/entry/2020/05/26/204848">diffコマンドをカラー表示にして見やすくする方法</a> <span class="tag">[diff git colordiff]</span> (2020/05/26)</li>
@@ -632,7 +640,7 @@
       </tr>
       <tr>
         <td><a href="https://suzuki-navi.hatenablog.com/">はてなブログ</a>：</td>
-        <td>24</td>
+        <td>25</td>
       </tr>
     </table>
     <p class="font-small">
