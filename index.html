@@ -82,10 +82,14 @@
   @media screen and (min-width: 790px) {
     .grid {
       display: grid;
-      grid-auto-rows: 1fr;
+      /* grid-auto-rows: 1fr; */
+      grid-auto-rows: 88px;
       grid-gap: 0px;
       /* grid-template-columns: repeat(auto-fit, 390px); */
       grid-auto-flow: dense;
+    }
+    .card {
+      overflow: scroll;
     }
     .card-size1 {
     }
@@ -150,7 +154,6 @@
     #card-otherarticles {
     }
     #card-opensource {
-      grid-row: span 3;
     }
   }
   @media screen and (min-width: 1180px) and (max-width: 1569px) {
@@ -168,12 +171,10 @@
     #card-fluentd {
     }
     #card-jupyter {
-      grid-row: span 8;
     }
     #card-raspberry {
     }
     #card-otherarticles {
-      grid-row: span 5;
     }
   }
   @media screen and (min-width: 1570px) {
@@ -187,11 +188,14 @@
      grid-column: 4;
     }
     #card-python {
+      grid-row: span 8;
     }
     #card-fluentd {
     }
-    #card-opensource {
+    #card-otherarticles {
       grid-row: span 4;
+    }
+    #card-opensource {
     }
   }
 </style>
@@ -225,6 +229,7 @@
   <section id="card-recent" class="card card-size6">
     <h1>最近の記事</h1>
     <ul class="font-small">
+      <li><a href="https://qiita.com/suzuki-navi/items/a8f4e21d75e685df51e9">AWSの3種類のLBの比較と使い分け (ALB, NLB, CLB)</a> (2020/06/20)</li>
       <li><a href="https://suzuki-navi.hatenablog.com/entry/2020/06/19/222810">unzipコマンドで unsupported compression method 99 というエラー</a> (2020/06/19)</li>
       <li><a href="https://suzuki-navi.hatenablog.com/entry/2020/06/18/203608">AWS Elasticsearch/KibanaにCognitoの認証を組み合わせてみる</a> (2020/06/18)</li>
       <li><a href="https://suzuki-navi.hatenablog.com/entry/2020/06/17/152140">連続した数字や日付や時刻を出力するには(seqコマンド)</a> (2020/06/17)</li>
@@ -283,7 +288,7 @@
       <li><a href="https://tech.naviplus.co.jp/2014/02/27/%e4%b8%8d%e5%81%8f%e5%88%86%e6%95%a3%e3%81%af%e3%81%aa%e3%81%9c-n-1-%e3%81%a7%e5%89%b2%e3%82%8b%e3%81%ae%e3%81%8b%ef%bc%9f/">不偏分散はなぜ n – 1 で割るのか？</a>  (2014/02/27)</li>
     </ul>
   </section>
-  <section class="card card-size7">
+  <section class="card card-size6">
     <h1>可視化 - データ活用フェーズの記事</h1>
     <ul>
       <li><a href="https://suzuki-navi.hatenablog.com/entry/2020/06/12/142426">Metabaseの使い方：用語のまとめ</a> (2020/06/12)</li>
@@ -323,6 +328,7 @@
   <section class="card card-size9">
     <h1>AWS/GCP関係の記事</h1>
     <ul>
+      <li><a href="https://qiita.com/suzuki-navi/items/a8f4e21d75e685df51e9">AWSの3種類のLBの比較と使い分け (ALB, NLB, CLB)</a> (2020/06/20)</li>
       <li><a href="https://suzuki-navi.hatenablog.com/entry/2020/06/18/203608">AWS Elasticsearch/KibanaにCognitoの認証を組み合わせてみる</a> (2020/06/18)</li>
       <li><a href="https://suzuki-navi.hatenablog.com/entry/2020/06/16/195737">AWS RDS PostgreSQLのクエリログをawscliで取得するワンライナー</a> (2020/06/16)</li>
       <li><a href="https://suzuki-navi.hatenablog.com/entry/2020/06/14/121717">たくさんのAWS Glue Jobを実行している環境で実行履歴をまとめて見るワンライナー</a> (2020/06/14)</li>
@@ -365,7 +371,7 @@
       <li><a href="https://qiita.com/suzuki-navi/items/37615024d4748aac6688">Jupyter NotebookをDockerを使って簡単にインストールし起動（nbextensions、Scalaにも対応）</a> (2019/11/06)</li>
     </ul>
   </section>
-  <section class="card card-size4">
+  <section class="card card-size3">
     <h1>Java - 言語別記事</h1>
     <ul>
       <li><a href="https://suzuki-navi.hatenablog.com/entry/2020/05/17/121452">JavaとScalaにおける浮動小数点数の大小比較</a> (2020/05/17)</li>
@@ -566,10 +572,16 @@
       <iframe width="352" height="198" src="https://www.youtube-nocookie.com/embed/wFTvOIsHmQo?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </p>
   </section>
-  <section id="card-otherarticles" class="card card-size4">
+  <section class="card card-size2">
+    <h1>ネットワークの記事</h1>
+    <ul>
+      <li><a href="https://qiita.com/suzuki-navi/items/a8f4e21d75e685df51e9">AWSの3種類のLBの比較と使い分け (ALB, NLB, CLB)</a> (2020/06/20)</li>
+      <li><a href="https://suzuki-navi.hatenablog.com/entry/2020/06/15/194217">TCP/UDP/IPプロトコルの各レイヤーで処理しているパケットの情報</a> (2020/06/15)</li>
+    </ul>
+  </section>
+  <section id="card-otherarticles" class="card card-size3">
     <h1>その他の記事</h1>
     <ul>
-      <li><a href="https://suzuki-navi.hatenablog.com/entry/2020/06/15/194217">TCP/UDP/IPプロトコルの各レイヤーで処理しているパケットの情報</a> (2020/06/15)</li>
       <li><a href="https://suzuki-navi.hatenablog.com/entry/2020/05/31/222942">平方根（ルート）のない電卓で平方根を計算するには</a> (2020/05/31)</li>
       <li><a href="https://suzuki-navi.hatenablog.com/entry/2020/05/18/232822">DockerのUbuntuでヘルプが表示できない場合の対処方法</a> (2020/05/18)</li>
       <li><a href="https://tech.naviplus.co.jp/2014/12/12/unicode%e3%81%ab%e3%81%82%e3%82%8b%e3%81%9f%e3%81%8f%e3%81%95%e3%82%93%e3%81%ae%e6%b3%a2%e7%b7%9a%e5%85%a840%e6%96%87%e5%ad%97/">Unicodeにあるたくさんの波線(全40文字)</a> (2014/12/
@@ -639,7 +651,7 @@
       </tr>
       <tr>
         <td><a href="https://qiita.com/suzuki-navi">Qiita</a>：</td>
-        <td>47</td>
+        <td>48</td>
       </tr>
       <tr>
         <td><a href="https://suzuki-navi.hatenablog.com/">はてなブログ</a>：</td>
