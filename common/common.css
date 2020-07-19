@@ -1,0 +1,206 @@
+body {
+  margin: 5px;
+  background-color: #d8e698;
+  font-family: sans-serif;
+}
+
+h1 {
+  font-size: 1em;
+  font-weight: normal;
+}
+  .card h1 {
+  margin: 0 0 10px 0;
+  column-span: all;
+}
+.card h2 {
+  margin: 5px 0 5px 0;
+  font-size: 0.9em;
+  font-weight: normal;
+}
+.card p {
+  margin: 0;
+  font-size: 0.9em;
+}
+.card ul {
+  margin: 0;
+  font-size: 0.9em;
+  list-style: disc;
+  padding-inline-start: 20px;
+}
+.card table {
+  margin: 0;
+}
+.card table td {
+  margin: 5px;
+  font-size: 0.9em;
+}
+.card.font-small p, .card.font-small ul, .card .font-small {
+  font-size: 0.7em;
+}
+.card .tag {
+  font-size: 0.7em;
+}
+.card p.image {
+  margin: 1em 0 1em 0;
+  text-align: center;
+}
+.card p.youtube {
+  margin: 1em 0 1em 0;
+  text-align: center;
+}
+
+.grid {
+}
+.card {
+  margin: 5px;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px #9a5;
+}
+.card-title {
+  margin: auto 5px auto 5px;
+  background: none;
+  box-shadow: none;
+}
+.card-title h1 {
+  border-bottom: 1px solid #9a5;
+  padding-bottom: 5px;
+}
+@media screen and (max-width: 789px) {
+  #card-github-grass p img {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 790px) {
+  .grid {
+    display: grid;
+    /* grid-auto-rows: 1fr; */
+    grid-auto-rows: 90px;
+    grid-gap: 0px;
+    /* grid-template-columns: repeat(auto-fit, 390px); */
+    grid-auto-flow: dense;
+  }
+  .card {
+    overflow: scroll;
+  }
+  .card-size1 {
+  }
+  .card-size2 {
+    grid-row: span 2;
+  }
+  .card-size3 {
+    grid-row: span 3;
+  }
+  .card-size4 {
+    grid-row: span 4;
+  }
+  .card-size5 {
+    grid-row: span 5;
+  }
+  .card-size6 {
+    grid-row: span 6;
+  }
+  .card-size7 {
+    grid-row: span 7;
+  }
+  .card-size8 {
+    grid-row: span 8;
+  }
+  .card-size9 {
+    grid-row: span 9;
+  }
+  .card-size10 {
+    grid-row: span 10;
+  }
+  .card-size11 {
+    grid-row: span 11;
+  }
+  .card-col2 {
+    grid-column: span 2;
+    column-count: 2;
+    column-rule-style: solid;
+    column-rule-width: 1px;
+    column-rule-color: #ccc;
+  }
+  #card-github-grass {
+    grid-column: span 2;
+    grid-row: span 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 790px) and (max-width: 1179px) {
+  .grid {
+    grid-template-columns: 390px 390px;
+  }
+  .card-title {
+    grid-column: 1 / 3;
+  }
+  #card-search {
+    grid-column: 2;
+  }
+  #card-statistics {
+  }
+  #card-python {
+  }
+  #card-jupyter {
+  }
+  #card-fluentd {
+  }
+  #card-math {
+    grid-row: span 10;
+  }
+  #card-otherarticles {
+  }
+  #card-opensource {
+  }
+}
+@media screen and (min-width: 1180px) and (max-width: 1569px) {
+  .grid {
+    grid-template-columns: 390px 390px 390px;
+  }
+  .card-title {
+    grid-column: 1 / 4;
+  }
+  #card-search {
+    grid-column: 3;
+  }
+  #card-python {
+  }
+  #card-fluentd {
+  }
+  #card-jupyter {
+    grid-row: span 8;
+  }
+  #card-raspberry {
+  }
+  #card-otherarticles {
+  }
+}
+@media screen and (min-width: 1570px) {
+  .grid {
+    grid-template-columns: 390px 390px 390px 390px;
+  }
+  .card-title {
+    grid-column: 1 / 5;
+  }
+  #card-search {
+   grid-column: 4;
+  }
+  #card-python {
+  }
+  #card-jupyter {
+    grid-row: span 8;
+  }
+  #card-fluentd {
+  }
+  #card-raspberry {
+    grid-row: span 6;
+  }
+  #card-otherarticles {
+  }
+  #card-opensource {
+  }
+}
