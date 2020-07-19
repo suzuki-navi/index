@@ -26,6 +26,7 @@ $(function(){
     function searchByKeyword2(keywd, articles) {
         var result = articles.filter( article => {
             return (article.keyword1.find(k => k.startsWith(keywd)) ||
+                    article.keyword2.find(k => k.startsWith(keywd)) ||
                     article.title.toLowerCase().indexOf(keywd) >= 0);
         });
         return result;
@@ -66,6 +67,12 @@ $(function(){
 
         case "#linux_commands":
             title1 = "Linuxコマンドの記事";
+            break;
+        case "#numerical_analysis":
+            title1 = "数値計算/シミュレーションの記事";
+            break;
+        case "#natural_language_processing":
+            title1 = "自然言語処理の記事";
             break;
 
         case "aws":
@@ -114,6 +121,20 @@ $(function(){
             count: count,
         };
     };
+    function extractSynonymIndex(keywds) {
+        var len = keywds.length;
+        for (var i = 0; i < len; i++) {
+            switch(keywds[i]) {
+            case "javascript":
+                keywds.push("js");
+                break;
+            case "#natural_language_processing":
+                keywds.push("nlp");
+                break;
+            }
+        }
+        return keywds;
+    }
     var articles = {
         list: [],
     };
@@ -125,6 +146,11 @@ $(function(){
             } else {
                 list[i]["date"] = list[i]["posted"] + "投稿 " + list[i]["updated"] + "更新";
             }
+            if (!list[i]["keyword2"]) {
+                list[i]["keyword2"] = [];
+            }
+            list[i]["keyword1"] = extractSynonymIndex(list[i]["keyword1"]);
+            list[i]["keyword2"] = extractSynonymIndex(list[i]["keyword2"]);
         }
         articles.list = list;
     });

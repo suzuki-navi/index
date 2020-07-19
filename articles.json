@@ -1,5 +1,13 @@
 [
 {
+  "url": "https://suzuki-navi.hatenablog.com/entry/2020/07/19/144917",
+  "title": "Vue.jsでページ中の複数の要素をクラスで指定してVueインスタンスを生成するには",
+  "posted": "2020/07/19",
+  "updated": "",
+  "keyword1": ["#hatenablog", "vuejs", "jquery"],
+  "keyword2": ["javascript"]
+},
+{
   "url": "https://qiita.com/suzuki-navi/items/8530adc5b2eb61dcb7ac",
   "title": "fluentdでIPアドレスから地理情報を付与",
   "posted": "2020/07/18",
@@ -277,7 +285,7 @@
   "title": "平方根（ルート）のない電卓で平方根を計算するには",
   "posted": "2020/05/31",
   "updated": "",
-  "keyword1": ["#hatenablog"]
+  "keyword1": ["#hatenablog", "#numerical_analysis"]
 },
 {
   "url": "https://suzuki-navi.hatenablog.com/entry/2020/05/30/120022",
@@ -368,7 +376,7 @@
   "title": "JavaとScalaにおける浮動小数点数の大小比較",
   "posted": "2020/05/17",
   "updated": "",
-  "keyword1": ["#hatenablog"]
+    "keyword1": ["#hatenablog", "#numerical_analysis", "java", "scala"]
 },
 {
   "url": "https://suzuki-navi.hatenablog.com/entry/2020/05/16/121608",
@@ -396,7 +404,7 @@
   "title": "Talend Open Studioのインストールからジョブ作成まで",
   "posted": "2020/05/08",
   "updated": "",
-  "keyword1": ["#qiita"]
+  "keyword1": ["#qiita", "talend"]
 },
 {
   "url": "https://www.beex-inc.com/blog/aws-cloudwatch-logs-cli/",
@@ -431,7 +439,7 @@
   "title": "ウイルス感染の簡単なシミュレーション",
   "posted": "2020/04/24",
   "updated": "",
-  "keyword1": ["#qiita"]
+  "keyword1": ["#qiita", "#numerical_analysis"]
 },
 {
   "url": "https://qiita.com/suzuki-navi/items/d9228fc776a571ef16c9",
@@ -452,7 +460,7 @@
   "title": "Scalaでの行列演算の計算速度",
   "posted": "2020/02/28",
   "updated": "",
-  "keyword1": ["#qiita"]
+  "keyword1": ["#qiita", "#numerical_analysis", "scala"]
 },
 {
   "url": "https://qiita.com/suzuki-navi/items/9fdf34163b9915bcaeb7",
@@ -473,7 +481,7 @@
   "title": "データの分布状況から異常検知",
   "posted": "2020/01/28",
   "updated": "",
-  "keyword1": ["#qiita"]
+  "keyword1": ["#qiita", "#numerical_analysis"]
 },
 {
   "url": "https://qiita.com/suzuki-navi/items/501cb84d154c53c6a25c",
@@ -487,7 +495,7 @@
   "title": "インクリメント・デクリメントの書き方のまとめ(Scala、Java、Rust、C言語、C++、Go言語、PHP、Perl、Python、Ruby、JavaScript)",
   "posted": "2020/01/14",
   "updated": "",
-  "keyword1": ["#qiita"]
+  "keyword1": ["#qiita", "javascript"]
 },
 {
   "url": "https://qiita.com/suzuki-navi/items/b5f066db181092543854",
@@ -501,7 +509,7 @@
   "title": "一様分布、正規分布、指数分布、ポアソン分布の乱数を生成する方法 (Scala)",
   "posted": "2020/01/09",
   "updated": "",
-  "keyword1": ["#qiita"]
+  "keyword1": ["#qiita", "#numerical_analysis"]
 },
 {
   "url": "https://qiita.com/suzuki-navi/items/9ed7670aa4a93cf021d2",
@@ -606,7 +614,7 @@
   "title": "言語の判定をGoogle Cloud TranslationとAmazon Comprehendとで比較してみる",
   "posted": "2019/11/08",
   "updated": "",
-  "keyword1": ["#qiita"]
+  "keyword1": ["#qiita", "#natural_language_processing"]
 },
 {
   "url": "https://qiita.com/suzuki-navi/items/37615024d4748aac6688",
