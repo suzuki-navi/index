@@ -1,5 +1,13 @@
 [
 {
+  "url": "https://suzuki-navi.hatenablog.com/entry/2020/07/20/234005",
+  "title": "Linuxのバージョン確認方法 (CentOS / Ubuntu)",
+  "posted": "2020/07/20",
+  "updated": "",
+  "keyword1": ["#hatenablog", "#linux_commands", "uname"],
+  "keyword2": ["javascript"]
+},
+{
   "url": "https://suzuki-navi.hatenablog.com/entry/2020/07/19/144917",
   "title": "Vue.jsでページ中の複数の要素をクラスで指定してVueインスタンスを生成するには",
   "posted": "2020/07/19",
@@ -12,7 +20,7 @@
   "title": "fluentdでIPアドレスから地理情報を付与",
   "posted": "2020/07/18",
   "updated": "",
-  "keyword1": ["#qiita", "fluentd"]
+  "keyword1": ["#qiita", "fluentd", "geoip"]
 },
 {
   "url": "https://suzuki-navi.hatenablog.com/entry/2020/07/17/215140",
@@ -33,7 +41,7 @@
   "title": "BigQueryの2種類のSQLをbqコマンドでクエリ実行",
   "posted": "2020/07/15",
   "updated": "",
-  "keyword1": ["#hatenablog", "#linux_commands", "command", "cmd", "bq"]
+  "keyword1": ["#hatenablog", "#linux_commands", "bq"]
 },
 {
   "url": "https://suzuki-navi.hatenablog.com/entry/2020/07/14/202753",
@@ -152,7 +160,7 @@
   "title": "unzipコマンドで unsupported compression method 99 というエラー",
   "posted": "2020/06/19",
   "updated": "",
-  "keyword1": ["#hatenablog", "#linux_commands", "command", "cmd", "unzip", "7z"]
+  "keyword1": ["#hatenablog", "#linux_commands", "unzip", "7z"]
 },
 {
   "url": "https://suzuki-navi.hatenablog.com/entry/2020/06/18/203608",
@@ -166,14 +174,14 @@
   "title": "連続した数字や日付や時刻を出力するには(seqコマンド)",
   "posted": "2020/06/17",
   "updated": "",
-  "keyword1": ["#hatenablog", "#linux_commands", "command", "cmd", "seq", "xargs", "printf", "date"]
+  "keyword1": ["#hatenablog", "#linux_commands", "seq", "xargs", "printf", "date"]
 },
 {
   "url": "https://suzuki-navi.hatenablog.com/entry/2020/06/16/195737",
   "title": "AWS RDS PostgreSQLのクエリログをawscliで取得するワンライナー",
   "posted": "2020/06/16",
   "updated": "",
-  "keyword1": ["#hatenablog", "#linux_commands", "command", "cmd", "postgresql", "aws", "jq"]
+  "keyword1": ["#hatenablog", "#linux_commands", "postgresql", "aws", "jq"]
 },
 {
   "url": "https://suzuki-navi.hatenablog.com/entry/2020/06/15/194217",
@@ -187,7 +195,7 @@
   "title": "たくさんのAWS Glue Jobを実行している環境で実行履歴をまとめて見るワンライナー",
   "posted": "2020/06/14",
   "updated": "",
-  "keyword1": ["#hatenablog", "#linux_commands", "command", "cmd", "aws", "jq"]
+  "keyword1": ["#hatenablog", "#linux_commands", "aws", "jq"]
 },
 {
   "url": "https://suzuki-navi.hatenablog.com/entry/2020/06/13/131412",
@@ -208,7 +216,7 @@
   "title": "diff目的でExcelファイルをテキストにPythonで変換",
   "posted": "2020/06/11",
   "updated": "",
-  "keyword1": ["#qiita", "#linux_commands", "command", "cmd", "diff"]
+  "keyword1": ["#qiita", "#linux_commands", "diff"]
 },
 {
   "url": "https://suzuki-navi.hatenablog.com/entry/2020/06/10/113504",
@@ -320,7 +328,7 @@
   "title": "diffコマンドをカラー表示にして見やすくする方法",
   "posted": "2020/05/26",
   "updated": "",
-  "keyword1": ["#hatenablog", "#linux_commands", "command", "cmd", "diff", "git", "colordiff"]
+  "keyword1": ["#hatenablog", "#linux_commands", "diff", "git", "colordiff"]
 },
 {
   "url": "https://suzuki-navi.hatenablog.com/entry/2020/05/25/173849",
@@ -390,7 +398,7 @@
   "title": "fluentdのsyslogプラグインを使ってsyslogプロトコルでログを受け取る",
   "posted": "2020/05/15",
   "updated": "",
-  "keyword1": ["#qiita", "#linux_commands", "command", "cmd", "fluentd", "logger"]
+  "keyword1": ["#qiita", "#linux_commands", "fluentd", "logger"]
 },
 {
   "url": "https://qiita.com/suzuki-navi/items/c3c9082725f653d2d53a",
@@ -404,21 +412,22 @@
   "title": "Talend Open Studioのインストールからジョブ作成まで",
   "posted": "2020/05/08",
   "updated": "",
-  "keyword1": ["#qiita", "talend"]
+  "keyword1": ["#qiita", "talend"],
+  "keyword2": ["java"]
 },
 {
   "url": "https://www.beex-inc.com/blog/aws-cloudwatch-logs-cli/",
   "title": "AWS CloudWatchログ容量の推移を確認するワンライナー",
   "posted": "2020/05/07",
   "updated": "",
-  "keyword1": ["#beex", "#business_blog", "#linux_commands", "command", "cmd", "aws", "jq"]
+  "keyword1": ["#beex", "#business_blog", "#linux_commands", "aws", "jq"]
 },
 {
   "url": "https://qiita.com/suzuki-navi/items/075ea29cdf481b711d0a",
   "title": "空のディレクトリを削除するには",
   "posted": "2020/05/06",
   "updated": "",
-  "keyword1": ["#qiita", "#linux_commands", "command", "cmd", "find", "rm", "xargs"]
+  "keyword1": ["#qiita", "#linux_commands", "find", "rm", "xargs"]
 },
 {
   "url": "https://qiita.com/suzuki-navi/items/81494eb31212c0fe8efb",
@@ -432,7 +441,7 @@
   "title": "gitでよく使うコマンド (gitl, gitd, gits)",
   "posted": "2020/05/01",
   "updated": "",
-  "keyword1": ["#qiita", "#linux_commands", "command", "cmd", "git"]
+  "keyword1": ["#qiita", "#linux_commands", "git"]
 },
 {
   "url": "https://qiita.com/suzuki-navi/items/f3b11058f1acc19ef8b1",
@@ -446,14 +455,14 @@
   "title": "columnコマンドをUbuntuにインストール",
   "posted": "2020/03/10",
   "updated": "",
-  "keyword1": ["#qiita", "#linux_commands", "command", "cmd", "column"]
+  "keyword1": ["#qiita", "#linux_commands", "column"]
 },
 {
   "url": "https://qiita.com/suzuki-navi/items/3a3fd6ef736bc2a13036",
   "title": "PowerShellをLinuxにインストールして試す",
   "posted": "2020/03/09",
   "updated": "",
-  "keyword1": ["#qiita", "#linux_commands", "command", "cmd", "pwsh"]
+  "keyword1": ["#qiita", "#linux_commands", "pwsh"]
 },
 {
   "url": "https://qiita.com/suzuki-navi/items/c380c73ad69ce32cf5fb",
@@ -467,7 +476,7 @@
   "title": "S3にあるテキストファイルをサクッと編集するには",
   "posted": "2020/02/27",
   "updated": "",
-  "keyword1": ["#qiita", "#linux_commands", "command", "cmd", "vipe", "aws"]
+  "keyword1": ["#qiita", "#linux_commands", "vipe", "aws"]
 },
 {
   "url": "https://qiita.com/suzuki-navi/items/2581b3f4afeeabeacace",
@@ -495,7 +504,8 @@
   "title": "インクリメント・デクリメントの書き方のまとめ(Scala、Java、Rust、C言語、C++、Go言語、PHP、Perl、Python、Ruby、JavaScript)",
   "posted": "2020/01/14",
   "updated": "",
-  "keyword1": ["#qiita", "javascript"]
+  "keyword1": ["#qiita", "#lang_compare"],
+  "keyword2": ["scala", "java", "rust", "clang", "c++", "golang", "php", "perl", "python", "ruby", "javascript"]
 },
 {
   "url": "https://qiita.com/suzuki-navi/items/b5f066db181092543854",
@@ -558,7 +568,8 @@
   "title": "if文の書き方のまとめ(Scala、Java、Rust、C言語、C++、Go言語、PHP、Perl、Python、Ruby)",
   "posted": "2019/11/22",
   "updated": "",
-  "keyword1": ["#qiita"]
+  "keyword1": ["#qiita", "#lang_compare"],
+  "keyword2": ["scala", "java", "rust", "clang", "c++", "golang", "php", "perl", "python", "ruby"]
 },
 {
   "url": "https://qiita.com/suzuki-navi/items/d7c27c9ce815750cdc59",
@@ -586,7 +597,7 @@
   "title": "gsutil、aws s3での基本的なファイル操作（Google Cloud Storage、S3）",
   "posted": "2019/11/15",
   "updated": "",
-  "keyword1": ["#qiita", "#linux_commands", "command", "cmd", "aws", "gsutil"]
+  "keyword1": ["#qiita", "#linux_commands", "aws", "gsutil"]
 },
 {
   "url": "https://qiita.com/suzuki-navi/items/9f5fd47734b22b4adf71",
@@ -649,7 +660,7 @@
   "title": "ディレクトリの合計容量を確認するには(local, Gogle Cloud Storage, S3)",
   "posted": "2019/10/29",
   "updated": "",
-  "keyword1": ["#qiita", "#linux_commands", "command", "cmd", "du", "aws", "gsutil"]
+  "keyword1": ["#qiita", "#linux_commands", "du", "aws", "gsutil"]
 },
 {
   "url": "https://qiita.com/suzuki-navi/items/7879b708b4f38b003444",
@@ -663,14 +674,14 @@
   "title": "Linuxのパイプの流れの進捗を見守るには",
   "posted": "2019/10/21",
   "updated": "",
-  "keyword1": ["#qiita", "#linux_commands", "command", "cmd", "pv"]
+  "keyword1": ["#qiita", "#linux_commands", "pv"]
 },
 {
   "url": "https://qiita.com/suzuki-navi/items/cf92371e71cb4d106300",
   "title": "Google Cloud StorageとAWS S3との間でファイルをコピーするには",
   "posted": "2019/10/19",
   "updated": "",
-  "keyword1": ["#qiita", "#linux_commands", "command", "cmd", "aws", "gsutil"]
+  "keyword1": ["#qiita", "#linux_commands", "aws", "gsutil"]
 },
 {
   "url": "https://tech.naviplus.co.jp/2014/12/12/unicode%e3%81%ab%e3%81%82%e3%82%8b%e3%81%9f%e3%81%8f%e3%81%95%e3%82%93%e3%81%ae%e6%b3%a2%e7%b7%9a%e5%85%a840%e6%96%87%e5%ad%97/",

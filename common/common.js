@@ -18,17 +18,27 @@ $(function(){
     });
 
     function searchByKeyword1(keywd, articles) {
-        var result = articles.filter( article => {
+        let result = articles.filter( article => {
             return article.keyword1.find(k => k == keywd);
         });
         return result;
     };
     function searchByKeyword2(keywd, articles) {
-        var result = articles.filter( article => {
-            return (article.keyword1.find(k => k.startsWith(keywd)) ||
-                    article.keyword2.find(k => k.startsWith(keywd)) ||
-                    article.title.toLowerCase().indexOf(keywd) >= 0);
-        });
+        let result;
+        if (keywd == "java") {
+            result = articles.filter( article => {
+                let ex = "javascript";
+                return (article.keyword1.find(k => k.startsWith(keywd) && !k.startsWith(ex)) ||
+                        article.keyword2.find(k => k.startsWith(keywd) && !k.startsWith(ex)) ||
+                        article.title.toLowerCase().indexOf(keywd) >= 0 && article.title.toLowerCase().indexOf(ex) < 0);
+            });
+        } else {
+            result = articles.filter( article => {
+                return (article.keyword1.find(k => k.startsWith(keywd)) ||
+                        article.keyword2.find(k => k.startsWith(keywd)) ||
+                        article.title.toLowerCase().indexOf(keywd) >= 0);
+            });
+        }
         return result;
     };
     function normalizeQuery(query) {
@@ -74,9 +84,19 @@ $(function(){
         case "#natural_language_processing":
             title1 = "自然言語処理の記事";
             break;
+        case "#lang_compare":
+            title1 = "プログラミング言語比較の記事";
+            break;
 
         case "aws":
             title1 = "AWSに関する記事";
+            break;
+
+        case "scala":
+            title1 = "Scala - 言語別記事";
+            break;
+        case "java":
+            title1 = "Java - 言語別記事";
             break;
 
         case "elasticsearch":
@@ -120,13 +140,24 @@ $(function(){
             articles2: result2,
             count: count,
         };
-    };
+    }
+    function getImageHtml(query) {
+        switch(query) {
+        case "#linux_commands":
+            return '<p class="image"><a href="https://qiita.com/suzuki-navi/items/fdcb166f32b28bc0ff82"><img src="cli.png"></a></p>';
+        default:
+            return '';
+        }
+    }
     function extractSynonymIndex(keywds) {
         var len = keywds.length;
         for (var i = 0; i < len; i++) {
             switch(keywds[i]) {
             case "javascript":
                 keywds.push("js");
+                break;
+            case "vuejs":
+                keywds.push("vue.js");
                 break;
             case "#natural_language_processing":
                 keywds.push("nlp");
@@ -192,6 +223,7 @@ $(function(){
         },
         computed: {
             result: function () { return searchArticles(this.query, this.articles.list); },
+            imageHtml: function () { return getImageHtml(this.query); },
         },
         template: `
           <div>
@@ -201,6 +233,7 @@ $(function(){
                 <a v-bind:href="article.url" target="_blank">{{ article.title }}</a> ({{ article.date }})
               </li>
             </ul>
+            <div v-html="imageHtml"></div>
             <h2 v-if="result.title2">{{ result.title2 }}</h2>
             <ul v-if="result.articles2.length > 0" class="font-small">
               <li v-for="article in result.articles2">
