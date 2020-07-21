@@ -98,6 +98,9 @@ $(function(){
         case "java":
             title1 = "Java - 言語別記事";
             break;
+        case "python":
+            title1 = "Python - 言語別記事";
+            break;
 
         case "elasticsearch":
             title1 = "Elasticsearch - ソフトウェア別記事";
@@ -186,7 +189,6 @@ $(function(){
         articles.list = list;
     });
     Vue.component("search-articles", {
-        //props: ["query"],
         data: function () {
             return {
                 articles: articles,
@@ -199,6 +201,34 @@ $(function(){
         template: `
           <div>
             <!-- input v-model="query" placeholder="Search articles" -->
+            <h1 v-if="result.title1">{{ result.title1 }} ({{ result.count }}件)</h1>
+            <ul v-if="result.articles1.length > 0">
+              <li v-for="article in result.articles1">
+                <a v-bind:href="article.url" target="_blank">{{ article.title }}</a> ({{ article.date }})
+              </li>
+            </ul>
+            <h2 v-if="result.title2">{{ result.title2 }}</h2>
+            <ul v-if="result.articles2.length > 0" class="font-small">
+              <li v-for="article in result.articles2">
+                <a v-bind:href="article.url" target="_blank">{{ article.title }}</a> ({{ article.date }})
+              </li>
+            </ul>
+          </div>
+        `,
+    });
+    Vue.component("search-articles-search", {
+        data: function () {
+            return {
+                articles: articles,
+                query: "",
+            };
+        },
+        computed: {
+            result: function () { return searchArticles(this.query, this.articles.list); },
+        },
+        template: `
+          <div>
+            <input v-model="query" placeholder="Search articles">
             <h1 v-if="result.title1">{{ result.title1 }} ({{ result.count }}件)</h1>
             <ul v-if="result.articles1.length > 0">
               <li v-for="article in result.articles1">

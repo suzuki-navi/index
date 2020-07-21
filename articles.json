@@ -1,10 +1,18 @@
 [
 {
+  "url": "https://suzuki-navi.hatenablog.com/entry/2020/07/21/235123",
+  "title": "Perl / Powershell / JavaScriptのワンライナーでどこでもパスワードを生成",
+  "posted": "2020/07/21",
+  "updated": "",
+  "keyword1": ["#hatenablog"],
+  "keyword2": ["perl", "javascript", "powershell"]
+},
+{
   "url": "https://suzuki-navi.hatenablog.com/entry/2020/07/20/234005",
   "title": "Linuxのバージョン確認方法 (CentOS / Ubuntu)",
   "posted": "2020/07/20",
   "updated": "",
-  "keyword1": ["#hatenablog", "#linux_commands", "uname"],
+  "keyword1": ["#hatenablog", "#linux_commands", "uname", "ubuntu", "centos"],
   "keyword2": ["javascript"]
 },
 {
@@ -41,14 +49,14 @@
   "title": "BigQueryの2種類のSQLをbqコマンドでクエリ実行",
   "posted": "2020/07/15",
   "updated": "",
-  "keyword1": ["#hatenablog", "#linux_commands", "bq"]
+  "keyword1": ["#hatenablog", "#linux_commands", "bq", "gcp", "bigquery"]
 },
 {
   "url": "https://suzuki-navi.hatenablog.com/entry/2020/07/14/202753",
   "title": "AWS DocumentDBのクラスタ構成",
   "posted": "2020/07/14",
   "updated": "",
-  "keyword1": ["#hatenablog"]
+  "keyword1": ["#hatenablog", "aws", "documentdb"]
 },
 {
   "url": "https://suzuki-navi.hatenablog.com/entry/2020/07/13/234858",
@@ -62,14 +70,14 @@
   "title": "Google BigQueryとGoogleデータポータル(Data Studio)を使い始めてCOVID-19感染者数のグラフを作るまで",
   "posted": "2020/07/12",
   "updated": "",
-  "keyword1": ["#qiita"]
+  "keyword1": ["#qiita", "gcp", "bigquery", "datastudio"]
 },
 {
   "url": "https://suzuki-navi.hatenablog.com/entry/2020/07/11/224128",
   "title": "GCPのCompute Engine、Cloud SQLの最も安いマシンタイプ",
   "posted": "2020/07/11",
   "updated": "",
-  "keyword1": ["#hatenablog"]
+  "keyword1": ["#hatenablog", "gcp", "cloudsql"]
 },
 {
   "url": "https://suzuki-navi.hatenablog.com/entry/2020/07/10/234240",
@@ -90,14 +98,14 @@
   "title": "AWS S3のオブジェクトロックの機能",
   "posted": "2020/07/08",
   "updated": "",
-  "keyword1": ["#qiita"]
+  "keyword1": ["#qiita", "aws", "s3"]
 },
 {
   "url": "https://suzuki-navi.hatenablog.com/entry/2020/07/07/225915",
   "title": "AWS RDS Auroraのクラスタ構成",
   "posted": "2020/07/07",
   "updated": "",
-  "keyword1": ["#hatenablog"]
+  "keyword1": ["#hatenablog", "aws", "rds", "aurora"]
 },
 {
   "url": "https://suzuki-navi.hatenablog.com/entry/2020/07/06/234025",
@@ -153,7 +161,7 @@
   "title": "AWSの3種類のLBの比較と使い分け (ALB, NLB, CLB)",
   "posted": "2020/06/20",
   "updated": "",
-  "keyword1": ["#qiita"]
+  "keyword1": ["#qiita", "aws", "network", "lb", "alb", "nlb", "clb"]
 },
 {
   "url": "https://suzuki-navi.hatenablog.com/entry/2020/06/19/222810",
@@ -167,7 +175,7 @@
   "title": "AWS Elasticsearch/KibanaにCognitoの認証を組み合わせてみる",
   "posted": "2020/06/18",
   "updated": "",
-  "keyword1": ["#hatenablog", "elasticsearch", "kibana"]
+  "keyword1": ["#hatenablog", "aws", "elasticsearch", "kibana", "cognito"]
 },
 {
   "url": "https://suzuki-navi.hatenablog.com/entry/2020/06/17/152140",
@@ -181,28 +189,29 @@
   "title": "AWS RDS PostgreSQLのクエリログをawscliで取得するワンライナー",
   "posted": "2020/06/16",
   "updated": "",
-  "keyword1": ["#hatenablog", "#linux_commands", "postgresql", "aws", "jq"]
+  "keyword1": ["#hatenablog", "#linux_commands", "postgresql", "aws", "jq", "rds"]
 },
 {
   "url": "https://suzuki-navi.hatenablog.com/entry/2020/06/15/194217",
   "title": "TCP/UDP/IPプロトコルの各レイヤーで処理しているパケットの情報",
   "posted": "2020/06/15",
   "updated": "",
-  "keyword1": ["#hatenablog"]
+  "keyword1": ["#hatenablog", "network"]
 },
 {
   "url": "https://suzuki-navi.hatenablog.com/entry/2020/06/14/121717",
   "title": "たくさんのAWS Glue Jobを実行している環境で実行履歴をまとめて見るワンライナー",
   "posted": "2020/06/14",
   "updated": "",
-  "keyword1": ["#hatenablog", "#linux_commands", "aws", "jq"]
+  "keyword1": ["#hatenablog", "#linux_commands", "aws", "jq", "glue"]
 },
 {
   "url": "https://suzuki-navi.hatenablog.com/entry/2020/06/13/131412",
   "title": "AWS DocumentDBのクラスタ構築からmongoコマンドで接続するまで",
   "posted": "2020/06/13",
   "updated": "",
-  "keyword1": ["#hatenablog"]
+  "keyword1": ["#hatenablog", "#linux_commands", "aws", "documentdb"],
+  "keyword2": ["mongo"]
 },
 {
   "url": "https://suzuki-navi.hatenablog.com/entry/2020/06/12/142426",
@@ -216,7 +225,8 @@
   "title": "diff目的でExcelファイルをテキストにPythonで変換",
   "posted": "2020/06/11",
   "updated": "",
-  "keyword1": ["#qiita", "#linux_commands", "diff"]
+  "keyword1": ["#qiita", "#linux_commands", "diff"],
+  "keyword2": ["python"]
 },
 {
   "url": "https://suzuki-navi.hatenablog.com/entry/2020/06/10/113504",
@@ -300,7 +310,8 @@
   "title": "Jupyter Notebook上のmatplotlibのグラフを大きくするには",
   "posted": "2020/05/30",
   "updated": "",
-  "keyword1": ["#hatenablog"]
+  "keyword1": ["#hatenablog"],
+  "keyword2": ["python"]
 },
 {
   "url": "https://qiita.com/suzuki-navi/items/acb37f76152989156241",
@@ -314,7 +325,8 @@
   "title": "二項分布の極限がポアソン分布になることをグラフによりイメージする",
   "posted": "2020/05/28",
   "updated": "",
-  "keyword1": ["#hatenablog"]
+  "keyword1": ["#hatenablog"],
+  "keyword2": ["python"]
 },
 {
   "url": "https://qiita.com/suzuki-navi/items/6c43a555d74d4236e913",
@@ -377,14 +389,15 @@
   "title": "DockerのUbuntuでヘルプが表示できない場合の対処方法",
   "posted": "2020/05/18",
   "updated": "",
-  "keyword1": ["#hatenablog"]
+  "keyword1": ["#hatenablog", "docker"],
+  "keyword2": ["ubuntu"]
 },
 {
   "url": "https://suzuki-navi.hatenablog.com/entry/2020/05/17/121452",
   "title": "JavaとScalaにおける浮動小数点数の大小比較",
   "posted": "2020/05/17",
   "updated": "",
-    "keyword1": ["#hatenablog", "#numerical_analysis", "java", "scala"]
+  "keyword1": ["#hatenablog", "#numerical_analysis", "java", "scala"]
 },
 {
   "url": "https://suzuki-navi.hatenablog.com/entry/2020/05/16/121608",
@@ -420,7 +433,7 @@
   "title": "AWS CloudWatchログ容量の推移を確認するワンライナー",
   "posted": "2020/05/07",
   "updated": "",
-  "keyword1": ["#beex", "#business_blog", "#linux_commands", "aws", "jq"]
+  "keyword1": ["#beex", "#business_blog", "#linux_commands", "aws", "jq", "cloudwatch"]
 },
 {
   "url": "https://qiita.com/suzuki-navi/items/075ea29cdf481b711d0a",
@@ -434,7 +447,8 @@
   "title": "折れ線グラフをJupyter Notebook上でシンプルに表示する",
   "posted": "2020/05/02",
   "updated": "",
-  "keyword1": ["#qiita"]
+  "keyword1": ["#qiita"],
+  "keyword2": ["python"]
 },
 {
   "url": "https://qiita.com/suzuki-navi/items/fdcb166f32b28bc0ff82",
@@ -476,14 +490,15 @@
   "title": "S3にあるテキストファイルをサクッと編集するには",
   "posted": "2020/02/27",
   "updated": "",
-  "keyword1": ["#qiita", "#linux_commands", "vipe", "aws"]
+  "keyword1": ["#qiita", "#linux_commands", "vipe", "aws", "s3"]
 },
 {
   "url": "https://qiita.com/suzuki-navi/items/2581b3f4afeeabeacace",
   "title": "ソフトマックス関数と交差エントロピー誤差の可視化",
   "posted": "2020/02/26",
   "updated": "",
-  "keyword1": ["#qiita"]
+  "keyword1": ["#qiita"],
+  "keyword2": ["python"]
 },
 {
   "url": "https://qiita.com/suzuki-navi/items/90b9799bd9df3923dc3d",
@@ -523,45 +538,48 @@
 },
 {
   "url": "https://qiita.com/suzuki-navi/items/9ed7670aa4a93cf021d2",
-  "title": "Pythonでのタイムゾーンの扱い(datetime,p pytz)",
+  "title": "Pythonでのタイムゾーンの扱い(datetime, pytz)",
   "posted": "2020/01/06",
   "updated": "",
-  "keyword1": ["#qiita"]
+  "keyword1": ["#qiita", "python"]
 },
 {
   "url": "https://qiita.com/suzuki-navi/items/823aca8f55e30c0a7f87",
   "title": "PostgreSQLパーティショニングのTableau、DBeaver、Glue Crawlerでの対応状況調査",
   "posted": "2019/12/24",
   "updated": "",
-  "keyword1": ["#qiita", "postgresql", "tableau", "dbeaver"]
+  "keyword1": ["#qiita", "postgresql", "tableau", "dbeaver", "aws", "glue"]
 },
 {
   "url": "https://qiita.com/suzuki-navi/items/25e5b884fbced9f1c4d2",
   "title": "AWS SAMでの Lambda Functions with Node.js + API Gateway 最小構成",
   "posted": "2019/12/16",
   "updated": "",
-  "keyword1": ["#qiita"]
+  "keyword1": ["#qiita", "aws", "lambda", "apigateway"],
+  "keyword2": ["nodejs"]
 },
 {
   "url": "https://qiita.com/suzuki-navi/items/3664bfbc102052717426",
   "title": "AWS Certified Machine Learning – Specialty 合格しました",
   "posted": "2019/12/04",
   "updated": "",
-  "keyword1": ["#qiita"]
+  "keyword1": ["#qiita", "aws"]
 },
 {
   "url": "https://qiita.com/suzuki-navi/items/79aa5f156427c2149fbe",
   "title": "aws cliを自作しています",
   "posted": "2019/11/29",
   "updated": "",
-  "keyword1": ["#qiita"]
+    "keyword1": ["#qiita", "aws"],
+  "keyword2": ["python"]
 },
 {
   "url": "https://qiita.com/suzuki-navi/items/d0e33a5379b4bfb848bc",
   "title": "Kaggleのタイタニック号のチュートリアルを試す",
   "posted": "2019/11/26",
   "updated": "",
-  "keyword1": ["#qiita"]
+  "keyword1": ["#qiita"],
+  "keyword2": ["python"]
 },
 {
   "url": "https://qiita.com/suzuki-navi/items/16793a5f5e67fb8d3fc2",
@@ -576,42 +594,46 @@
   "title": "混合ガウスモデルによるクラスタリングをJupyter Notebook上で試す",
   "posted": "2019/11/21",
   "updated": "",
-  "keyword1": ["#qiita"]
+  "keyword1": ["#qiita"],
+  "keyword2": ["python"]
 },
 {
   "url": "https://qiita.com/suzuki-navi/items/60c046c95c217487e4f4",
   "title": "AWS CloudFormationをちょっとだけ理解した",
   "posted": "2019/11/19",
   "updated": "",
-  "keyword1": ["#qiita"]
+  "keyword1": ["#qiita", "aws", "cloudformation"]
 },
 {
   "url": "https://qiita.com/suzuki-navi/items/5745eff3392ec9f75249",
   "title": "SVMをJupyter Notebook上のscikit-learnで試す",
   "posted": "2019/11/18",
   "updated": "",
-  "keyword1": ["#qiita"]
+  "keyword1": ["#qiita"],
+  "keyword2": ["python"]
 },
 {
   "url": "https://qiita.com/suzuki-navi/items/775b9f9029af19780be3",
   "title": "gsutil、aws s3での基本的なファイル操作（Google Cloud Storage、S3）",
   "posted": "2019/11/15",
   "updated": "",
-  "keyword1": ["#qiita", "#linux_commands", "aws", "gsutil"]
+  "keyword1": ["#qiita", "#linux_commands", "aws", "gsutil", "s3", "gcp", "gcs"]
 },
 {
   "url": "https://qiita.com/suzuki-navi/items/9f5fd47734b22b4adf71",
   "title": "ヒストグラム・散布図をJupyter Notebook上で表示する",
   "posted": "2019/11/14",
   "updated": "",
-  "keyword1": ["#qiita"]
+  "keyword1": ["#qiita"],
+  "keyword2": ["python"]
 },
 {
   "url": "https://qiita.com/suzuki-navi/items/6bd8377ca7974779a822",
   "title": "PandasのDataFrameに対する基本操作をJupyter Notebook上で試す",
   "posted": "2019/11/12",
   "updated": "",
-  "keyword1": ["#qiita"]
+  "keyword1": ["#qiita"],
+  "keyword2": ["python"]
 },
 {
   "url": "https://qiita.com/suzuki-navi/items/57ec168267466a343a8a",
@@ -625,21 +647,22 @@
   "title": "言語の判定をGoogle Cloud TranslationとAmazon Comprehendとで比較してみる",
   "posted": "2019/11/08",
   "updated": "",
-  "keyword1": ["#qiita", "#natural_language_processing"]
+  "keyword1": ["#qiita", "#natural_language_processing", "aws", "gcp", "cloudtranslation", "comprehend"]
 },
 {
   "url": "https://qiita.com/suzuki-navi/items/37615024d4748aac6688",
   "title": "Jupyter NotebookをDockerを使って簡単にインストールし起動（nbextensions、Scalaにも対応）",
   "posted": "2019/11/06",
   "updated": "",
-  "keyword1": ["#qiita"]
+  "keyword1": ["#qiita"],
+  "keyword2": ["python", "scala", "docker"]
 },
 {
   "url": "https://qiita.com/suzuki-navi/items/8b2fe5a35a4439013461",
   "title": "AWS Certified Big Data - Specialty 合格しました",
   "posted": "2019/11/05",
   "updated": "",
-  "keyword1": ["#qiita"]
+  "keyword1": ["#qiita", "aws"]
 },
 {
   "url": "https://qiita.com/suzuki-navi/items/7e85f55c2a25038816b3",
@@ -660,7 +683,7 @@
   "title": "ディレクトリの合計容量を確認するには(local, Gogle Cloud Storage, S3)",
   "posted": "2019/10/29",
   "updated": "",
-  "keyword1": ["#qiita", "#linux_commands", "du", "aws", "gsutil"]
+  "keyword1": ["#qiita", "#linux_commands", "du", "aws", "gsutil", "gcp", "gcs", "s3"]
 },
 {
   "url": "https://qiita.com/suzuki-navi/items/7879b708b4f38b003444",
@@ -681,7 +704,7 @@
   "title": "Google Cloud StorageとAWS S3との間でファイルをコピーするには",
   "posted": "2019/10/19",
   "updated": "",
-  "keyword1": ["#qiita", "#linux_commands", "aws", "gsutil"]
+  "keyword1": ["#qiita", "#linux_commands", "aws", "gsutil", "gcp", "s3", "gcs"]
 },
 {
   "url": "https://tech.naviplus.co.jp/2014/12/12/unicode%e3%81%ab%e3%81%82%e3%82%8b%e3%81%9f%e3%81%8f%e3%81%95%e3%82%93%e3%81%ae%e6%b3%a2%e7%b7%9a%e5%85%a840%e6%96%87%e5%ad%97/",
@@ -702,7 +725,8 @@
   "title": "Raspberry PiでADコンバータ(MCP3208)を使う",
   "posted": "2014/07/23",
   "updated": "",
-  "keyword1": ["#naviplus", "#business_blog"]
+  "keyword1": ["#naviplus", "#business_blog"],
+  "keyword2": ["python"]
 },
 {
   "url": "https://tech.naviplus.co.jp/2014/07/04/raspberry-pi%e3%82%92%e8%b5%b0%e3%82%89%e3%81%9b%e3%82%8b/",
