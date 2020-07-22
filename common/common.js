@@ -91,6 +91,12 @@ $(function(){
         case "aws":
             title1 = "AWSに関する記事";
             break;
+        case "gcp":
+            title1 = "GCPに関する記事";
+            break;
+        case "aws_gcp":
+            title1 = "AWS/GCP関係の記事";
+            break;
 
         case "scala":
             title1 = "Scala - 言語別記事";
@@ -153,9 +159,10 @@ $(function(){
         }
     }
     function extractSynonymIndex(keywds) {
-        var len = keywds.length;
-        for (var i = 0; i < len; i++) {
-            switch(keywds[i]) {
+        let len = keywds.length;
+        for (let i = 0; i < len; i++) {
+            let k = keywds[i];
+            switch(k) {
             case "javascript":
                 keywds.push("js");
                 break;
@@ -165,6 +172,15 @@ $(function(){
             case "#natural_language_processing":
                 keywds.push("nlp");
                 break;
+            case "aws":
+                keywds.push("aws_gcp");
+                break;
+            case "gcp":
+                keywds.push("aws_gcp");
+                break;
+            }
+            if (k.indexOf('_') >= 0) {
+                keywds.push(k.replace('_', ''));
             }
         }
         return keywds;
@@ -173,8 +189,8 @@ $(function(){
         list: [],
     };
     axios.get(articles_json_url).then(response => {
-        var list = response.data;
-        for (var i = 0; i < list.length; i++) {
+        let list = response.data;
+        for (let i = 0; i < list.length; i++) {
             if (list[i]["updated"] == "") {
                 list[i]["date"] = list[i]["posted"];
             } else {

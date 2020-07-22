@@ -1,11 +1,19 @@
 [
 {
+  "url": "https://qiita.com/suzuki-navi/items/1ea284c97075f3a34b30",
+  "title": "IAM認証のAWS API GatewayにPythonからSigV4署名してアクセスするには",
+  "posted": "2020/07/22",
+  "updated": "",
+  "keyword1": ["#qiita", "aws", "iam", "api_gateway"],
+  "keyword2": ["python"]
+},
+{
   "url": "https://suzuki-navi.hatenablog.com/entry/2020/07/21/235123",
   "title": "Perl / Powershell / JavaScriptのワンライナーでどこでもパスワードを生成",
   "posted": "2020/07/21",
   "updated": "",
-  "keyword1": ["#hatenablog"],
-  "keyword2": ["perl", "javascript", "powershell"]
+  "keyword1": ["#hatenablog", "one_liner"],
+  "keyword2": ["perl", "javascript", "powershell", "password"]
 },
 {
   "url": "https://suzuki-navi.hatenablog.com/entry/2020/07/20/234005",
@@ -13,7 +21,7 @@
   "posted": "2020/07/20",
   "updated": "",
   "keyword1": ["#hatenablog", "#linux_commands", "uname", "ubuntu", "centos"],
-  "keyword2": ["javascript"]
+  "keyword2": ["version"]
 },
 {
   "url": "https://suzuki-navi.hatenablog.com/entry/2020/07/19/144917",
@@ -70,14 +78,14 @@
   "title": "Google BigQueryとGoogleデータポータル(Data Studio)を使い始めてCOVID-19感染者数のグラフを作るまで",
   "posted": "2020/07/12",
   "updated": "",
-  "keyword1": ["#qiita", "gcp", "bigquery", "datastudio"]
+  "keyword1": ["#qiita", "gcp", "bigquery", "data_studio"]
 },
 {
   "url": "https://suzuki-navi.hatenablog.com/entry/2020/07/11/224128",
   "title": "GCPのCompute Engine、Cloud SQLの最も安いマシンタイプ",
   "posted": "2020/07/11",
   "updated": "",
-  "keyword1": ["#hatenablog", "gcp", "cloudsql"]
+  "keyword1": ["#hatenablog", "gcp", "cloud_sql", "compute_engine"]
 },
 {
   "url": "https://suzuki-navi.hatenablog.com/entry/2020/07/10/234240",
@@ -189,7 +197,7 @@
   "title": "AWS RDS PostgreSQLのクエリログをawscliで取得するワンライナー",
   "posted": "2020/06/16",
   "updated": "",
-  "keyword1": ["#hatenablog", "#linux_commands", "postgresql", "aws", "jq", "rds"]
+  "keyword1": ["#hatenablog", "#linux_commands", "postgresql", "aws", "jq", "rds", "one_liner"]
 },
 {
   "url": "https://suzuki-navi.hatenablog.com/entry/2020/06/15/194217",
@@ -203,7 +211,7 @@
   "title": "たくさんのAWS Glue Jobを実行している環境で実行履歴をまとめて見るワンライナー",
   "posted": "2020/06/14",
   "updated": "",
-  "keyword1": ["#hatenablog", "#linux_commands", "aws", "jq", "glue"]
+  "keyword1": ["#hatenablog", "#linux_commands", "aws", "jq", "glue", "one_liner"]
 },
 {
   "url": "https://suzuki-navi.hatenablog.com/entry/2020/06/13/131412",
@@ -433,7 +441,7 @@
   "title": "AWS CloudWatchログ容量の推移を確認するワンライナー",
   "posted": "2020/05/07",
   "updated": "",
-  "keyword1": ["#beex", "#business_blog", "#linux_commands", "aws", "jq", "cloudwatch"]
+  "keyword1": ["#beex", "#business_blog", "#linux_commands", "aws", "jq", "cloudwatch", "one_liner"]
 },
 {
   "url": "https://qiita.com/suzuki-navi/items/075ea29cdf481b711d0a",
@@ -541,7 +549,7 @@
   "title": "Pythonでのタイムゾーンの扱い(datetime, pytz)",
   "posted": "2020/01/06",
   "updated": "",
-  "keyword1": ["#qiita", "python"]
+  "keyword1": ["#qiita", "python", "time_zone"]
 },
 {
   "url": "https://qiita.com/suzuki-navi/items/823aca8f55e30c0a7f87",
@@ -570,7 +578,7 @@
   "title": "aws cliを自作しています",
   "posted": "2019/11/29",
   "updated": "",
-    "keyword1": ["#qiita", "aws"],
+  "keyword1": ["#qiita", "aws"],
   "keyword2": ["python"]
 },
 {
