@@ -1,11 +1,19 @@
 [
 {
+  "url": "https://suzuki-navi.hatenablog.com/entry/2020/07/23/235409",
+  "title": "PostgreSQLとAWS Glue Crawlerの日時のデータ型",
+  "posted": "2020/07/23",
+  "updated": "",
+  "keyword1": ["#hatenablog", "aws", "glue", "postgresql"],
+  "keyword2": ["python", "cloud_sql"]
+},
+{
   "url": "https://qiita.com/suzuki-navi/items/1ea284c97075f3a34b30",
   "title": "IAM認証のAWS API GatewayにPythonからSigV4署名してアクセスするには",
   "posted": "2020/07/22",
   "updated": "",
   "keyword1": ["#qiita", "aws", "iam", "api_gateway"],
-  "keyword2": ["python"]
+  "keyword2": ["python", "compute_engine"]
 },
 {
   "url": "https://suzuki-navi.hatenablog.com/entry/2020/07/21/235123",
