@@ -1,5 +1,13 @@
 [
 {
+  "url": "https://qiita.com/suzuki-navi/items/f25c63d0d112ff3d8540",
+  "title": "Google BigQueryとMetabaseでCOVID-19感染者数のグラフを作るまで",
+  "posted": "2020/07/24",
+  "updated": "",
+  "keyword1": ["#qiita", "#visualization", "gcp", "bigquery", "metabase"],
+  "keyword2": []
+},
+{
   "url": "https://suzuki-navi.hatenablog.com/entry/2020/07/23/235409",
   "title": "PostgreSQLとAWS Glue Crawlerの日時のデータ型",
   "posted": "2020/07/23",
@@ -58,7 +66,7 @@
   "title": "オープンソースのデータ可視化ツールMetabaseのご紹介",
   "posted": "2020/07/16",
   "updated": "",
-  "keyword1": ["#beex", "#business_blog", "metabase"]
+  "keyword1": ["#beex", "#business_blog", "#visualization", "metabase"]
 },
 {
   "url": "https://suzuki-navi.hatenablog.com/entry/2020/07/15/235213",
@@ -79,14 +87,14 @@
   "title": "Metabaseの設定情報をPostgreSQLに保存",
   "posted": "2020/07/13",
   "updated": "",
-  "keyword1": ["#hatenablog", "metabase"]
+  "keyword1": ["#hatenablog", "#visualization", "metabase"]
 },
 {
   "url": "https://qiita.com/suzuki-navi/items/e306b2480e9b3cf6ac08",
   "title": "Google BigQueryとGoogleデータポータル(Data Studio)を使い始めてCOVID-19感染者数のグラフを作るまで",
   "posted": "2020/07/12",
   "updated": "",
-  "keyword1": ["#qiita", "gcp", "bigquery", "data_studio"]
+  "keyword1": ["#qiita", "#visualization", "gcp", "bigquery", "data_studio"]
 },
 {
   "url": "https://suzuki-navi.hatenablog.com/entry/2020/07/11/224128",
@@ -143,7 +151,7 @@
   "title": "Kibanaのダッシュボードの作り方手順",
   "posted": "2020/07/02",
   "updated": "",
-  "keyword1": ["#qiita", "elasticsearch", "kibana"]
+  "keyword1": ["#qiita", "#visualization", "elasticsearch", "kibana"]
 },
 {
   "url": "https://suzuki-navi.hatenablog.com/entry/2020/07/01/213345",
@@ -158,14 +166,14 @@
   "title": "Kibanaで使える可視化の種類のまとめ",
   "posted": "2020/06/30",
   "updated": "",
-  "keyword1": ["#qiita", "elasticsearch", "kibana"]
+  "keyword1": ["#qiita", "#visualization", "elasticsearch", "kibana"]
 },
 {
   "url": "https://suzuki-navi.hatenablog.com/entry/2020/06/24/201920",
   "title": "Elasticsearch/Kibanaのインストールからcliでのデータ操作とブラウザでのデータ確認を試す",
   "posted": "2020/06/24",
   "updated": "",
-  "keyword1": ["#hatenablog", "elasticsearch", "kibana"]
+  "keyword1": ["#hatenablog", "#visualization", "elasticsearch", "kibana"]
 },
 {
   "url": "https://qiita.com/suzuki-navi/items/a8f4e21d75e685df51e9",
@@ -186,7 +194,7 @@
   "title": "AWS Elasticsearch/KibanaにCognitoの認証を組み合わせてみる",
   "posted": "2020/06/18",
   "updated": "",
-  "keyword1": ["#hatenablog", "aws", "elasticsearch", "kibana", "cognito"]
+  "keyword1": ["#hatenablog", "#visualization", "aws", "elasticsearch", "kibana", "cognito"]
 },
 {
   "url": "https://suzuki-navi.hatenablog.com/entry/2020/06/17/152140",
@@ -229,7 +237,7 @@
   "title": "Metabaseの使い方：用語のまとめ",
   "posted": "2020/06/12",
   "updated": "",
-  "keyword1": ["#hatenablog", "metabase"]
+  "keyword1": ["#hatenablog", "#visualization", "metabase"]
 },
 {
   "url": "https://qiita.com/suzuki-navi/items/fb2126ef3ba31623e538",
@@ -244,7 +252,7 @@
   "title": "Metabaseの使い方：グローバルメニュー",
   "posted": "2020/06/10",
   "updated": "",
-  "keyword1": ["#hatenablog", "metabase"]
+  "keyword1": ["#hatenablog", "#visualization", "metabase"]
 },
 {
   "url": "https://suzuki-navi.hatenablog.com/entry/2020/06/09/232401",
@@ -258,7 +266,7 @@
   "title": "Metabaseの使い方：Questionに至る画面遷移",
   "posted": "2020/06/08",
   "updated": "",
-  "keyword1": ["#hatenablog", "metabase"]
+  "keyword1": ["#hatenablog", "#visualization", "metabase"]
 },
 {
   "url": "https://suzuki-navi.hatenablog.com/entry/2020/06/07/140541",
@@ -286,7 +294,7 @@
   "title": "MetabaseのDashboard画面の使い方",
   "posted": "2020/06/04",
   "updated": "",
-  "keyword1": ["#qiita", "metabase"]
+  "keyword1": ["#qiita", "#visualization", "metabase"]
 },
 {
   "url": "https://suzuki-navi.hatenablog.com/entry/2020/06/03/211408",
@@ -323,7 +331,7 @@
   "title": "Jupyter Notebook上のmatplotlibのグラフを大きくするには",
   "posted": "2020/05/30",
   "updated": "",
-  "keyword1": ["#hatenablog"],
+  "keyword1": ["#hatenablog", "#visualization", "#jupyter_matplotlib", "jupyter", "matplotlib"],
   "keyword2": ["python"]
 },
 {
@@ -331,7 +339,7 @@
   "title": "MetabaseのQuestion（チャート・グラフ・テーブル）の作成・保存方法",
   "posted": "2020/05/29",
   "updated": "",
-  "keyword1": ["#qiita", "metabase"]
+  "keyword1": ["#qiita", "#visualization", "metabase"]
 },
 {
   "url": "https://suzuki-navi.hatenablog.com/entry/2020/05/28/184300",
@@ -339,14 +347,14 @@
   "posted": "2020/05/28",
   "updated": "",
   "keyword1": ["#hatenablog"],
-  "keyword2": ["#math", "python"]
+  "keyword2": ["#math", "#jupyter_matplotlib", "jupyter", "matplotlib", "python"]
 },
 {
   "url": "https://qiita.com/suzuki-navi/items/6c43a555d74d4236e913",
   "title": "MetabaseのQuestion画面の使い方（チャート・グラフ・テーブル表示）",
   "posted": "2020/05/27",
   "updated": "",
-  "keyword1": ["#qiita", "metabase"]
+  "keyword1": ["#qiita", "#visualization", "metabase"]
 },
 {
   "url": "https://suzuki-navi.hatenablog.com/entry/2020/05/26/204848",
@@ -374,7 +382,7 @@
   "title": "MetabaseにあるQuestion（チャート・グラフ・テーブル）の可視化種類のまとめ",
   "posted": "2020/05/23",
   "updated": "",
-  "keyword1": ["#qiita", "metabase"]
+  "keyword1": ["#qiita", "#visualization", "metabase"]
 },
 {
   "url": "https://suzuki-navi.hatenablog.com/entry/2020/05/22/095655",
@@ -441,7 +449,7 @@
   "title": "データ可視化ツール(Metabase, Redash, Superset)の比較メモ",
   "posted": "2020/05/11",
   "updated": "",
-  "keyword1": ["#qiita", "metabase", "redash", "superset"]
+  "keyword1": ["#qiita", "#visualization", "metabase", "redash", "superset"]
 },
 {
   "url": "https://qiita.com/suzuki-navi/items/605f3de176871ab80757",
@@ -470,7 +478,7 @@
   "title": "折れ線グラフをJupyter Notebook上でシンプルに表示する",
   "posted": "2020/05/02",
   "updated": "",
-  "keyword1": ["#qiita"],
+  "keyword1": ["#qiita", "#jupyter_matplotlib", "jupyter", "matplotlib"],
   "keyword2": ["python"]
 },
 {
@@ -485,7 +493,8 @@
   "title": "ウイルス感染の簡単なシミュレーション",
   "posted": "2020/04/24",
   "updated": "",
-  "keyword1": ["#qiita", "#numerical_analysis"]
+  "keyword1": ["#qiita", "#numerical_analysis"],
+  "keyword2": ["#jupyter_matplotlib", "jupyter", "matplotlib"]
 },
 {
   "url": "https://qiita.com/suzuki-navi/items/d9228fc776a571ef16c9",
@@ -522,14 +531,15 @@
   "posted": "2020/02/26",
   "updated": "",
   "keyword1": ["#qiita"],
-  "keyword2": ["#math", "python"]
+  "keyword2": ["#math", "#jupyter_matplotlib", "jupyter", "matplotlib", "python"]
 },
 {
   "url": "https://qiita.com/suzuki-navi/items/90b9799bd9df3923dc3d",
   "title": "データの分布状況から異常検知",
   "posted": "2020/01/28",
   "updated": "",
-  "keyword1": ["#qiita", "#numerical_analysis"]
+  "keyword1": ["#qiita", "#numerical_analysis"],
+  "keyword2": ["#jupyter_matplotlib", "jupyter", "matplotlib"]
 },
 {
   "url": "https://qiita.com/suzuki-navi/items/501cb84d154c53c6a25c",
@@ -619,7 +629,7 @@
   "title": "混合ガウスモデルによるクラスタリングをJupyter Notebook上で試す",
   "posted": "2019/11/21",
   "updated": "",
-  "keyword1": ["#qiita"],
+  "keyword1": ["#qiita", "#jupyter_matplotlib", "jupyter", "matplotlib"],
   "keyword2": ["python"]
 },
 {
@@ -634,7 +644,7 @@
   "title": "SVMをJupyter Notebook上のscikit-learnで試す",
   "posted": "2019/11/18",
   "updated": "",
-  "keyword1": ["#qiita"],
+  "keyword1": ["#qiita", "#jupyter_matplotlib", "jupyter", "matplotlib"],
   "keyword2": ["python"]
 },
 {
@@ -649,7 +659,7 @@
   "title": "ヒストグラム・散布図をJupyter Notebook上で表示する",
   "posted": "2019/11/14",
   "updated": "",
-  "keyword1": ["#qiita"],
+  "keyword1": ["#qiita", "#jupyter_matplotlib", "jupyter", "matplotlib"],
   "keyword2": ["python"]
 },
 {
@@ -657,7 +667,7 @@
   "title": "PandasのDataFrameに対する基本操作をJupyter Notebook上で試す",
   "posted": "2019/11/12",
   "updated": "",
-  "keyword1": ["#qiita"],
+  "keyword1": ["#qiita", "#jupyter_matplotlib", "jupyter"],
   "keyword2": ["python"]
 },
 {
@@ -680,7 +690,7 @@
   "title": "Jupyter NotebookをDockerを使って簡単にインストールし起動（nbextensions、Scalaにも対応）",
   "posted": "2019/11/06",
   "updated": "",
-  "keyword1": ["#qiita"],
+  "keyword1": ["#qiita", "#jupyter_matplotlib", "jupyter"],
   "keyword2": ["python", "scala", "docker"]
 },
 {

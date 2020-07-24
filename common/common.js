@@ -95,6 +95,10 @@ $(function(){
         case "#lang_compare":
             title1 = "プログラミング言語比較の記事";
             break;
+        case "#jupyter_matplotlib":
+            title1 = "Jupyter Notebook/Pandas/matplotlib - ソフトウェア別記事";
+            title2 = "Jupyter Notebook/Pandas/matplotlibも使用している記事";
+            break;
         case "#math":
             title1 = "数式が多めの記事";
             title2 = "数式が少し";
