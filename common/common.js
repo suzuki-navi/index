@@ -52,7 +52,11 @@ $(function(){
         var result1 = [];
         var result2 = [];
         if (query == "") {
-            result2 = articles;
+            if (articles.length <= 20) {
+                result2 = articles;
+            } else {
+                result2 = articles.slice(0, 20);
+            }
         } else {
             result1 = articles;
             var words = query.split(' ');
@@ -72,7 +76,11 @@ $(function(){
         var title2 = "\"" + query + "\" の含まれる記事";
         switch (query) {
         case "":
-            title2 = "すべての記事(最新順)";
+            title2 = "最近の記事";
+            break;
+
+        case "#data_input":
+            title1 = "データ収集フェーズの記事";
             break;
 
         case "#linux_commands":
@@ -87,6 +95,10 @@ $(function(){
         case "#lang_compare":
             title1 = "プログラミング言語比較の記事";
             break;
+        case "#math":
+            title1 = "数式が多めの記事";
+            title2 = "数式が少し";
+            break;
 
         case "aws":
             title1 = "AWSに関する記事";
@@ -100,12 +112,27 @@ $(function(){
 
         case "scala":
             title1 = "Scala - 言語別記事";
+            title2 = "Scalaも登場する記事";
             break;
         case "java":
             title1 = "Java - 言語別記事";
+            title2 = "Javaも登場する記事";
+            break;
+        case "php":
+            title1 = "PHP - 言語別記事";
+            title2 = "PHPも登場する記事";
+            break;
+        case "perl":
+            title1 = "Perl - 言語別記事";
+            title2 = "Perlも登場する記事";
             break;
         case "python":
             title1 = "Python - 言語別記事";
+            title2 = "Pythonも登場する記事";
+            break;
+        case "ruby":
+            title1 = "Ruby - 言語別記事";
+            title2 = "Rubyも登場する記事";
             break;
 
         case "elasticsearch":
@@ -126,6 +153,9 @@ $(function(){
         case "tex":
             title1 = "TeX - ツール別記事";
             break;
+        case "raspberry_pi":
+            title1 = "Raspberry Piの記事";
+            break;
 
         case "#qiita":
             title1 = "Qiitaの記事";
@@ -137,7 +167,7 @@ $(function(){
         }
         if (result2.length == 0) {
             title2 = "";
-        } else if (result1.length == 0) {
+        } else if (result1.length == 0 && getImageHtml(query) == "") {
             title1 = title2;
             title2 = "";
         }
@@ -151,11 +181,25 @@ $(function(){
         };
     }
     function getImageHtml(query) {
+        query = normalizeQuery(query);
         switch(query) {
+        case "php":
+            return '<p class="font-small">もっとも古くから触っていた言語の1つですが記事はあまりありません。</p>';
+        case "raspberry_pi":
+            return '<p class="youtube"><iframe width="352" height="198" src="https://www.youtube-nocookie.com/embed/wFTvOIsHmQo?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>';
         case "#linux_commands":
             return '<p class="image"><a href="https://qiita.com/suzuki-navi/items/fdcb166f32b28bc0ff82"><img src="cli.png"></a></p>';
+        case "#math":
+            return '<p class="image"><img src="math.png"></p>';
         default:
             return '';
+        }
+    }
+    function getCountStr(query, searchResult) {
+        if (query == "") {
+            return "";
+        } else {
+            return "( " + searchResult.count + "件 )";
         }
     }
     function extractSynonymIndex(keywds) {
@@ -213,11 +257,12 @@ $(function(){
         },
         computed: {
             result: function () { return searchArticles(this.query, this.articles.list); },
+            count_str: function () { return getCountStr(this.query, this.result); },
         },
         template: `
           <div>
             <!-- input v-model="query" placeholder="Search articles" -->
-            <h1 v-if="result.title1">{{ result.title1 }} ({{ result.count }}件)</h1>
+            <h1 v-if="result.title1">{{ result.title1 }} {{ count_str }}</h1>
             <ul v-if="result.articles1.length > 0">
               <li v-for="article in result.articles1">
                 <a v-bind:href="article.url" target="_blank">{{ article.title }}</a> ({{ article.date }})
@@ -241,11 +286,12 @@ $(function(){
         },
         computed: {
             result: function () { return searchArticles(this.query, this.articles.list); },
+            count_str: function () { return getCountStr(this.query, this.result); },
         },
         template: `
           <div>
             <input v-model="query" placeholder="Search articles">
-            <h1 v-if="result.title1">{{ result.title1 }} ({{ result.count }}件)</h1>
+            <h1 v-if="result.title1">{{ result.title1 }} {{ count_str }}</h1>
             <ul v-if="result.articles1.length > 0">
               <li v-for="article in result.articles1">
                 <a v-bind:href="article.url" target="_blank">{{ article.title }}</a> ({{ article.date }})

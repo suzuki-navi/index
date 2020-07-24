@@ -150,6 +150,7 @@ h1 {
   #card-python {
   }
   #card-jupyter {
+    grid-row: span 7;
   }
   #card-fluentd {
   }
@@ -176,7 +177,6 @@ h1 {
   #card-fluentd {
   }
   #card-jupyter {
-    grid-row: span 8;
   }
   #card-raspberry {
   }
@@ -196,7 +196,6 @@ h1 {
   #card-python {
   }
   #card-jupyter {
-    grid-row: span 8;
   }
   #card-fluentd {
   }

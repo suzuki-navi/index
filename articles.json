@@ -20,8 +20,8 @@
   "title": "Perl / Powershell / JavaScriptのワンライナーでどこでもパスワードを生成",
   "posted": "2020/07/21",
   "updated": "",
-  "keyword1": ["#hatenablog", "one_liner"],
-  "keyword2": ["perl", "javascript", "powershell", "password"]
+  "keyword1": ["#hatenablog", "one_liner", "perl", "javascript", "powershell"],
+  "keyword2": ["password"]
 },
 {
   "url": "https://suzuki-navi.hatenablog.com/entry/2020/07/20/234005",
@@ -44,7 +44,7 @@
   "title": "fluentdでIPアドレスから地理情報を付与",
   "posted": "2020/07/18",
   "updated": "",
-  "keyword1": ["#qiita", "fluentd", "geoip"]
+  "keyword1": ["#qiita", "#data_input", "fluentd", "geoip"]
 },
 {
   "url": "https://suzuki-navi.hatenablog.com/entry/2020/07/17/215140",
@@ -107,7 +107,8 @@
   "title": "ディープラーニングの基本 - G検定の勉強ノート",
   "posted": "2020/07/09",
   "updated": "",
-  "keyword1": ["#hatenablog"]
+  "keyword1": ["#hatenablog"],
+  "keyword2": ["#math"]
 },
 {
   "url": "https://qiita.com/suzuki-navi/items/d29ca26be7aca93c9045",
@@ -149,7 +150,8 @@
   "title": "混同行列・適合率・再現率のまとめ",
   "posted": "2020/07/01",
   "updated": "",
-  "keyword1": ["#hatenablog"]
+  "keyword1": ["#hatenablog"],
+  "keyword2": ["#math"]
 },
 {
   "url": "https://qiita.com/suzuki-navi/items/bf07980a26073d3fa37f",
@@ -157,13 +159,6 @@
   "posted": "2020/06/30",
   "updated": "",
   "keyword1": ["#qiita", "elasticsearch", "kibana"]
-},
-{
-  "url": "https://suzuki-navi.hatenablog.com/entry/2020/05/20/134615",
-  "title": "勾配降下法のアルゴリズム一覧のメモ",
-  "posted": "2020/05/20",
-  "updated": "2020/06/26",
-  "keyword1": ["#hatenablog"]
 },
 {
   "url": "https://suzuki-navi.hatenablog.com/entry/2020/06/24/201920",
@@ -219,7 +214,7 @@
   "title": "たくさんのAWS Glue Jobを実行している環境で実行履歴をまとめて見るワンライナー",
   "posted": "2020/06/14",
   "updated": "",
-  "keyword1": ["#hatenablog", "#linux_commands", "aws", "jq", "glue", "one_liner"]
+  "keyword1": ["#hatenablog", "#data_input", "#linux_commands", "aws", "jq", "glue", "one_liner"]
 },
 {
   "url": "https://suzuki-navi.hatenablog.com/entry/2020/06/13/131412",
@@ -256,7 +251,7 @@
   "title": "重回帰分析(多値)を分散・共分散から計算する式",
   "posted": "2020/06/09",
   "updated": "",
-  "keyword1": ["#hatenablog"]
+  "keyword1": ["#hatenablog", "#math"]
 },
 {
   "url": "https://suzuki-navi.hatenablog.com/entry/2020/06/08/091446",
@@ -270,21 +265,21 @@
   "title": "重回帰分析(2値)を平均・分散・共分散・相関係数から計算する式",
   "posted": "2020/06/07",
   "updated": "",
-  "keyword1": ["#hatenablog"]
+  "keyword1": ["#hatenablog", "#math"]
 },
 {
   "url": "https://suzuki-navi.hatenablog.com/entry/2020/06/06/211601",
   "title": "単回帰分析を平均・分散・共分散・相関係数から計算する式",
   "posted": "2020/06/06",
   "updated": "",
-  "keyword1": ["#hatenablog"]
+  "keyword1": ["#hatenablog", "#math"]
 },
 {
   "url": "https://qiita.com/suzuki-navi/items/e28539760098c70d8a4b",
   "title": "Rubyのchomp!にだまされる!",
   "posted": "2020/06/05",
   "updated": "",
-  "keyword1": ["#qiita"]
+  "keyword1": ["#qiita", "ruby"]
 },
 {
   "url": "https://qiita.com/suzuki-navi/items/05c32d638725883bc14f",
@@ -298,14 +293,15 @@
   "title": "td-agentとrbenv/gemでインストールしたfluentdのディレクトリ構成の比較",
   "posted": "2020/06/03",
   "updated": "",
-  "keyword1": ["#hatenablog", "fluentd"]
+  "keyword1": ["#hatenablog", "#data_input", "fluentd"],
+  "keyword2": ["ruby"]
 },
 {
   "url": "https://suzuki-navi.hatenablog.com/entry/2020/06/02/201648",
   "title": "平均・分散・共分散・相関係数の計算式",
   "posted": "2020/06/02",
   "updated": "",
-  "keyword1": ["#hatenablog"]
+  "keyword1": ["#hatenablog", "#math"]
 },
 {
   "url": "https://qiita.com/suzuki-navi/items/e353b8dfbc6e872f9f41",
@@ -319,7 +315,8 @@
   "title": "平方根（ルート）のない電卓で平方根を計算するには",
   "posted": "2020/05/31",
   "updated": "",
-  "keyword1": ["#hatenablog", "#numerical_analysis"]
+  "keyword1": ["#hatenablog", "#numerical_analysis"],
+  "keyword2": ["#math"]
 },
 {
   "url": "https://suzuki-navi.hatenablog.com/entry/2020/05/30/120022",
@@ -342,7 +339,7 @@
   "posted": "2020/05/28",
   "updated": "",
   "keyword1": ["#hatenablog"],
-  "keyword2": ["python"]
+  "keyword2": ["#math", "python"]
 },
 {
   "url": "https://qiita.com/suzuki-navi/items/6c43a555d74d4236e913",
@@ -363,7 +360,7 @@
   "title": "二項分布の極限がポアソン分布になることを数式変形によりイメージする",
   "posted": "2020/05/25",
   "updated": "",
-  "keyword1": ["#hatenablog"]
+  "keyword1": ["#hatenablog", "#math"]
 },
 {
   "url": "https://suzuki-navi.hatenablog.com/entry/2020/05/24/190325",
@@ -384,14 +381,24 @@
   "title": "二項分布の極限がポアソン分布になることを文章変形によりイメージする",
   "posted": "2020/05/22",
   "updated": "",
-  "keyword1": ["#hatenablog"]
+  "keyword1": ["#hatenablog"],
+  "keyword2": ["#math"]
 },
 {
   "url": "https://suzuki-navi.hatenablog.com/entry/2020/05/21/215928",
   "title": "勾配降下法の自作アルゴリズム",
   "posted": "2020/05/21",
   "updated": "",
-  "keyword1": ["#hatenablog"]
+  "keyword1": ["#hatenablog"],
+  "keyword2": ["#math"]
+},
+{
+  "url": "https://suzuki-navi.hatenablog.com/entry/2020/05/20/134615",
+  "title": "勾配降下法のアルゴリズム一覧のメモ",
+  "posted": "2020/05/20",
+  "updated": "2020/06/26",
+  "keyword1": ["#hatenablog"],
+  "keyword2": ["#math"]
 },
 {
   "url": "https://suzuki-navi.hatenablog.com/entry/2020/05/19/094020",
@@ -427,7 +434,7 @@
   "title": "fluentdのsyslogプラグインを使ってsyslogプロトコルでログを受け取る",
   "posted": "2020/05/15",
   "updated": "",
-  "keyword1": ["#qiita", "#linux_commands", "fluentd", "logger"]
+  "keyword1": ["#qiita", "#data_input", "#linux_commands", "fluentd", "logger"]
 },
 {
   "url": "https://qiita.com/suzuki-navi/items/c3c9082725f653d2d53a",
@@ -441,7 +448,7 @@
   "title": "Talend Open Studioのインストールからジョブ作成まで",
   "posted": "2020/05/08",
   "updated": "",
-  "keyword1": ["#qiita", "talend"],
+  "keyword1": ["#qiita", "#data_input", "talend"],
   "keyword2": ["java"]
 },
 {
@@ -485,7 +492,8 @@
   "title": "columnコマンドをUbuntuにインストール",
   "posted": "2020/03/10",
   "updated": "",
-  "keyword1": ["#qiita", "#linux_commands", "column"]
+  "keyword1": ["#qiita", "#linux_commands", "column"],
+  "keyword2": ["ubuntu"]
 },
 {
   "url": "https://qiita.com/suzuki-navi/items/3a3fd6ef736bc2a13036",
@@ -514,7 +522,7 @@
   "posted": "2020/02/26",
   "updated": "",
   "keyword1": ["#qiita"],
-  "keyword2": ["python"]
+  "keyword2": ["#math", "python"]
 },
 {
   "url": "https://qiita.com/suzuki-navi/items/90b9799bd9df3923dc3d",
@@ -528,7 +536,7 @@
   "title": "正規分布に従う乱数の生成方法(Box–Muller法)の数式による説明",
   "posted": "2020/01/23",
   "updated": "",
-  "keyword1": ["#qiita"]
+  "keyword1": ["#qiita", "#math"]
 },
 {
   "url": "https://qiita.com/suzuki-navi/items/6611b9f16a391bac5ac5",
@@ -543,7 +551,8 @@
   "title": "Perlで warning: Setting locale failed. と警告された時の対処",
   "posted": "2020/01/13",
   "updated": "",
-  "keyword1": ["#qiita"]
+  "keyword1": ["#qiita", "perl"],
+  "keyword2": ["ubuntu"]
 },
 {
   "url": "https://qiita.com/suzuki-navi/items/1609cfaefb5b4c16133e",
@@ -656,7 +665,8 @@
   "title": "fluentdのoutputプラグインの作成",
   "posted": "2019/11/11",
   "updated": "",
-  "keyword1": ["#qiita", "fluentd"]
+  "keyword1": ["#qiita", "#data_input", "fluentd"],
+  "keyword2": ["ruby"]
 },
 {
   "url": "https://qiita.com/suzuki-navi/items/2647f1f65ef731d42aa4",
@@ -685,14 +695,14 @@
   "title": "privateなgemサーバの構築とgem作成から利用まで",
   "posted": "2019/11/01",
   "updated": "",
-  "keyword1": ["#qiita"]
+  "keyword1": ["#qiita", "ruby"]
 },
 {
   "url": "https://qiita.com/suzuki-navi/items/3014e9cb60c85b29fdff",
   "title": "fluentdのプラグインをgemでインストール",
   "posted": "2019/10/31",
   "updated": "",
-  "keyword1": ["#qiita", "fluentd"]
+  "keyword1": ["#qiita", "#data_input", "fluentd"]
 },
 {
   "url": "https://qiita.com/suzuki-navi/items/b18b92f15cf36a4a840a",
@@ -706,7 +716,8 @@
   "title": "PostgreSQLのバルクインサートをRubyからPrepared Statementで実行",
   "posted": "2019/10/25",
   "updated": "",
-  "keyword1": ["#qiita", "postgresql"]
+  "keyword1": ["#qiita", "#data_input", "postgresql"],
+  "keyword2": ["ruby"]
 },
 {
   "url": "https://qiita.com/suzuki-navi/items/a851d9ec66d2cf4bf732",
@@ -741,7 +752,7 @@
   "title": "Raspberry PiでADコンバータ(MCP3208)を使う",
   "posted": "2014/07/23",
   "updated": "",
-  "keyword1": ["#naviplus", "#business_blog"],
+  "keyword1": ["#naviplus", "#business_blog", "raspberry_pi"],
   "keyword2": ["python"]
 },
 {
@@ -749,13 +760,14 @@
   "title": "Raspberry Piを走らせる",
   "posted": "2014/07/04",
   "updated": "",
-  "keyword1": ["#naviplus", "#business_blog"]
+  "keyword1": ["#naviplus", "#business_blog", "raspberry_pi"]
 },
 {
   "url": "https://tech.naviplus.co.jp/2014/02/27/%e4%b8%8d%e5%81%8f%e5%88%86%e6%95%a3%e3%81%af%e3%81%aa%e3%81%9c-n-1-%e3%81%a7%e5%89%b2%e3%82%8b%e3%81%ae%e3%81%8b%ef%bc%9f/",
   "title": "不偏分散はなぜ n – 1 で割るのか？",
   "posted": "2014/02/27",
   "updated": "",
-  "keyword1": ["#naviplus", "#business_blog"]
+  "keyword1": ["#naviplus", "#business_blog", "#math"],
+  "keyword2": ["ruby"]
 }
 ]
