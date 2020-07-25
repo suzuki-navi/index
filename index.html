@@ -7,10 +7,10 @@
 <link rel="canonical" href="https://suzuki-navi.github.io/index/">
 <link rel="stylesheet" href="common/common.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" defer></script>
-<script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.11" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js" defer></script>
 <script src="common/common.js" defer></script>
-<script>var articles_json_url="articles.json";</script>
+<script>let articles_json_url="articles.json";</script>
 
 </head>
 <body>
@@ -57,44 +57,8 @@
       <li><a href="https://tech.naviplus.co.jp/2014/02/27/%e4%b8%8d%e5%81%8f%e5%88%86%e6%95%a3%e3%81%af%e3%81%aa%e3%81%9c-n-1-%e3%81%a7%e5%89%b2%e3%82%8b%e3%81%ae%e3%81%8b%ef%bc%9f/">不偏分散はなぜ n – 1 で割るのか？</a>  (2014/02/27)</li>
     </ul>
   </section>
-  <section class="card card-size10">
-    <h1>可視化 - データ活用フェーズの記事</h1>
-    <ul>
-      <li><a href="https://www.beex-inc.com/blog/metabase-overview/">オープンソースのデータ可視化ツールMetabaseのご紹介</a> (2020/07/16)</li>
-      <li><a href="https://suzuki-navi.hatenablog.com/entry/2020/07/13/234858">Metabaseの設定情報をPostgreSQLに保存</a> (2020/07/13)</li>
-      <li><a href="https://qiita.com/suzuki-navi/items/e306b2480e9b3cf6ac08">Google BigQueryとGoogleデータポータル(Data Studio)を使い始めてCOVID-19感染者数のグラフを作るまで</a> (2020/07/12)</li>
-      <li><a href="https://qiita.com/suzuki-navi/items/bec509a480cbd4b00e3c">Kibanaのダッシュボードの作り方手順</a> (2020/07/02)</li>
-      <li><a href="https://qiita.com/suzuki-navi/items/bf07980a26073d3fa37f">Kibanaで使える可視化の種類のまとめ</a> (2020/06/30)</li>
-      <li><a href="https://suzuki-navi.hatenablog.com/entry/2020/06/24/201920">Elasticsearch/Kibanaのインストールからcliでのデータ操作とブラウザでのデータ確認を試す</a> (2020/06/24)</li>
-      <li><a href="https://suzuki-navi.hatenablog.com/entry/2020/06/18/203608">AWS Elasticsearch/KibanaにCognitoの認証を組み合わせてみる</a> (2020/06/18)</li>
-      <li><a href="https://suzuki-navi.hatenablog.com/entry/2020/06/12/142426">Metabaseの使い方：用語のまとめ</a> (2020/06/12)</li>
-      <li><a href="https://suzuki-navi.hatenablog.com/entry/2020/06/10/113504">Metabaseの使い方：グローバルメニュー</a> (2020/06/10)</li>
-      <li><a href="https://suzuki-navi.hatenablog.com/entry/2020/06/08/091446">Metabaseの使い方：Questionに至る画面遷移</a> (2020/06/08)</li>
-      <li><a href="https://qiita.com/suzuki-navi/items/05c32d638725883bc14f">MetabaseのDashboard画面の使い方</a> (2020/06/04)</li>
-      <li><a href="https://suzuki-navi.hatenablog.com/entry/2020/05/30/120022">Jupyter Notebook上のmatplotlibのグラフを大きくするには</a> (2020/05/30)</li>
-      <li><a href="https://qiita.com/suzuki-navi/items/acb37f76152989156241">MetabaseのQuestion（チャート・グラフ・テーブル）の作成・保存方法</a> (2020/05/29)</li>
-      <li><a href="https://qiita.com/suzuki-navi/items/6c43a555d74d4236e913">MetabaseのQuestion画面の使い方（チャート・グラフ・テーブル表示）</a> (2020/05/27)</li>
-      <li><a href="https://qiita.com/suzuki-navi/items/c1ee94d66e77d2dbfdcb">MetabaseにあるQuestion（チャート・グラフ・テーブル）の可視化種類のまとめ</a> (2020/05/23)</li>
-      <li><a href="https://qiita.com/suzuki-navi/items/c3c9082725f653d2d53a">データ可視化ツール(Metabase, Redash, Superset)の比較メモ</a> (2020/05/11)</li>
-      <li><a href="https://qiita.com/suzuki-navi/items/81494eb31212c0fe8efb">折れ線グラフをJupyter Notebook上でシンプルに表示する</a> (2020/05/02)</li>
-      <li><a href="https://qiita.com/suzuki-navi/items/9f5fd47734b22b4adf71">ヒストグラム・散布図をJupyter Notebook上で表示する</a> (2019/11/14)</li>
-    </ul>
-  </section>
-  <section class="card card-size6">
-    <h1>データ保管フェーズの記事</h1>
-    <ul>
-      <li><a href="https://suzuki-navi.hatenablog.com/entry/2020/07/14/202753">AWS DocumentDBのクラスタ構成</a> (2020/07/14)</li>
-      <li><a href="https://qiita.com/suzuki-navi/items/d29ca26be7aca93c9045">AWS S3のオブジェクトロックの機能</a> (2020/07/08)</li>
-      <li><a href="https://suzuki-navi.hatenablog.com/entry/2020/07/07/225915">AWS RDS Auroraのクラスタ構成</a> (2020/07/07)</li>
-      <li><a href="https://suzuki-navi.hatenablog.com/entry/2020/06/16/195737">AWS RDS PostgreSQLのクエリログをawscliで取得するワンライナー</a> (2020/06/16)</li>
-      <li><a href="https://suzuki-navi.hatenablog.com/entry/2020/06/13/131412">AWS DocumentDBのクラスタ構築からmongoコマンドで接続するまで</a> (2020/06/13)</li>
-      <li><a href="https://qiita.com/suzuki-navi/items/9fdf34163b9915bcaeb7">S3にあるテキストファイルをサクッと編集するには</a> (2020/02/27)</li>
-      <li><a href="https://qiita.com/suzuki-navi/items/823aca8f55e30c0a7f87">PostgreSQLパーティショニングのTableau、DBeaver、Glue Crawlerでの対応状況調査</a> (2019/12/24)</li>
-      <li><a href="https://qiita.com/suzuki-navi/items/775b9f9029af19780be3">gsutil、aws s3での基本的なファイル操作（Google Cloud Storage、S3）</a> (2019/11/15)</li>
-      <li><a href="https://qiita.com/suzuki-navi/items/8b2fe5a35a4439013461">AWS Certified Big Data - Specialty 合格しました</a> (2019/11/05)</li>
-      <li><a href="https://qiita.com/suzuki-navi/items/cf92371e71cb4d106300">Google Cloud StorageとAWS S3との間でファイルをコピーするには</a> (2019/10/19)</li>
-    </ul>
-  </section>
+  <search-articles-fixed class="card card-size10" query="#visualization"></search-articles-fixed>
+  <search-articles-fixed class="card card-size6" query="#data_store"></search-articles-fixed>
   <search-articles-fixed class="card card-size4" query="#data_input"></search-articles-fixed>
   <search-articles-fixed class="card card-size4" query="gcp"></search-articles-fixed>
   <search-articles-fixed class="card card-size8" query="aws"></search-articles-fixed>

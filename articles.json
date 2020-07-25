@@ -80,7 +80,7 @@
         "title": "AWS DocumentDBのクラスタ構成",
         "posted": "2020/07/14",
         "updated": "",
-        "keyword1": ["#hatenablog", "aws", "documentdb"]
+        "keyword1": ["#hatenablog", "#data_store", "aws", "documentdb"]
     },
     {
         "url": "https://suzuki-navi.hatenablog.com/entry/2020/07/13/234858",
@@ -123,14 +123,14 @@
         "title": "AWS S3のオブジェクトロックの機能",
         "posted": "2020/07/08",
         "updated": "",
-        "keyword1": ["#qiita", "aws", "s3"]
+        "keyword1": ["#qiita", "#data_store", "aws", "s3"]
     },
     {
         "url": "https://suzuki-navi.hatenablog.com/entry/2020/07/07/225915",
         "title": "AWS RDS Auroraのクラスタ構成",
         "posted": "2020/07/07",
         "updated": "",
-        "keyword1": ["#hatenablog", "aws", "rds", "aurora"]
+        "keyword1": ["#hatenablog", "#data_store", "aws", "rds", "aurora"]
     },
     {
         "url": "https://suzuki-navi.hatenablog.com/entry/2020/07/06/234025",
@@ -208,7 +208,7 @@
         "title": "AWS RDS PostgreSQLのクエリログをawscliで取得するワンライナー",
         "posted": "2020/06/16",
         "updated": "",
-        "keyword1": ["#hatenablog", "#linux_commands", "postgresql", "aws", "jq", "rds", "one_liner"]
+        "keyword1": ["#hatenablog", "#data_store", "#linux_commands", "postgresql", "aws", "jq", "rds", "one_liner"]
     },
     {
         "url": "https://suzuki-navi.hatenablog.com/entry/2020/06/15/194217",
@@ -229,7 +229,7 @@
         "title": "AWS DocumentDBのクラスタ構築からmongoコマンドで接続するまで",
         "posted": "2020/06/13",
         "updated": "",
-        "keyword1": ["#hatenablog", "#linux_commands", "aws", "documentdb"],
+        "keyword1": ["#hatenablog", "#data_store", "#linux_commands", "aws", "documentdb"],
         "keyword2": ["mongo"]
     },
     {
@@ -478,7 +478,7 @@
         "title": "折れ線グラフをJupyter Notebook上でシンプルに表示する",
         "posted": "2020/05/02",
         "updated": "",
-        "keyword1": ["#qiita", "#jupyter_matplotlib", "jupyter", "matplotlib"],
+        "keyword1": ["#qiita", "#visualization", "#jupyter_matplotlib", "jupyter", "matplotlib"],
         "keyword2": ["python"]
     },
     {
@@ -523,7 +523,7 @@
         "title": "S3にあるテキストファイルをサクッと編集するには",
         "posted": "2020/02/27",
         "updated": "",
-        "keyword1": ["#qiita", "#linux_commands", "vipe", "aws", "s3"]
+        "keyword1": ["#qiita", "#data_store", "#linux_commands", "vipe", "aws", "s3"]
     },
     {
         "url": "https://qiita.com/suzuki-navi/items/2581b3f4afeeabeacace",
@@ -554,7 +554,7 @@
         "posted": "2020/01/14",
         "updated": "",
         "keyword1": ["#qiita", "#lang_compare"],
-        "keyword2": ["scala", "java", "rust", "clang", "c++", "golang", "php", "perl", "python", "ruby", "javascript"]
+        "keyword2": ["scala", "java", "rust", "clang", "c++", "golang", "php", "perl", "python", "ruby", "javascript", "increment"]
     },
     {
         "url": "https://qiita.com/suzuki-navi/items/b5f066db181092543854",
@@ -583,7 +583,7 @@
         "title": "PostgreSQLパーティショニングのTableau、DBeaver、Glue Crawlerでの対応状況調査",
         "posted": "2019/12/24",
         "updated": "",
-        "keyword1": ["#qiita", "postgresql", "tableau", "dbeaver", "aws", "glue"]
+        "keyword1": ["#qiita", "#data_store", "postgresql", "tableau", "dbeaver", "aws", "glue"]
     },
     {
         "url": "https://qiita.com/suzuki-navi/items/25e5b884fbced9f1c4d2",
@@ -622,7 +622,7 @@
         "posted": "2019/11/22",
         "updated": "",
         "keyword1": ["#qiita", "#lang_compare"],
-        "keyword2": ["scala", "java", "rust", "clang", "c++", "golang", "php", "perl", "python", "ruby"]
+        "keyword2": ["scala", "java", "rust", "clang", "c++", "golang", "php", "perl", "python", "ruby", "if"]
     },
     {
         "url": "https://qiita.com/suzuki-navi/items/d7c27c9ce815750cdc59",
@@ -652,14 +652,14 @@
         "title": "gsutil、aws s3での基本的なファイル操作（Google Cloud Storage、S3）",
         "posted": "2019/11/15",
         "updated": "",
-        "keyword1": ["#qiita", "#linux_commands", "aws", "gsutil", "s3", "gcp", "gcs"]
+        "keyword1": ["#qiita", "#data_store", "#linux_commands", "aws", "gsutil", "s3", "gcp", "gcs"]
     },
     {
         "url": "https://qiita.com/suzuki-navi/items/9f5fd47734b22b4adf71",
         "title": "ヒストグラム・散布図をJupyter Notebook上で表示する",
         "posted": "2019/11/14",
         "updated": "",
-        "keyword1": ["#qiita", "#jupyter_matplotlib", "jupyter", "matplotlib"],
+        "keyword1": ["#qiita", "#visualization", "#jupyter_matplotlib", "jupyter", "matplotlib"],
         "keyword2": ["python"]
     },
     {
@@ -698,7 +698,7 @@
         "title": "AWS Certified Big Data - Specialty 合格しました",
         "posted": "2019/11/05",
         "updated": "",
-        "keyword1": ["#qiita", "aws"]
+        "keyword1": ["#qiita", "#data_store", "aws"]
     },
     {
         "url": "https://qiita.com/suzuki-navi/items/7e85f55c2a25038816b3",
@@ -741,7 +741,7 @@
         "title": "Google Cloud StorageとAWS S3との間でファイルをコピーするには",
         "posted": "2019/10/19",
         "updated": "",
-        "keyword1": ["#qiita", "#linux_commands", "aws", "gsutil", "gcp", "s3", "gcs"]
+        "keyword1": ["#qiita", "#data_store", "#linux_commands", "aws", "gsutil", "gcp", "s3", "gcs"]
     },
     {
         "url": "https://tech.naviplus.co.jp/2014/12/12/unicode%e3%81%ab%e3%81%82%e3%82%8b%e3%81%9f%e3%81%8f%e3%81%95%e3%82%93%e3%81%ae%e6%b3%a2%e7%b7%9a%e5%85%a840%e6%96%87%e5%ad%97/",

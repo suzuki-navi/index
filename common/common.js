@@ -49,8 +49,8 @@ $(function(){
     }
     function searchArticles(query, articles) {
         query = normalizeQuery(query);
-        var result1 = [];
-        var result2 = [];
+        let result1 = [];
+        let result2 = [];
         if (query == "") {
             if (articles.length <= 20) {
                 result2 = articles;
@@ -59,28 +59,34 @@ $(function(){
             }
         } else {
             result1 = articles;
-            var words = query.split(' ');
-            for (var i = 0; i < words.length; i++) {
-                var w = words[i];
+            let words = query.split(' ');
+            for (let i = 0; i < words.length; i++) {
+                let w = words[i];
                 result1 = searchByKeyword1(w, result1);
             }
             result2 = articles.filter ( a => {
                 return result1.indexOf(a) < 0;
             });
-            for (var i = 0; i < words.length; i++) {
-                var w = words[i];
+            for (let i = 0; i < words.length; i++) {
+                let w = words[i];
                 result2 = searchByKeyword2(w, result2);
             }
         }
-        var title1 = "\"" + query + "\" の記事";
-        var title2 = "\"" + query + "\" の含まれる記事";
+        let title1 = "\"" + query + "\" の記事";
+        let title2 = "\"" + query + "\" の含まれる記事";
         switch (query) {
         case "":
             title2 = "最近の記事";
             break;
 
+        case "#visualization":
+            title1 = "可視化 - データ活用フェーズの記事";
+            break;
         case "#data_input":
             title1 = "データ収集フェーズの記事";
+            break;
+        case "#data_store":
+            title1 = "データ保管フェーズの記事";
             break;
 
         case "#linux_commands":
@@ -175,13 +181,13 @@ $(function(){
             title1 = title2;
             title2 = "";
         }
-        var count = result1.length + result2.length;
+        let count = result1.length + result2.length;
         return {
-            title1: title1,
-            articles1: result1,
-            title2: title2,
-            articles2: result2,
-            count: count,
+            "title1": title1,
+            "articles1": result1,
+            "title2": title2,
+            "articles2": result2,
+            "count": count,
         };
     }
     function getImageHtml(query) {
@@ -233,7 +239,7 @@ $(function(){
         }
         return keywds;
     }
-    var articles = {
+    let articles = {
         list: [],
     };
     axios.get(articles_json_url).then(response => {
