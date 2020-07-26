@@ -59,7 +59,7 @@
         "title": "産業への応用 - G検定の勉強ノート",
         "posted": "2020/07/17",
         "updated": "",
-        "keyword1": ["#hatenablog"]
+        "keyword1": ["#hatenablog", "#machine_learning", "#jdla_general"]
     },
     {
         "url": "https://www.beex-inc.com/blog/metabase-overview/",
@@ -108,14 +108,14 @@
         "title": "ディープラーニングの応用 - G検定の勉強ノート",
         "posted": "2020/07/10",
         "updated": "",
-        "keyword1": ["#hatenablog"]
+        "keyword1": ["#hatenablog", "#machine_learning", "#jdla_general"]
     },
     {
         "url": "https://suzuki-navi.hatenablog.com/entry/2020/07/09/205317",
         "title": "ディープラーニングの基本 - G検定の勉強ノート",
         "posted": "2020/07/09",
         "updated": "",
-        "keyword1": ["#hatenablog"],
+        "keyword1": ["#hatenablog", "#machine_learning", "#jdla_general"],
         "keyword2": ["#math"]
     },
     {
@@ -137,14 +137,14 @@
         "title": "機械学習の一般知識 - G検定の勉強ノート",
         "posted": "2020/07/06",
         "updated": "",
-        "keyword1": ["#hatenablog"]
+        "keyword1": ["#hatenablog", "#machine_learning", "#jdla_general"]
     },
     {
         "url": "https://suzuki-navi.hatenablog.com/entry/2020/07/05/053853",
         "title": "人工知能の一般知識 - G検定の勉強ノート",
         "posted": "2020/07/05",
         "updated": "",
-        "keyword1": ["#hatenablog"]
+        "keyword1": ["#hatenablog", "#machine_learning", "#jdla_general"]
     },
     {
         "url": "https://qiita.com/suzuki-navi/items/bec509a480cbd4b00e3c",
@@ -158,7 +158,7 @@
         "title": "混同行列・適合率・再現率のまとめ",
         "posted": "2020/07/01",
         "updated": "",
-        "keyword1": ["#hatenablog"],
+        "keyword1": ["#hatenablog", "#machine_learning", "#statistics"],
         "keyword2": ["#math"]
     },
     {
@@ -180,7 +180,7 @@
         "title": "AWSの3種類のLBの比較と使い分け (ALB, NLB, CLB)",
         "posted": "2020/06/20",
         "updated": "",
-        "keyword1": ["#qiita", "aws", "network", "lb", "alb", "nlb", "clb"]
+        "keyword1": ["#qiita", "aws", "#network", "lb", "alb", "nlb", "clb"]
     },
     {
         "url": "https://suzuki-navi.hatenablog.com/entry/2020/06/19/222810",
@@ -215,7 +215,7 @@
         "title": "TCP/UDP/IPプロトコルの各レイヤーで処理しているパケットの情報",
         "posted": "2020/06/15",
         "updated": "",
-        "keyword1": ["#hatenablog", "network"]
+        "keyword1": ["#hatenablog", "#network"]
     },
     {
         "url": "https://suzuki-navi.hatenablog.com/entry/2020/06/14/121717",
@@ -259,7 +259,7 @@
         "title": "重回帰分析(多値)を分散・共分散から計算する式",
         "posted": "2020/06/09",
         "updated": "",
-        "keyword1": ["#hatenablog", "#math"]
+        "keyword1": ["#statistics", "#hatenablog", "#math"]
     },
     {
         "url": "https://suzuki-navi.hatenablog.com/entry/2020/06/08/091446",
@@ -273,14 +273,14 @@
         "title": "重回帰分析(2値)を平均・分散・共分散・相関係数から計算する式",
         "posted": "2020/06/07",
         "updated": "",
-        "keyword1": ["#hatenablog", "#math"]
+        "keyword1": ["#hatenablog", "#statistics", "#math"]
     },
     {
         "url": "https://suzuki-navi.hatenablog.com/entry/2020/06/06/211601",
         "title": "単回帰分析を平均・分散・共分散・相関係数から計算する式",
         "posted": "2020/06/06",
         "updated": "",
-        "keyword1": ["#hatenablog", "#math"]
+        "keyword1": ["#hatenablog", "#statistics", "#math"]
     },
     {
         "url": "https://qiita.com/suzuki-navi/items/e28539760098c70d8a4b",
@@ -309,14 +309,14 @@
         "title": "平均・分散・共分散・相関係数の計算式",
         "posted": "2020/06/02",
         "updated": "",
-        "keyword1": ["#hatenablog", "#math"]
+        "keyword1": ["#hatenablog", "#statistics", "#math"]
     },
     {
         "url": "https://qiita.com/suzuki-navi/items/e353b8dfbc6e872f9f41",
         "title": "統計検定2級に合格しました",
         "posted": "2020/06/01",
         "updated": "",
-        "keyword1": ["#qiita"]
+        "keyword1": ["#qiita", "#statistics"]
     },
     {
         "url": "https://suzuki-navi.hatenablog.com/entry/2020/05/31/222942",
@@ -346,7 +346,7 @@
         "title": "二項分布の極限がポアソン分布になることをグラフによりイメージする",
         "posted": "2020/05/28",
         "updated": "",
-        "keyword1": ["#hatenablog"],
+        "keyword1": ["#hatenablog", "#statistics"],
         "keyword2": ["#math", "#jupyter_matplotlib", "jupyter", "matplotlib", "python"]
     },
     {
@@ -368,7 +368,7 @@
         "title": "二項分布の極限がポアソン分布になることを数式変形によりイメージする",
         "posted": "2020/05/25",
         "updated": "",
-        "keyword1": ["#hatenablog", "#math"]
+        "keyword1": ["#hatenablog", "#statistics", "#math"]
     },
     {
         "url": "https://suzuki-navi.hatenablog.com/entry/2020/05/24/190325",
@@ -389,7 +389,7 @@
         "title": "二項分布の極限がポアソン分布になることを文章変形によりイメージする",
         "posted": "2020/05/22",
         "updated": "",
-        "keyword1": ["#hatenablog"],
+        "keyword1": ["#hatenablog", "#statistics"],
         "keyword2": ["#math"]
     },
     {
@@ -397,15 +397,15 @@
         "title": "勾配降下法の自作アルゴリズム",
         "posted": "2020/05/21",
         "updated": "",
-        "keyword1": ["#hatenablog"],
-        "keyword2": ["#math"]
+        "keyword1": ["#hatenablog", "#machine_learning"],
+        "keyword2": ["#math", "scala"]
     },
     {
         "url": "https://suzuki-navi.hatenablog.com/entry/2020/05/20/134615",
         "title": "勾配降下法のアルゴリズム一覧のメモ",
         "posted": "2020/05/20",
         "updated": "2020/06/26",
-        "keyword1": ["#hatenablog"],
+        "keyword1": ["#hatenablog", "#machine_learning"],
         "keyword2": ["#math"]
     },
     {
@@ -494,7 +494,7 @@
         "posted": "2020/04/24",
         "updated": "",
         "keyword1": ["#qiita", "#numerical_analysis"],
-        "keyword2": ["#jupyter_matplotlib", "jupyter", "matplotlib"]
+        "keyword2": ["#jupyter_matplotlib", "jupyter", "matplotlib", "scala"]
     },
     {
         "url": "https://qiita.com/suzuki-navi/items/d9228fc776a571ef16c9",
@@ -516,7 +516,7 @@
         "title": "Scalaでの行列演算の計算速度",
         "posted": "2020/02/28",
         "updated": "",
-        "keyword1": ["#qiita", "#numerical_analysis", "scala"]
+        "keyword1": ["#qiita", "#machine_learning", "#numerical_analysis", "scala"]
     },
     {
         "url": "https://qiita.com/suzuki-navi/items/9fdf34163b9915bcaeb7",
@@ -530,7 +530,7 @@
         "title": "ソフトマックス関数と交差エントロピー誤差の可視化",
         "posted": "2020/02/26",
         "updated": "",
-        "keyword1": ["#qiita"],
+        "keyword1": ["#qiita", "#machine_learning"],
         "keyword2": ["#math", "#jupyter_matplotlib", "jupyter", "matplotlib", "python"]
     },
     {
@@ -538,15 +538,15 @@
         "title": "データの分布状況から異常検知",
         "posted": "2020/01/28",
         "updated": "",
-        "keyword1": ["#qiita", "#numerical_analysis"],
-        "keyword2": ["#jupyter_matplotlib", "jupyter", "matplotlib"]
+        "keyword1": ["#qiita", "#machine_learning", "#numerical_analysis"],
+        "keyword2": ["#jupyter_matplotlib", "jupyter", "matplotlib", "scala"]
     },
     {
         "url": "https://qiita.com/suzuki-navi/items/501cb84d154c53c6a25c",
         "title": "正規分布に従う乱数の生成方法(Box–Muller法)の数式による説明",
         "posted": "2020/01/23",
         "updated": "",
-        "keyword1": ["#qiita", "#math"]
+        "keyword1": ["#qiita", "#statistics", "#math"]
     },
     {
         "url": "https://qiita.com/suzuki-navi/items/6611b9f16a391bac5ac5",
@@ -569,7 +569,7 @@
         "title": "一様分布、正規分布、指数分布、ポアソン分布の乱数を生成する方法 (Scala)",
         "posted": "2020/01/09",
         "updated": "",
-        "keyword1": ["#qiita", "#numerical_analysis"]
+        "keyword1": ["#qiita", "#statistics", "#numerical_analysis"]
     },
     {
         "url": "https://qiita.com/suzuki-navi/items/9ed7670aa4a93cf021d2",
@@ -598,7 +598,7 @@
         "title": "AWS Certified Machine Learning – Specialty 合格しました",
         "posted": "2019/12/04",
         "updated": "",
-        "keyword1": ["#qiita", "aws"]
+        "keyword1": ["#qiita", "#machine_learning", "aws"]
     },
     {
         "url": "https://qiita.com/suzuki-navi/items/79aa5f156427c2149fbe",
@@ -613,7 +613,7 @@
         "title": "Kaggleのタイタニック号のチュートリアルを試す",
         "posted": "2019/11/26",
         "updated": "",
-        "keyword1": ["#qiita"],
+        "keyword1": ["#qiita", "#machine_learning"],
         "keyword2": ["python"]
     },
     {
@@ -629,8 +629,8 @@
         "title": "混合ガウスモデルによるクラスタリングをJupyter Notebook上で試す",
         "posted": "2019/11/21",
         "updated": "",
-        "keyword1": ["#qiita", "#jupyter_matplotlib", "jupyter", "matplotlib"],
-        "keyword2": ["python"]
+        "keyword1": ["#qiita", "#machine_learning", "#jupyter_matplotlib", "jupyter", "matplotlib"],
+        "keyword2": ["python", "scala"]
     },
     {
         "url": "https://qiita.com/suzuki-navi/items/60c046c95c217487e4f4",
@@ -644,7 +644,7 @@
         "title": "SVMをJupyter Notebook上のscikit-learnで試す",
         "posted": "2019/11/18",
         "updated": "",
-        "keyword1": ["#qiita", "#jupyter_matplotlib", "jupyter", "matplotlib"],
+        "keyword1": ["#qiita", "#machine_learning", "#jupyter_matplotlib", "jupyter", "matplotlib"],
         "keyword2": ["python"]
     },
     {
@@ -748,14 +748,14 @@
         "title": "Unicodeにあるたくさんの波線(全40文字)",
         "posted": "2014/12/12",
         "updated": "",
-        "keyword1": ["#naviplus", "#business_blog"]
+        "keyword1": ["#naviplus", "#business_blog", "unicode"]
     },
     {
         "url": "https://tech.naviplus.co.jp/2014/12/05/%e3%83%8f%e3%82%a4%e3%83%95%e3%83%b3%e3%81%a8%e3%81%8b%e3%83%80%e3%83%83%e3%82%b7%e3%83%a5%e3%81%a8%e3%81%8bunicode%e3%81%ab%e3%81%82%e3%82%8b%e3%81%9f%e3%81%8f%e3%81%95%e3%82%93%e3%81%ae%e6%a8%aa/",
         "title": "ハイフンとかダッシュとかUnicodeにあるたくさんの横線(全135文字)",
         "posted": "2014/12/05",
         "updated": "",
-        "keyword1": ["#naviplus", "#business_blog"]
+        "keyword1": ["#naviplus", "#business_blog", "unicode"]
     },
     {
         "url": "https://tech.naviplus.co.jp/2014/07/23/raspberry-pi%e3%81%a7ad%e3%82%b3%e3%83%b3%e3%83%90%e3%83%bc%e3%82%bfmcp3208%e3%82%92%e4%bd%bf%e3%81%86/",
@@ -777,7 +777,7 @@
         "title": "不偏分散はなぜ n – 1 で割るのか？",
         "posted": "2014/02/27",
         "updated": "",
-        "keyword1": ["#naviplus", "#business_blog", "#math"],
+        "keyword1": ["#naviplus", "#business_blog", "#statistics", "#math"],
         "keyword2": ["ruby"]
     }
 ]

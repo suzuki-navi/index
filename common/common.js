@@ -79,6 +79,12 @@ $(function(){
             title2 = "最近の記事";
             break;
 
+        case "#machine_learning":
+            title1 = "機械学習 - データ活用フェーズの記事";
+            break;
+        case "#statistics":
+            title1 = "統計 - データ活用フェーズの記事";
+            break;
         case "#visualization":
             title1 = "可視化 - データ活用フェーズの記事";
             break;
@@ -104,6 +110,9 @@ $(function(){
         case "#jupyter_matplotlib":
             title1 = "Jupyter Notebook/Pandas/matplotlib - ソフトウェア別記事";
             title2 = "Jupyter Notebook/Pandas/matplotlibも使用している記事";
+            break;
+        case "#network":
+            title1 = "ネットワークの記事";
             break;
         case "#math":
             title1 = "数式が多めの記事";
@@ -193,6 +202,8 @@ $(function(){
     function getImageHtml(query) {
         query = normalizeQuery(query);
         switch(query) {
+        case "#machine_learning":
+            return '<p class="image"><a href="https://qiita.com/suzuki-navi/items/2581b3f4afeeabeacace"><img src="ml.png"></a></p>';
         case "php":
             return '<p class="font-small">もっとも古くから触っていた言語の1つですが記事はあまりありません。</p>';
         case "raspberry_pi":
@@ -222,6 +233,9 @@ $(function(){
                 break;
             case "vuejs":
                 keywds.push("vue.js");
+                break;
+            case "#machine_learning":
+                keywds.push("ml");
                 break;
             case "#natural_language_processing":
                 keywds.push("nlp");
