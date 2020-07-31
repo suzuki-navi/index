@@ -128,8 +128,6 @@ h1 {
     column-rule-color: #ccc;
   }
   #card-github-grass {
-    grid-column: span 2;
-    grid-row: span 2;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -150,12 +148,10 @@ h1 {
   #card-python {
   }
   #card-jupyter {
-    grid-row: span 7;
   }
   #card-fluentd {
   }
   #card-math {
-    grid-row: span 10;
   }
   #card-otherarticles {
   }
@@ -200,7 +196,6 @@ h1 {
   #card-fluentd {
   }
   #card-raspberry {
-    grid-row: span 6;
   }
   #card-otherarticles {
   }
