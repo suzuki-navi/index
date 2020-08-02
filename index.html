@@ -10,17 +10,17 @@
 <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js" defer></script>
 <script src="common/common.js" defer></script>
-<script>let articles_json_url="articles.json";</script>
+<script>let articles_json_url="articles.json?3";</script>
 
 </head>
 <body>
 <h1>これまでに書いたもの/してきたこと</h1>
 <div id="body" class="grid">
   <search-articles id="card-search" class="card card-size6"></search-articles>
-  <search-articles-fixed class="card card-size6 card-col2" query="#machine_learning"></search-articles-fixed>
+  <search-articles-fixed class="card card-size6" query="#machine_learning"></search-articles-fixed>
   <search-articles-fixed class="card card-size6" query="#statistics" id="card-statistics"></search-articles-fixed>
   <search-articles-fixed class="card card-size6" query="#visualization"></search-articles-fixed>
-  <search-articles-fixed class="card card-size6" query="#data_store"></search-articles-fixed>
+  <search-articles-fixed class="card card-size3" query="#data_store"></search-articles-fixed>
   <search-articles-fixed class="card card-size3" query="#data_input"></search-articles-fixed>
   <search-articles-fixed class="card card-size3" query="gcp"></search-articles-fixed>
   <search-articles-fixed class="card card-size6" query="aws"></search-articles-fixed>
@@ -31,7 +31,7 @@
   <search-articles-fixed class="card card-size3" query="perl"></search-articles-fixed>
   <search-articles-fixed class="card card-size3" query="python"></search-articles-fixed>
   <search-articles-fixed class="card card-size3" query="ruby"></search-articles-fixed>
-  <!-- <search-articles-fixed class="card card-size3" query="#jupyter_matplotlib" id="card-jupyter"></search-articles-fixed> -->
+  <search-articles-fixed class="card card-size3" query="#jupyter_matplotlib" id="card-jupyter"></search-articles-fixed>
   <search-articles-fixed class="card card-size3" query="postgresql"></search-articles-fixed>
   <search-articles-fixed class="card card-size3" query="fluentd"></search-articles-fixed>
   <search-articles-fixed class="card card-size3" query="metabase"></search-articles-fixed>
