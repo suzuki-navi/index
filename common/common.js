@@ -255,9 +255,14 @@ $(function(){
     }
     let articles = {
         list: [],
+        tags: [],
+    };
+    let global_query = {
+        query: "",
     };
     axios.get(articles_json_url).then(response => {
         let list = response.data;
+        let tags = {};
         for (let i = 0; i < list.length; i++) {
             if (list[i]["updated"] == "") {
                 list[i]["date"] = list[i]["posted"];
@@ -267,10 +272,36 @@ $(function(){
             if (!list[i]["keyword2"]) {
                 list[i]["keyword2"] = [];
             }
+            list[i]["keyword1"] = list[i]["keyword1"].filter(function (x, i, self) {
+                return self.indexOf(x) === i;
+            });
+            list[i]["keyword2"] = list[i]["keyword2"].filter(function (x, i, self) {
+                return list[i]["keyword1"].indexOf(x) < 0 && self.indexOf(x) === i;
+            });
+            list[i]["keyword1"].concat(list[i]["keyword2"]).forEach(function (k) {
+                if (k.indexOf("#") == 0) {
+                    return;
+                }
+                if (!(k in tags)) {
+                    tags[k] = 0;
+                }
+                tags[k]++;
+            });
             list[i]["keyword1"] = extractSynonymIndex(list[i]["keyword1"]);
             list[i]["keyword2"] = extractSynonymIndex(list[i]["keyword2"]);
         }
+        tags = Object.entries(tags);
+        tags.sort(function(a, b) {
+            if (a[1] > b[1]) {
+                return -1;
+            } else if (a[1] < b[1]) {
+                return +1;
+            } else {
+                return 0;
+            }
+        });
         articles.list = list;
+        articles.tags = tags;
     });
     Vue.component("search-articles", {
         data: function () {
@@ -305,10 +336,11 @@ $(function(){
         data: function () {
             return {
                 articles: articles,
-                query: "",
+                global_query: global_query,
             };
         },
         computed: {
+            query: function () { return global_query.query; },
             result: function () { return searchArticles(this.query, this.articles.list); },
             count_str: function () { return getCountStr(this.query, this.result); },
         },
@@ -356,6 +388,21 @@ $(function(){
                 <a v-bind:href="article.url" target="_blank">{{ article.title }}</a> ({{ article.date }})
               </li>
             </ul>
+          </div>
+        `,
+    });
+    Vue.component("articles-tags", {
+        data: function () {
+            return {
+                articles: articles,
+                global_query: global_query,
+            };
+        },
+        template: `
+          <div>
+            <span v-for="tag in articles.tags">
+              <a v-on:click.stop="global_query.query=tag[0]; return false;">{{ tag[0] }}({{ tag[1] }}) </a>
+            </span>
           </div>
         `,
     });

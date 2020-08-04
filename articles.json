@@ -95,7 +95,8 @@
         "title": "Metabaseの設定情報をPostgreSQLに保存",
         "posted": "2020/07/13",
         "updated": "",
-        "keyword1": ["#hatenablog", "#visualization", "metabase"]
+        "keyword1": ["#hatenablog", "#visualization", "metabase"],
+        "keyword2": ["postgresql"]
     },
     {
         "url": "https://qiita.com/suzuki-navi/items/e306b2480e9b3cf6ac08",
@@ -517,7 +518,7 @@
         "title": "PowerShellをLinuxにインストールして試す",
         "posted": "2020/03/09",
         "updated": "",
-        "keyword1": ["#qiita", "#linux_commands", "pwsh"]
+        "keyword1": ["#qiita", "#linux_commands", "pwsh", "powershell"]
     },
     {
         "url": "https://qiita.com/suzuki-navi/items/c380c73ad69ce32cf5fb",
@@ -577,7 +578,7 @@
         "title": "一様分布、正規分布、指数分布、ポアソン分布の乱数を生成する方法 (Scala)",
         "posted": "2020/01/09",
         "updated": "",
-        "keyword1": ["#qiita", "#statistics", "#numerical_analysis"]
+        "keyword1": ["#qiita", "#statistics", "#numerical_analysis", "scala"]
     },
     {
         "url": "https://qiita.com/suzuki-navi/items/9ed7670aa4a93cf021d2",
@@ -598,7 +599,7 @@
         "title": "AWS SAMでの Lambda Functions with Node.js + API Gateway 最小構成",
         "posted": "2019/12/16",
         "updated": "",
-        "keyword1": ["#qiita", "aws", "lambda", "apigateway"],
+        "keyword1": ["#qiita", "aws", "lambda", "api_gateway"],
         "keyword2": ["nodejs"]
     },
     {
@@ -629,8 +630,8 @@
         "title": "if文の書き方のまとめ(Scala、Java、Rust、C言語、C++、Go言語、PHP、Perl、Python、Ruby)",
         "posted": "2019/11/22",
         "updated": "",
-        "keyword1": ["#qiita", "#lang_compare"],
-        "keyword2": ["scala", "java", "rust", "clang", "c++", "golang", "php", "perl", "python", "ruby", "if"]
+        "keyword1": ["#qiita", "#lang_compare", "if"],
+        "keyword2": ["scala", "java", "rust", "clang", "c++", "golang", "php", "perl", "python", "ruby"]
     },
     {
         "url": "https://qiita.com/suzuki-navi/items/d7c27c9ce815750cdc59",
