@@ -346,7 +346,7 @@ $(function(){
         },
         template: `
           <div>
-            <input v-model="query" placeholder="Search articles">
+            <input v-model="global_query.query" placeholder="Search articles">
             <h1 v-if="result.title1">{{ result.title1 }} {{ count_str }}</h1>
             <ul v-if="result.articles1.length > 0">
               <li v-for="article in result.articles1">
