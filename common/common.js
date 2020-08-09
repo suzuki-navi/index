@@ -401,7 +401,7 @@ $(function(){
         template: `
           <div>
             <span v-for="tag in articles.tags">
-              <a v-on:click.stop="global_query.query=tag[0]; return false;">{{ tag[0] }}({{ tag[1] }}) </a>
+              <a href="#" v-on:click.prevent.stop="global_query.query=tag[0];">{{ tag[0] }}({{ tag[1] }}) </a>
             </span>
           </div>
         `,
