@@ -356,7 +356,7 @@
         "posted": "2020/05/28",
         "updated": "",
         "keyword1": ["#hatenablog", "#statistics"],
-        "keyword2": ["#math", "#jupyter_matplotlib", "jupyter", "matplotlib", "python"]
+        "keyword2": ["#math", "#jupyter_matplotlib", "jupyter", "matplotlib", "php", "python"]
     },
     {
         "url": "https://qiita.com/suzuki-navi/items/6c43a555d74d4236e913",
@@ -429,8 +429,8 @@
         "title": "DockerのUbuntuでヘルプが表示できない場合の対処方法",
         "posted": "2020/05/18",
         "updated": "",
-        "keyword1": ["#hatenablog", "docker"],
-        "keyword2": ["ubuntu"]
+        "keyword1": ["#hatenablog", "docker", "ubuntu"],
+        "keyword2": []
     },
     {
         "url": "https://suzuki-navi.hatenablog.com/entry/2020/05/17/121452",

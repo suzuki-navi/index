@@ -5,25 +5,26 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>suzuki-navi</title>
 <link rel="canonical" href="https://suzuki-navi.github.io/index/">
-<link rel="stylesheet" href="common/common.css">
+<link rel="stylesheet" href="common/common.css?1">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js" defer></script>
-<script src="common/common.js" defer></script>
-<script>let articles_json_url="articles.json";</script>
+<script src="common/common.js?6" defer></script>
+<script>let articles_json_url="articles.json?1";</script>
 
 </head>
 <body>
 <h1>これまでに書いたもの/してきたこと</h1>
 <div id="body" class="grid">
-  <search-articles id="card-search" class="card card-size6"></search-articles>
+  <search-articles-search class="card card-size6"></search-articles-search>
+  <articles-tags class="card card-size6"></articles-tags>
   <search-articles-fixed class="card card-size6" query="#machine_learning"></search-articles-fixed>
   <search-articles-fixed class="card card-size6" query="#statistics" id="card-statistics"></search-articles-fixed>
-  <search-articles-fixed class="card card-size6" query="#visualization"></search-articles-fixed>
+  <search-articles-fixed class="card card-size3" query="#visualization"></search-articles-fixed>
   <search-articles-fixed class="card card-size3" query="#data_store"></search-articles-fixed>
   <search-articles-fixed class="card card-size3" query="#data_input"></search-articles-fixed>
   <search-articles-fixed class="card card-size3" query="gcp"></search-articles-fixed>
-  <search-articles-fixed class="card card-size6" query="aws"></search-articles-fixed>
+  <search-articles-fixed class="card card-size3" query="aws"></search-articles-fixed>
   <search-articles-fixed class="card card-size3" query="#lang_compare"></search-articles-fixed>
   <search-articles-fixed class="card card-size3" query="scala"></search-articles-fixed>
   <search-articles-fixed class="card card-size3" query="java"></search-articles-fixed>
@@ -36,11 +37,11 @@
   <search-articles-fixed class="card card-size3" query="fluentd"></search-articles-fixed>
   <search-articles-fixed class="card card-size3" query="metabase"></search-articles-fixed>
   <search-articles-fixed class="card card-size3" query="elasticsearch"></search-articles-fixed>
-  <search-articles-fixed class="card card-size6" query="#linux_commands"></search-articles-fixed>
+  <search-articles-fixed class="card card-size3" query="#linux_commands"></search-articles-fixed>
   <!-- <search-articles-fixed class="card card-size3" query="tex"></search-articles-fixed> -->
   <search-articles-fixed class="card card-size3" query="#numerical_analysis"></search-articles-fixed>
-  <search-articles-fixed class="card card-size6" query="#math" id="card-math"></search-articles-fixed>
-  <search-articles-fixed class="card card-size4" query="raspberry_pi" id="card-raspberry"></search-articles-fixed>
+  <search-articles-fixed class="card card-size3" query="#math" id="card-math"></search-articles-fixed>
+  <search-articles-fixed class="card card-size6" query="raspberry_pi" id="card-raspberry"></search-articles-fixed>
   <!-- <search-articles-fixed class="card card-size2" query="#network"></search-articles-fixed> -->
   <!-- <section id="card-otherarticles" class="card card-size3">
     <h1>その他の記事</h1>
@@ -126,8 +127,6 @@
       ※このインデックスページには記事を重複ありで分類しています。
     </p>
   </section>
-  <search-articles-search class="card card-size4"></search-articles-search>
-  <articles-tags class="card card-size4"></articles-tags>
 </div>
 </body>
 </html>

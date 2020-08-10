@@ -260,6 +260,12 @@ $(function(){
     let global_query = {
         query: "",
     };
+    if (window.location.hash != "") {
+        global_query.query = window.location.hash.substring(1);
+    }
+    window.onpopstate = function(event) {
+        global_query.query = window.location.hash.substring(1);
+    };
     axios.get(articles_json_url).then(response => {
         let list = response.data;
         let tags = {};
@@ -303,6 +309,7 @@ $(function(){
         articles.list = list;
         articles.tags = tags;
     });
+    /*
     Vue.component("search-articles", {
         data: function () {
             return {
@@ -332,6 +339,7 @@ $(function(){
           </div>
         `,
     });
+    */
     Vue.component("search-articles-search", {
         data: function () {
             return {
@@ -343,6 +351,7 @@ $(function(){
             query: function () { return global_query.query; },
             result: function () { return searchArticles(this.query, this.articles.list); },
             count_str: function () { return getCountStr(this.query, this.result); },
+            imageHtml: function () { return getImageHtml(this.query); },
         },
         template: `
           <div>
@@ -353,6 +362,7 @@ $(function(){
                 <a v-bind:href="article.url" target="_blank">{{ article.title }}</a> ({{ article.date }})
               </li>
             </ul>
+            <div v-html="imageHtml"></div>
             <h2 v-if="result.title2">{{ result.title2 }}</h2>
             <ul v-if="result.articles2.length > 0" class="font-small">
               <li v-for="article in result.articles2">
@@ -398,10 +408,16 @@ $(function(){
                 global_query: global_query,
             };
         },
+        methods: {
+            gotoTagPage: function (tag) {
+                global_query.query = tag;
+                history.pushState(undefined, tag + " | suzuki-navi", "#" + tag);
+            },
+        },
         template: `
           <div>
             <span v-for="tag in articles.tags">
-              <a href="#" v-on:click.prevent.stop="global_query.query=tag[0];">{{ tag[0] }}({{ tag[1] }}) </a>
+              <a v-bind:href="'#' + tag[0]" v-on:click.prevent.stop="gotoTagPage(tag[0]);">{{ tag[0] }}({{ tag[1] }}) </a>
             </span>
           </div>
         `,
