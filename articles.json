@@ -1,10 +1,18 @@
 [
     {
+        "url": "https://suzuki-navi.hatenablog.com/entry/2020/08/14/233745",
+        "title": "t分布の確率密度関数・累積分布関数のグラフをPythonで描く",
+        "posted": "2020/08/14",
+        "updated": "",
+        "keyword1": ["#hatenablog", "#statistics"],
+        "keyword2": ["python"]
+    },
+    {
         "url": "https://qiita.com/suzuki-navi/items/fd3607f8f0e670bba887",
         "title": "G検定に合格しました",
         "posted": "2020/07/31",
         "updated": "",
-        "keyword1": ["#qiita", "#machine_learning"],
+        "keyword1": ["#qiita", "#machine_learning", "#jdla_general"],
         "keyword2": []
     },
     {

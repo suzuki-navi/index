@@ -240,12 +240,6 @@ $(function(){
             case "#natural_language_processing":
                 keywds.push("nlp");
                 break;
-            case "aws":
-                keywds.push("aws_gcp");
-                break;
-            case "gcp":
-                keywds.push("aws_gcp");
-                break;
             }
             if (k.indexOf('_') >= 0) {
                 keywds.push(k.replace('_', ''));

@@ -5,18 +5,18 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>suzuki-navi</title>
 <link rel="canonical" href="https://suzuki-navi.github.io/index/">
-<link rel="stylesheet" href="common/common.css?1">
+<link rel="stylesheet" href="common/common.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js" defer></script>
-<script src="common/common.js?6" defer></script>
-<script>let articles_json_url="articles.json?1";</script>
+<script src="common/common.js" defer></script>
+<script>let articles_json_url="articles.json";</script>
 
 </head>
 <body>
 <h1>これまでに書いたもの/してきたこと</h1>
 <div id="body" class="grid">
-  <search-articles-search class="card card-size6"></search-articles-search>
+  <search-articles-search class="card card-size6" id="card-search"></search-articles-search>
   <articles-tags class="card card-size6"></articles-tags>
   <search-articles-fixed class="card card-size6" query="#machine_learning"></search-articles-fixed>
   <search-articles-fixed class="card card-size6" query="#statistics" id="card-statistics"></search-articles-fixed>

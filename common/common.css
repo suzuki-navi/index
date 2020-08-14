@@ -68,6 +68,10 @@ h1 {
   padding-bottom: 5px;
 }
 @media screen and (max-width: 789px) {
+  #card-search {
+    height: 255px;
+    overflow: auto;
+  }
   #card-github-grass p img {
     width: 100%;
   }
@@ -136,9 +140,6 @@ h1 {
   .card-title {
     grid-column: 1 / 3;
   }
-  #card-search {
-    grid-column: 2;
-  }
   #card-statistics {
   }
   #card-python {
@@ -161,9 +162,6 @@ h1 {
   .card-title {
     grid-column: 1 / 4;
   }
-  #card-search {
-    grid-column: 3;
-  }
   #card-python {
   }
   #card-fluentd {
@@ -181,9 +179,6 @@ h1 {
   }
   .card-title {
     grid-column: 1 / 5;
-  }
-  #card-search {
-   grid-column: 4;
   }
   #card-python {
   }
