@@ -95,7 +95,7 @@ $(function(){
             title1 = "データ保管フェーズの記事";
             break;
 
-        case "#linux_commands":
+        case "command":
             title1 = "Linuxコマンドの記事";
             break;
         case "#numerical_analysis":
@@ -106,10 +106,6 @@ $(function(){
             break;
         case "#lang_compare":
             title1 = "プログラミング言語比較の記事";
-            break;
-        case "#jupyter_matplotlib":
-            title1 = "Jupyter Notebook/Pandas/matplotlib - ソフトウェア別記事";
-            title2 = "Jupyter Notebook/Pandas/matplotlibも使用している記事";
             break;
         case "#network":
             title1 = "ネットワークの記事";
@@ -183,6 +179,10 @@ $(function(){
             title1 = "はてなブログの記事";
             break;
 
+        case "#pickup":
+            title1 = "主な記事";
+            break;
+
         }
         if (result2.length == 0) {
             title2 = "";
@@ -208,10 +208,16 @@ $(function(){
             return '<p class="font-small">もっとも古くから触っていた言語の1つですが記事はあまりありません。</p>';
         case "raspberry_pi":
             return '<p class="youtube"><iframe width="352" height="198" src="https://www.youtube-nocookie.com/embed/wFTvOIsHmQo?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>';
-        case "#linux_commands":
+        case "command":
+            return '<p class="image"><a href="https://qiita.com/suzuki-navi/items/fdcb166f32b28bc0ff82"><img src="cli.png"></a></p>';
+        case "git":
             return '<p class="image"><a href="https://qiita.com/suzuki-navi/items/fdcb166f32b28bc0ff82"><img src="cli.png"></a></p>';
         case "#math":
-            return '<p class="image"><img src="math.png"></p>';
+            return '<p class="image"><a href="https://tech.naviplus.co.jp/2014/02/27/%e4%b8%8d%e5%81%8f%e5%88%86%e6%95%a3%e3%81%af%e3%81%aa%e3%81%9c-n-1-%e3%81%a7%e5%89%b2%e3%82%8b%e3%81%ae%e3%81%8b%ef%bc%9f/"><img src="math.png"></a></p>';
+        case "#pickup":
+            return '' +
+                '<p class="youtube"><iframe width="352" height="198" src="https://www.youtube-nocookie.com/embed/wFTvOIsHmQo?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>' +
+                '<p class="image"><a href="https://tech.naviplus.co.jp/2014/02/27/%e4%b8%8d%e5%81%8f%e5%88%86%e6%95%a3%e3%81%af%e3%81%aa%e3%81%9c-n-1-%e3%81%a7%e5%89%b2%e3%82%8b%e3%81%ae%e3%81%8b%ef%bc%9f/"><img src="math.png"></a></p>';
         default:
             return '';
         }
@@ -279,9 +285,6 @@ $(function(){
                 return list[i]["keyword1"].indexOf(x) < 0 && self.indexOf(x) === i;
             });
             list[i]["keyword1"].concat(list[i]["keyword2"]).forEach(function (k) {
-                if (k.indexOf("#") == 0) {
-                    return;
-                }
                 if (!(k in tags)) {
                     tags[k] = 0;
                 }
@@ -303,6 +306,110 @@ $(function(){
         articles.list = list;
         articles.tags = tags;
     });
+    function categorizeTags(tags) {
+        let ret = {
+            "thema": [
+                ["#machine_learning", 0, "機械学習の記事"],
+                ["#statistics", 0, "統計の記事"],
+                ["#visualization", 0, "データ可視化の記事"],
+                ["#data_store", 0, "データ保管の記事"],
+                ["#data_input", 0, "データ収集の記事"],
+                ["#math", 0, "数式のある記事"],
+            ],
+            "lang": [
+                ["scala", 0],
+                ["java", 0],
+                ["php", 0],
+                ["perl", 0],
+                ["python", 0],
+                ["ruby", 0],
+                ["javascript", 0],
+                ["powershell", 0],
+            ],
+            "cloud_gcp": [
+                ["gcp", 0],
+                ["bigquery", 0],
+                ["cloud_sql", 0],
+                ["compute_engine", 0],
+                ["gcs", 0],
+                ["cloudtranslation", 0],
+                ["gsutil", 0],
+                ["bq", 0],
+            ],
+            "cloud_aws": [
+                ["aws", 0],
+                ["s3", 0],
+                ["glue", 0],
+                ["documentdb", 0],
+                ["rds", 0],
+                ["aurora", 0],
+                ["lambda", 0],
+                ["api_gateway", 0],
+                ["alb", 0],
+                ["cognito", 0],
+                ["cloudformation", 0],
+                ["comprehend", 0],
+                ["awscli", 0],
+            ],
+            "software": [
+                ["postgresql", 0],
+                ["fluentd", 0],
+                ["elasticsearch", 0],
+                ["kibana", 0],
+                ["metabase", 0],
+            ],
+            "command": [
+                ["command", 0],
+                ["git", 0],
+                ["diff", 0],
+                ["jq", 0],
+                ["xargs", 0],
+                ["seq", 0],
+                ["printf", 0],
+                ["date", 0],
+                ["find", 0],
+                ["rm", 0],
+                ["column", 0],
+                ["uname", 0],
+                ["unzip", 0],
+                ["7z", 0],
+                ["du", 0],
+                ["pv", 0],
+                ["pwsh", 0],
+                ["gsutil", 0],
+                ["bq", 0],
+                ["awscli", 0],
+            ],
+            "hidden": [
+                ["golang", 0],
+                ["rust", 0],
+                ["clang", 0],
+                ["c++", 0],
+                ["nlb", 0],
+                ["clb", 0],
+            ],
+            "other": [
+                ["#network", 0],
+                ["#natural_language_processing", 0],
+                ["#lang_compare", 0],
+            ],
+        };
+        for (let i = 0; i < tags.length; i++) {
+            let f = true;
+            for (let [k, ts] of Object.entries(ret)) {
+                for (let j = 0; j < ts.length; j++) {
+                    if (ts[j][0] == tags[i][0]) {
+                        ts[j][1] = tags[i][1];
+                        f = false;
+                    }
+                }
+            }
+            if (f && tags[i][0].indexOf("#") != 0) {
+                ret["other"].push(tags[i]);
+            }
+        }
+        return ret;
+    }
     /*
     Vue.component("search-articles", {
         data: function () {
@@ -402,6 +509,11 @@ $(function(){
                 global_query: global_query,
             };
         },
+        computed: {
+            categorized: function () {
+                return categorizeTags(articles.tags);
+            }
+        },
         methods: {
             gotoTagPage: function (tag) {
                 global_query.query = tag;
@@ -410,9 +522,46 @@ $(function(){
         },
         template: `
           <div>
-            <span v-for="tag in articles.tags">
-              <a v-bind:href="'#' + tag[0]" v-on:click.prevent.stop="gotoTagPage(tag[0]);">{{ tag[0] }}({{ tag[1] }}) </a>
-            </span>
+            <div>
+              <div v-for="(tag, idx) in categorized.thema">
+                <a v-bind:href="'#' + tag[0]" v-on:click.prevent.stop="gotoTagPage(tag[0]);">{{ tag[2] }}({{ tag[1] }})</a>
+              </div>
+            </div>
+            <h2>クラウド環境記事 - GCP</h2>
+            <div>
+              <span v-for="(tag, idx) in categorized.cloud_gcp">
+                <span v-if="idx>0"> / </span>
+                <a v-bind:href="'#' + tag[0]" v-on:click.prevent.stop="gotoTagPage(tag[0]);">{{ tag[0] }}({{ tag[1] }})</a>
+              </span>
+            </div>
+            <h2>クラウド環境記事 - AWS</h2>
+            <div>
+              <span v-for="(tag, idx) in categorized.cloud_aws">
+                <span v-if="idx>0"> / </span>
+                <a v-bind:href="'#' + tag[0]" v-on:click.prevent.stop="gotoTagPage(tag[0]);">{{ tag[0] }}({{ tag[1] }})</a>
+              </span>
+            </div>
+            <h2>プログラミング言語別記事</h2>
+            <div>
+              <span v-for="(tag, idx) in categorized.lang">
+                <span v-if="idx>0"> / </span>
+                <a v-bind:href="'#' + tag[0]" v-on:click.prevent.stop="gotoTagPage(tag[0]);">{{ tag[0] }}({{ tag[1] }})</a>
+              </span>
+            </div>
+            <h2>ソフトウェア別記事</h2>
+            <div>
+              <span v-for="(tag, idx) in categorized.software">
+                <span v-if="idx>0"> / </span>
+                <a v-bind:href="'#' + tag[0]" v-on:click.prevent.stop="gotoTagPage(tag[0]);">{{ tag[0] }}({{ tag[1] }})</a>
+              </span>
+            </div>
+            <h2>Linuxコマンドの記事</h2>
+            <div>
+              <span v-for="(tag, idx) in categorized.command">
+                <span v-if="idx>0"> / </span>
+                <a v-bind:href="'#' + tag[0]" v-on:click.prevent.stop="gotoTagPage(tag[0]);">{{ tag[0] }}({{ tag[1] }})</a>
+              </span>
+            </div>
           </div>
         `,
     });
