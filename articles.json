@@ -1,11 +1,19 @@
 [
     {
+        "url": "https://suzuki-navi.hatenablog.com/entry/2020/08/16/235911",
+        "title": "TensorFlowの自動微分を使って勾配降下法を試してみる",
+        "posted": "2020/08/16",
+        "updated": "",
+        "keyword1": ["#hatenablog", "#machine_learning"],
+        "keyword2": ["python", "matplotlib", "tensorflow"]
+    },
+    {
         "url": "https://suzuki-navi.hatenablog.com/entry/2020/08/14/233745",
         "title": "t分布の確率密度関数・累積分布関数のグラフをPythonで描く",
         "posted": "2020/08/14",
         "updated": "",
-        "keyword1": ["#hatenablog", "#statistics", "matplotlib"],
-        "keyword2": ["python"]
+        "keyword1": ["#hatenablog", "#statistics"],
+        "keyword2": ["python", "matplotlib"]
     },
     {
         "url": "https://qiita.com/suzuki-navi/items/fd3607f8f0e670bba887",
@@ -29,15 +37,15 @@
         "posted": "2020/07/23",
         "updated": "",
         "keyword1": ["#hatenablog", "aws", "glue", "postgresql"],
-        "keyword2": ["python", "cloud_sql"]
+        "keyword2": ["python", "cloudsql"]
     },
     {
         "url": "https://qiita.com/suzuki-navi/items/1ea284c97075f3a34b30",
         "title": "IAM認証のAWS API GatewayにPythonからSigV4署名してアクセスするには",
         "posted": "2020/07/22",
         "updated": "",
-        "keyword1": ["#qiita", "aws", "iam", "api_gateway"],
-        "keyword2": ["python", "compute_engine"]
+        "keyword1": ["#qiita", "aws", "iam", "apigateway"],
+        "keyword2": ["python", "computeengine"]
     },
     {
         "url": "https://suzuki-navi.hatenablog.com/entry/2020/07/21/235123",
@@ -82,7 +90,7 @@
         "title": "オープンソースのデータ可視化ツールMetabaseのご紹介",
         "posted": "2020/07/16",
         "updated": "",
-        "keyword1": ["#beex", "#business_blog", "#visualization", "metabase"]
+        "keyword1": ["#beex", "#business_blog", "#pickup", "#visualization", "metabase"]
     },
     {
         "url": "https://suzuki-navi.hatenablog.com/entry/2020/07/15/235213",
@@ -118,7 +126,7 @@
         "title": "GCPのCompute Engine、Cloud SQLの最も安いマシンタイプ",
         "posted": "2020/07/11",
         "updated": "",
-        "keyword1": ["#hatenablog", "gcp", "cloud_sql", "compute_engine"]
+        "keyword1": ["#hatenablog", "gcp", "cloudsql", "computeengine"]
     },
     {
         "url": "https://suzuki-navi.hatenablog.com/entry/2020/07/10/234240",
@@ -607,7 +615,7 @@
         "title": "AWS SAMでの Lambda Functions with Node.js + API Gateway 最小構成",
         "posted": "2019/12/16",
         "updated": "",
-        "keyword1": ["#qiita", "aws", "lambda", "api_gateway"],
+        "keyword1": ["#qiita", "aws", "lambda", "apigateway"],
         "keyword2": ["nodejs"]
     },
     {

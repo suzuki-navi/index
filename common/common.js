@@ -316,21 +316,11 @@ $(function(){
                 ["#data_input", 0, "データ収集の記事"],
                 ["#math", 0, "数式のある記事"],
             ],
-            "lang": [
-                ["scala", 0],
-                ["java", 0],
-                ["php", 0],
-                ["perl", 0],
-                ["python", 0],
-                ["ruby", 0],
-                ["javascript", 0],
-                ["powershell", 0],
-            ],
             "cloud_gcp": [
                 ["gcp", 0],
                 ["bigquery", 0],
-                ["cloud_sql", 0],
-                ["compute_engine", 0],
+                ["cloudsql", 0],
+                ["computeengine", 0],
                 ["gcs", 0],
                 ["cloudtranslation", 0],
                 ["gsutil", 0],
@@ -344,12 +334,23 @@ $(function(){
                 ["rds", 0],
                 ["aurora", 0],
                 ["lambda", 0],
-                ["api_gateway", 0],
+                ["apigateway", 0],
                 ["alb", 0],
                 ["cognito", 0],
                 ["cloudformation", 0],
                 ["comprehend", 0],
+                ["cloudwatch", 0],
                 ["awscli", 0],
+            ],
+            "lang": [
+                ["scala", 0, "Scala"],
+                ["java", 0, "Java"],
+                ["php", 0, "PHP"],
+                ["perl", 0, "Perl"],
+                ["python", 0, "Python"],
+                ["ruby", 0, "Ruby"],
+                ["javascript", 0, "JavaScript"],
+                ["powershell", 0, "PowerShell"],
             ],
             "software": [
                 ["postgresql", 0],
@@ -357,6 +358,11 @@ $(function(){
                 ["elasticsearch", 0],
                 ["kibana", 0],
                 ["metabase", 0],
+                ["redash", 0],
+                ["superset", 0],
+                ["tableau", 0],
+                ["talend", 0],
+                ["dbeaver", 0],
             ],
             "command": [
                 ["command", 0],
@@ -375,6 +381,7 @@ $(function(){
                 ["7z", 0],
                 ["du", 0],
                 ["pv", 0],
+                ["vipe", 0],
                 ["pwsh", 0],
                 ["gsutil", 0],
                 ["bq", 0],
@@ -387,11 +394,18 @@ $(function(){
                 ["c++", 0],
                 ["nlb", 0],
                 ["clb", 0],
+                ["#naviplus", 0],
+                ["#beex", 0],
+                ["#business_blog", 0],
+                ["#qiita", 0],
+                ["#hatenablog", 0],
+                ["#pickup", 0],
             ],
             "other": [
-                ["#network", 0],
-                ["#natural_language_processing", 0],
-                ["#lang_compare", 0],
+                ["#lang_compare", 0, "プログラミング言語比較"],
+                ["#natural_language_processing", 0, "自然言語処理"],
+                ["#numerical_analysis", 0, "数値計算"],
+                ["#network", 0, "ネットワーク"],
             ],
         };
         for (let i = 0; i < tags.length; i++) {
@@ -404,8 +418,16 @@ $(function(){
                     }
                 }
             }
-            if (f && tags[i][0].indexOf("#") != 0) {
+            //if (f && tags[i][0].indexOf("#") != 0) {
+            if (f) {
                 ret["other"].push(tags[i]);
+            }
+        }
+        for (let [k, ts] of Object.entries(ret)) {
+            for (let j = 0; j < ts.length; j++) {
+                if (ts[j].length == 2) {
+                    ts[j].push(ts[j][0]);
+                }
             }
         }
         return ret;
@@ -530,36 +552,43 @@ $(function(){
             <h2>クラウド環境記事 - GCP</h2>
             <div>
               <span v-for="(tag, idx) in categorized.cloud_gcp">
-                <span v-if="idx>0"> / </span>
-                <a v-bind:href="'#' + tag[0]" v-on:click.prevent.stop="gotoTagPage(tag[0]);">{{ tag[0] }}({{ tag[1] }})</a>
+                <span v-if="idx>0" class="font-small"> / </span>
+                <a v-bind:href="'#' + tag[0]" v-on:click.prevent.stop="gotoTagPage(tag[0]);" v-bind:class="(tag[1]<3)? 'font-small':''">{{ tag[2] }}({{ tag[1] }})</a>
               </span>
             </div>
             <h2>クラウド環境記事 - AWS</h2>
             <div>
               <span v-for="(tag, idx) in categorized.cloud_aws">
-                <span v-if="idx>0"> / </span>
-                <a v-bind:href="'#' + tag[0]" v-on:click.prevent.stop="gotoTagPage(tag[0]);">{{ tag[0] }}({{ tag[1] }})</a>
+                <span v-if="idx>0" class="font-small"> / </span>
+                <a v-bind:href="'#' + tag[0]" v-on:click.prevent.stop="gotoTagPage(tag[0]);" v-bind:class="(tag[1]<3)? 'font-small':''">{{ tag[2] }}({{ tag[1] }})</a>
               </span>
             </div>
             <h2>プログラミング言語別記事</h2>
             <div>
               <span v-for="(tag, idx) in categorized.lang">
-                <span v-if="idx>0"> / </span>
-                <a v-bind:href="'#' + tag[0]" v-on:click.prevent.stop="gotoTagPage(tag[0]);">{{ tag[0] }}({{ tag[1] }})</a>
+                <span v-if="idx>0" class="font-small"> / </span>
+                <a v-bind:href="'#' + tag[0]" v-on:click.prevent.stop="gotoTagPage(tag[0]);" v-bind:class="(tag[1]<3)? 'font-small':''">{{ tag[2] }}({{ tag[1] }})</a>
               </span>
             </div>
             <h2>ソフトウェア別記事</h2>
             <div>
               <span v-for="(tag, idx) in categorized.software">
-                <span v-if="idx>0"> / </span>
-                <a v-bind:href="'#' + tag[0]" v-on:click.prevent.stop="gotoTagPage(tag[0]);">{{ tag[0] }}({{ tag[1] }})</a>
+                <span v-if="idx>0" class="font-small"> / </span>
+                <a v-bind:href="'#' + tag[0]" v-on:click.prevent.stop="gotoTagPage(tag[0]);" v-bind:class="(tag[1]<3)? 'font-small':''">{{ tag[2] }}({{ tag[1] }})</a>
               </span>
             </div>
             <h2>Linuxコマンドの記事</h2>
             <div>
               <span v-for="(tag, idx) in categorized.command">
-                <span v-if="idx>0"> / </span>
-                <a v-bind:href="'#' + tag[0]" v-on:click.prevent.stop="gotoTagPage(tag[0]);">{{ tag[0] }}({{ tag[1] }})</a>
+                <span v-if="idx>0" class="font-small"> / </span>
+                <a v-bind:href="'#' + tag[0]" v-on:click.prevent.stop="gotoTagPage(tag[0]);" v-bind:class="(tag[1]<3)? 'font-small':''">{{ tag[2] }}({{ tag[1] }})</a>
+              </span>
+            </div>
+            <h2>その他</h2>
+            <div>
+              <span v-for="(tag, idx) in categorized.other">
+                <span v-if="idx>0" class="font-small"> / </span>
+                <a v-bind:href="'#' + tag[0]" v-on:click.prevent.stop="gotoTagPage(tag[0]);" v-bind:class="(tag[1]<3)? 'font-small':''">{{ tag[2] }}({{ tag[1] }})</a>
               </span>
             </div>
           </div>
