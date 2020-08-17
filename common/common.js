@@ -32,6 +32,13 @@ $(function(){
                         article.keyword2.find(k => k.startsWith(keywd) && !k.startsWith(ex)) ||
                         article.title.toLowerCase().indexOf(keywd) >= 0 && article.title.toLowerCase().indexOf(ex) < 0);
             });
+        } else if (keywd == "jq") {
+            result = articles.filter( article => {
+                let ex = "jquery";
+                return (article.keyword1.find(k => k.startsWith(keywd) && !k.startsWith(ex)) ||
+                        article.keyword2.find(k => k.startsWith(keywd) && !k.startsWith(ex)) ||
+                        article.title.toLowerCase().indexOf(keywd) >= 0 && article.title.toLowerCase().indexOf(ex) < 0);
+            });
         } else {
             result = articles.filter( article => {
                 return (article.keyword1.find(k => k.startsWith(keywd)) ||
@@ -270,28 +277,29 @@ $(function(){
         let list = response.data;
         let tags = {};
         for (let i = 0; i < list.length; i++) {
-            if (list[i]["updated"] == "") {
-                list[i]["date"] = list[i]["posted"];
+            let entry = list[i];
+            if (entry["updated"] == "") {
+                entry["date"] = entry["posted"];
             } else {
-                list[i]["date"] = list[i]["posted"] + "投稿 " + list[i]["updated"] + "更新";
+                entry["date"] = entry["posted"] + "投稿 " + entry["updated"] + "更新";
             }
-            if (!list[i]["keyword2"]) {
-                list[i]["keyword2"] = [];
+            if (!entry["keyword2"]) {
+                entry["keyword2"] = [];
             }
-            list[i]["keyword1"] = list[i]["keyword1"].filter(function (x, i, self) {
+            entry["keyword1"] = entry["keyword1"].filter(function (x, i, self) {
                 return self.indexOf(x) === i;
             });
-            list[i]["keyword2"] = list[i]["keyword2"].filter(function (x, i, self) {
-                return list[i]["keyword1"].indexOf(x) < 0 && self.indexOf(x) === i;
+            entry["keyword2"] = entry["keyword2"].filter(function (x, i, self) {
+                return entry["keyword1"].indexOf(x) < 0 && self.indexOf(x) === i;
             });
-            list[i]["keyword1"].concat(list[i]["keyword2"]).forEach(function (k) {
+            entry["keyword1"].concat(entry["keyword2"]).forEach(function (k) {
                 if (!(k in tags)) {
                     tags[k] = 0;
                 }
                 tags[k]++;
             });
-            list[i]["keyword1"] = extractSynonymIndex(list[i]["keyword1"]);
-            list[i]["keyword2"] = extractSynonymIndex(list[i]["keyword2"]);
+            entry["keyword1"] = extractSynonymIndex(entry["keyword1"]);
+            entry["keyword2"] = extractSynonymIndex(entry["keyword2"]);
         }
         tags = Object.entries(tags);
         tags.sort(function(a, b) {

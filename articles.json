@@ -1,11 +1,19 @@
 [
     {
+        "url": "https://qiita.com/suzuki-navi/items/0d273454af382fad3ad6",
+        "title": "たくさんのAWS Glue Jobを実行している環境で実行履歴を一覧表示するPythonスクリプト",
+        "posted": "2020/08/17",
+        "updated": "",
+        "keyword1": ["#qiita", "#data_input", "aws", "glue"],
+        "keyword2": ["python"]
+    },
+    {
         "url": "https://suzuki-navi.hatenablog.com/entry/2020/08/16/235911",
         "title": "TensorFlowの自動微分を使って勾配降下法を試してみる",
         "posted": "2020/08/16",
         "updated": "",
         "keyword1": ["#hatenablog", "#machine_learning"],
-        "keyword2": ["python", "matplotlib", "tensorflow"]
+        "keyword2": ["#math", "python", "matplotlib", "tensorflow", "googlecolab"]
     },
     {
         "url": "https://suzuki-navi.hatenablog.com/entry/2020/08/14/233745",
@@ -52,7 +60,7 @@
         "title": "Perl / Powershell / JavaScriptのワンライナーでどこでもパスワードを生成",
         "posted": "2020/07/21",
         "updated": "",
-        "keyword1": ["#hatenablog", "one_liner", "perl", "javascript", "powershell"],
+        "keyword1": ["#hatenablog", "oneliner", "perl", "javascript", "powershell"],
         "keyword2": ["password"]
     },
     {
@@ -233,7 +241,7 @@
         "title": "AWS RDS PostgreSQLのクエリログをawscliで取得するワンライナー",
         "posted": "2020/06/16",
         "updated": "",
-        "keyword1": ["#hatenablog", "#data_store", "command", "postgresql", "aws", "awscli", "jq", "rds", "one_liner"]
+        "keyword1": ["#hatenablog", "#data_store", "command", "postgresql", "aws", "awscli", "jq", "rds", "oneliner"]
     },
     {
         "url": "https://suzuki-navi.hatenablog.com/entry/2020/06/15/194217",
@@ -247,7 +255,8 @@
         "title": "たくさんのAWS Glue Jobを実行している環境で実行履歴をまとめて見るワンライナー",
         "posted": "2020/06/14",
         "updated": "",
-        "keyword1": ["#hatenablog", "#data_input", "command", "aws", "awscli", "jq", "glue", "one_liner"]
+        "keyword1": ["#hatenablog", "#data_input", "command", "aws", "awscli", "jq", "glue", "oneliner"],
+        "keyword2": ["perl"]
     },
     {
         "url": "https://suzuki-navi.hatenablog.com/entry/2020/06/13/131412",
@@ -489,7 +498,7 @@
         "title": "AWS CloudWatchログ容量の推移を確認するワンライナー",
         "posted": "2020/05/07",
         "updated": "",
-        "keyword1": ["#beex", "#business_blog", "command", "aws", "awscli", "jq", "cloudwatch", "one_liner"]
+        "keyword1": ["#beex", "#business_blog", "command", "aws", "awscli", "jq", "cloudwatch", "oneliner"]
     },
     {
         "url": "https://qiita.com/suzuki-navi/items/075ea29cdf481b711d0a",
@@ -564,7 +573,7 @@
         "posted": "2020/01/28",
         "updated": "",
         "keyword1": ["#qiita", "#machine_learning", "#numerical_analysis"],
-        "keyword2": ["jupyter", "matplotlib", "scala"]
+        "keyword2": ["#math", "jupyter", "matplotlib", "scala"]
     },
     {
         "url": "https://qiita.com/suzuki-navi/items/501cb84d154c53c6a25c",
