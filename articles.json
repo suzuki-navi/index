@@ -1,5 +1,13 @@
 [
     {
+        "url": "https://suzuki-navi.hatenablog.com/entry/2020/08/19/155840",
+        "title": "AWS CloudWatch Logsでロググループが存在するかどうかをスクリプトで判定",
+        "posted": "2020/08/19",
+        "updated": "",
+        "keyword1": ["#hatenablog", "aws", "cloudwatch", "awscli", "powershell"],
+        "keyword2": ["jq"]
+    },
+    {
         "url": "https://qiita.com/suzuki-navi/items/0d273454af382fad3ad6",
         "title": "たくさんのAWS Glue Jobを実行している環境で実行履歴を一覧表示するPythonスクリプト",
         "posted": "2020/08/17",
