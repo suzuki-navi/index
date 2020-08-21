@@ -14,20 +14,17 @@
 
 </head>
 <body>
-<h1>これまでに書いたもの/してきたこと</h1>
-<div id="body" class="grid">
+
+<div id="body">
+<div class="drawer">
+  <h1>これまでに書いたもの/してきたこと</h1>
+  <input type="checkbox" id="drawer-check" class="drawer-hidden">
+  <label for="drawer-check" class="drawer-open"><span></span></label>
+  <articles-tags class="card" id="card-tags-sp"></articles-tags>
+</div>
+<div class="grid">
   <search-articles-search class="card card-size9" id="card-search"></search-articles-search>
-  <articles-tags class="card card-size9"></articles-tags>
-  <search-articles-fixed class="card card-size3" query="gcp"></search-articles-fixed>
-  <search-articles-fixed class="card card-size3" query="aws"></search-articles-fixed>
-  <search-articles-fixed class="card card-size3" query="scala"></search-articles-fixed>
-  <search-articles-fixed class="card card-size3" query="java"></search-articles-fixed>
-  <search-articles-fixed class="card card-size3" query="php"></search-articles-fixed>
-  <search-articles-fixed class="card card-size3" query="perl"></search-articles-fixed>
-  <search-articles-fixed class="card card-size3" query="python"></search-articles-fixed>
-  <search-articles-fixed class="card card-size3" query="metabase"></search-articles-fixed>
-  <search-articles-fixed class="card card-size3" query="command"></search-articles-fixed>
-  <search-articles-fixed class="card card-size3" query="#numerical_analysis"></search-articles-fixed>
+  <articles-tags class="card card-size9" id="card-tags"></articles-tags>
   <search-articles-fixed class="card card-size6" query="#pickup"></search-articles-fixed>
   <section class="card card-size2" id="card-opensource">
     <h1>オープンソースで作っているもの</h1>
@@ -103,6 +100,7 @@
       ※このインデックスページには記事を重複ありで分類しています。
     </p>
   </section>
+</div>
 </div>
 </body>
 </html>

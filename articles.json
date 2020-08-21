@@ -1,5 +1,13 @@
 [
     {
+        "url": "https://qiita.com/suzuki-navi/items/2bb11dab89d2339e19b9",
+        "title": "AWS S3のCloudTrailによるログとS3サーバアクセスログのサンプル",
+        "posted": "2020/08/21",
+        "updated": "",
+        "keyword1": ["#qiita", "#data_store", "aws", "s3", "cloudtrail"],
+        "keyword2": []
+    },
+    {
         "url": "https://suzuki-navi.hatenablog.com/entry/2020/08/19/155840",
         "title": "AWS CloudWatch Logsでロググループが存在するかどうかをスクリプトで判定",
         "posted": "2020/08/19",

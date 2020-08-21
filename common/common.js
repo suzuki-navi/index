@@ -348,6 +348,7 @@ $(function(){
                 ["cloudformation", 0, "CloudFormation"],
                 ["comprehend", 0, "Comprehend"],
                 ["cloudwatch", 0, "CloudWatch"],
+                ["cloudtrail", 0, "CloudTrail"],
                 ["awscli", 0, "awscli"],
             ],
             "lang": [
@@ -548,6 +549,7 @@ $(function(){
             gotoTagPage: function (tag) {
                 global_query.query = tag;
                 history.pushState(undefined, tag + " | suzuki-navi", "#" + tag);
+                $("#drawer-check").prop("checked", false);
             },
         },
         template: `
