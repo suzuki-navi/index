@@ -1,5 +1,13 @@
 [
     {
+        "url": "https://suzuki-navi.hatenablog.com/entry/2020/08/22/210702",
+        "title": "p値が同じでも分布によって確率密度関数の値はぜんぜん違う",
+        "posted": "2020/08/22",
+        "updated": "",
+        "keyword1": ["#hatenablog", "#statistics"],
+        "keyword2": ["python"]
+    },
+    {
         "url": "https://qiita.com/suzuki-navi/items/2bb11dab89d2339e19b9",
         "title": "AWS S3のCloudTrailによるログとS3サーバアクセスログのサンプル",
         "posted": "2020/08/21",

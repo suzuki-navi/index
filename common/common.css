@@ -123,13 +123,12 @@ h1 {
     transform: rotate(-45deg);
   }
   #card-tags-sp {
-    width: 100%;
-    height: 100%;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 100%;
     z-index: 99;
     transition: 0.5s;
+    scroll: auto;
   }
   #drawer-check:checked ~ #card-tags-sp {
     left: 0;

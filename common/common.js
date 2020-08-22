@@ -59,10 +59,11 @@ $(function(){
         let result1 = [];
         let result2 = [];
         if (query == "") {
-            if (articles.length <= 20) {
+            const recent_count = 25;
+            if (articles.length <= recent_count) {
                 result2 = articles;
             } else {
-                result2 = articles.slice(0, 20);
+                result2 = articles.slice(0, recent_count);
             }
         } else {
             result1 = articles;
@@ -325,14 +326,14 @@ $(function(){
                 ["#math", 0, "数式のある記事"],
             ],
             "cloud_gcp": [
-                ["gcp", 0],
-                ["bigquery", 0],
-                ["cloudsql", 0],
-                ["computeengine", 0],
-                ["gcs", 0],
-                ["cloudtranslation", 0],
-                ["gsutil", 0],
-                ["bq", 0],
+                ["gcp", 0, "GCP"],
+                ["bigquery", 0, "BigQuery"],
+                ["cloudsql", 0, "Cloud SQL"],
+                ["computeengine", 0, "Compute Engine"],
+                ["gcs", 0, "Cloud Storage"],
+                ["cloudtranslation", 0, "Cloud Translation"],
+                ["gsutil", 0, "gsutil"],
+                ["bq", 0, "bq"],
             ],
             "cloud_aws": [
                 ["aws", 0, "AWS"],
@@ -362,8 +363,8 @@ $(function(){
                 ["powershell", 0, "PowerShell"],
             ],
             "software": [
-                ["postgresql", 0],
-                ["fluentd", 0],
+                ["postgresql", "PostgreSQL"],
+                ["fluentd", "Fluentd"],
                 ["elasticsearch", 0],
                 ["kibana", 0],
                 ["metabase", 0],
@@ -550,6 +551,11 @@ $(function(){
                 global_query.query = tag;
                 history.pushState(undefined, tag + " | suzuki-navi", "#" + tag);
                 $("#drawer-check").prop("checked", false);
+                window.scroll({
+                    top: 0,
+                    left: 0,
+                    behavior: 'smooth',
+                });
             },
         },
         template: `
