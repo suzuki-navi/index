@@ -363,11 +363,11 @@ $(function(){
                 ["powershell", 0, "PowerShell"],
             ],
             "software": [
-                ["postgresql", "PostgreSQL"],
-                ["fluentd", "Fluentd"],
-                ["elasticsearch", 0],
-                ["kibana", 0],
-                ["metabase", 0],
+                ["postgresql", 0, "PostgreSQL"],
+                ["fluentd", 0, "Fluentd"],
+                ["elasticsearch", 0, "Elasticsearch"],
+                ["kibana", 0, "Kibana"],
+                ["metabase", 0, "Metabase"],
                 ["redash", 0],
                 ["superset", 0],
                 ["tableau", 0],
@@ -415,7 +415,9 @@ $(function(){
                 ["#lang_compare", 0, "プログラミング言語比較"],
                 ["#natural_language_processing", 0, "自然言語処理"],
                 ["#numerical_analysis", 0, "数値計算"],
+                ["#probability_distribution", 0, "確率分布"],
                 ["#network", 0, "ネットワーク"],
+                ["raspberry_pi", 0, "Raspberry Pi"],
             ],
         };
         for (let i = 0; i < tags.length; i++) {

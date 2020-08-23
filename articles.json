@@ -1,10 +1,18 @@
 [
     {
+        "url": "https://suzuki-navi.hatenablog.com/entry/2020/08/23/120255",
+        "title": "正規分布に従っているが平均と分散が不明のn個の標本があるときのn+1個目の標本の分布",
+        "posted": "2020/08/23",
+        "updated": "",
+        "keyword1": ["#hatenablog", "#statistics", "#probability_distribution"],
+        "keyword2": ["python", "jupyter", "matplotlib", "#math"]
+    },
+    {
         "url": "https://suzuki-navi.hatenablog.com/entry/2020/08/22/210702",
         "title": "p値が同じでも分布によって確率密度関数の値はぜんぜん違う",
         "posted": "2020/08/22",
         "updated": "",
-        "keyword1": ["#hatenablog", "#statistics"],
+        "keyword1": ["#hatenablog", "#statistics", "#probability_distribution"],
         "keyword2": ["python"]
     },
     {
@@ -37,15 +45,15 @@
         "posted": "2020/08/16",
         "updated": "",
         "keyword1": ["#hatenablog", "#machine_learning"],
-        "keyword2": ["#math", "python", "matplotlib", "tensorflow", "googlecolab"]
+        "keyword2": ["#math", "python", "googlecolab", "matplotlib", "tensorflow"]
     },
     {
         "url": "https://suzuki-navi.hatenablog.com/entry/2020/08/14/233745",
         "title": "t分布の確率密度関数・累積分布関数のグラフをPythonで描く",
         "posted": "2020/08/14",
         "updated": "",
-        "keyword1": ["#hatenablog", "#statistics"],
-        "keyword2": ["python", "matplotlib"]
+        "keyword1": ["#hatenablog", "#statistics", "#probability_distribution"],
+        "keyword2": ["python", "jupyter", "matplotlib"]
     },
     {
         "url": "https://qiita.com/suzuki-navi/items/fd3607f8f0e670bba887",
@@ -404,7 +412,7 @@
         "title": "二項分布の極限がポアソン分布になることをグラフによりイメージする",
         "posted": "2020/05/28",
         "updated": "",
-        "keyword1": ["#hatenablog", "#statistics"],
+        "keyword1": ["#hatenablog", "#statistics", "#probability_distribution"],
         "keyword2": ["#math", "jupyter", "matplotlib", "php", "python"]
     },
     {
@@ -426,7 +434,7 @@
         "title": "二項分布の極限がポアソン分布になることを数式変形によりイメージする",
         "posted": "2020/05/25",
         "updated": "",
-        "keyword1": ["#hatenablog", "#statistics", "#math"]
+        "keyword1": ["#hatenablog", "#statistics", "#probability_distribution", "#math"]
     },
     {
         "url": "https://suzuki-navi.hatenablog.com/entry/2020/05/24/190325",
@@ -447,7 +455,7 @@
         "title": "二項分布の極限がポアソン分布になることを文章変形によりイメージする",
         "posted": "2020/05/22",
         "updated": "",
-        "keyword1": ["#hatenablog", "#statistics"],
+        "keyword1": ["#hatenablog", "#statistics", "#probability_distribution"],
         "keyword2": ["#math"]
     },
     {
@@ -604,7 +612,7 @@
         "title": "正規分布に従う乱数の生成方法(Box–Muller法)の数式による説明",
         "posted": "2020/01/23",
         "updated": "",
-        "keyword1": ["#qiita", "#statistics", "#math"]
+        "keyword1": ["#qiita", "#statistics", "#probability_distribution", "#math"]
     },
     {
         "url": "https://qiita.com/suzuki-navi/items/6611b9f16a391bac5ac5",
@@ -627,7 +635,7 @@
         "title": "一様分布、正規分布、指数分布、ポアソン分布の乱数を生成する方法 (Scala)",
         "posted": "2020/01/09",
         "updated": "",
-        "keyword1": ["#qiita", "#statistics", "#numerical_analysis", "scala"]
+        "keyword1": ["#qiita", "#statistics", "#probability_distribution", "#numerical_analysis", "scala"]
     },
     {
         "url": "https://qiita.com/suzuki-navi/items/9ed7670aa4a93cf021d2",
@@ -748,8 +756,8 @@
         "title": "Jupyter NotebookをDockerを使って簡単にインストールし起動（nbextensions、Scalaにも対応）",
         "posted": "2019/11/06",
         "updated": "",
-        "keyword1": ["#qiita", "jupyter"],
-        "keyword2": ["python", "scala", "docker"]
+        "keyword1": ["#qiita", "jupyter", "scala"],
+        "keyword2": ["python", "docker"]
     },
     {
         "url": "https://qiita.com/suzuki-navi/items/8b2fe5a35a4439013461",
