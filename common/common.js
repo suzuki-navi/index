@@ -340,6 +340,7 @@ $(function(){
                 ["s3", 0, "S3"],
                 ["rds", 0, "RDS"],
                 ["aurora", 0, "Aurora"],
+                ["redshift", 0, "Redshift"],
                 ["glue", 0, "Glue"],
                 ["documentdb", 0, "DocumentDB"],
                 ["lambda", 0, "Lambda"],

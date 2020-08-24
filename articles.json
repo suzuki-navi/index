@@ -1,11 +1,19 @@
 [
     {
+        "url": "https://qiita.com/suzuki-navi/items/54ee0e33ebb12d6a4cd7",
+        "title": "AWS Redshift Spectrumとviewの組み合わせのアクセス権限を調べる",
+        "posted": "2020/08/24",
+        "updated": "",
+        "keyword1": ["#qiita", "#data_store", "aws", "redshift", "postgresql"],
+        "keyword2": []
+    },
+    {
         "url": "https://suzuki-navi.hatenablog.com/entry/2020/08/23/120255",
         "title": "正規分布に従っているが平均と分散が不明のn個の標本があるときのn+1個目の標本の分布",
         "posted": "2020/08/23",
         "updated": "",
         "keyword1": ["#hatenablog", "#statistics", "#probability_distribution"],
-        "keyword2": ["python", "jupyter", "matplotlib", "#math"]
+        "keyword2": ["python", "googlecolab", "matplotlib", "#math"]
     },
     {
         "url": "https://suzuki-navi.hatenablog.com/entry/2020/08/22/210702",
