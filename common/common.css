@@ -68,10 +68,6 @@ h1 {
   padding-bottom: 5px;
 }
 @media screen and (max-width: 829px) {
-  #card-search {
-    height: 255px;
-    overflow: auto;
-  }
   #card-github-grass p img {
     width: 100%;
   }

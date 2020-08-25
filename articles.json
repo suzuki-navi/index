@@ -627,8 +627,8 @@
         "title": "インクリメント・デクリメントの書き方のまとめ(Scala、Java、Rust、C言語、C++、Go言語、PHP、Perl、Python、Ruby、JavaScript)",
         "posted": "2020/01/14",
         "updated": "",
-        "keyword1": ["#qiita", "#lang_compare"],
-        "keyword2": ["scala", "java", "rust", "clang", "c++", "golang", "php", "perl", "python", "ruby", "javascript"]
+        "keyword1": ["#qiita", "#lang_compare", "scala", "java", "rust", "clang", "c++", "golang", "php", "perl", "python", "ruby", "javascript"],
+        "keyword2": []
     },
     {
         "url": "https://qiita.com/suzuki-navi/items/b5f066db181092543854",
@@ -695,8 +695,8 @@
         "title": "if文の書き方のまとめ(Scala、Java、Rust、C言語、C++、Go言語、PHP、Perl、Python、Ruby)",
         "posted": "2019/11/22",
         "updated": "",
-        "keyword1": ["#qiita", "#lang_compare"],
-        "keyword2": ["scala", "java", "rust", "clang", "c++", "golang", "php", "perl", "python", "ruby"]
+        "keyword1": ["#qiita", "#lang_compare", "scala", "java", "rust", "clang", "c++", "golang", "php", "perl", "python", "ruby"],
+        "keyword2": []
     },
     {
         "url": "https://qiita.com/suzuki-navi/items/d7c27c9ce815750cdc59",

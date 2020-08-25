@@ -190,11 +190,14 @@ $(function(){
         case "#pickup":
             title1 = "主な記事";
             break;
+        case "#count":
+            title1 = "これまでに書いた記事数";
+            break;
 
         }
         if (result2.length == 0) {
             title2 = "";
-        } else if (result1.length == 0 && getImageHtml(query) == "") {
+        } else if (result1.length == 0 && getImageHtml(query)[0] == "") {
             title1 = title2;
             title2 = "";
         }
@@ -211,27 +214,28 @@ $(function(){
         query = normalizeQuery(query);
         switch(query) {
         case "#machine_learning":
-            return '<p class="image"><a href="https://qiita.com/suzuki-navi/items/2581b3f4afeeabeacace"><img src="ml.png"></a></p>';
-        case "php":
-            return '<p class="font-small">もっとも古くから触っていた言語の1つですが記事はあまりありません。</p>';
+            return ['<p class="image"><a href="https://qiita.com/suzuki-navi/items/2581b3f4afeeabeacace"><img src="ml.png"></a></p>', ''];
         case "raspberry_pi":
-            return '<p class="youtube"><iframe width="352" height="198" src="https://www.youtube-nocookie.com/embed/wFTvOIsHmQo?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>';
+            return ['<p class="youtube"><iframe width="352" height="198" src="https://www.youtube-nocookie.com/embed/wFTvOIsHmQo?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>', ''];
         case "command":
-            return '<p class="image"><a href="https://qiita.com/suzuki-navi/items/fdcb166f32b28bc0ff82"><img src="cli.png"></a></p>';
+            return ['<p class="image"><a href="https://qiita.com/suzuki-navi/items/fdcb166f32b28bc0ff82"><img src="cli.png"></a></p>', ''];
         case "git":
-            return '<p class="image"><a href="https://qiita.com/suzuki-navi/items/fdcb166f32b28bc0ff82"><img src="cli.png"></a></p>';
+            return ['<p class="image"><a href="https://qiita.com/suzuki-navi/items/fdcb166f32b28bc0ff82"><img src="cli.png"></a></p>', ''];
         case "#math":
-            return '<p class="image"><a href="https://tech.naviplus.co.jp/2014/02/27/%e4%b8%8d%e5%81%8f%e5%88%86%e6%95%a3%e3%81%af%e3%81%aa%e3%81%9c-n-1-%e3%81%a7%e5%89%b2%e3%82%8b%e3%81%ae%e3%81%8b%ef%bc%9f/"><img src="math.png"></a></p>';
+            return ['<p class="image"><a href="https://tech.naviplus.co.jp/2014/02/27/%e4%b8%8d%e5%81%8f%e5%88%86%e6%95%a3%e3%81%af%e3%81%aa%e3%81%9c-n-1-%e3%81%a7%e5%89%b2%e3%82%8b%e3%81%ae%e3%81%8b%ef%bc%9f/"><img src="math.png"></a></p>', ''];
         case "#pickup":
-            return '' +
+            return [
                 '<p class="youtube"><iframe width="352" height="198" src="https://www.youtube-nocookie.com/embed/wFTvOIsHmQo?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>' +
-                '<p class="image"><a href="https://tech.naviplus.co.jp/2014/02/27/%e4%b8%8d%e5%81%8f%e5%88%86%e6%95%a3%e3%81%af%e3%81%aa%e3%81%9c-n-1-%e3%81%a7%e5%89%b2%e3%82%8b%e3%81%ae%e3%81%8b%ef%bc%9f/"><img src="math.png"></a></p>';
+                '<p class="image"><a href="https://tech.naviplus.co.jp/2014/02/27/%e4%b8%8d%e5%81%8f%e5%88%86%e6%95%a3%e3%81%af%e3%81%aa%e3%81%9c-n-1-%e3%81%a7%e5%89%b2%e3%82%8b%e3%81%ae%e3%81%8b%ef%bc%9f/"><img src="math.png"></a></p>',
+                ''];
         default:
-            return '';
+            return ['', ''];
         }
     }
     function getCountStr(query, searchResult) {
         if (query == "") {
+            return "";
+        } else if (query == "#count") {
             return "";
         } else {
             return "( " + searchResult.count + "件 )";
@@ -324,6 +328,9 @@ $(function(){
                 ["#data_store", 0, "データ保管の記事"],
                 ["#data_input", 0, "データ収集の記事"],
                 ["#math", 0, "数式のある記事"],
+            ],
+            "thema2": [
+                ["#count", 0, "これまでに書いた記事数"],
             ],
             "cloud_gcp": [
                 ["gcp", 0, "GCP"],
@@ -487,7 +494,8 @@ $(function(){
             query: function () { return global_query.query; },
             result: function () { return searchArticles(this.query, this.articles.list); },
             count_str: function () { return getCountStr(this.query, this.result); },
-            imageHtml: function () { return getImageHtml(this.query); },
+            imageHtml1: function () { return getImageHtml(this.query)[0]; },
+            imageHtml2: function () { return getImageHtml(this.query)[1]; },
         },
         template: `
           <div>
@@ -498,13 +506,33 @@ $(function(){
                 <a v-bind:href="article.url" target="_blank">{{ article.title }}</a> ({{ article.date }})
               </li>
             </ul>
-            <div v-html="imageHtml"></div>
+            <div v-html="imageHtml1"></div>
             <h2 v-if="result.title2">{{ result.title2 }}</h2>
             <ul v-if="result.articles2.length > 0" class="font-small">
               <li v-for="article in result.articles2">
                 <a v-bind:href="article.url" target="_blank">{{ article.title }}</a> ({{ article.date }})
               </li>
             </ul>
+            <div v-html="imageHtml2"></div>
+            <section v-if="global_query.query=='#count'">
+              <table>
+                <tr>
+                  <td>会社ブログ(現職+前職)：</td>
+                  <td><articles-count query="#business_blog"></articles-count></td>
+                </tr>
+                <tr>
+                  <td><a href="https://qiita.com/suzuki-navi">Qiita</a>：</td>
+                  <td><articles-count query="#qiita"></articles-count></td>
+                </tr>
+                <tr>
+                  <td><a href="https://suzuki-navi.hatenablog.com/">はてなブログ</a>：</td>
+                  <td><articles-count query="#hatenablog"></articles-count></td>
+                </tr>
+              </table>
+              <p class="font-small">
+                ※このインデックスページには記事を重複ありで分類しています。
+              </p>
+            </section>
           </div>
         `,
     });
@@ -517,7 +545,7 @@ $(function(){
         },
         computed: {
             result: function () { return searchArticles(this.query, this.articles.list); },
-            imageHtml: function () { return getImageHtml(this.query); },
+            imageHtml: function () { return getImageHtml(this.query)[0]; },
         },
         template: `
           <div>
@@ -566,6 +594,9 @@ $(function(){
             <div>
               <div v-for="(tag, idx) in categorized.thema">
                 <a v-bind:href="'#' + tag[0]" v-on:click.prevent.stop="gotoTagPage(tag[0]);">{{ tag[2] }}({{ tag[1] }})</a>
+              </div>
+              <div v-for="(tag, idx) in categorized.thema2">
+                <a v-bind:href="'#' + tag[0]" v-on:click.prevent.stop="gotoTagPage(tag[0]);">{{ tag[2] }}</a>
               </div>
             </div>
             <h2>クラウド環境記事 - GCP</h2>
