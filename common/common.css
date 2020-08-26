@@ -67,7 +67,7 @@ h1 {
   border-bottom: 1px solid #9a5;
   padding-bottom: 5px;
 }
-@media screen and (max-width: 829px) {
+@media screen and (max-width: 849px) {
   #card-github-grass p img {
     width: 100%;
   }
@@ -134,7 +134,7 @@ h1 {
   }
 
 }
-@media screen and (min-width: 830px) {
+@media screen and (min-width: 850px) {
   .drawer {
     display: flex;
     justify-content: space-between;
@@ -204,18 +204,18 @@ h1 {
     align-items: center;
   }
 }
-@media screen and (min-width: 830px) and (max-width: 1239px) {
+@media screen and (min-width: 850px) and (max-width: 1269px) {
   .grid {
-    grid-template-columns: 410px 410px;
+    grid-template-columns: 420px 420px;
   }
 }
-@media screen and (min-width: 1240px) and (max-width: 1649px) {
+@media screen and (min-width: 1270px) and (max-width: 1689px) {
   .grid {
-    grid-template-columns: 410px 410px 410px;
+    grid-template-columns: 420px 420px 420px;
   }
 }
-@media screen and (min-width: 1650px) {
+@media screen and (min-width: 1690px) {
   .grid {
-    grid-template-columns: 410px 410px 410px 410px;
+    grid-template-columns: 420px 420px 420px 420px;
   }
 }

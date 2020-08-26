@@ -190,6 +190,9 @@ $(function(){
         case "#pickup":
             title1 = "主な記事";
             break;
+        case "#certification":
+            title1 = "これまでに取得した資格";
+            break;
         case "#count":
             title1 = "これまでに書いた記事数";
             break;
@@ -236,6 +239,8 @@ $(function(){
         if (query == "") {
             return "";
         } else if (query == "#count") {
+            return "";
+        } else if (query == "#certification") {
             return "";
         } else {
             return "( " + searchResult.count + "件 )";
@@ -330,7 +335,9 @@ $(function(){
                 ["#math", 0, "数式のある記事"],
             ],
             "thema2": [
-                ["#count", 0, "これまでに書いた記事数"],
+                ["#pickup", 0, "主な記事"],
+                ["#count", 0, "書いた記事数"],
+                ["#certification", 0, "取得した資格"],
             ],
             "cloud_gcp": [
                 ["gcp", 0, "GCP"],
@@ -514,6 +521,23 @@ $(function(){
               </li>
             </ul>
             <div v-html="imageHtml2"></div>
+            <section v-if="global_query.query=='#certification'">
+              <ul>
+                <li>日本ディープラーニング協会 G検定 (2020/07/04) <a href="https://qiita.com/suzuki-navi/items/fd3607f8f0e670bba887">合格体験記事</a></li>
+                <li>日本統計学会 統計検定 2級 (2020/05/31) <a href="https://qiita.com/suzuki-navi/items/e353b8dfbc6e872f9f41">合格体験記事</a></li>
+                <li>AWS Certified Machine Learning - Specialty (2019/11/20) <a href="https://qiita.com/suzuki-navi/items/3664bfbc102052717426">合格体験記事</a></li>
+                <li>AWS Certified Big Data - Specialty (2019/10/31) <a href="https://qiita.com/suzuki-navi/items/8b2fe5a35a4439013461">合格体験記事</a></li>
+                <li>AWS Certified Solutions Architect - Associate (2019/09/26)</li>
+                <li>全国珠算教育連盟 珠算検定 初段 (昔)</li>
+                <li>日本商工会議所 珠算検定 1級 (昔)</li>
+              </ul>
+              <p class="image">
+                <img src="certification.png">
+              </p>
+              <p class="image">
+                <img src="toukei-kentei.png">
+              </p>
+            </section>
             <section v-if="global_query.query=='#count'">
               <table>
                 <tr>
