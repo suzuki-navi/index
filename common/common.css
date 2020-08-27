@@ -67,6 +67,15 @@ h1 {
   border-bottom: 1px solid #9a5;
   padding-bottom: 5px;
 }
+
+.drawer-menu-1 {
+  grid-column: span 2;
+  column-count: 2;
+  column-rule-style: solid;
+  column-rule-width: 1px;
+  column-rule-color: #ccc;
+}
+
 @media screen and (max-width: 849px) {
   #card-github-grass p img {
     width: 100%;

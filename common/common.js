@@ -615,7 +615,7 @@ $(function(){
         },
         template: `
           <div>
-            <div>
+            <div class="drawer-menu-1">
               <div v-for="(tag, idx) in categorized.thema">
                 <a v-bind:href="'#' + tag[0]" v-on:click.prevent.stop="gotoTagPage(tag[0]);">{{ tag[2] }}({{ tag[1] }})</a>
               </div>
