@@ -196,6 +196,12 @@ $(function(){
         case "#count":
             title1 = "これまでに書いた記事数";
             break;
+        case "#my_open_sources":
+            title1 = "オープンソースで作っているもの";
+            break;
+        case "#my_cases":
+            title1 = "これまでに携わった主な公開事例";
+            break;
 
         }
         if (result2.length == 0) {
@@ -241,6 +247,10 @@ $(function(){
         } else if (query == "#count") {
             return "";
         } else if (query == "#certification") {
+            return "";
+        } else if (query == "#my_open_sources") {
+            return "";
+        } else if (query == "#my_cases") {
             return "";
         } else {
             return "( " + searchResult.count + "件 )";
@@ -336,8 +346,10 @@ $(function(){
             ],
             "thema2": [
                 ["#pickup", 0, "主な記事"],
-                ["#count", 0, "書いた記事数"],
                 ["#certification", 0, "取得した資格"],
+                ["#count", 0, "書いた記事数"],
+                ["#my_open_sources", 0, "作っているもの"],
+                ["#my_cases", 0, "主な公開事例"],
             ],
             "cloud_gcp": [
                 ["gcp", 0, "GCP"],
@@ -555,6 +567,26 @@ $(function(){
               </table>
               <p class="font-small">
                 ※このインデックスページには記事を重複ありで分類しています。
+              </p>
+            </section>
+            <section v-if="global_query.query=='#my_open_sources'">
+              <ul>
+                <li><a href="https://github.com/xsvutils/xsvutils">xsvutils (2017/12 〜)</a>
+                  <p>CSVファイルやTSVファイルをCUIで扱うツール。</p>
+                </li>
+              </ul>
+            </section>
+            <section v-if="global_query.query=='#my_cases'">
+              <ul>
+                <li><a href="https://www.naviplus.co.jp/search/">ECサイトの検索エンジン</a> (2013/05 〜 2019/07)
+                  <p>多数のECサイトの検索エンジン開発/導入/運用に携わる</p>
+                  <ul>
+                    <li><a href="https://www.naviplus.co.jp/showcase/interview/surugaya">主な導入事例</a></li>
+                  </ul>
+                </li>
+              </ul>
+              <p class="image">
+                <img src="search-2.png">
               </p>
             </section>
           </div>
