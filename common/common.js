@@ -400,6 +400,8 @@ $(function(){
                 ["tableau", 0],
                 ["talend", 0],
                 ["dbeaver", 0],
+                ["jupyter", 0, "Jupyter Notebook"],
+                ["polynote", 0, "Polynote"],
             ],
             "command": [
                 ["command", 0],
