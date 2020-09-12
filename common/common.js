@@ -59,7 +59,7 @@ $(function(){
         let result1 = [];
         let result2 = [];
         if (query == "") {
-            const recent_count = 25;
+            const recent_count = 40;
             if (articles.length <= recent_count) {
                 result2 = articles;
             } else {
@@ -445,6 +445,7 @@ $(function(){
                 ["#natural_language_processing", 0, "自然言語処理"],
                 ["#numerical_analysis", 0, "数値計算"],
                 ["#probability_distribution", 0, "確率分布"],
+                ["#gradient_descent", 0, "勾配降下法"],
                 ["#network", 0, "ネットワーク"],
                 ["raspberry_pi", 0, "Raspberry Pi"],
             ],

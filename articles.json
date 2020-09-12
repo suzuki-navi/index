@@ -1,10 +1,25 @@
 [
     {
+        "url": "https://qiita.com/suzuki-navi/items/aace3fef0b355e23d0f0",
+        "title": "TensorFlowのOptimizerの違いによる学習推移の比較",
+        "posted": "2020/09/08",
+        "updated": "",
+        "keyword1": ["#qiita", "#machine_learning", "#gradient_descent", "tensorflow"],
+        "keyword2": ["#math", "python", "googlecolab", "matplotlib"]
+    },
+    {
+        "url": "https://www.youtube.com/watch?v=vO7E0xXA9eU",
+        "title": "SAP基幹システムの会計データをGoogle BigQuery上に取り込んでMetabaseで可視化してみた",
+        "posted": "2020/09/07",
+        "updated": "",
+        "keyword1": ["#beex", "#business_blog", "#visualization", "gcp", "bigquery", "metabase"]
+    },
+    {
         "url": "https://suzuki-navi.hatenablog.com/entry/2020/09/06/222351",
         "title": "金星・水星の最大光度のタイミングの違いを解く",
         "posted": "2020/09/06",
         "updated": "",
-        "keyword1": ["#hatenablog", "#numerical_analysis"],
+        "keyword1": ["#hatenablog", "#numerical_analysis", "#gradient_descent"],
         "keyword2": ["scala", "#math"]
     },
     {
@@ -84,8 +99,8 @@
         "title": "TensorFlowの自動微分を使って勾配降下法を試してみる",
         "posted": "2020/08/16",
         "updated": "",
-        "keyword1": ["#hatenablog", "#machine_learning"],
-        "keyword2": ["#math", "python", "googlecolab", "matplotlib", "tensorflow"]
+        "keyword1": ["#hatenablog", "#machine_learning", "#gradient_descent", "tensorflow"],
+        "keyword2": ["#math", "python", "googlecolab", "matplotlib"]
     },
     {
         "url": "https://suzuki-navi.hatenablog.com/entry/2020/08/14/233745",
@@ -503,7 +518,7 @@
         "title": "勾配降下法の自作アルゴリズム",
         "posted": "2020/05/21",
         "updated": "",
-        "keyword1": ["#hatenablog", "#machine_learning"],
+        "keyword1": ["#hatenablog", "#machine_learning", "#gradient_descent"],
         "keyword2": ["#math", "scala"]
     },
     {
@@ -511,7 +526,7 @@
         "title": "勾配降下法のアルゴリズム一覧のメモ",
         "posted": "2020/05/20",
         "updated": "2020/06/26",
-        "keyword1": ["#hatenablog", "#machine_learning"],
+        "keyword1": ["#hatenablog", "#machine_learning", "#gradient_descent"],
         "keyword2": ["#math"]
     },
     {
