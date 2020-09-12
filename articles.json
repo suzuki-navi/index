@@ -1,5 +1,13 @@
 [
     {
+        "url": "https://qiita.com/suzuki-navi/items/5e47a7cfc41aaa4c3ec7",
+        "title": "TensorFlowのOptimizerの違いによる学習推移をアニメーションにした",
+        "posted": "2020/09/12",
+        "updated": "",
+        "keyword1": ["#qiita", "#machine_learning", "#gradient_descent", "tensorflow"],
+        "keyword2": ["#math", "python", "googlecolab", "matplotlib"]
+    },
+    {
         "url": "https://qiita.com/suzuki-navi/items/aace3fef0b355e23d0f0",
         "title": "TensorFlowのOptimizerの違いによる学習推移の比較",
         "posted": "2020/09/08",
