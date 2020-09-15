@@ -1,5 +1,13 @@
 [
     {
+        "url": "https://qiita.com/suzuki-navi/items/4328ded67f59c7c21b19",
+        "title": "TensorFlowのOptimizerごとのスケール許容範囲の比較",
+        "posted": "2020/09/15",
+        "updated": "",
+        "keyword1": ["#qiita", "#machine_learning", "#gradient_descent", "tensorflow"],
+        "keyword2": ["#math", "python", "googlecolab", "matplotlib"]
+    },
+    {
         "url": "https://qiita.com/suzuki-navi/items/5e47a7cfc41aaa4c3ec7",
         "title": "TensorFlowのOptimizerの違いによる学習推移をアニメーションにした",
         "posted": "2020/09/12",
