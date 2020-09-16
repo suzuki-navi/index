@@ -77,86 +77,40 @@ h1 {
 }
 
 @media screen and (max-width: 949px) {
-  #card-github-grass p img {
-    width: 100%;
-  }
-
-  .drawer {
-    display: flex;
-    justify-content: space-between;
-  }
-  .drawer-hidden {
+  #card-tags-checkbox {
     display: none;
-  }
-  .drawer-open {
-    display: flex;
-    height: 30px;
-    width: 30px;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    z-index: 100;
-    cursor: pointer;
-  }
-  .drawer-open span,
-  .drawer-open span:before,
-  .drawer-open span:after {
-    content: '';
-    display: block;
-    height: 3px;
-    width: 25px;
-    border-radius: 3px;
-    background: #333;
-    transition: 0.5s;
-    position: absolute;
-  }
-  .drawer-open span:before {
-    bottom: 8px;
-  }
-  .drawer-open span:after {
-    top: 8px;
-  }
-  #drawer-check:checked ~ .drawer-open span {
-    background: rgba(255, 255, 255, 0);
-  }
-  #drawer-check:checked ~ .drawer-open span::before {
-    bottom: 0;
-    transform: rotate(45deg);
-  }
-  #drawer-check:checked ~ .drawer-open span::after {
-    top: 0;
-    transform: rotate(-45deg);
-  }
-  #card-tags-sp {
-    position: absolute;
-    top: 0;
-    left: 100%;
-    z-index: 99;
-    transition: 0.5s;
-    scroll: auto;
-  }
-  #drawer-check:checked ~ #card-tags-sp {
-    left: 0;
   }
   #card-tags {
     display: none;
   }
+  #card-tags-checkbox:checked ~ #card-tags {
+    display: block;
+  }
+  #card-tags-checkbox:checked ~ #card-tags-label-open {
+    display: none;
+  }
 
+  #card-github-grass p img {
+    width: 100%;
+  }
 }
 @media screen and (min-width: 950px) {
-  .drawer {
-    display: flex;
-    justify-content: space-between;
+  #card-tags-wrapper {
   }
-  .drawer-hidden {
+  #card-tags-checkbox {
     display: none;
   }
-  .drawer-open {
+  #card-tags {
+    display: block;
+    grid-column: 2;
+  }
+  #card-tags-label-open {
     display: none;
   }
-  #card-tags-sp {
+  #card-tags-label-close {
     display: none;
   }
+
   .grid {
     display: grid;
     max-width: 1300px;
@@ -185,4 +139,17 @@ h1 {
     justify-content: center;
     align-items: center;
   }
+}
+
+#othertags-checkbox {
+  display: none;
+}
+#othertags-checkbox:checked ~ #othertags-label {
+  display: none;
+}
+#othertags {
+  display: none;
+}
+#othertags-checkbox:checked ~ #othertags {
+  display: inline;
 }

@@ -433,13 +433,6 @@ $(function(){
                 ["awscli", 0],
             ],
             "hidden": [
-                ["golang", 0],
-                ["rust", 0],
-                ["clang", 0],
-                ["c++", 0],
-                ["elixir", 0],
-                ["nlb", 0],
-                ["clb", 0],
                 ["#naviplus", 0],
                 ["#beex", 0],
                 ["#business_blog", 0],
@@ -457,6 +450,7 @@ $(function(){
                 ["raspberry_pi", 0, "Raspberry Pi"],
                 ["googlecolab", 0, "Google Colaboratory"],
             ],
+            "other_more": [],
         };
         for (let i = 0; i < tags.length; i++) {
             let f = true;
@@ -468,9 +462,8 @@ $(function(){
                     }
                 }
             }
-            //if (f && tags[i][0].indexOf("#") != 0) {
             if (f) {
-                ret["other"].push(tags[i]);
+                ret["other_more"].push(tags[i]);
             }
         }
         for (let [k, ts] of Object.entries(ret)) {
@@ -530,6 +523,7 @@ $(function(){
         template: `
           <div>
             <input v-model="global_query.query" placeholder="Search articles">
+            <label for="card-tags-checkbox" id="card-tags-label-open">[tags...]</label>
             <h1 v-if="result.title1">{{ result.title1 }} {{ count_str }}</h1>
             <ul v-if="result.articles1.length > 0">
               <li v-for="article in result.articles1">
@@ -648,7 +642,7 @@ $(function(){
             gotoTagPage: function (tag) {
                 global_query.query = tag;
                 history.pushState(undefined, tag + " | suzuki-navi", "#" + tag);
-                $("#drawer-check").prop("checked", false);
+                $("#card-tags-checkbox").prop("checked", false);
                 window.scroll({
                     top: 0,
                     left: 0,
@@ -658,6 +652,7 @@ $(function(){
         },
         template: `
           <div>
+            <label for="card-tags-checkbox" id="card-tags-label-close">[tags close]</label>
             <div class="drawer-menu-1">
               <div v-for="(tag, idx) in categorized.thema">
                 <a v-bind:href="'#' + tag[0]" v-on:click.prevent.stop="gotoTagPage(tag[0]);">{{ tag[2] }}({{ tag[1] }})</a>
@@ -712,6 +707,14 @@ $(function(){
               <span v-for="(tag, idx) in categorized.other">
                 <span v-if="idx>0" class="font-small"> / </span>
                 <a v-bind:href="'#' + tag[0]" v-on:click.prevent.stop="gotoTagPage(tag[0]);" v-bind:class="(tag[1]<3)? 'font-small':''">{{ tag[2] }}({{ tag[1] }})</a>
+              </span>
+              <input type="checkbox" id="othertags-checkbox">
+              <label for="othertags-checkbox" id="othertags-label">more...</label>
+              <span id="othertags">
+              <span v-for="(tag, idx) in categorized.other_more">
+                <span v-if="idx>0" class="font-small"> / </span>
+                <a v-bind:href="'#' + tag[0]" v-on:click.prevent.stop="gotoTagPage(tag[0]);" v-bind:class="(tag[1]<3)? 'font-small':''">{{ tag[2] }}({{ tag[1] }})</a>
+              </span>
               </span>
             </div>
           </div>
