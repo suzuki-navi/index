@@ -56,10 +56,10 @@
     },
     {
         "url": "https://qiita.com/suzuki-navi/items/72fcb1fbf05008cbe8b4",
-        "title": "整数同士の除算演算子の挙動 (C言語、C++、Scala、Java、Rust、Go言語、PHP、JavaScript、Perl、Python、Ruby)",
+        "title": "整数同士の除算演算子の挙動 (C言語、C++、Scala、Java、Rust、Go言語、PHP、JavaScript、Perl、Python、Ruby、Elixir)",
         "posted": "2020/08/27",
-        "updated": "",
-        "keyword1": ["#qiita", "#lang_compare", "scala", "java", "rust", "clang", "c++", "golang", "php", "perl", "python", "ruby", "javascript"],
+        "updated": "2020/09/16",
+        "keyword1": ["#qiita", "#lang_compare", "scala", "java", "rust", "clang", "c++", "golang", "php", "perl", "python", "ruby", "javascript", "elixir"],
         "keyword2": []
     },
     {

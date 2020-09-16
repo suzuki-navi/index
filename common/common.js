@@ -351,6 +351,10 @@ $(function(){
                 ["#my_open_sources", 0, "作っているもの"],
                 ["#my_cases", 0, "主な公開事例"],
             ],
+            "thema3": [
+                ["tensorflow", 0, "TensorFlow"],
+                ["metabase", 0, "Metabase"],
+            ],
             "cloud_gcp": [
                 ["gcp", 0, "GCP"],
                 ["bigquery", 0, "BigQuery"],
@@ -400,6 +404,8 @@ $(function(){
                 ["tableau", 0, "Tableau"],
                 ["jupyter", 0, "Jupyter Notebook"],
                 ["polynote", 0, "Polynote"],
+                ["tensorflow", 0, "TensorFlow"],
+                ["matplotlib", 0, "Matplotlib"],
                 ["talend", 0, "Talend"],
                 ["dbeaver", 0, "DBeaver"],
             ],
@@ -431,6 +437,7 @@ $(function(){
                 ["rust", 0],
                 ["clang", 0],
                 ["c++", 0],
+                ["elixir", 0],
                 ["nlb", 0],
                 ["clb", 0],
                 ["#naviplus", 0],
@@ -448,6 +455,7 @@ $(function(){
                 ["#gradient_descent", 0, "勾配降下法"],
                 ["#network", 0, "ネットワーク"],
                 ["raspberry_pi", 0, "Raspberry Pi"],
+                ["googlecolab", 0, "Google Colaboratory"],
             ],
         };
         for (let i = 0; i < tags.length; i++) {
@@ -658,43 +666,49 @@ $(function(){
                 <a v-bind:href="'#' + tag[0]" v-on:click.prevent.stop="gotoTagPage(tag[0]);">{{ tag[2] }}</a>
               </div>
             </div>
-            <h2>クラウド環境記事 - GCP</h2>
             <div>
+              <h2>最近多いテーマ</h2>
+              <div v-for="(tag, idx) in categorized.thema3">
+                <a v-bind:href="'#' + tag[0]" v-on:click.prevent.stop="gotoTagPage(tag[0]);">{{ tag[2] }}({{ tag[1] }})</a>
+              </div>
+            </div>
+            <div>
+              <h2>クラウド環境記事 - GCP</h2>
               <span v-for="(tag, idx) in categorized.cloud_gcp">
                 <span v-if="idx>0" class="font-small"> / </span>
                 <a v-bind:href="'#' + tag[0]" v-on:click.prevent.stop="gotoTagPage(tag[0]);" v-bind:class="(tag[1]<3)? 'font-small':''">{{ tag[2] }}({{ tag[1] }})</a>
               </span>
             </div>
-            <h2>クラウド環境記事 - AWS</h2>
             <div>
+              <h2>クラウド環境記事 - AWS</h2>
               <span v-for="(tag, idx) in categorized.cloud_aws">
                 <span v-if="idx>0" class="font-small"> / </span>
                 <a v-bind:href="'#' + tag[0]" v-on:click.prevent.stop="gotoTagPage(tag[0]);" v-bind:class="(tag[1]<3)? 'font-small':''">{{ tag[2] }}({{ tag[1] }})</a>
               </span>
             </div>
-            <h2>プログラミング言語別記事</h2>
             <div>
+              <h2>プログラミング言語別記事</h2>
               <span v-for="(tag, idx) in categorized.lang">
                 <span v-if="idx>0" class="font-small"> / </span>
                 <a v-bind:href="'#' + tag[0]" v-on:click.prevent.stop="gotoTagPage(tag[0]);" v-bind:class="(tag[1]<3)? 'font-small':''">{{ tag[2] }}({{ tag[1] }})</a>
               </span>
             </div>
-            <h2>ソフトウェア別記事</h2>
             <div>
+              <h2>ソフトウェア別記事</h2>
               <span v-for="(tag, idx) in categorized.software">
                 <span v-if="idx>0" class="font-small"> / </span>
                 <a v-bind:href="'#' + tag[0]" v-on:click.prevent.stop="gotoTagPage(tag[0]);" v-bind:class="(tag[1]<3)? 'font-small':''">{{ tag[2] }}({{ tag[1] }})</a>
               </span>
             </div>
-            <h2>Linuxコマンドの記事</h2>
             <div>
+              <h2>Linuxコマンドの記事</h2>
               <span v-for="(tag, idx) in categorized.command">
                 <span v-if="idx>0" class="font-small"> / </span>
                 <a v-bind:href="'#' + tag[0]" v-on:click.prevent.stop="gotoTagPage(tag[0]);" v-bind:class="(tag[1]<3)? 'font-small':''">{{ tag[2] }}({{ tag[1] }})</a>
               </span>
             </div>
-            <h2>その他</h2>
             <div>
+              <h2>その他</h2>
               <span v-for="(tag, idx) in categorized.other">
                 <span v-if="idx>0" class="font-small"> / </span>
                 <a v-bind:href="'#' + tag[0]" v-on:click.prevent.stop="gotoTagPage(tag[0]);" v-bind:class="(tag[1]<3)? 'font-small':''">{{ tag[2] }}({{ tag[1] }})</a>
