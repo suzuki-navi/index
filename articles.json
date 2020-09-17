@@ -1,27 +1,35 @@
 [
     {
+        "url": "https://suzuki-navi.hatenablog.com/entry/2020/09/17/170001",
+        "title": "PostgreSQLの各テーブルのレコード数とデータ容量の概数を調べるには",
+        "posted": "2020/09/17",
+        "updated": "",
+        "keyword1": ["#hatenablog", "#data_store", "postgresql"],
+        "keyword2": []
+    },
+    {
         "url": "https://qiita.com/suzuki-navi/items/4328ded67f59c7c21b19",
         "title": "TensorFlowのOptimizerごとのスケール許容範囲の比較",
         "posted": "2020/09/15",
         "updated": "",
-        "keyword1": ["#qiita", "#machine_learning", "#gradient_descent", "tensorflow"],
-        "keyword2": ["#math", "python", "googlecolab", "matplotlib"]
+        "keyword1": ["#qiita", "#machine_learning", "#gradient_descent"],
+        "keyword2": ["#math", "python", "tensorflow", "googlecolab", "matplotlib"]
     },
     {
         "url": "https://qiita.com/suzuki-navi/items/5e47a7cfc41aaa4c3ec7",
         "title": "TensorFlowのOptimizerの違いによる学習推移をアニメーションにした",
         "posted": "2020/09/12",
         "updated": "",
-        "keyword1": ["#qiita", "#machine_learning", "#gradient_descent", "tensorflow"],
-        "keyword2": ["#math", "python", "googlecolab", "matplotlib"]
+        "keyword1": ["#qiita", "#machine_learning", "#gradient_descent"],
+        "keyword2": ["#math", "python", "tensorflow", "googlecolab", "matplotlib"]
     },
     {
         "url": "https://qiita.com/suzuki-navi/items/aace3fef0b355e23d0f0",
         "title": "TensorFlowのOptimizerの違いによる学習推移の比較",
         "posted": "2020/09/08",
         "updated": "",
-        "keyword1": ["#qiita", "#machine_learning", "#gradient_descent", "tensorflow"],
-        "keyword2": ["#math", "python", "googlecolab", "matplotlib"]
+        "keyword1": ["#qiita", "#machine_learning", "#gradient_descent"],
+        "keyword2": ["#math", "python", "tensorflow", "googlecolab", "matplotlib"]
     },
     {
         "url": "https://www.youtube.com/watch?v=vO7E0xXA9eU",
@@ -251,7 +259,7 @@
         "title": "ディープラーニングの基本 - G検定の勉強ノート",
         "posted": "2020/07/09",
         "updated": "",
-        "keyword1": ["#hatenablog", "#machine_learning", "#jdla_general"],
+        "keyword1": ["#hatenablog", "#machine_learning", "#jdla_general", "#gradient_descent"],
         "keyword2": ["#math"]
     },
     {
@@ -309,7 +317,7 @@
         "title": "Elasticsearch/Kibanaのインストールからcliでのデータ操作とブラウザでのデータ確認を試す",
         "posted": "2020/06/24",
         "updated": "",
-        "keyword1": ["#hatenablog", "#visualization", "elasticsearch", "kibana"]
+        "keyword1": ["#hatenablog", "elasticsearch", "kibana"]
     },
     {
         "url": "https://qiita.com/suzuki-navi/items/a8f4e21d75e685df51e9",
@@ -330,7 +338,7 @@
         "title": "AWS Elasticsearch/KibanaにCognitoの認証を組み合わせてみる",
         "posted": "2020/06/18",
         "updated": "",
-        "keyword1": ["#hatenablog", "#visualization", "aws", "elasticsearch", "kibana", "cognito"]
+        "keyword1": ["#hatenablog", "aws", "elasticsearch", "kibana", "cognito"]
     },
     {
         "url": "https://suzuki-navi.hatenablog.com/entry/2020/06/17/152140",

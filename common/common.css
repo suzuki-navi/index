@@ -68,17 +68,13 @@ h1 {
   padding-bottom: 5px;
 }
 
-.drawer-menu-1 {
-  grid-column: span 2;
-  column-count: 2;
-  column-rule-style: solid;
-  column-rule-width: 1px;
-  column-rule-color: #ccc;
-}
-
 @media screen and (max-width: 949px) {
   #card-tags-checkbox {
     display: none;
+  }
+  #card-tags-label-open-wrapper {
+    float: right;
+    text-align: right;
   }
   #card-tags {
     display: none;
@@ -88,6 +84,9 @@ h1 {
   }
   #card-tags-checkbox:checked ~ #card-tags-label-open {
     display: none;
+  }
+  #card-tags-label-close-wrapper {
+    text-align: right;
   }
 
   #card-github-grass p img {

@@ -334,124 +334,119 @@ $(function(){
         articles.list = list;
         articles.tags = tags;
     });
+    function keywordDatabase() {
+        return [
+            ["#machine_learning", "thema", "機械学習の記事"],
+            ["#statistics", "thema", "統計の記事"],
+            ["#visualization", "thema", "データ可視化の記事"],
+            ["#data_store", "thema", "データ保管の記事"],
+            ["#data_input", "thema", "データ収集の記事"],
+            ["#math", "thema", "数式のある記事"],
+
+            ["#certification", "thema2", "取得した資格"],
+            ["#count", "thema2", "書いた記事数"],
+            ["#my_open_sources", "thema2", "作っているもの"],
+            ["#my_cases", "thema2", "主な公開事例"],
+
+            ["gcp", "cloud_gcp", "GCP"],
+            ["bigquery", "cloud_gcp", "BigQuery"],
+            ["cloudsql", "cloud_gcp", "Cloud SQL"],
+            ["computeengine", "cloud_gcp", "Compute Engine"],
+            ["gcs", "cloud_gcp", "Cloud Storage"],
+            ["cloudtranslation", "cloud_gcp", "Cloud Translation"],
+            ["gsutil", "cloud_gcp", "gsutil"],
+            ["bq", "cloud_gcp", "bq"],
+
+            ["aws", "cloud_aws", "AWS"],
+            ["s3", "cloud_aws", "S3"],
+            ["rds", "cloud_aws", "RDS"],
+            ["aurora", "cloud_aws", "Aurora"],
+            ["redshift", "cloud_aws", "Redshift"],
+            ["glue", "cloud_aws", "Glue"],
+            ["documentdb", "cloud_aws", "DocumentDB"],
+            ["lambda", "cloud_aws", "Lambda"],
+            ["apigateway", "cloud_aws", "API Gateway"],
+            ["alb", "cloud_aws", "ALB"],
+            ["cognito", "cloud_aws", "Cognito"],
+            ["cloudformation", "cloud_aws", "CloudFormation"],
+            ["comprehend", "cloud_aws", "Comprehend"],
+            ["cloudwatch", "cloud_aws", "CloudWatch"],
+            ["cloudtrail", "cloud_aws", "CloudTrail"],
+            ["awscli", "cloud_aws", "awscli"],
+
+            ["scala", "lang", "Scala"],
+            ["java", "lang", "Java"],
+            ["php", "lang", "PHP"],
+            ["perl", "lang", "Perl"],
+            ["python", "lang", "Python"],
+            ["ruby", "lang", "Ruby"],
+            ["javascript", "lang", "JavaScript"],
+            ["powershell", "lang", "PowerShell"],
+
+            ["postgresql", "software", "PostgreSQL"],
+            ["fluentd", "software", "Fluentd"],
+            ["elasticsearch", "software", "Elasticsearch"],
+            ["kibana", "software", "Kibana"],
+            ["metabase", "software", "Metabase"],
+            ["redash", "software", "Redash"],
+            ["superset", "software", "Superset"],
+            ["tableau", "software", "Tableau"],
+            ["jupyter", "software", "Jupyter Notebook"],
+            ["polynote", "software", "Polynote"],
+            ["tensorflow", "software", "TensorFlow"],
+            ["matplotlib", "software", "Matplotlib"],
+            ["talend", "software", "Talend"],
+            ["dbeaver", "software", "DBeaver"],
+
+            ["command", "command", "Linuxコマンド"],
+            ["git", "command", "git"],
+            ["diff", "command", "diff"],
+            ["jq", "command", "jq"],
+            ["xargs", "command", "xargs"],
+            ["seq", "command", "seq"],
+            ["printf", "command", "printf"],
+            ["date", "command", "date"],
+            ["find", "command", "find"],
+            ["rm", "command", "rm"],
+            ["column", "command", "column"],
+            ["uname", "command", "uname"],
+            ["unzip", "command", "unzip"],
+            ["7z", "command", "7z"],
+            ["du", "command", "du"],
+            ["pv", "command", "pv"],
+            ["vipe", "command", "vipe"],
+            ["pwsh", "command", "pwsh"],
+            ["gsutil", "command", "gsutil"],
+            ["bq", "command", "bq"],
+            ["awscli", "command", "aws"],
+
+            ["#naviplus", "hidden"],
+            ["#beex", "hidden"],
+            ["#business_blog", "hidden"],
+            ["#qiita", "hidden"],
+            ["#hatenablog", "hidden"],
+            ["#pickup", "hidden"],
+
+            ["#lang_compare", "other", "プログラミング言語比較"],
+            ["#natural_language_processing", "other", "自然言語処理"],
+            ["#numerical_analysis", "other", "数値計算"],
+            ["#probability_distribution", "other", "確率分布"],
+            ["#gradient_descent", "other", "勾配降下法"],
+            ["#network", "other", "ネットワーク"],
+            ["raspberry_pi", "other", "Raspberry Pi"],
+            ["googlecolab", "other", "Google Colaboratory"],
+        ];
+    }
     function categorizeTags(tags) {
-        let ret = {
-            "thema": [
-                ["#machine_learning", 0, "機械学習の記事"],
-                ["#statistics", 0, "統計の記事"],
-                ["#visualization", 0, "データ可視化の記事"],
-                ["#data_store", 0, "データ保管の記事"],
-                ["#data_input", 0, "データ収集の記事"],
-                ["#math", 0, "数式のある記事"],
-            ],
-            "thema2": [
-                ["#pickup", 0, "主な記事"],
-                ["#certification", 0, "取得した資格"],
-                ["#count", 0, "書いた記事数"],
-                ["#my_open_sources", 0, "作っているもの"],
-                ["#my_cases", 0, "主な公開事例"],
-            ],
-            "thema3": [
-                ["tensorflow", 0, "TensorFlow"],
-                ["metabase", 0, "Metabase"],
-            ],
-            "cloud_gcp": [
-                ["gcp", 0, "GCP"],
-                ["bigquery", 0, "BigQuery"],
-                ["cloudsql", 0, "Cloud SQL"],
-                ["computeengine", 0, "Compute Engine"],
-                ["gcs", 0, "Cloud Storage"],
-                ["cloudtranslation", 0, "Cloud Translation"],
-                ["gsutil", 0, "gsutil"],
-                ["bq", 0, "bq"],
-            ],
-            "cloud_aws": [
-                ["aws", 0, "AWS"],
-                ["s3", 0, "S3"],
-                ["rds", 0, "RDS"],
-                ["aurora", 0, "Aurora"],
-                ["redshift", 0, "Redshift"],
-                ["glue", 0, "Glue"],
-                ["documentdb", 0, "DocumentDB"],
-                ["lambda", 0, "Lambda"],
-                ["apigateway", 0, "API Gateway"],
-                ["alb", 0, "ALB"],
-                ["cognito", 0, "Cognito"],
-                ["cloudformation", 0, "CloudFormation"],
-                ["comprehend", 0, "Comprehend"],
-                ["cloudwatch", 0, "CloudWatch"],
-                ["cloudtrail", 0, "CloudTrail"],
-                ["awscli", 0, "awscli"],
-            ],
-            "lang": [
-                ["scala", 0, "Scala"],
-                ["java", 0, "Java"],
-                ["php", 0, "PHP"],
-                ["perl", 0, "Perl"],
-                ["python", 0, "Python"],
-                ["ruby", 0, "Ruby"],
-                ["javascript", 0, "JavaScript"],
-                ["powershell", 0, "PowerShell"],
-            ],
-            "software": [
-                ["postgresql", 0, "PostgreSQL"],
-                ["fluentd", 0, "Fluentd"],
-                ["elasticsearch", 0, "Elasticsearch"],
-                ["kibana", 0, "Kibana"],
-                ["metabase", 0, "Metabase"],
-                ["redash", 0, "Redash"],
-                ["superset", 0, "Superset"],
-                ["tableau", 0, "Tableau"],
-                ["jupyter", 0, "Jupyter Notebook"],
-                ["polynote", 0, "Polynote"],
-                ["tensorflow", 0, "TensorFlow"],
-                ["matplotlib", 0, "Matplotlib"],
-                ["talend", 0, "Talend"],
-                ["dbeaver", 0, "DBeaver"],
-            ],
-            "command": [
-                ["command", 0],
-                ["git", 0],
-                ["diff", 0],
-                ["jq", 0],
-                ["xargs", 0],
-                ["seq", 0],
-                ["printf", 0],
-                ["date", 0],
-                ["find", 0],
-                ["rm", 0],
-                ["column", 0],
-                ["uname", 0],
-                ["unzip", 0],
-                ["7z", 0],
-                ["du", 0],
-                ["pv", 0],
-                ["vipe", 0],
-                ["pwsh", 0],
-                ["gsutil", 0],
-                ["bq", 0],
-                ["awscli", 0],
-            ],
-            "hidden": [
-                ["#naviplus", 0],
-                ["#beex", 0],
-                ["#business_blog", 0],
-                ["#qiita", 0],
-                ["#hatenablog", 0],
-                ["#pickup", 0],
-            ],
-            "other": [
-                ["#lang_compare", 0, "プログラミング言語比較"],
-                ["#natural_language_processing", 0, "自然言語処理"],
-                ["#numerical_analysis", 0, "数値計算"],
-                ["#probability_distribution", 0, "確率分布"],
-                ["#gradient_descent", 0, "勾配降下法"],
-                ["#network", 0, "ネットワーク"],
-                ["raspberry_pi", 0, "Raspberry Pi"],
-                ["googlecolab", 0, "Google Colaboratory"],
-            ],
-            "other_more": [],
-        };
+        let keywordDb = keywordDatabase();
+        let ret = [];
+        for (let i = 0; i < keywordDb.length; i++) {
+            if (!(keywordDb[i][1] in ret)) {
+                ret[keywordDb[i][1]] = [];
+            }
+            ret[keywordDb[i][1]].push([keywordDb[i][0], 0, keywordDb[i][2]]);
+        }
+        ret["other_more"] = [];
         for (let i = 0; i < tags.length; i++) {
             let f = true;
             for (let [k, ts] of Object.entries(ret)) {
@@ -475,37 +470,6 @@ $(function(){
         }
         return ret;
     }
-    /*
-    Vue.component("search-articles", {
-        data: function () {
-            return {
-                articles: articles,
-                query: "",
-            };
-        },
-        computed: {
-            result: function () { return searchArticles(this.query, this.articles.list); },
-            count_str: function () { return getCountStr(this.query, this.result); },
-        },
-        template: `
-          <div>
-            <!-- input v-model="query" placeholder="Search articles" -->
-            <h1 v-if="result.title1">{{ result.title1 }} {{ count_str }}</h1>
-            <ul v-if="result.articles1.length > 0">
-              <li v-for="article in result.articles1">
-                <a v-bind:href="article.url" target="_blank">{{ article.title }}</a> ({{ article.date }})
-              </li>
-            </ul>
-            <h2 v-if="result.title2">{{ result.title2 }}</h2>
-            <ul v-if="result.articles2.length > 0" class="font-small">
-              <li v-for="article in result.articles2">
-                <a v-bind:href="article.url" target="_blank">{{ article.title }}</a> ({{ article.date }})
-              </li>
-            </ul>
-          </div>
-        `,
-    });
-    */
     Vue.component("search-articles-search", {
         data: function () {
             return {
@@ -522,8 +486,8 @@ $(function(){
         },
         template: `
           <div>
+            <div id="card-tags-label-open-wrapper"><label for="card-tags-checkbox" id="card-tags-label-open">[tags...]</label></div>
             <input v-model="global_query.query" placeholder="Search articles">
-            <label for="card-tags-checkbox" id="card-tags-label-open">[tags...]</label>
             <h1 v-if="result.title1">{{ result.title1 }} {{ count_str }}</h1>
             <ul v-if="result.articles1.length > 0">
               <li v-for="article in result.articles1">
@@ -652,20 +616,17 @@ $(function(){
         },
         template: `
           <div>
-            <label for="card-tags-checkbox" id="card-tags-label-close">[tags close]</label>
-            <div class="drawer-menu-1">
-              <div v-for="(tag, idx) in categorized.thema">
-                <a v-bind:href="'#' + tag[0]" v-on:click.prevent.stop="gotoTagPage(tag[0]);">{{ tag[2] }}({{ tag[1] }})</a>
-              </div>
-              <div v-for="(tag, idx) in categorized.thema2">
-                <a v-bind:href="'#' + tag[0]" v-on:click.prevent.stop="gotoTagPage(tag[0]);">{{ tag[2] }}</a>
-              </div>
-            </div>
+            <div id="card-tags-label-close-wrapper"><label for="card-tags-checkbox" id="card-tags-label-close">[close tags]</label></div>
             <div>
-              <h2>最近多いテーマ</h2>
-              <div v-for="(tag, idx) in categorized.thema3">
+              <span v-for="(tag, idx) in categorized.thema">
+                <span v-if="idx>0" class="font-small"> / </span>
                 <a v-bind:href="'#' + tag[0]" v-on:click.prevent.stop="gotoTagPage(tag[0]);">{{ tag[2] }}({{ tag[1] }})</a>
-              </div>
+              </span>
+              <span class="font-small"> / </span>
+              <span v-for="(tag, idx) in categorized.thema2">
+                <span v-if="idx>0" class="font-small"> / </span>
+                <a v-bind:href="'#' + tag[0]" v-on:click.prevent.stop="gotoTagPage(tag[0]);">{{ tag[2] }}</a>
+              </span>
             </div>
             <div>
               <h2>クラウド環境記事 - GCP</h2>
