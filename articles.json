@@ -1,5 +1,29 @@
 [
     {
+        "url": "https://suzuki-navi.hatenablog.com/entry/2020/09/22/073756",
+        "title": "TensorFlowでOptimizerを自作する",
+        "posted": "2020/09/22",
+        "updated": "",
+        "keyword1": ["#hatenablog", "#machine_learning", "#gradient_descent", "tensorflow"],
+        "keyword2": ["python"]
+    },
+    {
+        "url": "https://suzuki-navi.hatenablog.com/entry/2020/09/20/220838",
+        "title": "Raspberry Piにキーボード・マウス・モニタなしでOSセットアップ",
+        "posted": "2020/09/20",
+        "updated": "",
+        "keyword1": ["#hatenablog", "raspberry_pi", "command", "arp"],
+        "keyword2": []
+    },
+    {
+        "url": "https://github.com/suzuki-navi/atcoder/tree/master/cheetsheet/swap",
+        "title": "変数の値を入れ替える(swap)には (C++、PHP、Perl、Python、Ruby)",
+        "posted": "2020/09/18",
+        "updated": "",
+        "keyword1": ["#github_markdown", "c++", "php", "perl", "python", "ruby"],
+        "keyword2": []
+    },
+    {
         "url": "https://suzuki-navi.hatenablog.com/entry/2020/09/17/170001",
         "title": "PostgreSQLの各テーブルのレコード数とデータ容量の概数を調べるには",
         "posted": "2020/09/17",
@@ -12,24 +36,24 @@
         "title": "TensorFlowのOptimizerごとのスケール許容範囲の比較",
         "posted": "2020/09/15",
         "updated": "",
-        "keyword1": ["#qiita", "#machine_learning", "#gradient_descent"],
-        "keyword2": ["#math", "python", "tensorflow", "googlecolab", "matplotlib"]
+        "keyword1": ["#qiita", "#machine_learning", "#gradient_descent", "tensorflow"],
+        "keyword2": ["#math", "python", "googlecolab", "matplotlib"]
     },
     {
         "url": "https://qiita.com/suzuki-navi/items/5e47a7cfc41aaa4c3ec7",
         "title": "TensorFlowのOptimizerの違いによる学習推移をアニメーションにした",
         "posted": "2020/09/12",
         "updated": "",
-        "keyword1": ["#qiita", "#machine_learning", "#gradient_descent"],
-        "keyword2": ["#math", "python", "tensorflow", "googlecolab", "matplotlib"]
+        "keyword1": ["#qiita", "#machine_learning", "#gradient_descent", "tensorflow"],
+        "keyword2": ["#math", "python", "googlecolab", "matplotlib"]
     },
     {
         "url": "https://qiita.com/suzuki-navi/items/aace3fef0b355e23d0f0",
         "title": "TensorFlowのOptimizerの違いによる学習推移の比較",
         "posted": "2020/09/08",
         "updated": "",
-        "keyword1": ["#qiita", "#machine_learning", "#gradient_descent"],
-        "keyword2": ["#math", "python", "tensorflow", "googlecolab", "matplotlib"]
+        "keyword1": ["#qiita", "#machine_learning", "#gradient_descent", "tensorflow"],
+        "keyword2": ["#math", "python", "googlecolab", "matplotlib"]
     },
     {
         "url": "https://www.youtube.com/watch?v=vO7E0xXA9eU",

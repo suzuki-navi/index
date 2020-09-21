@@ -86,6 +86,7 @@ h1 {
     display: none;
   }
   #card-tags-label-close-wrapper {
+    padding-bottom: 10px;
     text-align: right;
   }
 

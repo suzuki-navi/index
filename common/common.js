@@ -376,6 +376,7 @@ $(function(){
 
             ["scala", "lang", "Scala"],
             ["java", "lang", "Java"],
+            ["c++", "lang", "C++"],
             ["php", "lang", "PHP"],
             ["perl", "lang", "Perl"],
             ["python", "lang", "Python"],
@@ -425,6 +426,7 @@ $(function(){
             ["#business_blog", "hidden"],
             ["#qiita", "hidden"],
             ["#hatenablog", "hidden"],
+            ["#github_markdown", "hidden"],
             ["#pickup", "hidden"],
 
             ["#lang_compare", "other", "プログラミング言語比較"],
