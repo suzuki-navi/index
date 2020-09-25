@@ -1,5 +1,13 @@
 [
     {
+        "url": "https://suzuki-navi.hatenablog.com/entry/2020/09/25/223731",
+        "title": "fluentdでS3にJSONLでアップロード",
+        "posted": "2020/09/25",
+        "updated": "",
+        "keyword1": ["#hatenablog", "#data_input", "fluentd", "aws", "s3"],
+        "keyword2": []
+    },
+    {
         "url": "https://suzuki-navi.hatenablog.com/entry/2020/09/23/204754",
         "title": "手書き数字(MNIST)をTensorFlowの単純なニューラルネットワークで判別",
         "posted": "2020/09/23",
@@ -889,7 +897,8 @@
         "title": "fluentdのプラグインをgemでインストール",
         "posted": "2019/10/31",
         "updated": "",
-        "keyword1": ["#qiita", "#data_input", "fluentd"]
+        "keyword1": ["#qiita", "#data_input", "fluentd"],
+        "keyword2": ["aws", "s3"]
     },
     {
         "url": "https://qiita.com/suzuki-navi/items/b18b92f15cf36a4a840a",

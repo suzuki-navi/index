@@ -26,6 +26,9 @@ $(function(){
                 score = 1;
             } else if (article.keyword1.find(k => k == keywd)) {
                 score = 2;
+                if (article.keyword1.find(k => k == "#pickup")) {
+                    score = 3;
+                }
             } else {
                 if (keywd == "java") {
                     let ex = "javascript";
@@ -50,10 +53,10 @@ $(function(){
                 }
             }
             if (score > 0) {
-                let liststyle = (score >= 2)? "list-style-type:\"\\2714\"" : "list-style-type:\"・\"";
+                let liststyle = (score >= 3)? "★" : (score >= 2)? "\\2714" : "・";
                 let article2 = {
                     "score": score,
-                    "liststyle": liststyle,
+                    "liststyle": "list-style-type:\"" + liststyle + "\"",
                     "title": article.title,
                     "date": article["date"],
                     "url": article["url"],
@@ -72,7 +75,6 @@ $(function(){
     function searchArticles(query, articles) {
         query = normalizeQuery(query);
         let result1 = [];
-        let result2 = [];
         if (query == "") {
             const recent_count = 40;
             if (articles.length <= recent_count) {
@@ -90,10 +92,9 @@ $(function(){
             }
         }
         let title1 = "\"" + query + "\" の記事";
-        let title2 = "\"" + query + "\" の含まれる記事";
         switch (query) {
         case "":
-            title2 = "最近の記事";
+            title1 = "最近の記事";
             break;
 
         case "#machine_learning":
@@ -128,8 +129,7 @@ $(function(){
             title1 = "ネットワークの記事";
             break;
         case "#math":
-            title1 = "数式が多めの記事";
-            title2 = "数式が少し";
+            title1 = "数式のある記事";
             break;
 
         case "aws":
@@ -144,27 +144,21 @@ $(function(){
 
         case "scala":
             title1 = "Scala - 言語別記事";
-            title2 = "Scalaも登場する記事";
             break;
         case "java":
             title1 = "Java - 言語別記事";
-            title2 = "Javaも登場する記事";
             break;
         case "php":
             title1 = "PHP - 言語別記事";
-            title2 = "PHPも登場する記事";
             break;
         case "perl":
             title1 = "Perl - 言語別記事";
-            title2 = "Perlも登場する記事";
             break;
         case "python":
             title1 = "Python - 言語別記事";
-            title2 = "Pythonも登場する記事";
             break;
         case "ruby":
             title1 = "Ruby - 言語別記事";
-            title2 = "Rubyも登場する記事";
             break;
 
         case "elasticsearch":
@@ -210,18 +204,13 @@ $(function(){
             break;
 
         }
-        if (result2.length == 0) {
-            title2 = "";
-        } else if (result1.length == 0 && getImageHtml(query) == "") {
-            title1 = title2;
-            title2 = "";
+        if (result1.length == 0 && getImageHtml(query) == "") {
+            title1 = "最近の記事";
         }
-        let count = result1.length + result2.length;
+        let count = result1.length;
         return {
             "title1": title1,
             "articles1": result1,
-            "title2": title2,
-            "articles2": result2,
             "count": count,
         };
     }
@@ -414,6 +403,7 @@ $(function(){
             ["du", [["command", "du"]]],
             ["pv", [["command", "pv"]]],
             ["vipe", [["command", "vipe"]]],
+            ["arp", [["command", "arp"]]],
             ["pwsh", [["command", "pwsh"]]],
             ["gsutil",  [["command", "gsutil"], ["cloud_gcp", "gsutil"]]],
             ["bq",      [["command", "bq"],     ["cloud_gcp", "bq"]]],
@@ -426,20 +416,21 @@ $(function(){
             ["#hatenablog", [["hidden", ""]]],
             ["#github_markdown", [["hidden", ""]]],
             ["#pickup", [["hidden", ""]]],
+            ["#natural_language_processing", [["hidden", "自然言語処理"]]],
 
             ["#lang_compare", [["other", "プログラミング言語比較"]]],
-            ["#natural_language_processing", [["other", "自然言語処理"]]],
-            ["#numerical_analysis", [["other", "数値計算"]]],
-            ["#probability_distribution", [["other", "確率分布"]]],
-            ["#gradient_descent", [["other", "勾配降下法"]]],
-            ["#network", [["other", "ネットワーク"]]],
             ["raspberry_pi", [["other", "Raspberry Pi"]]],
-            ["googlecolab", [["other", "Google Colaboratory"]]],
+            ["#numerical_analysis", [["other_more", "数値計算"]]],
+            ["#probability_distribution", [["other_more", "確率分布"]]],
+            ["#gradient_descent", [["other_more", "勾配降下法"]]],
+            ["#network", [["other_more", "ネットワーク"]]],
+            ["googlecolab", [["other_more", "Google Colaboratory"]]],
         ];
     }
     function categorizeTags(tags) {
         let keywordDb = keywordDatabase();
         let ret = [];
+        ret["other_more"] = [];
         for (let i = 0; i < keywordDb.length; i++) {
             for (let j = 0; j < keywordDb[i][1].length; j++) {
                 if (!(keywordDb[i][1][j][0] in ret)) {
@@ -448,7 +439,6 @@ $(function(){
                 ret[keywordDb[i][1][j][0]].push([keywordDb[i][0], 0, keywordDb[i][1][j][1]]);
             }
         }
-        ret["other_more"] = [];
         for (let i = 0; i < tags.length; i++) {
             let f = true;
             for (let [k, ts] of Object.entries(ret)) {
@@ -483,7 +473,7 @@ $(function(){
             query: function () { return global_query.query; },
             result: function () { return searchArticles(this.query, this.articles.list); },
             count_str: function () { return getCountStr(this.query, this.result); },
-            imageHtml1: function () { return getImageHtml(this.query); },
+            imageHtml: function () { return getImageHtml(this.query); },
         },
         template: `
           <div>
@@ -495,13 +485,7 @@ $(function(){
                 <a v-bind:href="article.url" target="_blank">{{ article.title }}</a> ({{ article.date }})
               </li>
             </ul>
-            <div v-html="imageHtml1"></div>
-            <h2 v-if="result.title2">{{ result.title2 }}</h2>
-            <ul v-if="result.articles2.length > 0" class="font-small">
-              <li v-for="article in result.articles2">
-                <a v-bind:href="article.url" target="_blank">{{ article.title }}</a> ({{ article.date }})
-              </li>
-            </ul>
+            <div v-html="imageHtml"></div>
             <section v-if="global_query.query=='#certification'">
               <ul>
                 <li>日本ディープラーニング協会 G検定 (2020/07/04) <a href="https://qiita.com/suzuki-navi/items/fd3607f8f0e670bba887">合格体験記事</a></li>
@@ -595,12 +579,6 @@ $(function(){
               </span>
             </div>
             <div>
-              <span v-for="(tag, idx) in categorized.thema2">
-                <span v-if="idx>0" class="font-small"> / </span>
-                <a v-bind:href="'#' + tag[0]" v-on:click.prevent.stop="gotoTagPage(tag[0]);">{{ tag[2] }}</a>
-              </span>
-            </div>
-            <div>
               <h2>クラウド環境記事 - GCP</h2>
               <span v-for="(tag, idx) in categorized.cloud_gcp">
                 <span v-if="idx>0" class="font-small"> / </span>
@@ -637,6 +615,13 @@ $(function(){
             </div>
             <div>
               <h2>その他</h2>
+              <div>
+              <span v-for="(tag, idx) in categorized.thema2">
+                <span v-if="idx>0" class="font-small"> / </span>
+                <a v-bind:href="'#' + tag[0]" v-on:click.prevent.stop="gotoTagPage(tag[0]);">{{ tag[2] }}</a>
+              </span>
+              <div>
+              </div>
               <span v-for="(tag, idx) in categorized.other">
                 <span v-if="idx>0" class="font-small"> / </span>
                 <a v-bind:href="'#' + tag[0]" v-on:click.prevent.stop="gotoTagPage(tag[0]);" v-bind:class="(tag[1]<3)? 'font-small':''">{{ tag[2] }}({{ tag[1] }})</a>
@@ -649,6 +634,7 @@ $(function(){
                 <a v-bind:href="'#' + tag[0]" v-on:click.prevent.stop="gotoTagPage(tag[0]);" v-bind:class="(tag[1]<3)? 'font-small':''">{{ tag[2] }}({{ tag[1] }})</a>
               </span>
               </span>
+              </div>
             </div>
           </div>
         `,
