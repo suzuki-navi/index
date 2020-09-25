@@ -17,34 +17,49 @@ $(function(){
         return false;
     });
 
-    function searchByKeyword1(keywd, articles) {
-        let result = articles.filter( article => {
-            return article.keyword1.find(k => k == keywd);
-        });
-        return result;
-    };
-    function searchByKeyword2(keywd, articles) {
-        let result;
-        if (keywd == "java") {
-            result = articles.filter( article => {
-                let ex = "javascript";
-                return (article.keyword1.find(k => k.startsWith(keywd) && !k.startsWith(ex)) ||
+    function searchByKeyword(keywd, articles) {
+        let result = [];
+        for (let i in articles) {
+            let article = articles[i];
+            var score = 0;
+            if (keywd == "") {
+                score = 1;
+            } else if (article.keyword1.find(k => k == keywd)) {
+                score = 2;
+            } else {
+                if (keywd == "java") {
+                    let ex = "javascript";
+                    if (article.keyword1.find(k => k.startsWith(keywd) && !k.startsWith(ex)) ||
                         article.keyword2.find(k => k.startsWith(keywd) && !k.startsWith(ex)) ||
-                        article.title.toLowerCase().indexOf(keywd) >= 0 && article.title.toLowerCase().indexOf(ex) < 0);
-            });
-        } else if (keywd == "jq") {
-            result = articles.filter( article => {
-                let ex = "jquery";
-                return (article.keyword1.find(k => k.startsWith(keywd) && !k.startsWith(ex)) ||
+                        article.title.toLowerCase().indexOf(keywd) >= 0 && article.title.toLowerCase().indexOf(ex) < 0) {
+                        score = 1;
+                    }
+                } else if (keywd == "jq") {
+                    let ex = "jquery";
+                    if (article.keyword1.find(k => k.startsWith(keywd) && !k.startsWith(ex)) ||
                         article.keyword2.find(k => k.startsWith(keywd) && !k.startsWith(ex)) ||
-                        article.title.toLowerCase().indexOf(keywd) >= 0 && article.title.toLowerCase().indexOf(ex) < 0);
-            });
-        } else {
-            result = articles.filter( article => {
-                return (article.keyword1.find(k => k.startsWith(keywd)) ||
+                        article.title.toLowerCase().indexOf(keywd) >= 0 && article.title.toLowerCase().indexOf(ex) < 0) {
+                        score = 1;
+                    }
+                } else {
+                    if (article.keyword1.find(k => k.startsWith(keywd)) ||
                         article.keyword2.find(k => k.startsWith(keywd)) ||
-                        article.title.toLowerCase().indexOf(keywd) >= 0);
-            });
+                        article.title.toLowerCase().indexOf(keywd) >= 0) {
+                        score = 1;
+                    }
+                }
+            }
+            if (score > 0) {
+                let liststyle = (score >= 2)? "list-style-type:\"\\2714\"" : "list-style-type:\"・\"";
+                let article2 = {
+                    "score": score,
+                    "liststyle": liststyle,
+                    "title": article.title,
+                    "date": article["date"],
+                    "url": article["url"],
+                };
+                result.push(article2);
+            }
         }
         return result;
     };
@@ -61,23 +76,17 @@ $(function(){
         if (query == "") {
             const recent_count = 40;
             if (articles.length <= recent_count) {
-                result2 = articles;
+                result1 = articles;
             } else {
-                result2 = articles.slice(0, recent_count);
+                result1 = articles.slice(0, recent_count);
             }
+            result1 = searchByKeyword("", result1);
         } else {
             result1 = articles;
             let words = query.split(' ');
             for (let i = 0; i < words.length; i++) {
                 let w = words[i];
-                result1 = searchByKeyword1(w, result1);
-            }
-            result2 = articles.filter ( a => {
-                return result1.indexOf(a) < 0;
-            });
-            for (let i = 0; i < words.length; i++) {
-                let w = words[i];
-                result2 = searchByKeyword2(w, result2);
+                result1 = searchByKeyword(w, result1);
             }
         }
         let title1 = "\"" + query + "\" の記事";
@@ -187,9 +196,6 @@ $(function(){
             title1 = "はてなブログの記事";
             break;
 
-        case "#pickup":
-            title1 = "主な記事";
-            break;
         case "#certification":
             title1 = "これまでに取得した資格";
             break;
@@ -206,7 +212,7 @@ $(function(){
         }
         if (result2.length == 0) {
             title2 = "";
-        } else if (result1.length == 0 && getImageHtml(query)[0] == "") {
+        } else if (result1.length == 0 && getImageHtml(query) == "") {
             title1 = title2;
             title2 = "";
         }
@@ -223,22 +229,17 @@ $(function(){
         query = normalizeQuery(query);
         switch(query) {
         case "#machine_learning":
-            return ['<p class="image"><a href="https://qiita.com/suzuki-navi/items/2581b3f4afeeabeacace"><img src="ml.png"></a></p>', ''];
+            return '<p class="image"><a href="https://qiita.com/suzuki-navi/items/2581b3f4afeeabeacace"><img src="ml.png"></a></p>';
         case "raspberry_pi":
-            return ['<p class="youtube"><iframe width="352" height="198" src="https://www.youtube-nocookie.com/embed/wFTvOIsHmQo?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>', ''];
+            return '<p class="youtube"><iframe width="352" height="198" src="https://www.youtube-nocookie.com/embed/wFTvOIsHmQo?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>';
         case "command":
-            return ['<p class="image"><a href="https://qiita.com/suzuki-navi/items/fdcb166f32b28bc0ff82"><img src="cli.png"></a></p>', ''];
+            return '<p class="image"><a href="https://qiita.com/suzuki-navi/items/fdcb166f32b28bc0ff82"><img src="cli.png"></a></p>';
         case "git":
-            return ['<p class="image"><a href="https://qiita.com/suzuki-navi/items/fdcb166f32b28bc0ff82"><img src="cli.png"></a></p>', ''];
+            return '<p class="image"><a href="https://qiita.com/suzuki-navi/items/fdcb166f32b28bc0ff82"><img src="cli.png"></a></p>';
         case "#math":
-            return ['<p class="image"><a href="https://tech.naviplus.co.jp/2014/02/27/%e4%b8%8d%e5%81%8f%e5%88%86%e6%95%a3%e3%81%af%e3%81%aa%e3%81%9c-n-1-%e3%81%a7%e5%89%b2%e3%82%8b%e3%81%ae%e3%81%8b%ef%bc%9f/"><img src="math.png"></a></p>', ''];
-        case "#pickup":
-            return [
-                '<p class="youtube"><iframe width="352" height="198" src="https://www.youtube-nocookie.com/embed/wFTvOIsHmQo?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>' +
-                '<p class="image"><a href="https://tech.naviplus.co.jp/2014/02/27/%e4%b8%8d%e5%81%8f%e5%88%86%e6%95%a3%e3%81%af%e3%81%aa%e3%81%9c-n-1-%e3%81%a7%e5%89%b2%e3%82%8b%e3%81%ae%e3%81%8b%ef%bc%9f/"><img src="math.png"></a></p>',
-                ''];
+            return '<p class="image"><a href="https://tech.naviplus.co.jp/2014/02/27/%e4%b8%8d%e5%81%8f%e5%88%86%e6%95%a3%e3%81%af%e3%81%aa%e3%81%9c-n-1-%e3%81%a7%e5%89%b2%e3%82%8b%e3%81%ae%e3%81%8b%ef%bc%9f/"><img src="math.png"></a></p>';
         default:
-            return ['', ''];
+            return '';
         }
     }
     function getCountStr(query, searchResult) {
@@ -336,117 +337,116 @@ $(function(){
     });
     function keywordDatabase() {
         return [
-            ["#machine_learning", "thema", "機械学習の記事"],
-            ["#statistics", "thema", "統計の記事"],
-            ["#visualization", "thema", "データ可視化の記事"],
-            ["#data_store", "thema", "データ保管の記事"],
-            ["#data_input", "thema", "データ収集の記事"],
-            ["#math", "thema", "数式のある記事"],
+            ["#machine_learning", [["thema", "機械学習の記事"]]],
+            ["#statistics",       [["thema", "統計の記事"]]],
+            ["#visualization",    [["thema", "データ可視化の記事"]]],
+            ["#data_store",       [["thema", "データ保管の記事"]]],
+            ["#data_input",       [["thema", "データ収集の記事"]]],
+            ["#math",             [["thema", "数式のある記事"]]],
 
-            ["#certification", "thema2", "取得した資格"],
-            ["#count", "thema2", "書いた記事数"],
-            ["#my_open_sources", "thema2", "作っているもの"],
-            ["#my_cases", "thema2", "主な公開事例"],
+            ["#certification",    [["thema2", "取得した資格"]]],
+            ["#count",            [["thema2", "書いた記事数"]]],
+            ["#my_open_sources",  [["thema2", "作っているもの"]]],
+            ["#my_cases",         [["thema2", "主な公開事例"]]],
 
-            ["gcp", "cloud_gcp", "GCP"],
-            ["bigquery", "cloud_gcp", "BigQuery"],
-            ["cloudsql", "cloud_gcp", "Cloud SQL"],
-            ["computeengine", "cloud_gcp", "Compute Engine"],
-            ["gcs", "cloud_gcp", "Cloud Storage"],
-            ["cloudtranslation", "cloud_gcp", "Cloud Translation"],
-            ["gsutil", "cloud_gcp", "gsutil"],
-            ["bq", "cloud_gcp", "bq"],
+            ["gcp", [["cloud_gcp", "GCP"]]],
+            ["bigquery", [["cloud_gcp", "BigQuery"]]],
+            ["cloudsql", [["cloud_gcp", "Cloud SQL"]]],
+            ["computeengine", [["cloud_gcp", "Compute Engine"]]],
+            ["gcs", [["cloud_gcp", "Cloud Storage"]]],
+            ["cloudtranslation", [["cloud_gcp", "Cloud Translation"]]],
 
-            ["aws", "cloud_aws", "AWS"],
-            ["s3", "cloud_aws", "S3"],
-            ["rds", "cloud_aws", "RDS"],
-            ["aurora", "cloud_aws", "Aurora"],
-            ["redshift", "cloud_aws", "Redshift"],
-            ["glue", "cloud_aws", "Glue"],
-            ["documentdb", "cloud_aws", "DocumentDB"],
-            ["lambda", "cloud_aws", "Lambda"],
-            ["apigateway", "cloud_aws", "API Gateway"],
-            ["alb", "cloud_aws", "ALB"],
-            ["cognito", "cloud_aws", "Cognito"],
-            ["cloudformation", "cloud_aws", "CloudFormation"],
-            ["comprehend", "cloud_aws", "Comprehend"],
-            ["cloudwatch", "cloud_aws", "CloudWatch"],
-            ["cloudtrail", "cloud_aws", "CloudTrail"],
-            ["awscli", "cloud_aws", "awscli"],
+            ["aws", [["cloud_aws", "AWS"]]],
+            ["s3", [["cloud_aws", "S3"]]],
+            ["rds", [["cloud_aws", "RDS"]]],
+            ["aurora", [["cloud_aws", "Aurora"]]],
+            ["redshift", [["cloud_aws", "Redshift"]]],
+            ["glue", [["cloud_aws", "Glue"]]],
+            ["documentdb", [["cloud_aws", "DocumentDB"]]],
+            ["lambda", [["cloud_aws", "Lambda"]]],
+            ["apigateway", [["cloud_aws", "API Gateway"]]],
+            ["alb", [["cloud_aws", "ALB"]]],
+            ["cognito", [["cloud_aws", "Cognito"]]],
+            ["cloudformation", [["cloud_aws", "CloudFormation"]]],
+            ["comprehend", [["cloud_aws", "Comprehend"]]],
+            ["cloudwatch", [["cloud_aws", "CloudWatch"]]],
+            ["cloudtrail", [["cloud_aws", "CloudTrail"]]],
 
-            ["scala", "lang", "Scala"],
-            ["java", "lang", "Java"],
-            ["c++", "lang", "C++"],
-            ["php", "lang", "PHP"],
-            ["perl", "lang", "Perl"],
-            ["python", "lang", "Python"],
-            ["ruby", "lang", "Ruby"],
-            ["javascript", "lang", "JavaScript"],
-            ["powershell", "lang", "PowerShell"],
+            ["scala",      [["lang", "Scala"]]],
+            ["java",       [["lang", "Java"]]],
+            ["c++",        [["lang", "C++"]]],
+            ["php",        [["lang", "PHP"]]],
+            ["perl",       [["lang", "Perl"]]],
+            ["python",     [["lang", "Python"]]],
+            ["ruby",       [["lang", "Ruby"]]],
+            ["javascript", [["lang", "JavaScript"]]],
+            ["powershell", [["lang", "PowerShell"]]],
 
-            ["postgresql", "software", "PostgreSQL"],
-            ["fluentd", "software", "Fluentd"],
-            ["elasticsearch", "software", "Elasticsearch"],
-            ["kibana", "software", "Kibana"],
-            ["metabase", "software", "Metabase"],
-            ["redash", "software", "Redash"],
-            ["superset", "software", "Superset"],
-            ["tableau", "software", "Tableau"],
-            ["jupyter", "software", "Jupyter Notebook"],
-            ["polynote", "software", "Polynote"],
-            ["tensorflow", "software", "TensorFlow"],
-            ["matplotlib", "software", "Matplotlib"],
-            ["talend", "software", "Talend"],
-            ["dbeaver", "software", "DBeaver"],
+            ["postgresql", [["software", "PostgreSQL"]]],
+            ["fluentd", [["software", "Fluentd"]]],
+            ["elasticsearch", [["software", "Elasticsearch"]]],
+            ["kibana", [["software", "Kibana"]]],
+            ["metabase", [["software", "Metabase"]]],
+            ["redash", [["software", "Redash"]]],
+            ["superset", [["software", "Superset"]]],
+            ["tableau", [["software", "Tableau"]]],
+            ["jupyter", [["software", "Jupyter Notebook"]]],
+            ["polynote", [["software", "Polynote"]]],
+            ["tensorflow", [["software", "TensorFlow"]]],
+            ["matplotlib", [["software", "Matplotlib"]]],
+            ["talend", [["software", "Talend"]]],
+            ["dbeaver", [["software", "DBeaver"]]],
 
-            ["command", "command", "Linuxコマンド"],
-            ["git", "command", "git"],
-            ["diff", "command", "diff"],
-            ["jq", "command", "jq"],
-            ["xargs", "command", "xargs"],
-            ["seq", "command", "seq"],
-            ["printf", "command", "printf"],
-            ["date", "command", "date"],
-            ["find", "command", "find"],
-            ["rm", "command", "rm"],
-            ["column", "command", "column"],
-            ["uname", "command", "uname"],
-            ["unzip", "command", "unzip"],
-            ["7z", "command", "7z"],
-            ["du", "command", "du"],
-            ["pv", "command", "pv"],
-            ["vipe", "command", "vipe"],
-            ["pwsh", "command", "pwsh"],
-            ["gsutil", "command", "gsutil"],
-            ["bq", "command", "bq"],
-            ["awscli", "command", "aws"],
+            ["command", [["command", "Linuxコマンド"]]],
+            ["git", [["command", "git"]]],
+            ["diff", [["command", "diff"]]],
+            ["jq", [["command", "jq"]]],
+            ["xargs", [["command", "xargs"]]],
+            ["seq", [["command", "seq"]]],
+            ["printf", [["command", "printf"]]],
+            ["date", [["command", "date"]]],
+            ["find", [["command", "find"]]],
+            ["rm", [["command", "rm"]]],
+            ["column", [["command", "column"]]],
+            ["uname", [["command", "uname"]]],
+            ["unzip", [["command", "unzip"]]],
+            ["7z", [["command", "7z"]]],
+            ["du", [["command", "du"]]],
+            ["pv", [["command", "pv"]]],
+            ["vipe", [["command", "vipe"]]],
+            ["pwsh", [["command", "pwsh"]]],
+            ["gsutil",  [["command", "gsutil"], ["cloud_gcp", "gsutil"]]],
+            ["bq",      [["command", "bq"],     ["cloud_gcp", "bq"]]],
+            ["awscli",  [["command", "aws"],    ["cloud_aws", "awscli"]]],
 
-            ["#naviplus", "hidden"],
-            ["#beex", "hidden"],
-            ["#business_blog", "hidden"],
-            ["#qiita", "hidden"],
-            ["#hatenablog", "hidden"],
-            ["#github_markdown", "hidden"],
-            ["#pickup", "hidden"],
+            ["#naviplus", [["hidden", ""]]],
+            ["#beex", [["hidden", ""]]],
+            ["#business_blog", [["hidden", ""]]],
+            ["#qiita", [["hidden", ""]]],
+            ["#hatenablog", [["hidden", ""]]],
+            ["#github_markdown", [["hidden", ""]]],
+            ["#pickup", [["hidden", ""]]],
 
-            ["#lang_compare", "other", "プログラミング言語比較"],
-            ["#natural_language_processing", "other", "自然言語処理"],
-            ["#numerical_analysis", "other", "数値計算"],
-            ["#probability_distribution", "other", "確率分布"],
-            ["#gradient_descent", "other", "勾配降下法"],
-            ["#network", "other", "ネットワーク"],
-            ["raspberry_pi", "other", "Raspberry Pi"],
-            ["googlecolab", "other", "Google Colaboratory"],
+            ["#lang_compare", [["other", "プログラミング言語比較"]]],
+            ["#natural_language_processing", [["other", "自然言語処理"]]],
+            ["#numerical_analysis", [["other", "数値計算"]]],
+            ["#probability_distribution", [["other", "確率分布"]]],
+            ["#gradient_descent", [["other", "勾配降下法"]]],
+            ["#network", [["other", "ネットワーク"]]],
+            ["raspberry_pi", [["other", "Raspberry Pi"]]],
+            ["googlecolab", [["other", "Google Colaboratory"]]],
         ];
     }
     function categorizeTags(tags) {
         let keywordDb = keywordDatabase();
         let ret = [];
         for (let i = 0; i < keywordDb.length; i++) {
-            if (!(keywordDb[i][1] in ret)) {
-                ret[keywordDb[i][1]] = [];
+            for (let j = 0; j < keywordDb[i][1].length; j++) {
+                if (!(keywordDb[i][1][j][0] in ret)) {
+                    ret[keywordDb[i][1][j][0]] = [];
+                }
+                ret[keywordDb[i][1][j][0]].push([keywordDb[i][0], 0, keywordDb[i][1][j][1]]);
             }
-            ret[keywordDb[i][1]].push([keywordDb[i][0], 0, keywordDb[i][2]]);
         }
         ret["other_more"] = [];
         for (let i = 0; i < tags.length; i++) {
@@ -483,8 +483,7 @@ $(function(){
             query: function () { return global_query.query; },
             result: function () { return searchArticles(this.query, this.articles.list); },
             count_str: function () { return getCountStr(this.query, this.result); },
-            imageHtml1: function () { return getImageHtml(this.query)[0]; },
-            imageHtml2: function () { return getImageHtml(this.query)[1]; },
+            imageHtml1: function () { return getImageHtml(this.query); },
         },
         template: `
           <div>
@@ -492,7 +491,7 @@ $(function(){
             <input v-model="global_query.query" placeholder="Search articles">
             <h1 v-if="result.title1">{{ result.title1 }} {{ count_str }}</h1>
             <ul v-if="result.articles1.length > 0">
-              <li v-for="article in result.articles1">
+              <li v-for="article in result.articles1" v-bind:style="article.liststyle">
                 <a v-bind:href="article.url" target="_blank">{{ article.title }}</a> ({{ article.date }})
               </li>
             </ul>
@@ -503,7 +502,6 @@ $(function(){
                 <a v-bind:href="article.url" target="_blank">{{ article.title }}</a> ({{ article.date }})
               </li>
             </ul>
-            <div v-html="imageHtml2"></div>
             <section v-if="global_query.query=='#certification'">
               <ul>
                 <li>日本ディープラーニング協会 G検定 (2020/07/04) <a href="https://qiita.com/suzuki-navi/items/fd3607f8f0e670bba887">合格体験記事</a></li>
@@ -563,35 +561,6 @@ $(function(){
           </div>
         `,
     });
-    Vue.component("search-articles-fixed", {
-        props: ["query"],
-        data: function () {
-            return {
-                articles: articles,
-            };
-        },
-        computed: {
-            result: function () { return searchArticles(this.query, this.articles.list); },
-            imageHtml: function () { return getImageHtml(this.query)[0]; },
-        },
-        template: `
-          <div>
-            <h1 v-if="result.title1">{{ result.title1 }} ({{ result.count }}件)</h1>
-            <ul v-if="result.articles1.length > 0">
-              <li v-for="article in result.articles1">
-                <a v-bind:href="article.url" target="_blank">{{ article.title }}</a> ({{ article.date }})
-              </li>
-            </ul>
-            <div v-html="imageHtml"></div>
-            <h2 v-if="result.title2">{{ result.title2 }}</h2>
-            <ul v-if="result.articles2.length > 0" class="font-small">
-              <li v-for="article in result.articles2">
-                <a v-bind:href="article.url" target="_blank">{{ article.title }}</a> ({{ article.date }})
-              </li>
-            </ul>
-          </div>
-        `,
-    });
     Vue.component("articles-tags", {
         data: function () {
             return {
@@ -624,7 +593,8 @@ $(function(){
                 <span v-if="idx>0" class="font-small"> / </span>
                 <a v-bind:href="'#' + tag[0]" v-on:click.prevent.stop="gotoTagPage(tag[0]);">{{ tag[2] }}({{ tag[1] }})</a>
               </span>
-              <span class="font-small"> / </span>
+            </div>
+            <div>
               <span v-for="(tag, idx) in categorized.thema2">
                 <span v-if="idx>0" class="font-small"> / </span>
                 <a v-bind:href="'#' + tag[0]" v-on:click.prevent.stop="gotoTagPage(tag[0]);">{{ tag[2] }}</a>
