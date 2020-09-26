@@ -1,5 +1,13 @@
 [
     {
+        "url": "https://suzuki-navi.hatenablog.com/entry/2020/09/26/144920",
+        "title": "正規分布の母分散をTensorFlowを使って最尤推定で数値計算してみる",
+        "posted": "2020/09/26",
+        "updated": "",
+        "keyword1": ["#hatenablog", "#machine_learning", "#gradient_descent", "tensorflow", "#statistics"],
+        "keyword2": ["python", "googlecolab", "matplotlib"]
+    },
+    {
         "url": "https://suzuki-navi.hatenablog.com/entry/2020/09/25/223731",
         "title": "fluentdでS3にJSONLでアップロード",
         "posted": "2020/09/25",

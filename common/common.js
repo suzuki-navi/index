@@ -76,7 +76,7 @@ $(function(){
         query = normalizeQuery(query);
         let result1 = [];
         if (query == "") {
-            const recent_count = 40;
+            const recent_count = 20;
             if (articles.length <= recent_count) {
                 result1 = articles;
             } else {
@@ -542,6 +542,11 @@ $(function(){
                 <img src="search-2.png">
               </p>
             </section>
+            <section v-if="global_query.query==''">
+              <p class="image">
+                <a href="https://github.com/suzuki-navi"><img src="https://grass-graph.moshimo.works/images/suzuki-navi.png?width=610"></a>
+              </p>
+            </section>
           </div>
         `,
     });
@@ -560,7 +565,11 @@ $(function(){
         methods: {
             gotoTagPage: function (tag) {
                 global_query.query = tag;
-                history.pushState(undefined, tag + " | suzuki-navi", "#" + tag);
+                if (tag == "") {
+                    history.pushState(undefined, tag + " | suzuki-navi", "./");
+                } else {
+                    history.pushState(undefined, tag + " | suzuki-navi", "./#" + tag);
+                }
                 $("#card-tags-checkbox").prop("checked", false);
                 window.scroll({
                     top: 0,
@@ -635,6 +644,9 @@ $(function(){
               </span>
               </span>
               </div>
+            </div>
+            <div>
+              <a href="" v-on:click.prevent.stop="gotoTagPage('');">top</a>
             </div>
           </div>
         `,
