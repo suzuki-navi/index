@@ -645,9 +645,9 @@ $(function(){
               </span>
               </div>
             </div>
-            <div>
+            <p>
               <a href="" v-on:click.prevent.stop="gotoTagPage('');">top</a>
-            </div>
+            </p>
           </div>
         `,
     });
