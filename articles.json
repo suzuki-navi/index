@@ -1,5 +1,13 @@
 [
     {
+        "url": "https://suzuki-navi.hatenablog.com/entry/2020/09/28/193909",
+        "title": "MNISTのニューラルネットワークでの学習の教師データ数と精度の関係",
+        "posted": "2020/09/28",
+        "updated": "",
+        "keyword1": ["#hatenablog", "#machine_learning", "#deep_learning", "tensorflow", "mnist"],
+        "keyword2": ["python", "googlecolab", "matplotlib"]
+    },
+    {
         "url": "https://github.com/suzuki-navi/atcoder/blob/master/cheetsheet/sort/READMD.md",
         "title": "配列のソート (Scala、Java、C++)",
         "posted": "2020/09/27",
@@ -28,7 +36,7 @@
         "title": "手書き数字(MNIST)をTensorFlowの単純なニューラルネットワークで判別",
         "posted": "2020/09/23",
         "updated": "",
-        "keyword1": ["#hatenablog", "#machine_learning", "#deep_learning", "tensorflow"],
+        "keyword1": ["#hatenablog", "#machine_learning", "#deep_learning", "tensorflow", "mnist"],
         "keyword2": ["python", "googlecolab", "matplotlib"]
     },
     {
