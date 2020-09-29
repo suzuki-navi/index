@@ -369,6 +369,7 @@ $(function(){
             ["python",     [["lang", "Python"]]],
             ["ruby",       [["lang", "Ruby"]]],
             ["javascript", [["lang", "JavaScript"]]],
+            ["elixir",     [["lang", "Elixir"]]],
             ["powershell", [["lang", "PowerShell"]]],
 
             ["postgresql", [["software", "PostgreSQL"]]],

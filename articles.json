@@ -1,5 +1,13 @@
 [
     {
+        "url": "https://qiita.com/suzuki-navi/items/d29175b2baed42bbca7a",
+        "title": "ElixirでABC178のC Ubiquityを解いてみる",
+        "posted": "2020/09/29",
+        "updated": "",
+        "keyword1": ["#qiita", "elixir", "atcoder"],
+        "keyword2": ["scala"]
+    },
+    {
         "url": "https://suzuki-navi.hatenablog.com/entry/2020/09/28/193909",
         "title": "MNISTのニューラルネットワークでの学習の教師データ数と精度の関係",
         "posted": "2020/09/28",
