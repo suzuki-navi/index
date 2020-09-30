@@ -204,32 +204,12 @@ $(function(){
             break;
 
         }
-        if (result1.length == 0 && getImageHtml(query) == "") {
-            title1 = "最近の記事";
-        }
         let count = result1.length;
         return {
             "title1": title1,
             "articles1": result1,
             "count": count,
         };
-    }
-    function getImageHtml(query) {
-        query = normalizeQuery(query);
-        switch(query) {
-        case "#machine_learning":
-            return '<p class="image"><a href="https://qiita.com/suzuki-navi/items/2581b3f4afeeabeacace"><img src="ml.png"></a></p>';
-        case "raspberry_pi":
-            return '<p class="youtube"><iframe width="352" height="198" src="https://www.youtube-nocookie.com/embed/wFTvOIsHmQo?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>';
-        case "command":
-            return '<p class="image"><a href="https://qiita.com/suzuki-navi/items/fdcb166f32b28bc0ff82"><img src="cli.png"></a></p>';
-        case "git":
-            return '<p class="image"><a href="https://qiita.com/suzuki-navi/items/fdcb166f32b28bc0ff82"><img src="cli.png"></a></p>';
-        case "#math":
-            return '<p class="image"><a href="https://tech.naviplus.co.jp/2014/02/27/%e4%b8%8d%e5%81%8f%e5%88%86%e6%95%a3%e3%81%af%e3%81%aa%e3%81%9c-n-1-%e3%81%a7%e5%89%b2%e3%82%8b%e3%81%ae%e3%81%8b%ef%bc%9f/"><img src="math.png"></a></p>';
-        default:
-            return '';
-        }
     }
     function getCountStr(query, searchResult) {
         if (query == "") {
@@ -325,119 +305,130 @@ $(function(){
         articles.tags = tags;
     });
     function keywordDatabase() {
-        return [
-            ["#machine_learning", [["thema", "機械学習の記事"]]],
-            ["#statistics",       [["thema", "統計の記事"]]],
-            ["#visualization",    [["thema", "データ可視化の記事"]]],
-            ["#data_store",       [["thema", "データ保管の記事"]]],
-            ["#data_input",       [["thema", "データ収集の記事"]]],
-            ["#math",             [["thema", "数式のある記事"]]],
+        return  [
+            {tag: "#machine_learning", categories: [["thema", "機械学習の記事"]]},
+            {tag: "#statistics",       categories: [["thema", "統計の記事"]]},
+            {tag: "#visualization",    categories: [["thema", "データ可視化の記事"]]},
+            {tag: "#data_store",       categories: [["thema", "データ保管の記事"]]},
+            {tag: "#data_input",       categories: [["thema", "データ収集の記事"]]},
+            {tag: "#math",             categories: [["thema", "数式のある記事"]]},
 
-            ["#certification",    [["thema2", "取得した資格"]]],
-            ["#count",            [["thema2", "書いた記事数"]]],
-            ["#my_open_sources",  [["thema2", "作っているもの"]]],
-            ["#my_cases",         [["thema2", "主な公開事例"]]],
+            {tag: "#certification",    categories: [["thema2", "取得した資格"]]},
+            {tag: "#count",            categories: [["thema2", "書いた記事数"]]},
+            {tag: "#my_open_sources",  categories: [["thema2", "作っているもの"]]},
+            {tag: "#my_cases",         categories: [["thema2", "主な公開事例"]]},
 
-            ["gcp", [["cloud_gcp", "GCP"]]],
-            ["bigquery", [["cloud_gcp", "BigQuery"]]],
-            ["cloudsql", [["cloud_gcp", "Cloud SQL"]]],
-            ["computeengine", [["cloud_gcp", "Compute Engine"]]],
-            ["gcs", [["cloud_gcp", "Cloud Storage"]]],
-            ["cloudtranslation", [["cloud_gcp", "Cloud Translation"]]],
+            {tag: "gcp",               categories: [["cloud_gcp", "GCP"]]},
+            {tag: "bigquery",          categories: [["cloud_gcp", "BigQuery"]]},
+            {tag: "cloudsql",          categories: [["cloud_gcp", "Cloud SQL"]]},
+            {tag: "computeengine",     categories: [["cloud_gcp", "Compute Engine"]]},
+            {tag: "gcs",               categories: [["cloud_gcp", "Cloud Storage"]]},
+            {tag: "cloudtranslation",  categories: [["cloud_gcp", "Cloud Translation"]]},
 
-            ["aws", [["cloud_aws", "AWS"]]],
-            ["s3", [["cloud_aws", "S3"]]],
-            ["rds", [["cloud_aws", "RDS"]]],
-            ["aurora", [["cloud_aws", "Aurora"]]],
-            ["redshift", [["cloud_aws", "Redshift"]]],
-            ["glue", [["cloud_aws", "Glue"]]],
-            ["documentdb", [["cloud_aws", "DocumentDB"]]],
-            ["lambda", [["cloud_aws", "Lambda"]]],
-            ["apigateway", [["cloud_aws", "API Gateway"]]],
-            ["alb", [["cloud_aws", "ALB"]]],
-            ["cognito", [["cloud_aws", "Cognito"]]],
-            ["cloudformation", [["cloud_aws", "CloudFormation"]]],
-            ["comprehend", [["cloud_aws", "Comprehend"]]],
-            ["cloudwatch", [["cloud_aws", "CloudWatch"]]],
-            ["cloudtrail", [["cloud_aws", "CloudTrail"]]],
+            {tag: "aws", categories: [["cloud_aws", "AWS"]]},
+            {tag: "s3", categories: [["cloud_aws", "S3"]]},
+            {tag: "rds", categories: [["cloud_aws", "RDS"]]},
+            {tag: "aurora", categories: [["cloud_aws", "Aurora"]]},
+            {tag: "redshift", categories: [["cloud_aws", "Redshift"]]},
+            {tag: "glue", categories: [["cloud_aws", "Glue"]]},
+            {tag: "documentdb", categories: [["cloud_aws", "DocumentDB"]]},
+            {tag: "lambda", categories: [["cloud_aws", "Lambda"]]},
+            {tag: "apigateway", categories: [["cloud_aws", "API Gateway"]]},
+            {tag: "alb", categories: [["cloud_aws", "ALB"]]},
+            {tag: "cognito", categories: [["cloud_aws", "Cognito"]]},
+            {tag: "cloudformation", categories: [["cloud_aws", "CloudFormation"]]},
+            {tag: "comprehend", categories: [["cloud_aws", "Comprehend"]]},
+            {tag: "cloudwatch", categories: [["cloud_aws", "CloudWatch"]]},
+            {tag: "cloudtrail", categories: [["cloud_aws", "CloudTrail"]]},
 
-            ["scala",      [["lang", "Scala"]]],
-            ["java",       [["lang", "Java"]]],
-            ["c++",        [["lang", "C++"]]],
-            ["php",        [["lang", "PHP"]]],
-            ["perl",       [["lang", "Perl"]]],
-            ["python",     [["lang", "Python"]]],
-            ["ruby",       [["lang", "Ruby"]]],
-            ["javascript", [["lang", "JavaScript"]]],
-            ["elixir",     [["lang", "Elixir"]]],
-            ["powershell", [["lang", "PowerShell"]]],
+            {tag: "scala",      categories: [["lang", "Scala"]]},
+            {tag: "java",       categories: [["lang", "Java"]]},
+            {tag: "c++",        categories: [["lang", "C++"]]},
+            {tag: "php",        categories: [["lang", "PHP"]]},
+            {tag: "perl",       categories: [["lang", "Perl"]]},
+            {tag: "python",     categories: [["lang", "Python"]]},
+            {tag: "ruby",       categories: [["lang", "Ruby"]]},
+            {tag: "javascript", categories: [["lang", "JavaScript"]]},
+            {tag: "elixir",     categories: [["lang", "Elixir"]]},
+            {tag: "powershell", categories: [["lang", "PowerShell"]]},
 
-            ["postgresql", [["software", "PostgreSQL"]]],
-            ["fluentd", [["software", "Fluentd"]]],
-            ["elasticsearch", [["software", "Elasticsearch"]]],
-            ["kibana", [["software", "Kibana"]]],
-            ["metabase", [["software", "Metabase"]]],
-            ["redash", [["software", "Redash"]]],
-            ["superset", [["software", "Superset"]]],
-            ["tableau", [["software", "Tableau"]]],
-            ["jupyter", [["software", "Jupyter Notebook"]]],
-            ["polynote", [["software", "Polynote"]]],
-            ["tensorflow", [["software", "TensorFlow"]]],
-            ["matplotlib", [["software", "Matplotlib"]]],
-            ["talend", [["software", "Talend"]]],
-            ["dbeaver", [["software", "DBeaver"]]],
+            {tag: "postgresql", categories: [["software", "PostgreSQL"]]},
+            {tag: "fluentd", categories: [["software", "Fluentd"]]},
+            {tag: "elasticsearch", categories: [["software", "Elasticsearch"]]},
+            {tag: "kibana", categories: [["software", "Kibana"]]},
+            {tag: "metabase", categories: [["software", "Metabase"]]},
+            {tag: "redash", categories: [["software", "Redash"]]},
+            {tag: "superset", categories: [["software", "Superset"]]},
+            {tag: "tableau", categories: [["software", "Tableau"]]},
+            {tag: "jupyter", categories: [["software", "Jupyter Notebook"]]},
+            {tag: "polynote", categories: [["software", "Polynote"]]},
+            {tag: "tensorflow", categories: [["software", "TensorFlow"]]},
+            {tag: "matplotlib", categories: [["software", "Matplotlib"]]},
+            {tag: "talend", categories: [["software", "Talend"]]},
+            {tag: "dbeaver", categories: [["software", "DBeaver"]]},
 
-            ["command", [["command", "Linuxコマンド"]]],
-            ["git", [["command", "git"]]],
-            ["diff", [["command", "diff"]]],
-            ["jq", [["command", "jq"]]],
-            ["xargs", [["command", "xargs"]]],
-            ["seq", [["command", "seq"]]],
-            ["printf", [["command", "printf"]]],
-            ["date", [["command", "date"]]],
-            ["find", [["command", "find"]]],
-            ["rm", [["command", "rm"]]],
-            ["column", [["command", "column"]]],
-            ["uname", [["command", "uname"]]],
-            ["unzip", [["command", "unzip"]]],
-            ["7z", [["command", "7z"]]],
-            ["du", [["command", "du"]]],
-            ["pv", [["command", "pv"]]],
-            ["vipe", [["command", "vipe"]]],
-            ["arp", [["command", "arp"]]],
-            ["pwsh", [["command", "pwsh"]]],
-            ["gsutil",  [["command", "gsutil"], ["cloud_gcp", "gsutil"]]],
-            ["bq",      [["command", "bq"],     ["cloud_gcp", "bq"]]],
-            ["awscli",  [["command", "aws"],    ["cloud_aws", "awscli"]]],
+            {tag: "command", categories: [["command", "Linuxコマンド"]]},
+            {tag: "git", categories: [["command", "git"]]},
+            {tag: "diff", categories: [["command", "diff"]]},
+            {tag: "jq", categories: [["command", "jq"]]},
+            {tag: "xargs", categories: [["command", "xargs"]]},
+            {tag: "seq", categories: [["command", "seq"]]},
+            {tag: "printf", categories: [["command", "printf"]]},
+            {tag: "date", categories: [["command", "date"]]},
+            {tag: "find", categories: [["command", "find"]]},
+            {tag: "rm", categories: [["command", "rm"]]},
+            {tag: "column", categories: [["command", "column"]]},
+            {tag: "uname", categories: [["command", "uname"]]},
+            {tag: "unzip", categories: [["command", "unzip"]]},
+            {tag: "7z", categories: [["command", "7z"]]},
+            {tag: "du", categories: [["command", "du"]]},
+            {tag: "pv", categories: [["command", "pv"]]},
+            {tag: "vipe", categories: [["command", "vipe"]]},
+            {tag: "arp", categories: [["command", "arp"]]},
+            {tag: "pwsh", categories: [["command", "pwsh"]]},
+            {tag: "gsutil",  categories: [["command", "gsutil"], ["cloud_gcp", "gsutil"]]},
+            {tag: "bq",      categories: [["command", "bq"],     ["cloud_gcp", "bq"]]},
+            {tag: "awscli",  categories: [["command", "aws"],    ["cloud_aws", "awscli"]]},
 
-            ["#naviplus", [["hidden", ""]]],
-            ["#beex", [["hidden", ""]]],
-            ["#business_blog", [["hidden", ""]]],
-            ["#qiita", [["hidden", ""]]],
-            ["#hatenablog", [["hidden", ""]]],
-            ["#github_markdown", [["hidden", ""]]],
-            ["#pickup", [["hidden", ""]]],
-            ["#natural_language_processing", [["hidden", "自然言語処理"]]],
+            {tag: "#naviplus", categories: [["hidden", ""]]},
+            {tag: "#beex", categories: [["hidden", ""]]},
+            {tag: "#business_blog", categories: [["hidden", ""]]},
+            {tag: "#qiita", categories: [["hidden", ""]]},
+            {tag: "#hatenablog", categories: [["hidden", ""]]},
+            {tag: "#github_markdown", categories: [["hidden", ""]]},
+            {tag: "#pickup", categories: [["hidden", ""]]},
+            {tag: "#natural_language_processing", categories: [["hidden", "自然言語処理"]]},
 
-            ["#lang_compare", [["other", "プログラミング言語比較"]]],
-            ["raspberry_pi", [["other", "Raspberry Pi"]]],
-            ["#numerical_analysis", [["other_more", "数値計算"]]],
-            ["#probability_distribution", [["other_more", "確率分布"]]],
-            ["#gradient_descent", [["other_more", "勾配降下法"]]],
-            ["#network", [["other_more", "ネットワーク"]]],
-            ["googlecolab", [["other_more", "Google Colaboratory"]]],
+            {tag: "#lang_compare", categories: [["other", "プログラミング言語比較"]]},
+            {tag: "raspberry_pi", categories: [["other", "Raspberry Pi"]]},
+            {tag: "#numerical_analysis", categories: [["other_more", "数値計算"]]},
+            {tag: "#probability_distribution", categories: [["other_more", "確率分布"]]},
+            {tag: "#gradient_descent", categories: [["other_more", "勾配降下法"]]},
+            {tag: "#network", categories: [["other_more", "ネットワーク"]]},
+            {tag: "googlecolab", categories: [["other_more", "Google Colaboratory"]]},
         ];
+    }
+    function keywordDatabaseByTag(tag) {
+        let arr = keywordDatabase();
+        let map = {};
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i].tag == tag) {
+                return arr[i];
+            }
+        }
+        return undefined;
     }
     function categorizeTags(tags) {
         let keywordDb = keywordDatabase();
         let ret = [];
         ret["other_more"] = [];
         for (let i = 0; i < keywordDb.length; i++) {
-            for (let j = 0; j < keywordDb[i][1].length; j++) {
-                if (!(keywordDb[i][1][j][0] in ret)) {
-                    ret[keywordDb[i][1][j][0]] = [];
+            let keywordRecord = keywordDb[i];
+            for (let j = 0; j < keywordRecord.categories.length; j++) {
+                if (!(keywordRecord.categories[j][0] in ret)) {
+                    ret[keywordRecord.categories[j][0]] = [];
                 }
-                ret[keywordDb[i][1][j][0]].push([keywordDb[i][0], 0, keywordDb[i][1][j][1]]);
+                ret[keywordRecord.categories[j][0]].push([keywordRecord.tag, 0, keywordRecord.categories[j][1]]);
             }
         }
         for (let i = 0; i < tags.length; i++) {
@@ -474,7 +465,6 @@ $(function(){
             query: function () { return global_query.query; },
             result: function () { return searchArticles(this.query, this.articles.list); },
             count_str: function () { return getCountStr(this.query, this.result); },
-            imageHtml: function () { return getImageHtml(this.query); },
         },
         template: `
           <div>
@@ -486,7 +476,21 @@ $(function(){
                 <a v-bind:href="article.url" target="_blank">{{ article.title }}</a> ({{ article.date }})
               </li>
             </ul>
-            <div v-html="imageHtml"></div>
+            <section v-if="global_query.query=='#machine_learning'">
+              <p class="image"><a href="https://qiita.com/suzuki-navi/items/2581b3f4afeeabeacace"><img src="ml.png"></a></p>
+            </section>
+            <section v-if="global_query.query=='#math'">
+              <p class="image"><a href="https://tech.naviplus.co.jp/2014/02/27/%e4%b8%8d%e5%81%8f%e5%88%86%e6%95%a3%e3%81%af%e3%81%aa%e3%81%9c-n-1-%e3%81%a7%e5%89%b2%e3%82%8b%e3%81%ae%e3%81%8b%ef%bc%9f/"><img src="math.png"></a></p>
+            </section>
+            <section v-if="global_query.query=='command'">
+              <p class="image"><a href="https://qiita.com/suzuki-navi/items/fdcb166f32b28bc0ff82"><img src="cli.png"></a></p>
+            </section>
+            <section v-if="global_query.query=='git'">
+              <p class="image"><a href="https://qiita.com/suzuki-navi/items/fdcb166f32b28bc0ff82"><img src="cli.png"></a></p>
+            </section>
+            <section v-if="global_query.query=='raspberry_pi'">
+              <p class="youtube"><iframe width="352" height="198" src="https://www.youtube-nocookie.com/embed/wFTvOIsHmQo?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+            </section>
             <section v-if="global_query.query=='#certification'">
               <ul>
                 <li>日本ディープラーニング協会 G検定 (2020/07/04) <a href="https://qiita.com/suzuki-navi/items/fd3607f8f0e670bba887">合格体験記事</a></li>

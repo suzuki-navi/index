@@ -48,6 +48,12 @@ h1 {
   margin: 1em 0 1em 0;
   text-align: center;
 }
+label {
+    color: #0000ee;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
 
 .grid {
 }
