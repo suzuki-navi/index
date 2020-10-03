@@ -1,5 +1,13 @@
 [
     {
+        "url": "https://github.com/suzuki-navi/atcoder/blob/master/cheetsheet/pow/README.md",
+        "title": "1000000007で割った余りを計算するサンプルコード",
+        "posted": "2020/10/03",
+        "updated": "",
+        "keyword1": ["#github_markdown", "scala", "java", "c++", "ruby", "#programming"],
+        "keyword2": []
+    },
+    {
         "url": "https://qiita.com/suzuki-navi/items/d29175b2baed42bbca7a",
         "title": "ElixirでABC178のC Ubiquityを解いてみる",
         "posted": "2020/09/29",
@@ -20,7 +28,7 @@
         "title": "配列のソート (Scala、Java、C++)",
         "posted": "2020/09/27",
         "updated": "",
-        "keyword1": ["#github_markdown", "scala", "java", "c++"],
+        "keyword1": ["#github_markdown", "scala", "java", "c++", "#programming"],
         "keyword2": []
     },
     {
@@ -68,7 +76,7 @@
         "title": "変数の値を入れ替える(swap)には (C++、PHP、Perl、Python、Ruby)",
         "posted": "2020/09/18",
         "updated": "",
-        "keyword1": ["#github_markdown", "c++", "php", "perl", "python", "ruby"],
+        "keyword1": ["#github_markdown", "c++", "php", "perl", "python", "ruby", "#programming"],
         "keyword2": []
     },
     {
