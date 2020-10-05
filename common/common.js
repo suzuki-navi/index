@@ -122,8 +122,8 @@ $(function(){
         case "#natural_language_processing":
             title1 = "自然言語処理の記事";
             break;
-        case "#lang_compare":
-            title1 = "プログラミング言語比較の記事";
+        case "#programming":
+            title1 = "プログラミングの記事";
             break;
         case "#network":
             title1 = "ネットワークの記事";
@@ -399,7 +399,7 @@ $(function(){
             {tag: "#pickup", categories: [["hidden", ""]]},
             {tag: "#natural_language_processing", categories: [["hidden", "自然言語処理"]]},
 
-            {tag: "#lang_compare", categories: [["other", "プログラミング言語比較"]]},
+            {tag: "#programming", categories: [["other", "プログラミング"]]},
             {tag: "raspberry_pi", categories: [["other", "Raspberry Pi"]]},
             {tag: "#numerical_analysis", categories: [["other_more", "数値計算"]]},
             {tag: "#probability_distribution", categories: [["other_more", "確率分布"]]},

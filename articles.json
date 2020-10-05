@@ -1,10 +1,18 @@
 [
     {
+        "url": "https://suzuki-navi.hatenablog.com/entry/2020/10/05/174320",
+        "title": "fluent-plugin-s3のhex_randomはリトライしても値が変わらない",
+        "posted": "2020/10/05",
+        "updated": "",
+        "keyword1": ["#hatenablog", "#data_input", "fluentd", "aws", "s3"],
+        "keyword2": []
+    },
+    {
         "url": "https://suzuki-navi.hatenablog.com/entry/2020/10/04/104751",
         "title": "AtCoder参戦日記 ABC177 ― 初参加",
         "posted": "2020/10/04",
         "updated": "",
-        "keyword1": ["#hatenablog", "atcoder", "#programming"],
+        "keyword1": ["#hatenablog", "#programming", "atcoder"],
         "keyword2": ["scala", "java"]
     },
     {
@@ -12,7 +20,7 @@
         "title": "1000000007で割った余りを計算するサンプルコード",
         "posted": "2020/10/03",
         "updated": "",
-        "keyword1": ["#github_markdown", "scala", "java", "c++", "ruby", "#programming"],
+        "keyword1": ["#github_markdown", "#programming", "scala", "java", "c++", "ruby"],
         "keyword2": []
     },
     {
@@ -36,7 +44,7 @@
         "title": "配列のソート (Scala、Java、C++)",
         "posted": "2020/09/27",
         "updated": "",
-        "keyword1": ["#github_markdown", "scala", "java", "c++", "#programming"],
+        "keyword1": ["#github_markdown", "#programming", "scala", "java", "c++"],
         "keyword2": []
     },
     {
@@ -84,7 +92,7 @@
         "title": "変数の値を入れ替える(swap)には (C++、PHP、Perl、Python、Ruby)",
         "posted": "2020/09/18",
         "updated": "",
-        "keyword1": ["#github_markdown", "c++", "php", "perl", "python", "ruby", "#programming"],
+        "keyword1": ["#github_markdown", "#programming", "c++", "php", "perl", "python", "ruby"],
         "keyword2": []
     },
     {
@@ -155,7 +163,7 @@
         "title": "整数同士の除算演算子の挙動 (C言語、C++、Scala、Java、Rust、Go言語、PHP、JavaScript、Perl、Python、Ruby、Elixir)",
         "posted": "2020/08/27",
         "updated": "2020/09/16",
-        "keyword1": ["#qiita", "#lang_compare", "scala", "java", "rust", "clang", "c++", "golang", "php", "perl", "python", "ruby", "javascript", "elixir"],
+        "keyword1": ["#qiita", "#programming", "scala", "java", "rust", "clang", "c++", "golang", "php", "perl", "python", "ruby", "javascript", "elixir"],
         "keyword2": []
     },
     {
@@ -786,7 +794,7 @@
         "title": "インクリメント・デクリメントの書き方のまとめ(Scala、Java、Rust、C言語、C++、Go言語、PHP、Perl、Python、Ruby、JavaScript)",
         "posted": "2020/01/14",
         "updated": "",
-        "keyword1": ["#qiita", "#lang_compare", "scala", "java", "rust", "clang", "c++", "golang", "php", "perl", "python", "ruby", "javascript"],
+        "keyword1": ["#qiita", "#programming", "scala", "java", "rust", "clang", "c++", "golang", "php", "perl", "python", "ruby", "javascript"],
         "keyword2": []
     },
     {
@@ -854,7 +862,7 @@
         "title": "if文の書き方のまとめ(Scala、Java、Rust、C言語、C++、Go言語、PHP、Perl、Python、Ruby)",
         "posted": "2019/11/22",
         "updated": "",
-        "keyword1": ["#qiita", "#lang_compare", "scala", "java", "rust", "clang", "c++", "golang", "php", "perl", "python", "ruby"],
+        "keyword1": ["#qiita", "#programming", "scala", "java", "rust", "clang", "c++", "golang", "php", "perl", "python", "ruby"],
         "keyword2": []
     },
     {
