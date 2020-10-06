@@ -1,5 +1,13 @@
 [
     {
+        "url": "https://suzuki-navi.hatenablog.com/entry/2020/10/06/225359",
+        "title": "Google Cloud DataflowをJavaで動かしてみる",
+        "posted": "2020/10/06",
+        "updated": "",
+        "keyword1": ["#hatenablog", "#data_input", "gcp", "dataflow", "apache_beam"],
+        "keyword2": ["java"]
+    },
+    {
         "url": "https://suzuki-navi.hatenablog.com/entry/2020/10/05/174320",
         "title": "fluent-plugin-s3のhex_randomはリトライしても値が変わらない",
         "posted": "2020/10/05",
