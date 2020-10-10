@@ -384,6 +384,8 @@ $(function(){
             {tag: "du", categories: [["command", "du"]]},
             {tag: "pv", categories: [["command", "pv"]]},
             {tag: "vipe", categories: [["command", "vipe"]]},
+            {tag: "grep", categories: [["command", "grep"]]},
+            {tag: "sed", categories: [["command", "sed"]]},
             {tag: "arp", categories: [["command", "arp"]]},
             {tag: "pwsh", categories: [["command", "pwsh"]]},
             {tag: "gsutil",  categories: [["command", "gsutil"], ["cloud_gcp", "gsutil"]]},
@@ -406,6 +408,10 @@ $(function(){
             {tag: "#gradient_descent", categories: [["other_more", "勾配降下法"]]},
             {tag: "#network", categories: [["other_more", "ネットワーク"]]},
             {tag: "googlecolab", categories: [["other_more", "Google Colaboratory"]]},
+            {tag: "clang",         categories: [["other_more", "C言語"]]},
+            {tag: "golang",         categories: [["other_more", "Go言語"]]},
+            {tag: "rust",         categories: [["other_more", "Rust"]]},
+            {tag: "c#",         categories: [["other_more", "C#"]]},
         ];
     }
     function keywordDatabaseByTag(tag) {

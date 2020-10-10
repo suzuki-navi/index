@@ -1,5 +1,29 @@
 [
     {
+        "url": "https://suzuki-navi.hatenablog.com/entry/2020/10/10/185131",
+        "title": "sedコマンドでディレクトリ内の全ファイルをテキスト全置換するには",
+        "posted": "2020/10/10",
+        "updated": "",
+        "keyword1": ["#hatenablog", "command", "sed"],
+        "keyword2": ["find", "grep", "xargs", "git"]
+    },
+    {
+        "url": "https://suzuki-navi.hatenablog.com/entry/2020/10/09/233700",
+        "title": "Google Cloud DataflowをPythonで動かしてみる",
+        "posted": "2020/10/09",
+        "updated": "",
+        "keyword1": ["#hatenablog", "#data_input", "gcp", "dataflow", "apache_beam"],
+        "keyword2": ["python"]
+    },
+    {
+        "url": "https://suzuki-navi.hatenablog.com/entry/2020/10/08/215128",
+        "title": "Ubuntu 20.04にC#をインストールしてAWS SDKを使ってみる",
+        "posted": "2020/10/08",
+        "updated": "",
+        "keyword1": ["#hatenablog", "c#", "aws", "ubuntu"],
+        "keyword2": ["s3"]
+    },
+    {
         "url": "https://suzuki-navi.hatenablog.com/entry/2020/10/06/225359",
         "title": "Google Cloud DataflowをJavaで動かしてみる",
         "posted": "2020/10/06",
@@ -267,7 +291,7 @@
         "title": "IAM認証のAWS API GatewayにPythonからSigV4署名してアクセスするには",
         "posted": "2020/07/22",
         "updated": "",
-        "keyword1": ["#qiita", "aws", "iam", "apigateway"],
+        "keyword1": ["#qiita", "aws", "iam", "apigateway", "sigv4"],
         "keyword2": ["python", "computeengine"]
     },
     {
@@ -840,7 +864,7 @@
         "posted": "2019/12/16",
         "updated": "",
         "keyword1": ["#qiita", "aws", "lambda", "apigateway"],
-        "keyword2": ["nodejs"]
+        "keyword2": ["nodejs", "javascript"]
     },
     {
         "url": "https://qiita.com/suzuki-navi/items/3664bfbc102052717426",
