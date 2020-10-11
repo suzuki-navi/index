@@ -1,5 +1,13 @@
 [
     {
+        "url": "https://suzuki-navi.hatenablog.com/entry/2020/10/11/075820",
+        "title": "AtCoder参戦日記 ABC178 ― 奇跡的な好成績",
+        "posted": "2020/10/11",
+        "updated": "",
+        "keyword1": ["#hatenablog", "#programming", "atcoder"],
+        "keyword2": ["scala", "java", "python"]
+    },
+    {
         "url": "https://suzuki-navi.hatenablog.com/entry/2020/10/10/185131",
         "title": "sedコマンドでディレクトリ内の全ファイルをテキスト全置換するには",
         "posted": "2020/10/10",
@@ -49,7 +57,7 @@
     },
     {
         "url": "https://github.com/suzuki-navi/atcoder/blob/master/cheetsheet/pow/README.md",
-        "title": "1000000007で割った余りを計算するサンプルコード",
+        "title": "1000000007で割った余りを計算するサンプルコード (Scala、Java、C++、Ruby)",
         "posted": "2020/10/03",
         "updated": "",
         "keyword1": ["#github_markdown", "#programming", "scala", "java", "c++", "ruby"],

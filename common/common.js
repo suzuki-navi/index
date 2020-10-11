@@ -323,6 +323,7 @@ $(function(){
             {tag: "cloudsql",          categories: [["cloud_gcp", "Cloud SQL"]]},
             {tag: "computeengine",     categories: [["cloud_gcp", "Compute Engine"]]},
             {tag: "gcs",               categories: [["cloud_gcp", "Cloud Storage"]]},
+            {tag: "dataflow",          categories: [["cloud_gcp", "Dataflow"]]},
             {tag: "cloudtranslation",  categories: [["cloud_gcp", "Cloud Translation"]]},
 
             {tag: "aws", categories: [["cloud_aws", "AWS"]]},
@@ -343,7 +344,11 @@ $(function(){
 
             {tag: "scala",      categories: [["lang", "Scala"]]},
             {tag: "java",       categories: [["lang", "Java"]]},
+            {tag: "c#",         categories: [["lang", "C#"]]},
             {tag: "c++",        categories: [["lang", "C++"]]},
+            {tag: "clang",      categories: [["lang", "C言語"]], desc: "私にとって始めてさわったプログラミング言語"},
+            {tag: "golang",     categories: [["lang", "Go言語"]]},
+            {tag: "rust",       categories: [["lang", "Rust"]]},
             {tag: "php",        categories: [["lang", "PHP"]]},
             {tag: "perl",       categories: [["lang", "Perl"]]},
             {tag: "python",     categories: [["lang", "Python"]]},
@@ -408,10 +413,6 @@ $(function(){
             {tag: "#gradient_descent", categories: [["other_more", "勾配降下法"]]},
             {tag: "#network", categories: [["other_more", "ネットワーク"]]},
             {tag: "googlecolab", categories: [["other_more", "Google Colaboratory"]]},
-            {tag: "clang",         categories: [["other_more", "C言語"]]},
-            {tag: "golang",         categories: [["other_more", "Go言語"]]},
-            {tag: "rust",         categories: [["other_more", "Rust"]]},
-            {tag: "c#",         categories: [["other_more", "C#"]]},
         ];
     }
     function keywordDatabaseByTag(tag) {
@@ -460,6 +461,14 @@ $(function(){
         }
         return ret;
     }
+    function descFromTag(tag) {
+        let keywordDb = keywordDatabaseByTag(tag);
+        if (keywordDb) {
+            return keywordDb.desc;
+        } else {
+            return "";
+        }
+    }
     Vue.component("search-articles-search", {
         data: function () {
             return {
@@ -471,12 +480,14 @@ $(function(){
             query: function () { return global_query.query; },
             result: function () { return searchArticles(this.query, this.articles.list); },
             count_str: function () { return getCountStr(this.query, this.result); },
+            desc: function () { return descFromTag(this.query); },
         },
         template: `
           <div>
             <div id="card-tags-label-open-wrapper"><label for="card-tags-checkbox" id="card-tags-label-open">[tags...]</label></div>
             <input v-model="global_query.query" placeholder="Search articles">
             <h1 v-if="result.title1">{{ result.title1 }} {{ count_str }}</h1>
+            <p v-if="desc">{{ desc }}</p>
             <ul v-if="result.articles1.length > 0">
               <li v-for="article in result.articles1" v-bind:style="article.liststyle">
                 <a v-bind:href="article.url" target="_blank">{{ article.title }}</a> ({{ article.date }})
@@ -640,8 +651,8 @@ $(function(){
                 <span v-if="idx>0" class="font-small"> / </span>
                 <a v-bind:href="'#' + tag[0]" v-on:click.prevent.stop="gotoTagPage(tag[0]);">{{ tag[2] }}</a>
               </span>
-              <div>
               </div>
+              <div style="margin-top:16px;">
               <span v-for="(tag, idx) in categorized.other">
                 <span v-if="idx>0" class="font-small"> / </span>
                 <a v-bind:href="'#' + tag[0]" v-on:click.prevent.stop="gotoTagPage(tag[0]);" v-bind:class="(tag[1]<3)? 'font-small':''">{{ tag[2] }}({{ tag[1] }})</a>
