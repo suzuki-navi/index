@@ -1,11 +1,27 @@
 [
     {
+        "url": "https://suzuki-navi.hatenablog.com/entry/2020/10/13/221928",
+        "title": "AtCoder参戦日記 ABC179 ― 茶色になる",
+        "posted": "2020/10/13",
+        "updated": "",
+        "keyword1": ["#hatenablog", "#programming", "atcoder"],
+        "keyword2": ["scala", "java", "python"]
+    },
+    {
+        "url": "https://suzuki-navi.hatenablog.com/entry/2020/10/12/224423",
+        "title": "MNISTのニューラルネットワークでの学習の隠れ層のニューロン数と精度の関係",
+        "posted": "2020/10/12",
+        "updated": "",
+        "keyword1": ["#hatenablog", "#machine_learning", "#deep_learning", "tensorflow", "mnist"],
+        "keyword2": ["python", "googlecolab"]
+    },
+    {
         "url": "https://suzuki-navi.hatenablog.com/entry/2020/10/11/075820",
         "title": "AtCoder参戦日記 ABC178 ― 奇跡的な好成績",
         "posted": "2020/10/11",
         "updated": "",
         "keyword1": ["#hatenablog", "#programming", "atcoder"],
-        "keyword2": ["scala", "java", "python"]
+        "keyword2": ["scala", "c++", "python"]
     },
     {
         "url": "https://suzuki-navi.hatenablog.com/entry/2020/10/10/185131",
