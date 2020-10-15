@@ -1,10 +1,18 @@
 [
     {
+        "url": "https://suzuki-navi.hatenablog.com/entry/2020/10/15/165228",
+        "title": "JavaScript AWS SDKでS3にある画像をブラウザに表示",
+        "posted": "2020/10/15",
+        "updated": "",
+        "keyword1": ["#hatenablog", "aws", "s3", "aws_sdk"],
+        "keyword2": ["javascript", "python", "python", "vuejs"]
+    },
+    {
         "url": "https://qiita.com/suzuki-navi/items/385deb31f36a2a66fac0",
         "title": "IAM認証のAWS API GatewayにC#からIAMユーザでSigV4署名してアクセスするには",
         "posted": "2020/10/14",
         "updated": "",
-        "keyword1": ["#qiita", "aws", "iam", "apigateway", "sigv4"],
+        "keyword1": ["#qiita", "aws", "iam", "apigateway", "sigv4", "aws_sdk"],
         "keyword2": ["c#"]
     },
     {
@@ -52,7 +60,7 @@
         "title": "Ubuntu 20.04にC#をインストールしてAWS SDKを使ってみる",
         "posted": "2020/10/08",
         "updated": "",
-        "keyword1": ["#hatenablog", "c#", "aws", "ubuntu"],
+        "keyword1": ["#hatenablog", "c#", "aws", "ubuntu", "aws_sdk"],
         "keyword2": ["s3"]
     },
     {
