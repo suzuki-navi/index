@@ -1,5 +1,13 @@
 [
     {
+        "url": "https://suzuki-navi.hatenablog.com/entry/2020/10/16/235709",
+        "title": "AWS SAMとCloudFormationで同じ構成のAPI Gateway + Lambdaを構築",
+        "posted": "2020/10/16",
+        "updated": "",
+        "keyword1": ["#hatenablog", "aws", "lambda", "apigateway", "cloudformation"],
+        "keyword2": ["python", "awscli"]
+    },
+    {
         "url": "https://suzuki-navi.hatenablog.com/entry/2020/10/15/165228",
         "title": "JavaScript AWS SDKでS3にある画像をブラウザに表示",
         "posted": "2020/10/15",
@@ -92,7 +100,7 @@
         "title": "1000000007で割った余りを計算するサンプルコード (Scala、Java、C++、Ruby)",
         "posted": "2020/10/03",
         "updated": "",
-        "keyword1": ["#github_markdown", "#programming", "scala", "java", "c++", "ruby"],
+        "keyword1": ["#github_markdown", "#programming", "#multilang", "scala", "java", "c++", "ruby"],
         "keyword2": []
     },
     {
@@ -116,7 +124,7 @@
         "title": "配列のソート (Scala、Java、C++)",
         "posted": "2020/09/27",
         "updated": "",
-        "keyword1": ["#github_markdown", "#programming", "scala", "java", "c++"],
+        "keyword1": ["#github_markdown", "#programming", "#multilang", "scala", "java", "c++"],
         "keyword2": []
     },
     {
@@ -164,7 +172,7 @@
         "title": "変数の値を入れ替える(swap)には (C++、PHP、Perl、Python、Ruby)",
         "posted": "2020/09/18",
         "updated": "",
-        "keyword1": ["#github_markdown", "#programming", "c++", "php", "perl", "python", "ruby"],
+        "keyword1": ["#github_markdown", "#programming", "#multilang", "c++", "php", "perl", "python", "ruby"],
         "keyword2": []
     },
     {
@@ -235,7 +243,7 @@
         "title": "整数同士の除算演算子の挙動 (C言語、C++、Scala、Java、Rust、Go言語、PHP、JavaScript、Perl、Python、Ruby、Elixir)",
         "posted": "2020/08/27",
         "updated": "2020/09/16",
-        "keyword1": ["#qiita", "#programming", "scala", "java", "rust", "clang", "c++", "golang", "php", "perl", "python", "ruby", "javascript", "elixir"],
+        "keyword1": ["#qiita", "#programming", "#multilang", "scala", "java", "rust", "clang", "c++", "golang", "php", "perl", "python", "ruby", "javascript", "elixir"],
         "keyword2": []
     },
     {
@@ -866,7 +874,7 @@
         "title": "インクリメント・デクリメントの書き方のまとめ(Scala、Java、Rust、C言語、C++、Go言語、PHP、Perl、Python、Ruby、JavaScript)",
         "posted": "2020/01/14",
         "updated": "",
-        "keyword1": ["#qiita", "#programming", "scala", "java", "rust", "clang", "c++", "golang", "php", "perl", "python", "ruby", "javascript"],
+        "keyword1": ["#qiita", "#programming", "#multilang", "scala", "java", "rust", "clang", "c++", "golang", "php", "perl", "python", "ruby", "javascript"],
         "keyword2": []
     },
     {
@@ -903,7 +911,7 @@
         "title": "AWS SAMでの Lambda Functions with Node.js + API Gateway 最小構成",
         "posted": "2019/12/16",
         "updated": "",
-        "keyword1": ["#qiita", "aws", "lambda", "apigateway"],
+        "keyword1": ["#qiita", "aws", "lambda", "apigateway", "cloudformation"],
         "keyword2": ["nodejs", "javascript"]
     },
     {
@@ -934,7 +942,7 @@
         "title": "if文の書き方のまとめ(Scala、Java、Rust、C言語、C++、Go言語、PHP、Perl、Python、Ruby)",
         "posted": "2019/11/22",
         "updated": "",
-        "keyword1": ["#qiita", "#programming", "scala", "java", "rust", "clang", "c++", "golang", "php", "perl", "python", "ruby"],
+        "keyword1": ["#qiita", "#programming", "#multilang", "scala", "java", "rust", "clang", "c++", "golang", "php", "perl", "python", "ruby"],
         "keyword2": []
     },
     {

@@ -214,6 +214,8 @@ $(function(){
     function getCountStr(query, searchResult) {
         if (query == "") {
             return "";
+        } else if (query == "#tags") {
+            return "";
         } else if (query == "#count") {
             return "";
         } else if (query == "#certification") {
@@ -481,6 +483,9 @@ $(function(){
             result: function () { return searchArticles(this.query, this.articles.list); },
             count_str: function () { return getCountStr(this.query, this.result); },
             desc: function () { return descFromTag(this.query); },
+            categorized: function () {
+                return categorizeTags(articles.tags);
+            }
         },
         template: `
           <div>
@@ -563,6 +568,15 @@ $(function(){
               <p class="image">
                 <img src="search-2.png">
               </p>
+            </section>
+            <section v-if="global_query.query=='#tags'">
+              <div id="card-tags-label-close-wrapper"><label for="card-tags-checkbox" id="card-tags-label-close">[close tags]</label></div>
+              <div>
+                <span v-for="(tag, idx) in categorized.thema">
+                  <span v-if="idx>0" class="font-small"> / </span>
+                  <a v-bind:href="'#' + tag[0]" v-on:click.prevent.stop="gotoTagPage(tag[0]);">{{ tag[2] }}({{ tag[1] }})</a>
+                </span>
+              </div>
             </section>
             <section v-if="global_query.query==''">
               <p class="image">
