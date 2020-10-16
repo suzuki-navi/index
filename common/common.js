@@ -96,6 +96,9 @@ $(function(){
         case "":
             title1 = "最近の記事";
             break;
+        case "#tags":
+            title1 = "";
+            break;
 
         case "#machine_learning":
             title1 = "機械学習 - データ活用フェーズの記事";
@@ -471,6 +474,75 @@ $(function(){
             return "";
         }
     }
+    const tagsTemplate = `
+            <div>
+              <span v-for="(tag, idx) in categorized.thema">
+                <span v-if="idx>0" class="font-small"> / </span>
+                <a v-bind:href="'#' + tag[0]" v-on:click.prevent.stop="gotoTagPage(tag[0]);">{{ tag[2] }}({{ tag[1] }})</a>
+              </span>
+            </div>
+            <div>
+              <h2>クラウド環境記事 - GCP</h2>
+              <span v-for="(tag, idx) in categorized.cloud_gcp">
+                <span v-if="idx>0" class="font-small"> / </span>
+                <a v-bind:href="'#' + tag[0]" v-on:click.prevent.stop="gotoTagPage(tag[0]);" v-bind:class="(tag[1]<3)? 'font-small':''">{{ tag[2] }}({{ tag[1] }})</a>
+              </span>
+            </div>
+            <div>
+              <h2>クラウド環境記事 - AWS</h2>
+              <span v-for="(tag, idx) in categorized.cloud_aws">
+                <span v-if="idx>0" class="font-small"> / </span>
+                <a v-bind:href="'#' + tag[0]" v-on:click.prevent.stop="gotoTagPage(tag[0]);" v-bind:class="(tag[1]<3)? 'font-small':''">{{ tag[2] }}({{ tag[1] }})</a>
+              </span>
+            </div>
+            <div>
+              <h2>プログラミング言語別記事</h2>
+              <span v-for="(tag, idx) in categorized.lang">
+                <span v-if="idx>0" class="font-small"> / </span>
+                <a v-bind:href="'#' + tag[0]" v-on:click.prevent.stop="gotoTagPage(tag[0]);" v-bind:class="(tag[1]<3)? 'font-small':''">{{ tag[2] }}({{ tag[1] }})</a>
+              </span>
+            </div>
+            <div>
+              <h2>ソフトウェア別記事</h2>
+              <span v-for="(tag, idx) in categorized.software">
+                <span v-if="idx>0" class="font-small"> / </span>
+                <a v-bind:href="'#' + tag[0]" v-on:click.prevent.stop="gotoTagPage(tag[0]);" v-bind:class="(tag[1]<3)? 'font-small':''">{{ tag[2] }}({{ tag[1] }})</a>
+              </span>
+            </div>
+            <div>
+              <h2>Linuxコマンドの記事</h2>
+              <span v-for="(tag, idx) in categorized.command">
+                <span v-if="idx>0" class="font-small"> / </span>
+                <a v-bind:href="'#' + tag[0]" v-on:click.prevent.stop="gotoTagPage(tag[0]);" v-bind:class="(tag[1]<3)? 'font-small':''">{{ tag[2] }}({{ tag[1] }})</a>
+              </span>
+            </div>
+            <div>
+              <h2>その他</h2>
+              <div>
+              <span v-for="(tag, idx) in categorized.thema2">
+                <span v-if="idx>0" class="font-small"> / </span>
+                <a v-bind:href="'#' + tag[0]" v-on:click.prevent.stop="gotoTagPage(tag[0]);">{{ tag[2] }}</a>
+              </span>
+              </div>
+              <div style="margin-top:16px;">
+              <span v-for="(tag, idx) in categorized.other">
+                <span v-if="idx>0" class="font-small"> / </span>
+                <a v-bind:href="'#' + tag[0]" v-on:click.prevent.stop="gotoTagPage(tag[0]);" v-bind:class="(tag[1]<3)? 'font-small':''">{{ tag[2] }}({{ tag[1] }})</a>
+              </span>
+              <input type="checkbox" id="othertags-checkbox">
+              <label for="othertags-checkbox" id="othertags-label">more...</label>
+              <span id="othertags">
+              <span v-for="(tag, idx) in categorized.other_more">
+                <span v-if="idx>0" class="font-small"> / </span>
+                <a v-bind:href="'#' + tag[0]" v-on:click.prevent.stop="gotoTagPage(tag[0]);" v-bind:class="(tag[1]<3)? 'font-small':''">{{ tag[2] }}({{ tag[1] }})</a>
+              </span>
+              </span>
+              </div>
+            </div>
+            <p>
+              <a href="" v-on:click.prevent.stop="gotoTagPage('');">top</a>
+            </p>
+        `;
     Vue.component("search-articles-search", {
         data: function () {
             return {
@@ -487,9 +559,27 @@ $(function(){
                 return categorizeTags(articles.tags);
             }
         },
+        methods: {
+            gotoTagPage: function (tag) {
+                global_query.query = tag;
+                if (tag == "") {
+                    history.pushState(undefined, tag + " | suzuki-navi", "./");
+                } else {
+                    history.pushState(undefined, tag + " | suzuki-navi", "./#" + tag);
+                }
+                window.scroll({
+                    top: 0,
+                    left: 0,
+                    behavior: 'smooth',
+                });
+            },
+        },
         template: `
           <div>
-            <div id="card-tags-label-open-wrapper"><label for="card-tags-checkbox" id="card-tags-label-open">[tags...]</label></div>
+            <div id="tags-label-wrapper">
+              <a v-if="global_query.query=='#tags'" href="#" v-on:click.prevent.stop="history.back();">[close tags]</a>
+              <a v-if="global_query.query!='#tags'" href="#tags" v-on:click.prevent.stop="gotoTagPage('#tags');">[tags...]</a>
+            </div>
             <input v-model="global_query.query" placeholder="Search articles">
             <h1 v-if="result.title1">{{ result.title1 }} {{ count_str }}</h1>
             <p v-if="desc">{{ desc }}</p>
@@ -569,14 +659,7 @@ $(function(){
                 <img src="search-2.png">
               </p>
             </section>
-            <section v-if="global_query.query=='#tags'">
-              <div id="card-tags-label-close-wrapper"><label for="card-tags-checkbox" id="card-tags-label-close">[close tags]</label></div>
-              <div>
-                <span v-for="(tag, idx) in categorized.thema">
-                  <span v-if="idx>0" class="font-small"> / </span>
-                  <a v-bind:href="'#' + tag[0]" v-on:click.prevent.stop="gotoTagPage(tag[0]);">{{ tag[2] }}({{ tag[1] }})</a>
-                </span>
-              </div>
+            <section v-if="global_query.query=='#tags'">` + tagsTemplate + `
             </section>
             <section v-if="global_query.query==''">
               <p class="image">
@@ -606,7 +689,6 @@ $(function(){
                 } else {
                     history.pushState(undefined, tag + " | suzuki-navi", "./#" + tag);
                 }
-                $("#card-tags-checkbox").prop("checked", false);
                 window.scroll({
                     top: 0,
                     left: 0,
@@ -614,78 +696,7 @@ $(function(){
                 });
             },
         },
-        template: `
-          <div>
-            <div id="card-tags-label-close-wrapper"><label for="card-tags-checkbox" id="card-tags-label-close">[close tags]</label></div>
-            <div>
-              <span v-for="(tag, idx) in categorized.thema">
-                <span v-if="idx>0" class="font-small"> / </span>
-                <a v-bind:href="'#' + tag[0]" v-on:click.prevent.stop="gotoTagPage(tag[0]);">{{ tag[2] }}({{ tag[1] }})</a>
-              </span>
-            </div>
-            <div>
-              <h2>クラウド環境記事 - GCP</h2>
-              <span v-for="(tag, idx) in categorized.cloud_gcp">
-                <span v-if="idx>0" class="font-small"> / </span>
-                <a v-bind:href="'#' + tag[0]" v-on:click.prevent.stop="gotoTagPage(tag[0]);" v-bind:class="(tag[1]<3)? 'font-small':''">{{ tag[2] }}({{ tag[1] }})</a>
-              </span>
-            </div>
-            <div>
-              <h2>クラウド環境記事 - AWS</h2>
-              <span v-for="(tag, idx) in categorized.cloud_aws">
-                <span v-if="idx>0" class="font-small"> / </span>
-                <a v-bind:href="'#' + tag[0]" v-on:click.prevent.stop="gotoTagPage(tag[0]);" v-bind:class="(tag[1]<3)? 'font-small':''">{{ tag[2] }}({{ tag[1] }})</a>
-              </span>
-            </div>
-            <div>
-              <h2>プログラミング言語別記事</h2>
-              <span v-for="(tag, idx) in categorized.lang">
-                <span v-if="idx>0" class="font-small"> / </span>
-                <a v-bind:href="'#' + tag[0]" v-on:click.prevent.stop="gotoTagPage(tag[0]);" v-bind:class="(tag[1]<3)? 'font-small':''">{{ tag[2] }}({{ tag[1] }})</a>
-              </span>
-            </div>
-            <div>
-              <h2>ソフトウェア別記事</h2>
-              <span v-for="(tag, idx) in categorized.software">
-                <span v-if="idx>0" class="font-small"> / </span>
-                <a v-bind:href="'#' + tag[0]" v-on:click.prevent.stop="gotoTagPage(tag[0]);" v-bind:class="(tag[1]<3)? 'font-small':''">{{ tag[2] }}({{ tag[1] }})</a>
-              </span>
-            </div>
-            <div>
-              <h2>Linuxコマンドの記事</h2>
-              <span v-for="(tag, idx) in categorized.command">
-                <span v-if="idx>0" class="font-small"> / </span>
-                <a v-bind:href="'#' + tag[0]" v-on:click.prevent.stop="gotoTagPage(tag[0]);" v-bind:class="(tag[1]<3)? 'font-small':''">{{ tag[2] }}({{ tag[1] }})</a>
-              </span>
-            </div>
-            <div>
-              <h2>その他</h2>
-              <div>
-              <span v-for="(tag, idx) in categorized.thema2">
-                <span v-if="idx>0" class="font-small"> / </span>
-                <a v-bind:href="'#' + tag[0]" v-on:click.prevent.stop="gotoTagPage(tag[0]);">{{ tag[2] }}</a>
-              </span>
-              </div>
-              <div style="margin-top:16px;">
-              <span v-for="(tag, idx) in categorized.other">
-                <span v-if="idx>0" class="font-small"> / </span>
-                <a v-bind:href="'#' + tag[0]" v-on:click.prevent.stop="gotoTagPage(tag[0]);" v-bind:class="(tag[1]<3)? 'font-small':''">{{ tag[2] }}({{ tag[1] }})</a>
-              </span>
-              <input type="checkbox" id="othertags-checkbox">
-              <label for="othertags-checkbox" id="othertags-label">more...</label>
-              <span id="othertags">
-              <span v-for="(tag, idx) in categorized.other_more">
-                <span v-if="idx>0" class="font-small"> / </span>
-                <a v-bind:href="'#' + tag[0]" v-on:click.prevent.stop="gotoTagPage(tag[0]);" v-bind:class="(tag[1]<3)? 'font-small':''">{{ tag[2] }}({{ tag[1] }})</a>
-              </span>
-              </span>
-              </div>
-            </div>
-            <p>
-              <a href="" v-on:click.prevent.stop="gotoTagPage('');">top</a>
-            </p>
-          </div>
-        `,
+        template: "<div>" + tagsTemplate + "</div>",
     });
     Vue.component("articles-count", {
         props: ["query"],

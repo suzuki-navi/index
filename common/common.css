@@ -55,12 +55,6 @@ h1 {
   margin: 1em 0 1em 0;
   text-align: center;
 }
-label {
-    color: #0000ee;
-    cursor: pointer;
-    text-decoration: underline;
-}
-
 
 .grid {
 }
@@ -82,25 +76,12 @@ label {
 }
 
 @media screen and (max-width: 949px) {
-  #card-tags-checkbox {
-    display: none;
-  }
-  #card-tags-label-open-wrapper {
+  #tags-label-wrapper {
     float: right;
     text-align: right;
   }
   #card-tags {
     display: none;
-  }
-  #card-tags-checkbox:checked ~ #card-tags {
-    display: block;
-  }
-  #card-tags-checkbox:checked ~ #card-tags-label-open {
-    display: none;
-  }
-  #card-tags-label-close-wrapper {
-    padding-bottom: 10px;
-    text-align: right;
   }
 
   #card-github-grass p img {
@@ -108,20 +89,12 @@ label {
   }
 }
 @media screen and (min-width: 950px) {
-  #card-tags-wrapper {
-  }
-  #card-tags-checkbox {
+  #tags-label-wrapper {
     display: none;
   }
   #card-tags {
     display: block;
     grid-column: 2;
-  }
-  #card-tags-label-open {
-    display: none;
-  }
-  #card-tags-label-close {
-    display: none;
   }
 
   .grid {
