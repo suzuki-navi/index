@@ -1,5 +1,13 @@
 [
     {
+        "url": "https://qiita.com/suzuki-navi/items/569453cac3e2264d2519",
+        "title": "ARC104のD Multiset MeanをScala、Java、C++、Ruby、Perl、Elixirで解く",
+        "posted": "2020/10/17",
+        "updated": "",
+        "keyword1": ["#qiita", "atcoder", "scala", "java", "c++", "ruby", "perl", "elixir"],
+        "keyword2": []
+    },
+    {
         "url": "https://suzuki-navi.hatenablog.com/entry/2020/10/16/235709",
         "title": "AWS SAMとCloudFormationで同じ構成のAPI Gateway + Lambdaを構築",
         "posted": "2020/10/16",

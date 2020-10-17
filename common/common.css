@@ -55,6 +55,11 @@ h1 {
   margin: 1em 0 1em 0;
   text-align: center;
 }
+label {
+    color: #0000ee;
+    cursor: pointer;
+    text-decoration: underline;
+}
 
 .grid {
 }
@@ -127,15 +132,27 @@ h1 {
   }
 }
 
-#othertags-checkbox {
+#othertags-1-checkbox {
   display: none;
 }
-#othertags-checkbox:checked ~ #othertags-label {
+#othertags-1-checkbox:checked ~ #othertags-1-label {
   display: none;
 }
-#othertags {
+#othertags-1 {
   display: none;
 }
-#othertags-checkbox:checked ~ #othertags {
+#othertags-1-checkbox:checked ~ #othertags-1 {
+  display: inline;
+}
+#othertags-2-checkbox {
+  display: none;
+}
+#othertags-2-checkbox:checked ~ #othertags-2-label {
+  display: none;
+}
+#othertags-2 {
+  display: none;
+}
+#othertags-2-checkbox:checked ~ #othertags-2 {
   display: inline;
 }

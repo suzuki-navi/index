@@ -474,7 +474,8 @@ $(function(){
             return "";
         }
     }
-    const tagsTemplate = `
+    function tagsTemplate(id) {
+        return `
             <div>
               <span v-for="(tag, idx) in categorized.thema">
                 <span v-if="idx>0" class="font-small"> / </span>
@@ -529,9 +530,9 @@ $(function(){
                 <span v-if="idx>0" class="font-small"> / </span>
                 <a v-bind:href="'#' + tag[0]" v-on:click.prevent.stop="gotoTagPage(tag[0]);" v-bind:class="(tag[1]<3)? 'font-small':''">{{ tag[2] }}({{ tag[1] }})</a>
               </span>
-              <input type="checkbox" id="othertags-checkbox">
-              <label for="othertags-checkbox" id="othertags-label">more...</label>
-              <span id="othertags">
+              <input type="checkbox" id="othertags-` + id + `-checkbox">
+              <label for="othertags-` + id + `-checkbox" id="othertags-` + id + `-label">more...</label>
+              <span id="othertags-` + id + `">
               <span v-for="(tag, idx) in categorized.other_more">
                 <span v-if="idx>0" class="font-small"> / </span>
                 <a v-bind:href="'#' + tag[0]" v-on:click.prevent.stop="gotoTagPage(tag[0]);" v-bind:class="(tag[1]<3)? 'font-small':''">{{ tag[2] }}({{ tag[1] }})</a>
@@ -543,6 +544,7 @@ $(function(){
               <a href="" v-on:click.prevent.stop="gotoTagPage('');">top</a>
             </p>
         `;
+    }
     Vue.component("search-articles-search", {
         data: function () {
             return {
@@ -659,7 +661,7 @@ $(function(){
                 <img src="search-2.png">
               </p>
             </section>
-            <section v-if="global_query.query=='#tags'">` + tagsTemplate + `
+            <section v-if="global_query.query=='#tags'">` + tagsTemplate(1) + `
             </section>
             <section v-if="global_query.query==''">
               <p class="image">
@@ -696,7 +698,7 @@ $(function(){
                 });
             },
         },
-        template: "<div>" + tagsTemplate + "</div>",
+        template: "<div>" + tagsTemplate(2) + "</div>",
     });
     Vue.component("articles-count", {
         props: ["query"],
