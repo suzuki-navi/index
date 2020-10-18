@@ -1,10 +1,18 @@
 [
     {
+        "url": "https://suzuki-navi.hatenablog.com/entry/2020/10/18/144356",
+        "title": "curlコマンドとwgetコマンドでバイナリをPOST",
+        "posted": "2020/10/18",
+        "updated": "",
+        "keyword1": ["#hatenablog", "command", "curl", "wget"],
+        "keyword2": []
+    },
+    {
         "url": "https://qiita.com/suzuki-navi/items/569453cac3e2264d2519",
         "title": "ARC104のD Multiset MeanをScala、Java、C++、Ruby、Perl、Elixirで解く",
         "posted": "2020/10/17",
         "updated": "",
-        "keyword1": ["#qiita", "atcoder", "scala", "java", "c++", "ruby", "perl", "elixir"],
+        "keyword1": ["#qiita", "#multilang", "atcoder", "scala", "java", "c++", "ruby", "perl", "elixir"],
         "keyword2": []
     },
     {
@@ -966,7 +974,8 @@
         "title": "AWS CloudFormationをちょっとだけ理解した",
         "posted": "2019/11/19",
         "updated": "",
-        "keyword1": ["#qiita", "aws", "awscli", "cloudformation"]
+        "keyword1": ["#qiita", "aws", "awscli", "cloudformation"],
+        "keyword2": ["python"]
     },
     {
         "url": "https://qiita.com/suzuki-navi/items/5745eff3392ec9f75249",
