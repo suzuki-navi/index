@@ -415,6 +415,7 @@ $(function(){
 
             {tag: "#programming", categories: [["other", "プログラミング"]]},
             {tag: "raspberry_pi", categories: [["other", "Raspberry Pi"]]},
+            {tag: "atcoder", categories: [["other", "AtCoder"]]},
             {tag: "#numerical_analysis", categories: [["other_more", "数値計算"]]},
             {tag: "#probability_distribution", categories: [["other_more", "確率分布"]]},
             {tag: "#gradient_descent", categories: [["other_more", "勾配降下法"]]},

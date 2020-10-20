@@ -1,5 +1,13 @@
 [
     {
+        "url": "https://qiita.com/suzuki-navi/items/4bf03406069761b8257f",
+        "title": "IAM認証のAWS API GatewayにC#からIAMロールでSigV4署名してアクセスするには",
+        "posted": "2020/10/19",
+        "updated": "",
+        "keyword1": ["#qiita", "aws", "iam", "apigateway", "sigv4", "aws_sdk"],
+        "keyword2": ["c#"]
+    },
+    {
         "url": "https://suzuki-navi.hatenablog.com/entry/2020/10/18/144356",
         "title": "curlコマンドとwgetコマンドでバイナリをPOST",
         "posted": "2020/10/18",
@@ -935,7 +943,8 @@
         "title": "AWS Certified Machine Learning – Specialty 合格しました",
         "posted": "2019/12/04",
         "updated": "",
-        "keyword1": ["#qiita", "#machine_learning", "aws"]
+        "keyword1": ["#qiita", "#machine_learning", "aws"],
+        "keyword2": ["sagemaker", "rekognition", "comprehend", "kinesis", "emr"]
     },
     {
         "url": "https://qiita.com/suzuki-navi/items/79aa5f156427c2149fbe",
@@ -1036,7 +1045,8 @@
         "title": "AWS Certified Big Data - Specialty 合格しました",
         "posted": "2019/11/05",
         "updated": "",
-        "keyword1": ["#qiita", "#data_store", "aws"]
+        "keyword1": ["#qiita", "#data_store", "aws"],
+        "keyword2": ["kinesis", "dynamodb", "emr", "redshift"]
     },
     {
         "url": "https://qiita.com/suzuki-navi/items/7e85f55c2a25038816b3",
