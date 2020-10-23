@@ -610,6 +610,7 @@ $(function(){
             </section>
             <section v-if="global_query.query=='#certification'">
               <ul>
+                <li>AWS Certified Database - Specialty (2020/10/19) <a href="https://qiita.com/suzuki-navi/items/59f8a4a94ad9a22dd569">合格体験記事</a></li>
                 <li>日本ディープラーニング協会 G検定 (2020/07/04) <a href="https://qiita.com/suzuki-navi/items/fd3607f8f0e670bba887">合格体験記事</a></li>
                 <li>日本統計学会 統計検定 2級 (2020/05/31) <a href="https://qiita.com/suzuki-navi/items/e353b8dfbc6e872f9f41">合格体験記事</a></li>
                 <li>AWS Certified Machine Learning - Specialty (2019/11/20) <a href="https://qiita.com/suzuki-navi/items/3664bfbc102052717426">合格体験記事</a></li>
