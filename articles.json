@@ -1,5 +1,13 @@
 [
     {
+        "url": "https://suzuki-navi.hatenablog.com/entry/2020/10/26/210811",
+        "title": "PostgreSQLのテーブルやデータベースのデータサイズを調べるには",
+        "posted": "2020/10/26",
+        "updated": "",
+        "keyword1": ["#hatenablog", "#data_store", "postgresql"],
+        "keyword2": []
+    },
+    {
         "url": "https://suzuki-navi.hatenablog.com/entry/2020/10/25/171251",
         "title": "Parquet Toolsをインストール",
         "posted": "2020/10/25",
@@ -387,7 +395,7 @@
         "title": "IAM認証のAWS API GatewayにPythonからSigV4署名してアクセスするには",
         "posted": "2020/07/22",
         "updated": "",
-        "keyword1": ["#qiita", "aws", "iam", "apigateway", "sigv4"],
+        "keyword1": ["#qiita", "aws", "iam", "apigateway", "sigv4", "aws_sdk"],
         "keyword2": ["python"]
     },
     {
@@ -986,7 +994,7 @@
         "title": "aws cliを自作しています",
         "posted": "2019/11/29",
         "updated": "",
-        "keyword1": ["#qiita", "aws"],
+        "keyword1": ["#qiita", "aws", "aws_sdk"],
         "keyword2": ["python"]
     },
     {
