@@ -1,5 +1,13 @@
 [
     {
+        "url": "https://suzuki-navi.hatenablog.com/entry/2020/10/27/225258",
+        "title": "AWS RDSのログファイルをダウンロードするPythonとRubyのスクリプト",
+        "posted": "2020/10/27",
+        "updated": "",
+        "keyword1": ["#hatenablog", "#data_store", "aws", "rds"],
+        "keyword2": ["postgresql", "python", "ruby"]
+    },
+    {
         "url": "https://suzuki-navi.hatenablog.com/entry/2020/10/26/210811",
         "title": "PostgreSQLのテーブルやデータベースのデータサイズを調べるには",
         "posted": "2020/10/26",
@@ -590,8 +598,8 @@
         "title": "AWS RDS PostgreSQLのクエリログをawscliで取得するワンライナー",
         "posted": "2020/06/16",
         "updated": "",
-        "keyword1": ["#hatenablog", "#data_store", "command", "postgresql", "aws", "awscli", "jq", "rds", "oneliner"],
-        "keyword2": []
+        "keyword1": ["#hatenablog", "#data_store", "command", "aws", "awscli", "jq", "rds", "oneliner"],
+        "keyword2": ["postgresql"]
     },
     {
         "url": "https://suzuki-navi.hatenablog.com/entry/2020/06/15/194217",
