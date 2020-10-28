@@ -1,5 +1,13 @@
 [
     {
+        "url": "https://suzuki-navi.hatenablog.com/entry/2020/10/28/202005",
+        "title": "ParquetファイルをJavaで生成する",
+        "posted": "2020/10/28",
+        "updated": "",
+        "keyword1": ["#hatenablog", "parquet"],
+        "keyword2": ["java"]
+    },
+    {
         "url": "https://suzuki-navi.hatenablog.com/entry/2020/10/27/225258",
         "title": "AWS RDSのログファイルをダウンロードするPythonとRubyのスクリプト",
         "posted": "2020/10/27",
@@ -12,7 +20,7 @@
         "title": "PostgreSQLのテーブルやデータベースのデータサイズを調べるには",
         "posted": "2020/10/26",
         "updated": "",
-        "keyword1": ["#hatenablog", "#data_store", "postgresql"],
+        "keyword1": ["#hatenablog", "#data_store", "postgresql", "aws_sdk"],
         "keyword2": []
     },
     {
