@@ -24,6 +24,9 @@ $(function(){
             var score = 0;
             if (keywd == "") {
                 score = 1;
+                if (article.keyword1.find(k => k == "#unlisted")) {
+                    score = 0;
+                }
             } else if (article.keyword1.find(k => k == keywd)) {
                 score = 2;
                 if (article.keyword1.find(k => k == "#pickup")) {
@@ -411,6 +414,7 @@ $(function(){
             {tag: "#hatenablog", categories: [["hidden", ""]]},
             {tag: "#github_markdown", categories: [["hidden", ""]]},
             {tag: "#pickup", categories: [["hidden", ""]]},
+            {tag: "#unlisted", categories: [["hidden", ""]]},
             {tag: "#natural_language_processing", categories: [["hidden", "自然言語処理"]]},
 
             {tag: "#programming", categories: [["other", "プログラミング"]]},
