@@ -1,18 +1,26 @@
 [
     {
+        "url": "https://suzuki-navi.hatenablog.com/entry/2020/11/01/161307",
+        "title": "Parquetのデータ型とAWS Glue Crawlerのデータ型のマッピングとAthenaからのアクセス",
+        "posted": "2020/11/01",
+        "updated": "",
+        "keyword1": ["#hatenablog", "aws", "parquet", "athena", "glue"],
+        "keyword2": []
+    },
+    {
         "url": "https://suzuki-navi.hatenablog.com/entry/2020/10/31/154736",
         "title": "AWS CloudWatchでRDSのディスク容量の監視",
         "posted": "2020/10/31",
         "updated": "",
         "keyword1": ["#hatenablog", "#data_store", "aws", "rds", "cloudwatch", "cloudformation"],
-        "keyword2": ["postgresql"]
+        "keyword2": ["postgresql", "aws_sns"]
     },
     {
         "url": "https://www.youtube.com/watch?v=X127KHaoIBQ",
         "title": "バイエル49番 2020/10/31",
         "posted": "2020/10/31",
         "updated": "",
-        "keyword1": ["#unlisted", "piano"],
+        "keyword1": ["#unlisted", "#piano"],
         "keyword2": []
     },
     {
@@ -807,7 +815,7 @@
         "title": "君をのせて ピアノ連弾 2020/05/23",
         "posted": "2020/05/23",
         "updated": "",
-        "keyword1": ["#unlisted", "piano"],
+        "keyword1": ["#unlisted", "#piano"],
         "keyword2": []
     },
     {
