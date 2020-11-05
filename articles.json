@@ -1,5 +1,29 @@
 [
     {
+        "url": "https://suzuki-navi.hatenablog.com/entry/2020/11/05/212337",
+        "title": "PostgreSQLのデータ型とAWS Glue Crawlerのデータ型のマッピング",
+        "posted": "2020/11/05",
+        "updated": "",
+        "keyword1": ["#hatenablog", "aws", "glue", "postgresql"],
+        "keyword2": ["rds"]
+    },
+    {
+        "url": "https://suzuki-navi.hatenablog.com/entry/2020/11/03/231732",
+        "title": "AtCoder参戦日記 ABC180 2020/11/01",
+        "posted": "2020/11/03",
+        "updated": "",
+        "keyword1": ["#hatenablog", "#programming", "atcoder"],
+        "keyword2": ["ruby", "scala", "c++", "java"]
+    },
+    {
+        "url": "https://www.youtube.com/watch?v=sGEUijDnhK0",
+        "title": "バイエル50番 2020/11/03",
+        "posted": "2020/11/03",
+        "updated": "",
+        "keyword1": ["#unlisted", "#piano"],
+        "keyword2": []
+    },
+    {
         "url": "https://suzuki-navi.hatenablog.com/entry/2020/11/02/202621",
         "title": "AtCoder参戦日記 ARC105 #6 2020/10/11",
         "posted": "2020/11/02",
@@ -108,7 +132,7 @@
         "title": "ARC104のD Multiset MeanをScala、Java、C++、Ruby、Perl、Elixirで解く",
         "posted": "2020/10/17",
         "updated": "",
-        "keyword1": ["#qiita", "#multilang", "atcoder", "scala", "java", "c++", "ruby", "perl", "elixir"],
+        "keyword1": ["#qiita", "#multilang", "#programming", "atcoder", "scala", "java", "c++", "ruby", "perl", "elixir"],
         "keyword2": []
     },
     {
@@ -220,7 +244,7 @@
         "title": "ElixirでABC178のC Ubiquityを解いてみる",
         "posted": "2020/09/29",
         "updated": "",
-        "keyword1": ["#qiita", "elixir", "atcoder"],
+        "keyword1": ["#qiita", "elixir", "#programming", "atcoder"],
         "keyword2": ["scala"]
     },
     {
@@ -444,7 +468,7 @@
         "posted": "2020/07/23",
         "updated": "",
         "keyword1": ["#hatenablog", "aws", "glue", "postgresql"],
-        "keyword2": ["python", "cloudsql"]
+        "keyword2": ["python", "cloudsql", "rds"]
     },
     {
         "url": "https://qiita.com/suzuki-navi/items/1ea284c97075f3a34b30",
