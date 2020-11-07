@@ -1,5 +1,21 @@
 [
     {
+        "url": "https://suzuki-navi.hatenablog.com/entry/2020/11/07/114238",
+        "title": "AtCoder参戦日記 ABC181 #7 2020/11/01 ― 緑色になる",
+        "posted": "2020/11/07",
+        "updated": "",
+        "keyword1": ["#hatenablog", "#programming", "atcoder"],
+        "keyword2": ["c++", "ruby", "elixir", "scala", "javascript", "java"]
+    },
+    {
+        "url": "https://qiita.com/suzuki-navi/items/fdabc8bc82d7183a05f3",
+        "title": "AWS RDSのログファイルを高速にダウンロードするスクリプト",
+        "posted": "2020/11/06",
+        "updated": "",
+        "keyword1": ["#qiita", "#data_store", "aws", "rds", "sigv4", "aws_sdk"],
+        "keyword2": ["postgresql", "python", "curl"]
+    },
+    {
         "url": "https://suzuki-navi.hatenablog.com/entry/2020/11/05/212337",
         "title": "PostgreSQLのデータ型とAWS Glue Crawlerのデータ型のマッピング",
         "posted": "2020/11/05",
