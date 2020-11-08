@@ -1,7 +1,15 @@
 [
     {
+        "url": "https://suzuki-navi.hatenablog.com/entry/2020/11/08/111501",
+        "title": "S3にオブジェクトとメタデータをPythonで保存",
+        "posted": "2020/11/07",
+        "updated": "",
+        "keyword1": ["#hatenablog", "#data_store", "aws", "s3"],
+        "keyword2": ["python", "boto3"]
+    },
+    {
         "url": "https://suzuki-navi.hatenablog.com/entry/2020/11/07/114238",
-        "title": "AtCoder参戦日記 ABC181 #7 2020/11/01 ― 緑色になる",
+        "title": "AtCoder参戦日記 ABC181 2020/11/01 #7 ― 緑色になる",
         "posted": "2020/11/07",
         "updated": "",
         "keyword1": ["#hatenablog", "#programming", "atcoder"],
@@ -20,7 +28,7 @@
         "title": "PostgreSQLのデータ型とAWS Glue Crawlerのデータ型のマッピング",
         "posted": "2020/11/05",
         "updated": "",
-        "keyword1": ["#hatenablog", "aws", "glue", "postgresql"],
+        "keyword1": ["#hatenablog", "#data_input", "aws", "glue", "postgresql"],
         "keyword2": ["rds"]
     },
     {
@@ -41,7 +49,7 @@
     },
     {
         "url": "https://suzuki-navi.hatenablog.com/entry/2020/11/02/202621",
-        "title": "AtCoder参戦日記 ARC105 #6 2020/10/11",
+        "title": "AtCoder参戦日記 ARC105 2020/10/11 #6",
         "posted": "2020/11/02",
         "updated": "",
         "keyword1": ["#hatenablog", "#programming", "atcoder"],
@@ -52,7 +60,7 @@
         "title": "Parquetのデータ型とAWS Glue Crawlerのデータ型のマッピングとAthenaからのアクセス",
         "posted": "2020/11/01",
         "updated": "",
-        "keyword1": ["#hatenablog", "aws", "parquet", "athena", "glue"],
+        "keyword1": ["#hatenablog", "#data_input", "aws", "parquet", "athena", "glue"],
         "keyword2": []
     },
     {
@@ -73,7 +81,7 @@
     },
     {
         "url": "https://suzuki-navi.hatenablog.com/entry/2020/10/30/204503",
-        "title": "AtCoder参戦日記 HHKB2020 #5 2020/10/10",
+        "title": "AtCoder参戦日記 HHKB2020 2020/10/10 #5",
         "posted": "2020/10/30",
         "updated": "",
         "keyword1": ["#hatenablog", "#programming", "atcoder"],
@@ -84,7 +92,7 @@
         "title": "ParquetファイルをJavaで生成する",
         "posted": "2020/10/28",
         "updated": "",
-        "keyword1": ["#hatenablog", "parquet"],
+        "keyword1": ["#hatenablog", "#data_input", "parquet"],
         "keyword2": ["java"]
     },
     {
@@ -93,14 +101,14 @@
         "posted": "2020/10/27",
         "updated": "",
         "keyword1": ["#hatenablog", "#data_store", "aws", "rds"],
-        "keyword2": ["postgresql", "python", "ruby"]
+        "keyword2": ["postgresql", "python", "ruby", "boto3"]
     },
     {
         "url": "https://suzuki-navi.hatenablog.com/entry/2020/10/26/210811",
         "title": "PostgreSQLのテーブルやデータベースのデータサイズを調べるには",
         "posted": "2020/10/26",
         "updated": "",
-        "keyword1": ["#hatenablog", "#data_store", "postgresql", "aws_sdk"],
+        "keyword1": ["#hatenablog", "#data_store", "postgresql"],
         "keyword2": []
     },
     {
@@ -121,7 +129,7 @@
     },
     {
         "url": "https://suzuki-navi.hatenablog.com/entry/2020/10/22/232345",
-        "title": "AtCoder参戦日記 ARC104 #4 2020/10/03 ― Scalaの限界を知る",
+        "title": "AtCoder参戦日記 ARC104 2020/10/03 #4 ― Scalaの限界を知る",
         "posted": "2020/10/22",
         "updated": "",
         "keyword1": ["#hatenablog", "#programming", "atcoder"],
@@ -177,7 +185,7 @@
     },
     {
         "url": "https://suzuki-navi.hatenablog.com/entry/2020/10/13/221928",
-        "title": "AtCoder参戦日記 ABC179 #3 2020/09/19 ― 茶色になる",
+        "title": "AtCoder参戦日記 ABC179 2020/09/19 #3 ― 茶色になる",
         "posted": "2020/10/13",
         "updated": "",
         "keyword1": ["#hatenablog", "#programming", "atcoder"],
@@ -193,7 +201,7 @@
     },
     {
         "url": "https://suzuki-navi.hatenablog.com/entry/2020/10/11/075820",
-        "title": "AtCoder参戦日記 ABC178 #2 2020/09/13 ― 奇跡的な好成績",
+        "title": "AtCoder参戦日記 ABC178 2020/09/13 #2 ― 奇跡的な好成績",
         "posted": "2020/10/11",
         "updated": "",
         "keyword1": ["#hatenablog", "#programming", "atcoder"],
@@ -241,7 +249,7 @@
     },
     {
         "url": "https://suzuki-navi.hatenablog.com/entry/2020/10/04/104751",
-        "title": "AtCoder参戦日記 ABC177 #1 ― 初参加",
+        "title": "AtCoder参戦日記 ABC177 2020/08/29 #1 ― 初参加",
         "posted": "2020/10/04",
         "updated": "",
         "keyword1": ["#hatenablog", "#programming", "atcoder"],
@@ -444,7 +452,7 @@
         "posted": "2020/08/17",
         "updated": "",
         "keyword1": ["#qiita", "#data_input", "aws", "glue"],
-        "keyword2": ["python"]
+        "keyword2": ["python", "boto3"]
     },
     {
         "url": "https://suzuki-navi.hatenablog.com/entry/2020/08/16/235911",
@@ -492,7 +500,7 @@
         "posted": "2020/07/22",
         "updated": "",
         "keyword1": ["#qiita", "aws", "iam", "apigateway", "sigv4", "aws_sdk"],
-        "keyword2": ["python"]
+        "keyword2": ["python", "boto3"]
     },
     {
         "url": "https://suzuki-navi.hatenablog.com/entry/2020/07/21/235123",
@@ -1098,8 +1106,8 @@
         "title": "aws cliを自作しています",
         "posted": "2019/11/29",
         "updated": "",
-        "keyword1": ["#qiita", "aws", "aws_sdk"],
-        "keyword2": ["python"]
+        "keyword1": ["#qiita", "aws"],
+        "keyword2": ["python", "boto3"]
     },
     {
         "url": "https://qiita.com/suzuki-navi/items/d0e33a5379b4bfb848bc",

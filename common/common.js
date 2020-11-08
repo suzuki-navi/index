@@ -319,6 +319,7 @@ $(function(){
             {tag: "#visualization",    categories: [["thema", "データ可視化の記事"]]},
             {tag: "#data_store",       categories: [["thema", "データ保管の記事"]]},
             {tag: "#data_input",       categories: [["thema", "データ収集の記事"]]},
+            {tag: "#programming",      categories: [["thema", "プログラミング"]]},
             {tag: "#math",             categories: [["thema", "数式のある記事"]]},
 
             {tag: "#certification",    categories: [["thema2", "取得した資格"]]},
@@ -417,7 +418,6 @@ $(function(){
             {tag: "#unlisted", categories: [["hidden", ""]]},
             {tag: "#natural_language_processing", categories: [["hidden", "自然言語処理"]]},
 
-            {tag: "#programming", categories: [["other", "プログラミング"]]},
             {tag: "raspberry_pi", categories: [["other", "Raspberry Pi"]]},
             {tag: "atcoder", categories: [["other", "AtCoder"]]},
             {tag: "#numerical_analysis", categories: [["other_more", "数値計算"]]},
@@ -425,6 +425,7 @@ $(function(){
             {tag: "#gradient_descent", categories: [["other_more", "勾配降下法"]]},
             {tag: "#network", categories: [["other_more", "ネットワーク"]]},
             {tag: "googlecolab", categories: [["other_more", "Google Colaboratory"]]},
+            {tag: "#piano", categories: [["other_more", "ピアノ"]]},
         ];
     }
     function keywordDatabaseByTag(tag) {
@@ -484,6 +485,12 @@ $(function(){
     function tagsTemplate(id) {
         return `
             <div>
+              <span v-for="(tag, idx) in categorized.thema2">
+                <span v-if="idx>0" class="font-small"> / </span>
+                <a v-bind:href="'#' + tag[0]" v-on:click.prevent.stop="gotoTagPage(tag[0]);">{{ tag[2] }}</a>
+              </span>
+            </div>
+            <div style="margin-top:16px;">
               <span v-for="(tag, idx) in categorized.thema">
                 <span v-if="idx>0" class="font-small"> / </span>
                 <a v-bind:href="'#' + tag[0]" v-on:click.prevent.stop="gotoTagPage(tag[0]);">{{ tag[2] }}({{ tag[1] }})</a>
@@ -526,13 +533,6 @@ $(function(){
             </div>
             <div>
               <h2>その他</h2>
-              <div>
-              <span v-for="(tag, idx) in categorized.thema2">
-                <span v-if="idx>0" class="font-small"> / </span>
-                <a v-bind:href="'#' + tag[0]" v-on:click.prevent.stop="gotoTagPage(tag[0]);">{{ tag[2] }}</a>
-              </span>
-              </div>
-              <div style="margin-top:16px;">
               <span v-for="(tag, idx) in categorized.other">
                 <span v-if="idx>0" class="font-small"> / </span>
                 <a v-bind:href="'#' + tag[0]" v-on:click.prevent.stop="gotoTagPage(tag[0]);" v-bind:class="(tag[1]<3)? 'font-small':''">{{ tag[2] }}({{ tag[1] }})</a>
@@ -545,7 +545,6 @@ $(function(){
                 <a v-bind:href="'#' + tag[0]" v-on:click.prevent.stop="gotoTagPage(tag[0]);" v-bind:class="(tag[1]<3)? 'font-small':''">{{ tag[2] }}({{ tag[1] }})</a>
               </span>
               </span>
-              </div>
             </div>
             <p>
               <a href="" v-on:click.prevent.stop="gotoTagPage('');">top</a>
