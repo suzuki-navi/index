@@ -1,8 +1,24 @@
 [
     {
+        "url": "https://qiita.com/suzuki-navi/items/a005b6a4f184d6b66e35",
+        "title": "boto3のS3 NoSuchKeyエラーをキャッチする方法",
+        "posted": "2020/11/09",
+        "updated": "",
+        "keyword1": ["#qiita", "aws", "s3", "boto3"],
+        "keyword2": ["python"]
+    },
+    {
+        "url": "https://www.youtube.com/watch?v=NG66FvQy86w",
+        "title": "バイエル51番 2020/11/08",
+        "posted": "2020/11/08",
+        "updated": "",
+        "keyword1": ["#unlisted", "#piano"],
+        "keyword2": []
+    },
+    {
         "url": "https://suzuki-navi.hatenablog.com/entry/2020/11/08/111501",
         "title": "S3にオブジェクトとメタデータをPythonで保存",
-        "posted": "2020/11/07",
+        "posted": "2020/11/08",
         "updated": "",
         "keyword1": ["#hatenablog", "#data_store", "aws", "s3"],
         "keyword2": ["python", "boto3"]
