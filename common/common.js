@@ -58,11 +58,13 @@ $(function(){
             if (score > 0) {
                 let liststyle = (score >= 3)? "★" : (score >= 2)? "\\2714" : "・";
                 let article2 = {
-                    "score": score,
-                    "liststyle": "list-style-type:\"" + liststyle + "\"",
-                    "title": article.title,
-                    "date": article["date"],
-                    "url": article["url"],
+                    score: score,
+                    liststyle: "list-style-type:\"" + liststyle + "\"",
+                    title: article.title,
+                    date: article.date,
+                    url: article.url,
+                    keyword1: article.keyword1,
+                    keyword2: article.keyword2,
                 };
                 result.push(article2);
             }
