@@ -17,54 +17,58 @@ $(function(){
         return false;
     });
 
+    function calcScore(article, keywd) {
+        var score = 0;
+        if (keywd == "" || keywd == ".") {
+            score = 1;
+            if (article.keyword1.find(k => k == "#unlisted")) {
+                score = 0;
+            }
+        } else if (article.keyword1.find(k => k == keywd)) {
+            score = 2;
+            if (article.keyword1.find(k => k == "#pickup")) {
+                score = 3;
+            }
+        } else {
+            if (keywd == "java") {
+                let ex = "javascript";
+                if (article.keyword1.find(k => k.startsWith(keywd) && !k.startsWith(ex)) ||
+                    article.keyword2.find(k => k.startsWith(keywd) && !k.startsWith(ex)) ||
+                    article.title.toLowerCase().indexOf(keywd) >= 0 && article.title.toLowerCase().indexOf(ex) < 0) {
+                    score = 1;
+                }
+            } else if (keywd == "jq") {
+                let ex = "jquery";
+                if (article.keyword1.find(k => k.startsWith(keywd) && !k.startsWith(ex)) ||
+                    article.keyword2.find(k => k.startsWith(keywd) && !k.startsWith(ex)) ||
+                    article.title.toLowerCase().indexOf(keywd) >= 0 && article.title.toLowerCase().indexOf(ex) < 0) {
+                    score = 1;
+                }
+            } else {
+                if (article.keyword1.find(k => k.startsWith(keywd)) ||
+                    article.keyword2.find(k => k.startsWith(keywd)) ||
+                    article.title.toLowerCase().indexOf(keywd) >= 0) {
+                    score = 1;
+                }
+            }
+        }
+        return score;
+    }
     function searchByKeyword(keywd, articles) {
         let result = [];
         for (let i in articles) {
             let article = articles[i];
-            var score = 0;
-            if (keywd == "") {
-                score = 1;
-                if (article.keyword1.find(k => k == "#unlisted")) {
-                    score = 0;
-                }
-            } else if (article.keyword1.find(k => k == keywd)) {
-                score = 2;
-                if (article.keyword1.find(k => k == "#pickup")) {
-                    score = 3;
-                }
-            } else {
-                if (keywd == "java") {
-                    let ex = "javascript";
-                    if (article.keyword1.find(k => k.startsWith(keywd) && !k.startsWith(ex)) ||
-                        article.keyword2.find(k => k.startsWith(keywd) && !k.startsWith(ex)) ||
-                        article.title.toLowerCase().indexOf(keywd) >= 0 && article.title.toLowerCase().indexOf(ex) < 0) {
-                        score = 1;
-                    }
-                } else if (keywd == "jq") {
-                    let ex = "jquery";
-                    if (article.keyword1.find(k => k.startsWith(keywd) && !k.startsWith(ex)) ||
-                        article.keyword2.find(k => k.startsWith(keywd) && !k.startsWith(ex)) ||
-                        article.title.toLowerCase().indexOf(keywd) >= 0 && article.title.toLowerCase().indexOf(ex) < 0) {
-                        score = 1;
-                    }
-                } else {
-                    if (article.keyword1.find(k => k.startsWith(keywd)) ||
-                        article.keyword2.find(k => k.startsWith(keywd)) ||
-                        article.title.toLowerCase().indexOf(keywd) >= 0) {
-                        score = 1;
-                    }
-                }
-            }
+            let score = calcScore(article, keywd);
+            if (score > article.score) score = article.score;
             if (score > 0) {
-                let liststyle = (score >= 3)? "★" : (score >= 2)? "\\2714" : "・";
                 let article2 = {
                     score: score,
-                    liststyle: "list-style-type:\"" + liststyle + "\"",
                     title: article.title,
                     date: article.date,
                     url: article.url,
                     keyword1: article.keyword1,
                     keyword2: article.keyword2,
+                    body: article.body,
                 };
                 result.push(article2);
             }
@@ -80,21 +84,36 @@ $(function(){
     function searchArticles(query, articles) {
         query = normalizeQuery(query);
         let result1 = [];
+        for (let i = 0; i < articles.length; i++) {
+            let article = articles[i];
+            let article2 = {
+                score: 3,
+                title: article.title,
+                date: article.date,
+                url: article.url,
+                keyword1: article.keyword1,
+                keyword2: article.keyword2,
+                body: "",
+            };
+            result1.push(article2);
+        }
         if (query == "") {
             const recent_count = 20;
-            if (articles.length <= recent_count) {
-                result1 = articles;
-            } else {
-                result1 = articles.slice(0, recent_count);
-            }
             result1 = searchByKeyword("", result1);
+            if (result1.length > recent_count) {
+                result1 = result1.slice(0, recent_count);
+            }
         } else {
-            result1 = articles;
             let words = query.split(' ');
             for (let i = 0; i < words.length; i++) {
                 let w = words[i];
                 result1 = searchByKeyword(w, result1);
             }
+        }
+        for (let i = 0; i < result1.length; i++) {
+            let article = result1[i];
+            let liststyle = (article.score >= 3)? "★" : (article.score >= 2)? "\\2714" : "・";
+            article.liststyle = "list-style-type:\"" + liststyle + "\"";
         }
         let title1 = "\"" + query + "\" の記事";
         switch (query) {
@@ -219,6 +238,41 @@ $(function(){
             "count": count,
         };
     }
+    function searchSnippets(query, snippets) {
+        query = normalizeQuery(query);
+        let result1 = [];
+        for (let i = 0; i < snippets.length; i++) {
+            let snippet = snippets[i];
+            let snippet2 = {
+                score: 3,
+                title: "",
+                date: "",
+                url: snippet.url,
+                keyword1: snippet.keyword1,
+                keyword2: [],
+                body: snippet.body,
+            };
+            result1.push(snippet2);
+        }
+        if (query == "") {
+            result1 = [];
+        } else {
+            let words = query.split(' ');
+            if (words.length <= 1) {
+                result1 = [];
+            } else {
+                for (let i = 0; i < words.length; i++) {
+                    let w = words[i];
+                    result1 = searchByKeyword(w, result1);
+                }
+            }
+        }
+        let count = result1.length;
+        return {
+            "snippets": result1,
+            "count": count,
+        };
+    }
     function getCountStr(query, searchResult) {
         if (query == "") {
             return "";
@@ -263,6 +317,7 @@ $(function(){
     let articles = {
         list: [],
         tags: [],
+        snippets: [],
     };
     let global_query = {
         query: "",
@@ -314,6 +369,64 @@ $(function(){
         articles.list = list;
         articles.tags = tags;
     });
+    function loadSnippets(list) {
+        if (list.length == 0) return;
+        const url = list[0];
+        const listTail = list.slice(1);
+        axios.get(url).then(response => {
+            const data = response.data;
+            const lines = data.split("\n");
+            const lineCount = lines.length;
+            const commentPattern1 = /^# *(.+)$/;
+            const commentPattern2 = /^\/\/ *(.+)$/;
+            let flag = 0;
+            let url = "";
+            let keywords = [];
+            let body = "";
+            for (let i = 0; i < lineCount; i++) {
+                const line = lines[i];
+                if (flag == 0) {
+                    if (line != "") {
+                        let matched = line.match(commentPattern1);
+                        if (!matched) {
+                            matched = line.match(commentPattern2);
+                        }
+                        if (matched) {
+                            const ks = matched[1].split(/ +/);
+                            for (let i in ks) {
+                                const k = ks[i];
+                                if (k != "") keywords.push(k);
+                            }
+                        } else {
+                            i--;
+                        }
+                        flag = 1;
+                    }
+                } else if (flag == 1) {
+                    if (line != "" ){
+                        body += line + "\n";
+                    } else {
+                        keywords = extractSynonymIndex(keywords);
+                        articles.snippets.push({
+                            url: url,
+                            keyword1: keywords,
+                            body: body,
+                        });
+                        flag = 0;
+                        url = "";
+                        keywords = [];
+                        body = "";
+                    }
+                }
+            }
+            loadSnippets(listTail);
+        });
+    }
+    loadSnippets([
+        ruby_snippets_url,
+        python_snippets_url,
+        other_snippets_url,
+    ]);
     function keywordDatabase() {
         return  [
             {tag: "#machine_learning", categories: [["thema", "機械学習の記事"]]},
@@ -564,6 +677,7 @@ $(function(){
             query: function () { return global_query.query; },
             result: function () { return searchArticles(this.query, this.articles.list); },
             count_str: function () { return getCountStr(this.query, this.result); },
+            snippets_result: function () { return searchSnippets(this.query, this.articles.snippets); },
             desc: function () { return descFromTag(this.query); },
             categorized: function () {
                 return categorizeTags(articles.tags);
@@ -593,11 +707,17 @@ $(function(){
             <input v-model="global_query.query" placeholder="Search articles">
             <h1 v-if="result.title1">{{ result.title1 }} {{ count_str }}</h1>
             <p v-if="desc">{{ desc }}</p>
-            <ul v-if="result.articles1.length > 0">
+            <ul v-if="!global_query.query.startsWith('.') && result.articles1.length > 0">
               <li v-for="article in result.articles1" v-bind:style="article.liststyle">
                 <a v-bind:href="article.url" target="_blank">{{ article.title }}</a> ({{ article.date }})
               </li>
             </ul>
+            <div v-if="snippets_result.snippets.length > 0">
+              <p>
+                snippet count: {{ snippets_result.snippets.length }}
+              </p>
+              <pre v-for="snippet in snippets_result.snippets">{{ snippet.body }}</pre>
+            </div>
             <section v-if="global_query.query=='#machine_learning'">
               <p class="image"><a href="https://qiita.com/suzuki-navi/items/2581b3f4afeeabeacace"><img src="ml.png"></a></p>
             </section>

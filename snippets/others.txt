@@ -1,0 +1,22 @@
+# vuejs click button
+<button @click="myfunc">ボタン</button>
+
+# vuejs component computed methods template
+Vue.component("mytag", {
+  data: function () { return {
+    name: "aaa",
+  }},
+  computed: {
+  },
+  methods: {
+    mymethod: function () {
+    },
+  },
+  template: "<p>Hello, {{ name }}</p>",
+});
+
+# vuejs app el new
+new Vue({
+  el: "#app",
+});
+
