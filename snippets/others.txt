@@ -1,7 +1,7 @@
-# vuejs click button
+# html vuejs click button
 <button @click="myfunc">ボタン</button>
 
-# vuejs component computed methods template
+# javascript vuejs component computed methods template
 Vue.component("mytag", {
   data: function () { return {
     name: "aaa",
@@ -15,8 +15,39 @@ Vue.component("mytag", {
   template: "<p>Hello, {{ name }}</p>",
 });
 
-# vuejs app el new
+# javascript vuejs app el new
 new Vue({
   el: "#app",
 });
+
+# shell vuejs install
+sudo npm install -g npm
+sudo npm install -g @vue/cli
+vue create sample-project
+
+# shell python http server
+# 簡易HTTPサーバ
+python -m http.server 8080
+
+
+# shell docker centos amazon linux
+# Amazon Linux 2 (CentOS) へのDockerインストール
+sudo yum install docker
+sudo systemctl start docker
+sudo usermod -a -G docker ec2-user
+
+# shell docker proxy systemd systemctl amazon linux
+# Proxyが必要な環境でのDockerの設定
+# Amazon Linuxでの実行例
+cd /etc/systemd/system
+sudo mkdir docker.service.d
+cd docker.service.d
+sudo bash -c "cat > http-proxy.conf" << EOF
+[Service]
+Environment="HTTP_PROXY=http://proxy:80/"
+Environment="HTTPS_PROXY=http://proxy:443/"
+EOF
+sudo systemctl daemon-reload
+sudo systemctl restart docker
+
 

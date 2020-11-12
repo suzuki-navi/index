@@ -425,6 +425,7 @@ $(function(){
     loadSnippets([
         ruby_snippets_url,
         python_snippets_url,
+        shell_snippets_url,
         other_snippets_url,
     ]);
     function keywordDatabase() {
@@ -712,12 +713,10 @@ $(function(){
                 <a v-bind:href="article.url" target="_blank">{{ article.title }}</a> ({{ article.date }})
               </li>
             </ul>
-            <div v-if="snippets_result.snippets.length > 0">
-              <p>
-                snippet count: {{ snippets_result.snippets.length }}
-              </p>
+            <template v-if="snippets_result.snippets.length > 0">
+              <h1>"{{ global_query.query }}" のsnippet ({{ snippets_result.snippets.length }})</h1>
               <pre v-for="snippet in snippets_result.snippets">{{ snippet.body }}</pre>
-            </div>
+            </template>
             <section v-if="global_query.query=='#machine_learning'">
               <p class="image"><a href="https://qiita.com/suzuki-navi/items/2581b3f4afeeabeacace"><img src="ml.png"></a></p>
             </section>
