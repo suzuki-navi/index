@@ -1,10 +1,18 @@
 [
     {
+        "url": "https://qiita.com/suzuki-navi/items/c87005eebfe06307fe6a",
+        "title": "Pythonの簡易HTTPサーバでブラウザキャッシュを無効にするには",
+        "posted": "2020/11/13",
+        "updated": "",
+        "keyword1": ["#qiita", "python"],
+        "keyword2": []
+    },
+    {
         "url": "https://suzuki-navi.hatenablog.com/entry/2020/11/12/202100",
         "title": "Dockerのエラー: certificate signed by unknown authority.",
         "posted": "2020/11/12",
         "updated": "",
-        "keyword1": ["#hatenablog", "docker"],
+        "keyword1": ["#hatenablog", "docker", "systemd"],
         "keyword2": ["aws", "ec2"]
     },
     {

@@ -16,17 +16,17 @@ h1 {
   font-weight: normal;
 }
 .card h1 {
-  margin: 0 0 10px 0;
+  margin: 10px 0 10px 0;
   column-span: all;
 }
 .card h2 {
-  margin: 10px 0 5px 0;
-  font-size: 0.9em;
+  margin: 10px 0 10px 0;
+  font-size: 1.0em;
   font-weight: normal;
 }
 .card p {
   margin: 10px 0 10px 0;
-  font-size: 0.9em;
+  font-size: 1.0em;
 }
 .card pre {
   background-color: #eee;

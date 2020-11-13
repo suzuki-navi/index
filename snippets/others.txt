@@ -50,4 +50,25 @@ EOF
 sudo systemctl daemon-reload
 sudo systemctl restart docker
 
+# shell apt update upgrade
+# パッケージ一覧を更新
+sudo apt update
+
+# shell apt update upgrade
+# パッケージを更新
+sudo apt upgrade
+
+# shell python install pyenv pip
+# install pyenv
+git clone https://github.com/pyenv/pyenv.git $HOME/.pyenv
+export PYENV_ROOT=$HOME/.pyenv
+export PATH=$PYENV_ROOT/shims:$PYENV_ROOT/bin:$PATH
+pyenv install --skip-existing -v 3.9.0
+pyenv global 3.9.0
+pip install --upgrade pip
+
+# shell aws awscli install
+# install awscli
+pip install awscli
+
 
