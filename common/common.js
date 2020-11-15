@@ -423,6 +423,8 @@ $(function(){
         });
     }
     loadSnippets([
+        scala_snippets_url,
+        java_snippets_url,
         ruby_snippets_url,
         python_snippets_url,
         shell_snippets_url,
