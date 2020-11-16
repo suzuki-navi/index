@@ -71,4 +71,12 @@ pip install --upgrade pip
 # install awscli
 pip install awscli
 
+# shell postgresql psql pg_dump dump
+PGPASSWORD="xxxx" pg_dump -h HOST -p 5432 -U USER_NAME DB_NAME -t TABLE_NAME --clean --if-exists
+
+# shell postgresql psql pg_dump dump schema show create table
+PGPASSWORD="xxxx" pg_dump -h HOST -p 5432 -U USER_NAME DB_NAME -t TABLE_NAME --clean --if-exists --schema-only
+
+# sql postgresql psql drop index exists
+DROP INDEX IF EXISTS public.INDEX_NAME;
 
