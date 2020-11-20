@@ -115,6 +115,14 @@ $(function(){
             let liststyle = (article.score >= 3)? "★" : (article.score >= 2)? "\\2714" : "・";
             article.liststyle = "list-style-type:\"" + liststyle + "\"";
         }
+        let count = result1.length;
+        return {
+            "articles1": result1,
+            "count": count,
+        };
+    }
+    function searchArticlesTitle(query) {
+        query = normalizeQuery(query);
         let title1 = "\"" + query + "\" の記事";
         switch (query) {
         case "":
@@ -231,12 +239,7 @@ $(function(){
             break;
 
         }
-        let count = result1.length;
-        return {
-            "title1": title1,
-            "articles1": result1,
-            "count": count,
-        };
+        return title1;
     }
     function searchSnippets(query, snippets) {
         query = normalizeQuery(query);
@@ -425,6 +428,7 @@ $(function(){
     loadSnippets([
         scala_snippets_url,
         java_snippets_url,
+        javascript_snippets_url,
         ruby_snippets_url,
         python_snippets_url,
         shell_snippets_url,
@@ -679,6 +683,7 @@ $(function(){
         computed: {
             query: function () { return global_query.query; },
             result: function () { return searchArticles(this.query, this.articles.list); },
+            title1: function () { return searchArticlesTitle(this.query); },
             count_str: function () { return getCountStr(this.query, this.result); },
             snippets_result: function () { return searchSnippets(this.query, this.articles.snippets); },
             desc: function () { return descFromTag(this.query); },
@@ -708,7 +713,7 @@ $(function(){
               <a v-if="global_query.query!='#tags'" href="#tags" v-on:click.prevent.stop="gotoTagPage('#tags');">[tags...]</a>
             </div>
             <input v-model="global_query.query" placeholder="Search articles">
-            <h1 v-if="result.title1">{{ result.title1 }} {{ count_str }}</h1>
+            <h1 v-if="title1">{{ title1 }} {{ count_str }}</h1>
             <p v-if="desc">{{ desc }}</p>
             <ul v-if="!global_query.query.startsWith('.') && result.articles1.length > 0">
               <li v-for="article in result.articles1" v-bind:style="article.liststyle">

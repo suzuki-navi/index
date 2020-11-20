@@ -1,34 +1,15 @@
 # html vuejs click button
 <button @click="myfunc">ボタン</button>
 
-# javascript vuejs component computed methods template
-Vue.component("mytag", {
-  data: function () { return {
-    name: "aaa",
-  }},
-  computed: {
-  },
-  methods: {
-    mymethod: function () {
-    },
-  },
-  template: "<p>Hello, {{ name }}</p>",
-});
-
-# javascript vuejs app el new
-new Vue({
-  el: "#app",
-});
-
 # shell vuejs install
 sudo npm install -g npm
 sudo npm install -g @vue/cli
+sudo npm install vue-router
 vue create sample-project
 
 # shell python http server
 # 簡易HTTPサーバ
 python -m http.server 8080
-
 
 # shell docker centos amazon linux
 # Amazon Linux 2 (CentOS) へのDockerインストール
