@@ -39,6 +39,14 @@ h1 {
   list-style: disc;
   padding-inline-start: 20px;
 }
+.card .snippet .snippet-lang {
+  margin-top: 4px;
+  font-size: 0.8em;
+}
+.card .snippet pre {
+  margin: 0 0 4px 8px;
+  font-size: 0.8em;
+}
 .card table {
   margin: 0;
 }

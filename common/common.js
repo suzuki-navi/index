@@ -69,6 +69,7 @@ $(function(){
                     keyword1: article.keyword1,
                     keyword2: article.keyword2,
                     body: article.body,
+                    lang: article.lang,
                 };
                 result.push(article2);
             }
@@ -94,6 +95,7 @@ $(function(){
                 keyword1: article.keyword1,
                 keyword2: article.keyword2,
                 body: "",
+                lang: "",
             };
             result1.push(article2);
         }
@@ -254,6 +256,7 @@ $(function(){
                 keyword1: snippet.keyword1,
                 keyword2: [],
                 body: snippet.body,
+                lang: snippet.lang,
             };
             result1.push(snippet2);
         }
@@ -385,6 +388,7 @@ $(function(){
             let flag = 0;
             let url = "";
             let keywords = [];
+            let lang = "";
             let body = "";
             for (let i = 0; i < lineCount; i++) {
                 const line = lines[i];
@@ -400,6 +404,7 @@ $(function(){
                                 const k = ks[i];
                                 if (k != "") keywords.push(k);
                             }
+                            lang = keywords[0];
                         } else {
                             i--;
                         }
@@ -409,15 +414,19 @@ $(function(){
                     if (line != "" ){
                         body += line + "\n";
                     } else {
-                        keywords = extractSynonymIndex(keywords);
-                        articles.snippets.push({
-                            url: url,
-                            keyword1: keywords,
-                            body: body,
-                        });
+                        if (keywords.length > 0 && body != "") {
+                            keywords = extractSynonymIndex(keywords);
+                            articles.snippets.push({
+                                url: url,
+                                keyword1: keywords,
+                                body: body,
+                                lang: lang,
+                            });
+                        }
                         flag = 0;
                         url = "";
                         keywords = [];
+                        lang = "";
                         body = "";
                     }
                 }
@@ -426,6 +435,8 @@ $(function(){
         });
     }
     loadSnippets([
+        multilangs_snippets_url,
+        cpp_snippets_url,
         scala_snippets_url,
         java_snippets_url,
         javascript_snippets_url,
@@ -722,7 +733,10 @@ $(function(){
             </ul>
             <template v-if="snippets_result.snippets.length > 0">
               <h1>"{{ global_query.query }}" のsnippet ({{ snippets_result.snippets.length }})</h1>
-              <pre v-for="snippet in snippets_result.snippets">{{ snippet.body }}</pre>
+              <div v-for="snippet in snippets_result.snippets" class="snippet">
+                <div class="snippet-lang">{{ snippet.lang }}</div>
+                <pre>{{ snippet.body }}</pre>
+              </div>
             </template>
             <section v-if="global_query.query=='#machine_learning'">
               <p class="image"><a href="https://qiita.com/suzuki-navi/items/2581b3f4afeeabeacace"><img src="ml.png"></a></p>

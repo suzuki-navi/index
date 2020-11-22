@@ -29,6 +29,16 @@ while ...
   ...
 end
 
+# ruby loop while do
+# do whileの構文
+begin
+  ...
+end while ...
+
+# ruby loop while
+# 修飾子の記法
+... while ...
+
 # ruby method return
 def f(arg1, arg2)
   ...
@@ -58,4 +68,8 @@ arr.max
 
 # ruby array list range
 range = (0 .. n-1).to_a
+
+# ruby array list length size count
+arr.length
+arr.size
 

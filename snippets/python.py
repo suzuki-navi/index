@@ -58,21 +58,6 @@ def f():
     f2(l)
     print(total)
 
-# python elif elsif else if
-if ...:
-    ...
-elif ...:
-    ...
-else:
-    ...
-
-# python loop for range
-for i in range(2, 6):
-    # 2
-    # 3
-    # 4
-    # 5
-
 # python iterator loop for foreach
 for el in it:
     ...

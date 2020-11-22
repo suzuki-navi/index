@@ -1,0 +1,59 @@
+# python if elif elsif else
+if ...:
+    ...
+elif ...:
+    ...
+else:
+    ...
+
+# python while for loop break
+while ...:
+    ...
+    if ...:
+        break
+    ...
+
+# python while for loop continue
+while ...:
+    ...
+    if ...:
+        continue
+    ...
+
+// scala seq slice substring
+seq.slice(start, end);
+
+# python loop for range
+for i in range(4):
+    # 0
+    # 1
+    # 2
+    # 3
+
+# python loop for range
+for i in range(2, 6):
+    # 2
+    # 3
+    # 4
+    # 5
+
+# elixir loop for range
+(2 .. 6) |> Enum.each(fn l -> IO.puts(l) end)
+  # 2
+  # 3
+  # 4
+  # 5
+  # 6
+
+# elixir string strcat
+s1 <> s2
+
+# ruby array list string join mkstring
+arr.join(" ")
+
+# python array list string join mkstring
+" ".join(map(str, lst))
+
+# elixir array list string join mkstring
+Enum.join(list, " ")
+

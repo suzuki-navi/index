@@ -61,3 +61,13 @@ PGPASSWORD="xxxx" pg_dump -h HOST -p 5432 -U USER_NAME DB_NAME -t TABLE_NAME --c
 # sql postgresql psql drop index exists
 DROP INDEX IF EXISTS public.INDEX_NAME;
 
+# shell aws stepfunctions execution
+# Step Functionsの最新実行の情報
+aws --profile default stepfunctions describe-execution --execution-arn $(aws --profile default stepfunctions list-executions --state-machine-arn arn:aws:states:ap-northeast-1:xxxxxxxxxxxx:stateMachine:xxxx | jq -r '.executions[0].executionArn')
+aws --profile default stepfunctions get-execution-history --execution-arn $(aws --profile default stepfunctions list-executions --state-machine-arn arn:aws:states:ap-northeast-1:xxxxxxxxxxxx:stateMachine:xxxx | jq -r '.executions[0].executionArn')
+aws --profile default stepfunctions get-execution-history --execution-arn $(aws --profile default stepfunctions list-executions --state-machine-arn arn:aws:states:ap-northeast-1:xxxxxxxxxxxx:stateMachine:xxxx | jq -r '.executions[0].executionArn') | jq '.events[-1].stateEnteredEventDetails.input' -r | jq .
+
+# shell aws glue job list
+# Glue Job名の一覧
+aws --profile default glue list-jobs --max-results 1000 | jq '.JobNames[]' -r
+
