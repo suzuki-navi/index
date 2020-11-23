@@ -1,3 +1,19 @@
+# . scala java rust clang c++ golang php perl python ruby if elif elsif else
+# if文の書き方のまとめ(Scala、Java、Rust、C言語、C++、Go言語、PHP、Perl、Python、Ruby)
+# https://qiita.com/suzuki-navi/items/16793a5f5e67fb8d3fc2
+
+# . scala java rust clang cpp golang php perl python ruby javascript increment decrement
+# インクリメント・デクリメントの書き方のまとめ(Scala、Java、Rust、C言語、C++、Go言語、PHP、Perl、Python、Ruby、JavaScript)
+# https://qiita.com/suzuki-navi/items/6611b9f16a391bac5ac5
+
+# . clang cpp scala java rust golang php javascript perl python ruby elixir division remainder div rem integer
+# 整数同士の除算演算子の挙動 (C言語、C++、Scala、Java、Rust、Go言語、PHP、JavaScript、Perl、Python、Ruby、Elixir)
+# https://qiita.com/suzuki-navi/items/72fcb1fbf05008cbe8b4
+
+# . cpp scala ruby python clang java javascript elixir next_permutation permutations permutation
+# 順列の全探索をするプログラム（競技プログラミング向け）
+# https://qiita.com/suzuki-navi/items/a80677a0747232843957
+
 # python if elif elsif else
 if ...:
     ...
@@ -22,6 +38,21 @@ while ...:
 
 // scala seq slice substring
 seq.slice(start, end);
+
+# cpp swap
+swap(a, b);
+
+# ruby swap
+a, b = b, a
+
+# python swap
+a, b = b, a
+
+# php swap
+[$a, $b] = [$b, $a];
+
+# perl swap
+($a, $b) = ($b, $a);
 
 # python loop for range
 for i in range(4):

@@ -385,6 +385,8 @@ $(function(){
             const lineCount = lines.length;
             const commentPattern1 = /^# *(.+)$/;
             const commentPattern2 = /^\/\/ *(.+)$/;
+            const urlPattern1 = /^(# *)(https?:\/\/.+)$/;
+            const urlPattern2 = /^(\/\/ *)(https?:\/\/.+)$/;
             let flag = 0;
             let url = "";
             let keywords = [];
@@ -412,7 +414,20 @@ $(function(){
                     }
                 } else if (flag == 1) {
                     if (line != "" ){
-                        body += line + "\n";
+                        let line2 = line;
+                        if (url == "") {
+                            let matched = line.match(urlPattern1);
+                            if (!matched) {
+                                matched = line.match(urlPattern2);
+                            }
+                            if (matched) {
+                                url = matched[2];
+                                line2 = "";
+                            }
+                        }
+                        if (line2 != "") {
+                            body += line2 + "\n";
+                        }
                     } else {
                         if (keywords.length > 0 && body != "") {
                             keywords = extractSynonymIndex(keywords);
@@ -734,7 +749,8 @@ $(function(){
             <template v-if="snippets_result.snippets.length > 0">
               <h1>"{{ global_query.query }}" のsnippet ({{ snippets_result.snippets.length }})</h1>
               <div v-for="snippet in snippets_result.snippets" class="snippet">
-                <div class="snippet-lang">{{ snippet.lang }}</div>
+                <div class="snippet-lang" v-if="snippet.lang!='.'">{{ snippet.lang }}</div>
+                <div class="snippet-url" v-if="snippet.url"><a :href="snippet.url" target="_blank">{{ snippet.url }}</a></div>
                 <pre>{{ snippet.body }}</pre>
               </div>
             </template>

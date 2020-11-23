@@ -1,5 +1,13 @@
 [
     {
+        "url": "https://suzuki-navi.hatenablog.com/entry/2020/11/23/215712",
+        "title": "htmlWebpackPlugin.options.title を設定する方法",
+        "posted": "2020/11/23",
+        "updated": "",
+        "keyword1": ["#hatenablog", "vuejs"],
+        "keyword2": ["javascript"]
+    },
+    {
         "url": "https://qiita.com/suzuki-navi/items/a80677a0747232843957",
         "title": "順列の全探索をするプログラム（競技プログラミング向け）",
         "posted": "2020/11/22",
@@ -389,14 +397,6 @@
         "posted": "2020/09/20",
         "updated": "",
         "keyword1": ["#hatenablog", "raspberry_pi", "command", "arp"],
-        "keyword2": []
-    },
-    {
-        "url": "https://github.com/suzuki-navi/atcoder/tree/master/cheetsheet/swap/README.md",
-        "title": "変数の値を入れ替える(swap)には (C++、PHP、Perl、Python、Ruby)",
-        "posted": "2020/09/18",
-        "updated": "",
-        "keyword1": ["#github_markdown", "#programming", "#multilang", "c++", "php", "perl", "python", "ruby"],
         "keyword2": []
     },
     {
