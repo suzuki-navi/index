@@ -88,3 +88,26 @@ arr.join(" ")
 # elixir array list string join mkstring
 Enum.join(list, " ")
 
+// javascript argv
+// 1つ目のパラメータ
+a = process.argv[2];
+// argv[0]: "node"
+// argv[1]: javascriptのスクリプトファイル名
+
+# ruby argv
+# 1つ目のパラメータ
+a = ARGV[0]
+
+# python argv
+# 1つ目のパラメータ
+a = sys.argv[1]
+
+# python itoa sprintf format
+# 数値に3桁ごとのカンマを付与して文字列化
+size = 5000000
+print("{:,} KiB".format(size / 1024))
+# 4,882.8125 KiB
+print("{:,} KiB".format(size // 1024))
+# 4,882 KiB
+
+

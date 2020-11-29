@@ -53,10 +53,6 @@ i = str.to_i
 # ruby string split
 cols = str.split(" ")
 
-# ruby argv
-# 1つ目のパラメータ
-a = ARGV[0].to_i
-
 # ruby stdout puts print
 puts(str)
 
