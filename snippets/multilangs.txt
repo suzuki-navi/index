@@ -39,6 +39,14 @@ while ...:
 // scala seq slice substring
 seq.slice(start, end);
 
+// javascript string slice substr substring
+s.substring(start)
+s.substring(start, end)
+
+// python string slice substr substring
+s[start:]
+s[start:end]
+
 # cpp swap
 swap(a, b);
 
@@ -76,8 +84,43 @@ for i in range(2, 6):
   # 5
   # 6
 
+// javascript array list map
+const result = arr.map(el => ...);
+
+// javascript array list push append
+arr.push(el);
+
 # elixir string strcat
 s1 <> s2
+
+// javascript indexof find
+const s = "abcbd"
+s.indexOf("b")
+// => 1
+// return -1 on failure
+
+# python lastindexof find rfind
+s = "abcbd"
+s.rfind("b")
+# => 3
+# return -1 on failure
+
+// javascript lastindexof rfind
+const s = "abcbd"
+s.lastIndexOf("b")
+// => 3
+// return -1 on failure
+
+# python string startswith
+if s.startswith(prefix):
+    ...
+
+# python string endswith
+if s.endswith(suffix):
+    ...
+
+// javascript array list string join mkstring
+arr.join(" ")
 
 # ruby array list string join mkstring
 arr.join(" ")

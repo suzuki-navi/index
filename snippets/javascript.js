@@ -27,3 +27,16 @@ new Vue({
   el: "#app",
 });
 
+// javascript tojson tostring
+JSON.stringify(obj)
+
+// javascript foreach array list
+// 配列の値でループ
+for (const el of arr) {
+    ...;
+}
+// 配列のキーまたはインデックスでループ
+for (const key in arr) {
+    ...;
+}
+

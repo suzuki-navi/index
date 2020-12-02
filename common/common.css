@@ -44,6 +44,12 @@ h1 {
   margin-bottom: 4px;
 }
 .card .snippet .snippet-lang {
+  display: inline-block;
+  font-size: 0.8em;
+}
+.card .snippet .snippet-position {
+  display: inline-block;
+  margin-left: 4px;
   font-size: 0.8em;
 }
 .card .snippet .snippet-url {

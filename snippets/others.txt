@@ -27,6 +27,10 @@ sudo npm install -g @vue/cli
 sudo npm install vue-router
 vue create sample-project
 
+# shell npm install
+# package-lock.json のとおりにパッケージをインストール
+npm install
+
 # shell python http server
 # 簡易HTTPサーバ
 python -m http.server 8080
@@ -94,4 +98,9 @@ aws --profile default glue list-jobs --max-results 1000 | jq '.JobNames[]' -r
 # shell aws glue job start invoke
 # Glue Job起動
 aws --profile default glue start-job-run --job-name JOB_NAME
+
+# shell tmux
+# 既存のセッションを -t で指定すると
+# 同じウィンドウ構成の別のカーソルをもったセッションを作成できる
+tmux new-session -t 0
 

@@ -70,6 +70,7 @@ $(function(){
                     keyword2: article.keyword2,
                     body: article.body,
                     lang: article.lang,
+                    position: article.position,
                 };
                 result.push(article2);
             }
@@ -96,6 +97,7 @@ $(function(){
                 keyword2: article.keyword2,
                 body: "",
                 lang: "",
+                position: "",
             };
             result1.push(article2);
         }
@@ -257,6 +259,7 @@ $(function(){
                 keyword2: [],
                 body: snippet.body,
                 lang: snippet.lang,
+                position: snippet.position,
             };
             result1.push(snippet2);
         }
@@ -376,8 +379,14 @@ $(function(){
         articles.tags = tags;
     });
     function loadSnippets(list) {
+        function basename(url) {
+            const p = url.lastIndexOf("/");
+            if (p < 0) return "";
+            return url.substring(p + 1);
+        }
         if (list.length == 0) return;
         const url = list[0];
+        const fname = basename(url);
         const listTail = list.slice(1);
         axios.get(url).then(response => {
             const data = response.data;
@@ -392,10 +401,12 @@ $(function(){
             let keywords = [];
             let lang = "";
             let body = "";
+            let position = "";
             for (let i = 0; i < lineCount; i++) {
                 const line = lines[i];
                 if (flag == 0) {
                     if (line != "") {
+                        position = fname + ":" + (i+1);
                         let matched = line.match(commentPattern1);
                         if (!matched) {
                             matched = line.match(commentPattern2);
@@ -436,6 +447,7 @@ $(function(){
                                 keyword1: keywords,
                                 body: body,
                                 lang: lang,
+                                position: position,
                             });
                         }
                         flag = 0;
@@ -443,6 +455,7 @@ $(function(){
                         keywords = [];
                         lang = "";
                         body = "";
+                        position = "";
                     }
                 }
             }
@@ -750,6 +763,7 @@ $(function(){
               <h1>"{{ global_query.query }}" のsnippet ({{ snippets_result.snippets.length }})</h1>
               <div v-for="snippet in snippets_result.snippets" class="snippet">
                 <div class="snippet-lang" v-if="snippet.lang!='.'">{{ snippet.lang }}</div>
+                <div class="snippet-position" v-if="snippet.position!='.'">{{ snippet.position }}</div>
                 <div class="snippet-url" v-if="snippet.url"><a :href="snippet.url" target="_blank">{{ snippet.url }}</a></div>
                 <pre>{{ snippet.body }}</pre>
               </div>

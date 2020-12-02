@@ -3,19 +3,6 @@
 if len(path) > 0 and path[-1:] != "/":
     path = path + "/"
 
-# python lastindexof find rfind
-s = "abcbd"
-print(s.rfind("b"))
-# => 3
-
-# python string startswith
-if s.startswith(prefix):
-    ...
-
-# python string endswith
-if s.endswith(suffix):
-    ...
-
 # python stderr puts print
 print("illegal s3 path", file = sys.stderr)
 
