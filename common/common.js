@@ -102,7 +102,7 @@ $(function(){
             result1.push(article2);
         }
         if (query == "") {
-            const recent_count = 20;
+            const recent_count = 15;
             result1 = searchByKeyword("", result1);
             if (result1.length > recent_count) {
                 result1 = result1.slice(0, recent_count);
@@ -843,6 +843,9 @@ $(function(){
             <section v-if="global_query.query=='#tags'">` + tagsTemplate(1) + `
             </section>
             <section v-if="global_query.query==''">
+              <p class="image">
+                <img src="./atcoder.png" height="180" width="320">
+              </p>
               <p class="image">
                 <a href="https://github.com/suzuki-navi"><img src="https://grass-graph.moshimo.works/images/suzuki-navi.png?width=610"></a>
               </p>

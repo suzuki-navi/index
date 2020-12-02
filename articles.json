@@ -1,5 +1,13 @@
 [
     {
+        "url": "https://suzuki-navi.hatenablog.com/entry/2020/12/02/232521",
+        "title": "AWS Redshift Federated QueryでRedshiftにアクセスしてみる",
+        "posted": "2020/12/02",
+        "updated": "",
+        "keyword1": ["#hatenablog", "#data_store", "aws", "redshift"],
+        "keyword2": ["postgresql"]
+    },
+    {
         "url": "https://suzuki-navi.hatenablog.com/entry/2020/11/16/235348",
         "title": "AtCoder参戦日記 ABC183 2020/11/15 #9",
         "posted": "2020/11/29",
