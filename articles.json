@@ -1,5 +1,13 @@
 [
     {
+        "url": "https://suzuki-navi.hatenablog.com/entry/2020/12/03/235300",
+        "title": "CloudFormationのパラメータを配列型にする",
+        "posted": "2020/12/03",
+        "updated": "",
+        "keyword1": ["#hatenablog", "aws", "cloudformation"],
+        "keyword2": ["awscli"]
+    },
+    {
         "url": "https://suzuki-navi.hatenablog.com/entry/2020/12/02/232521",
         "title": "AWS Redshift Federated QueryでRedshiftにアクセスしてみる",
         "posted": "2020/12/02",
