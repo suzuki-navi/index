@@ -27,8 +27,12 @@ new Vue({
   el: "#app",
 });
 
-// javascript tojson tostring
+// javascript json tojson tostring
 JSON.stringify(obj)
+
+// javascript base64 btoa encode
+const encodedStr = window.btoa(byteArr);
+const encodedStr = byteArr.toString("base64");
 
 // javascript foreach array list
 // 配列の値でループ

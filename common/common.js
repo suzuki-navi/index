@@ -404,7 +404,9 @@ $(function(){
             let position = "";
             for (let i = 0; i < lineCount; i++) {
                 const line = lines[i];
-                if (flag == 0) {
+                if (line.startsWith("##")) {
+                    // nothing
+                } else if (flag == 0) {
                     if (line != "") {
                         position = fname + ":" + (i+1);
                         let matched = line.match(commentPattern1);
@@ -751,7 +753,7 @@ $(function(){
               <a v-if="global_query.query=='#tags'" href="#" v-on:click.prevent.stop="history.back();">[close tags]</a>
               <a v-if="global_query.query!='#tags'" href="#tags" v-on:click.prevent.stop="gotoTagPage('#tags');">[tags...]</a>
             </div>
-            <input v-model="global_query.query" placeholder="Search articles">
+            <input v-model="global_query.query" placeholder="Search articles" onfocus="this.select()">
             <h1 v-if="title1">{{ title1 }} {{ count_str }}</h1>
             <p v-if="desc">{{ desc }}</p>
             <ul v-if="!global_query.query.startsWith('.') && result.articles1.length > 0">

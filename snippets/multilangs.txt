@@ -14,13 +14,219 @@
 # 順列の全探索をするプログラム（競技プログラミング向け）
 # https://qiita.com/suzuki-navi/items/a80677a0747232843957
 
+####################################################################################################
+## 演算子
+####################################################################################################
+
+################################
+## インクリメント、デクリメント
+################################
+
+# scala increment decrement
+i += 1;
+i -= 1;
+
+# java increment decrement
+i++;
+i--;
+
+# clang increment decrement
+i++;
+i--;
+
+# c++ increment decrement
+i++;
+i--;
+
+# javascript increment decrement
+i++;
+i--;
+
+# php increment decrement
+$i++;
+$i--;
+
+# perl increment decrement
+$i++;
+$i--;
+
+# rust increment decrement
+i += 1;
+i -= 1;
+
+# golang increment decrement
+i++
+i--
+
+# ruby increment decrement
+i += 1
+i -= 1
+
+# python increment decrement
+i += 1
+i -= 1
+
+####################################################################################################
+## 制御構文
+####################################################################################################
+
+################################
+## if文
+################################
+
+# scala if elif elsif else
+# if文の書き方のまとめ(Scala、Java、Rust、C言語、C++、Go言語、PHP、Perl、Python、Ruby)
+# https://qiita.com/suzuki-navi/items/16793a5f5e67fb8d3fc2
+if (...) {
+  ...;
+} else if (...) {
+  ...;
+} else {
+  ...;
+}
+
+# java if elif elsif else
+# if文の書き方のまとめ(Scala、Java、Rust、C言語、C++、Go言語、PHP、Perl、Python、Ruby)
+# https://qiita.com/suzuki-navi/items/16793a5f5e67fb8d3fc2
+if (...) {
+  ...;
+} else if (...) {
+  ...;
+} else {
+  ...;
+}
+
+# clang if elif elsif else
+# if文の書き方のまとめ(Scala、Java、Rust、C言語、C++、Go言語、PHP、Perl、Python、Ruby)
+# https://qiita.com/suzuki-navi/items/16793a5f5e67fb8d3fc2
+if (...) {
+  ...;
+} else if (...) {
+  ...;
+} else {
+  ...;
+}
+
+# c++ if elif elsif else
+# if文の書き方のまとめ(Scala、Java、Rust、C言語、C++、Go言語、PHP、Perl、Python、Ruby)
+# https://qiita.com/suzuki-navi/items/16793a5f5e67fb8d3fc2
+if (...) {
+  ...;
+} else if (...) {
+  ...;
+} else {
+  ...;
+}
+
+# php if elif elsif else
+# if文の書き方のまとめ(Scala、Java、Rust、C言語、C++、Go言語、PHP、Perl、Python、Ruby)
+# https://qiita.com/suzuki-navi/items/16793a5f5e67fb8d3fc2
+if (...) {
+  ...;
+} else if (...) {
+  ...;
+} else {
+  ...;
+}
+
+# perl if elif elsif else
+# if文の書き方のまとめ(Scala、Java、Rust、C言語、C++、Go言語、PHP、Perl、Python、Ruby)
+# https://qiita.com/suzuki-navi/items/16793a5f5e67fb8d3fc2
+if (...) {
+  ...;
+} elsif (...) {
+  ...;
+} else {
+  ...;
+}
+unless (...) {
+  ...;
+}
+... if ...;
+... unless ...;
+
+# rust if elif elsif else
+# if文の書き方のまとめ(Scala、Java、Rust、C言語、C++、Go言語、PHP、Perl、Python、Ruby)
+# https://qiita.com/suzuki-navi/items/16793a5f5e67fb8d3fc2
+if ... {
+  ...
+} else if ... {
+  ...
+} else {
+  ...
+}
+
+# golang if elif elsif else
+# if文の書き方のまとめ(Scala、Java、Rust、C言語、C++、Go言語、PHP、Perl、Python、Ruby)
+# https://qiita.com/suzuki-navi/items/16793a5f5e67fb8d3fc2
+if ... {
+  ...
+} else if ... {
+  ...
+} else {
+  ...
+}
+
+# ruby if elif elsif else
+# if文の書き方のまとめ(Scala、Java、Rust、C言語、C++、Go言語、PHP、Perl、Python、Ruby)
+# https://qiita.com/suzuki-navi/items/16793a5f5e67fb8d3fc2
+if ...
+  ...
+elsif ...
+  ...
+else
+  ...
+end
+unless ...
+  ...
+end
+... if ...
+... unless ...
+
 # python if elif elsif else
+# if文の書き方のまとめ(Scala、Java、Rust、C言語、C++、Go言語、PHP、Perl、Python、Ruby)
+# https://qiita.com/suzuki-navi/items/16793a5f5e67fb8d3fc2
 if ...:
-    ...
+  ...
 elif ...:
-    ...
+  ...
 else:
-    ...
+  ...
+
+################################
+
+# ruby loop times
+10.times do |i|
+  ...
+end
+
+# ruby loop for range
+for i in 2..5
+  # 2
+  # 3
+  # 4
+  # 5
+end
+
+# ruby loop for range
+for i in 0..n-1
+  ...
+end
+
+# ruby loop while
+while ...
+  ...
+end
+
+# ruby loop while do
+# do whileの構文
+begin
+  ...
+end while ...
+
+# ruby loop while
+# 修飾子の記法
+... while ...
 
 # python while for loop break
 while ...:
@@ -35,6 +241,8 @@ while ...:
     if ...:
         continue
     ...
+
+####################################################################################################
 
 // scala seq slice substring
 seq.slice(start, end);
@@ -111,6 +319,16 @@ s.lastIndexOf("b")
 // => 3
 // return -1 on failure
 
+// javascript string startswith
+if (s.startsWith(prefix)) {
+    ...;
+}
+
+// javascript string endswith
+if (s.endsWith(prefix)) {
+    ...;
+}
+
 # python string startswith
 if s.startswith(prefix):
     ...
@@ -153,4 +371,14 @@ print("{:,} KiB".format(size / 1024))
 print("{:,} KiB".format(size // 1024))
 # 4,882 KiB
 
+# python env
+import os
+path = os.environ["PATH"]
+
+// javascript env
+const path = process.env.PATH;
+
+// javascript process exit
+// 非同期処理を待たずにプロセスを終了
+process.exit(0);
 
