@@ -55,6 +55,14 @@ EOF
 sudo systemctl daemon-reload
 sudo systemctl restart docker
 
+# shell docker attach exec
+# 起動中のコンテナのコンソールを開く
+# このコンソールでexitするとコンテナは終了する
+docker attach <CONTAINER_ID>
+# 起動中のコンテナの中に新規にbashを起動
+# このbashからexitしてもコンテナは終了しない
+docker exec -i -t <CONTAINER_ID> /bin/bash
+
 # shell apt update upgrade
 # パッケージ一覧を更新
 sudo apt update
@@ -85,6 +93,25 @@ PGPASSWORD="xxxx" pg_dump -h HOST -p 5432 -U USER_NAME DB_NAME -t TABLE_NAME --c
 # sql postgresql psql drop index exists
 DROP INDEX IF EXISTS public.INDEX_NAME;
 
+# sql redshift psql
+# ユーザ一覧
+SELECT * FROM pg_user;
+
+# sql redshift psql
+# スキーマと権限付与の一覧
+SLECT * FROM pg_namespace;
+
+# sql redshift psql
+# テーブルと権限付与の一覧
+\z
+
+# shell aws s3 bucket policy
+# S3バケットポリシー
+aws --profile default s3api get-bucket-policy --bucket BUCKET_NAME | jq -r '.Policy' | jq .
+
+# shell aws subnets
+aws --profile default ec2 describe-subnets | jq .
+
 # shell aws stepfunctions execution
 # Step Functionsの最新実行の情報
 aws --profile default stepfunctions describe-execution --execution-arn $(aws --profile default stepfunctions list-executions --state-machine-arn arn:aws:states:ap-northeast-1:xxxxxxxxxxxx:stateMachine:xxxx | jq -r '.executions[0].executionArn')
@@ -103,4 +130,22 @@ aws --profile default glue start-job-run --job-name JOB_NAME
 # 既存のセッションを -t で指定すると
 # 同じウィンドウ構成の別のカーソルをもったセッションを作成できる
 tmux new-session -t 0
+
+# shell magic comment set pipe pipefail
+# シェルスクリプトの冒頭に書くおまじない
+set -Ceu
+set -o pipefail
+
+# shell date
+date '+%Y-%m-%d %H:%M:%S'
+
+# shell git commit show full fuller pretty
+# コミットの内容すべて
+git show --pretty=fuller HEAD
+
+# shell git commit copy
+# 他のディレクトリのコミットを持ってくる
+(cd ../other; git show --format='%s' main~9 | head -n1)
+git add -A
+git commit --date "$(cd ../other; git show --format='%ai' main~9 | head -n1)" -m "$(cd ../other; git show --format='%s' main~9 | head -n1)"
 

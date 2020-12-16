@@ -44,3 +44,12 @@ for (const key in arr) {
     ...;
 }
 
+// javascript copy shallow
+// https://qiita.com/uhyo/items/eaed00f1af9b0b7ee2e6
+const newObj = Object.assign({}, srcObj);
+const newObj = {...srcObj};
+
+// javascript json tostring tojson
+const json_str = JSON.stringify(event.headers); // 1行
+const json_str = JSON.stringify(event.headers, null, "  "); // pretty print
+

@@ -116,8 +116,15 @@ sorted(iterable)
 # modify the list in-place
 lst.sort()
 
-# python json tostring
+# python json tostring tojson
 # https://docs.python.org/ja/3/library/json.html
 import json
-json_str = json.dumps(obj)
+json_str = json.dumps(obj) # 1行
+json_str = json.dumps(obj, indent = "  ") # pretty print
+
+# python newline
+s = "abc" + \
+    "def"
+s = ("abc" +
+     "def")
 
