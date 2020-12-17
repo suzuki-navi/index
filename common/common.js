@@ -834,7 +834,7 @@ $(function(){
                 <li><a href="https://www.naviplus.co.jp/search/">ECサイトの検索エンジン</a> (2013/05 〜 2019/07)
                   <p>多数のECサイトの検索エンジン開発/導入/運用に携わる</p>
                   <ul>
-                    <li><a href="https://www.naviplus.co.jp/showcase/interview/surugaya">主な導入事例</a></li>
+                    <li><a href="https://www.naviplus.co.jp/search/interview_surugaya.html">主な導入事例</a></li>
                   </ul>
                 </li>
               </ul>

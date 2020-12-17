@@ -276,12 +276,25 @@ done
 
 
 ####################################################################################################
+## String
+
+# python string uppercase
+upper_str = s.upper()
+
+
+####################################################################################################
 ## Map
 
 # python map dict get getorelse
 v = dct.get("key", "defaultValue")
 # NoneやFalseの場合もデフォルト値にしたい場合
-v = dict.get("key") or "defaultValue"
+v = dict.get("key", False) or "defaultValue"
+
+# python map dict
+dct = {"key-a": "value-a", "key-b": "value-b", "key-c": "value-c"}
+dct2 = dict(map(lambda kv: (kv[0].upper(), kv[1]), dct.items()))
+print(dct2)
+# {'KEY-A': 'value-a', 'KEY-B': 'value-b', 'KEY-C': 'value-c'}
 
 
 ####################################################################################################
@@ -309,6 +322,7 @@ console.log(now.toGMTString());
 // Mon, 14 Dec 2020 13:48:41 GMT
 
 # python datetime strftime tostring
+import datetime
 now = datetime.datetime.utcnow().astimezone(datetime.timezone(datetime.timedelta(hours = +9)))
 print(now.strftime("%a, %d %b %Y %H:%M:%S %Z"))
 # Mon, 14 Dec 2020 14:00:42 UTC+09:00

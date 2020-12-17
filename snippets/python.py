@@ -72,6 +72,12 @@ m = 1_000_000_007
 
 # python bigint atoi
 m = int("1_000_000_007") # 1000000007
+#
+try:
+    print(int("a"))
+except:
+    print("Error")
+# => Error
 
 # python range list array
 [n for n in range(2, 10)]
