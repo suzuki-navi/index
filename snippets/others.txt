@@ -149,3 +149,16 @@ git show --pretty=fuller HEAD
 git add -A
 git commit --date "$(cd ../other; git show --format='%ai' main~9 | head -n1)" -m "$(cd ../other; git show --format='%s' main~9 | head -n1)"
 
+# shell python pip install
+# pipでインストール時にインストール先ディレクトリを指定
+$ pip install --target ./packages PACKAGE_NAME
+
+# shell python pip install
+# https://qiita.com/tshimura/items/64603dfb8f0d6eb35992
+# GitHubの特定のディレクトリからpipでインストール
+pip install --target ./packages git+https://github.com/suzuki-navi/szntools.git#egg=aws-cp-s3&subdirectory=aws-cp-s3/src
+
+# shell python pipenv
+# 別ディレクトリのPipfileを指定して実行
+PIPENV_PIPFILE=foo/Pipfile pipenv run python ...
+

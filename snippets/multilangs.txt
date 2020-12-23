@@ -283,6 +283,25 @@ upper_str = s.upper()
 
 
 ####################################################################################################
+## List
+
+# javascript list array exists includes
+if (arr.include(elem)) {
+  ...;
+}
+
+# javascript list array exists
+if (arr.some(elem => ...)) {
+  ...;
+}
+
+# javascript list array filter
+arr2 = arr.filter(elem => ...);
+
+# javascript list array map
+arr2 = arr.map(elem => ...);
+
+####################################################################################################
 ## Map
 
 # python map dict get getorelse
@@ -291,11 +310,12 @@ v = dct.get("key", "defaultValue")
 v = dict.get("key", False) or "defaultValue"
 
 # python map dict
-dct = {"key-a": "value-a", "key-b": "value-b", "key-c": "value-c"}
-dct2 = dict(map(lambda kv: (kv[0].upper(), kv[1]), dct.items()))
-print(dct2)
-# {'KEY-A': 'value-a', 'KEY-B': 'value-b', 'KEY-C': 'value-c'}
+# 辞書の各要素に関数を適用
+dct2 = dict(map(lambda kv: (kv[0].lower(), kv[1]), dct.items()))
 
+# javascript map object
+# オブジェクトの各要素に関数を適用
+const obj2 = Object.fromEntries(Object.entries(obj).map(([k, v]) => [k.toLowerCase(), v]));
 
 ####################################################################################################
 ## DateTime
