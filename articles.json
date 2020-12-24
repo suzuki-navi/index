@@ -1,5 +1,13 @@
 [
     {
+        "url": "https://qiita.com/suzuki-navi/items/7d7625c8f6900f9082dc",
+        "title": "API GatewayとLambdaを使ってS3の静的ホスティングをしてみる",
+        "posted": "2020/12/24",
+        "updated": "",
+        "keyword1": ["#qiita", "aws", "apigateway", "lambda", "s3"],
+        "keyword2": ["javascript", "cloudformation", "aws_sdk", "awscli"]
+    },
+    {
         "url": "https://qiita.com/suzuki-navi/items/21b5840608ad67548f0b",
         "title": "IAM認証のAWS API GatewayにEC2インスタンスからSigV4署名してアクセスするには",
         "posted": "2020/12/23",
@@ -13,7 +21,7 @@
         "posted": "2020/12/22",
         "updated": "",
         "keyword1": ["#qiita", "aws", "apigateway"],
-        "keyword2": ["python", "javascript", "cloudformation"]
+        "keyword2": ["python", "javascript", "cloudformation", "awscli"]
     },
     {
         "url": "https://suzuki-navi.hatenablog.com/entry/2020/12/21/081530",
@@ -21,7 +29,7 @@
         "posted": "2020/12/21",
         "updated": "",
         "keyword1": ["#hatenablog", "aws", "apigateway"],
-        "keyword2": ["cloudformation"]
+        "keyword2": ["cloudformation", "curl"]
     },
     {
         "url": "https://suzuki-navi.hatenablog.com/entry/2020/12/17/214538",
@@ -29,7 +37,7 @@
         "posted": "2020/12/17",
         "updated": "",
         "keyword1": ["#hatenablog", "aws", "cloudformation", "apigateway"],
-        "keyword2": []
+        "keyword2": ["awscli"]
     },
     {
         "url": "https://suzuki-navi.hatenablog.com/entry/2020/12/16/230323",
