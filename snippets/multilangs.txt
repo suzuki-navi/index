@@ -244,6 +244,15 @@ end while ...
 # 修飾子の記法
 ... while ...
 
+# ruby while for loop break
+while ...
+  ...
+  if ...
+    break
+  end
+  ...
+end
+
 # python while for loop break
 while ...:
     ...
@@ -278,12 +287,20 @@ done
 ####################################################################################################
 ## String
 
+# ruby string strcat
+str1 + str2
+str.concat('def') # 破壊的に連結
+
 # python string uppercase
 upper_str = s.upper()
 
 
 ####################################################################################################
 ## List
+
+# ruby list array length size len
+size = arr.length
+size = arr.size
 
 # javascript list array exists includes
 if (arr.include(elem)) {
@@ -300,6 +317,11 @@ arr2 = arr.filter(elem => ...);
 
 # javascript list array map
 arr2 = arr.map(elem => ...);
+
+# ruby list array foreach each
+arr.each do |elem|
+  ...
+end
 
 ####################################################################################################
 ## Map
@@ -495,4 +517,22 @@ process.exit(0);
 File.open("foo.txt") do |file|
   content = file.read
 end
+
+# python stderr puts print
+import sys
+print("Error!", file = sys.stderr)
+sys.stderr.write("Error!\n")
+
+# ruby stderr puts print
+STDERR.puts "Error!"
+STDERR.print "Error!\n"
+
+# perl stderr puts print
+print STDERR "Error!\n";
+
+// php stderr puts print
+fputs(STDERR, "Error!\n");
+
+// java stderr puts print
+System.err.println("Error!");
 

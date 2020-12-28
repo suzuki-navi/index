@@ -3,9 +3,6 @@
 if len(path) > 0 and path[-1:] != "/":
     path = path + "/"
 
-# python stderr puts print
-print("illegal s3 path", file = sys.stderr)
-
 # python regexp match group
 import re
 s3_path_pattern = 's3://([^/]+)(/.*)?'

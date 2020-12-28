@@ -503,14 +503,15 @@ $(function(){
             {tag: "rds", categories: [["cloud_aws", "RDS"]]},
             {tag: "aurora", categories: [["cloud_aws", "Aurora"]]},
             {tag: "redshift", categories: [["cloud_aws", "Redshift"]]},
-            {tag: "glue", categories: [["cloud_aws", "Glue"]]},
+            {tag: "dynamodb",   categories: [["cloud_aws", "DynamoDB"]]},
             {tag: "documentdb", categories: [["cloud_aws", "DocumentDB"]]},
-            {tag: "lambda", categories: [["cloud_aws", "Lambda"]]},
+            {tag: "lambda",     categories: [["cloud_aws", "Lambda"]]},
             {tag: "apigateway", categories: [["cloud_aws", "API Gateway"]]},
-            {tag: "alb", categories: [["cloud_aws", "ALB"]]},
-            {tag: "cognito", categories: [["cloud_aws", "Cognito"]]},
-            {tag: "cloudformation", categories: [["cloud_aws", "CloudFormation"]]},
+            {tag: "alb",        categories: [["cloud_aws", "ALB"]]},
+            {tag: "cognito",    categories: [["cloud_aws", "Cognito"]]},
+            {tag: "glue",       categories: [["cloud_aws", "Glue"]]},
             {tag: "comprehend", categories: [["cloud_aws", "Comprehend"]]},
+            {tag: "cloudformation", categories: [["cloud_aws", "CloudFormation"]]},
             {tag: "cloudwatch", categories: [["cloud_aws", "CloudWatch"]]},
             {tag: "cloudtrail", categories: [["cloud_aws", "CloudTrail"]]},
 
@@ -653,12 +654,6 @@ $(function(){
                 <a v-bind:href="'#' + tag[0]" v-on:click.prevent.stop="gotoTagPage(tag[0]);">{{ tag[2] }}</a>
               </span></p>
             </div>
-            <div style="margin-top:16px;">
-              <p><span v-for="(tag, idx) in categorized.thema">
-                <span v-if="idx>0" class="font-small"> / </span>
-                <a v-bind:href="'#' + tag[0]" v-on:click.prevent.stop="gotoTagPage(tag[0]);">{{ tag[2] }}({{ tag[1] }})</a>
-              </span></p>
-            </div>
             <div>
               <h2>クラウド環境記事 - GCP</h2>
               <p><span v-for="(tag, idx) in categorized.cloud_gcp">
@@ -696,10 +691,15 @@ $(function(){
             </div>
             <div>
               <h2>その他</h2>
+              <p><span v-for="(tag, idx) in categorized.thema">
+                <span v-if="idx>0" class="font-small"> / </span>
+                <a v-bind:href="'#' + tag[0]" v-on:click.prevent.stop="gotoTagPage(tag[0]);">{{ tag[2] }}({{ tag[1] }})</a>
+              </span></p>
               <p><span v-for="(tag, idx) in categorized.other">
                 <span v-if="idx>0" class="font-small"> / </span>
                 <a v-bind:href="'#' + tag[0]" v-on:click.prevent.stop="gotoTagPage(tag[0]);" v-bind:class="(tag[1]<3)? 'font-small':''">{{ tag[2] }}({{ tag[1] }})</a>
               </span>
+              <span class="font-small"> / </span>
               <input type="checkbox" id="othertags-` + id + `-checkbox">
               <label for="othertags-` + id + `-checkbox" id="othertags-` + id + `-label">more...</label>
               <span id="othertags-` + id + `">

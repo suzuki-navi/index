@@ -29,3 +29,14 @@ range = (0 .. n-1).to_a
 arr.length
 arr.size
 
+# ruby json tostring tojson
+require 'json'
+json_str = JSON.generate(obj) # 1行
+json_str = JSON.pretty_generate(obj) # pretty print
+
+# ruby method function definition
+def f(arg1, arg2)
+  ...
+  retval
+end
+
