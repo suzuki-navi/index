@@ -1,10 +1,42 @@
 [
     {
+        "url": "https://qiita.com/suzuki-navi/items/1369b11a8f5d7f467645",
+        "title": "Serverless FrameworkとAWS Lambda with Rubyの環境にgemインストール",
+        "posted": "2021/01/03",
+        "updated": "",
+        "keyword1": ["#qiita", "aws", "lambda", "serverless_framework"],
+        "keyword2": ["ruby"]
+    },
+    {
+        "url": "https://suzuki-navi.hatenablog.com/entry/2021/01/02/213005",
+        "title": "地球時(TT)と太陽系力学時(TDB)の関係式",
+        "posted": "2021/01/02",
+        "updated": "",
+        "keyword1": ["#hatenablog", "#astronomy", "#datetime"],
+        "keyword2": ["#math"]
+    },
+    {
+        "url": "https://suzuki-navi.hatenablog.com/entry/2020/12/30/170610",
+        "title": "Serverless FrameworkとAWS Lambda with RubyでS3アクセス",
+        "posted": "2020/12/30",
+        "updated": "",
+        "keyword1": ["#hatenablog", "aws", "lambda", "serverless_framework"],
+        "keyword2": ["s3", "ruby", "cloudwatch", "aws_sdk"]
+    },
+    {
+        "url": "https://suzuki-navi.hatenablog.com/entry/2020/12/29/160405",
+        "title": "天文計算に関わる各種時刻系",
+        "posted": "2020/12/29",
+        "updated": "",
+        "keyword1": ["#hatenablog", "#astronomy", "#datetime"],
+        "keyword2": ["ruby"]
+    },
+    {
         "url": "https://suzuki-navi.hatenablog.com/entry/2020/12/28/182758",
         "title": "日時/タイムスタンプとタイムゾーンに関わるデータ型",
         "posted": "2020/12/28",
         "updated": "",
-        "keyword1": ["#hatenablog", "postgresql", "datetime", "timezone"],
+        "keyword1": ["#hatenablog", "postgresql", "#datetime", "#timezone"],
         "keyword2": ["java", "python", "ruby", "mysql"]
     },
     {
@@ -20,7 +52,7 @@
         "title": "DynamoDBを初めて触ってハマったこと",
         "posted": "2020/12/25",
         "updated": "",
-        "keyword1": ["#hatenablog", "aws", "dynamodb"],
+        "keyword1": ["#hatenablog", "aws", "dynamodb", "#data_store"],
         "keyword2": ["cloudformation", "python"]
     },
     {
@@ -539,7 +571,7 @@
         "title": "金星・水星の最大光度のタイミングの違いを解く",
         "posted": "2020/09/06",
         "updated": "",
-        "keyword1": ["#hatenablog", "#numerical_analysis", "#gradient_descent"],
+        "keyword1": ["#hatenablog", "#numerical_analysis", "#gradient_descent", "#astronomy"],
         "keyword2": ["scala", "#math"]
     },
     {
@@ -1232,10 +1264,10 @@
     },
     {
         "url": "https://qiita.com/suzuki-navi/items/9ed7670aa4a93cf021d2",
-        "title": "Pythonでのタイムゾーンの扱い(datetime, pytz)",
+        "title": "Pythonでのタイムゾーンの扱い(#datetime, pytz)",
         "posted": "2020/01/06",
         "updated": "",
-        "keyword1": ["#qiita", "python", "datetime", "timezone"]
+        "keyword1": ["#qiita", "python", "#datetime", "#timezone"]
     },
     {
         "url": "https://qiita.com/suzuki-navi/items/823aca8f55e30c0a7f87",
@@ -1251,7 +1283,7 @@
         "posted": "2019/12/16",
         "updated": "",
         "keyword1": ["#qiita", "aws", "lambda", "apigateway", "cloudformation"],
-        "keyword2": ["nodejs", "javascript"]
+        "keyword2": ["javascript"]
     },
     {
         "url": "https://qiita.com/suzuki-navi/items/3664bfbc102052717426",

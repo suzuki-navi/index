@@ -382,6 +382,10 @@ seq.slice(start, end);
 s.substring(start)
 s.substring(start, end)
 
+# ruby string slice substr substring
+s.slice(start, len)
+# s.slice(n) とするとn文字目のみになる
+
 // python string slice substr substring
 s[start:]
 s[start:end]
@@ -502,6 +506,9 @@ print("{:,} KiB".format(size / 1024))
 print("{:,} KiB".format(size // 1024))
 # 4,882 KiB
 
+# ruby env
+path = ENV["PATH"]
+
 # python env
 import os
 path = os.environ["PATH"]
@@ -536,3 +543,8 @@ fputs(STDERR, "Error!\n");
 // java stderr puts print
 System.err.println("Error!");
 
+# ruby string embed literal
+"Hello, #{name}"
+
+# python string embed literal
+f"Hello, {name}"

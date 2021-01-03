@@ -53,3 +53,6 @@ const newObj = {...srcObj};
 const json_str = JSON.stringify(event.headers); // 1行
 const json_str = JSON.stringify(event.headers, null, "  "); // pretty print
 
+// javascript string split explode
+str.split([separator[, limit]])
+
