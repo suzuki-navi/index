@@ -1,11 +1,43 @@
 [
     {
+        "url": "https://qiita.com/suzuki-navi/items/a16eca5b450c28e25671",
+        "title": "AWS CloudFormationのデプロイ済みスタックのテンプレートをYAMLで取得",
+        "posted": "2021/01/07",
+        "updated": "",
+        "keyword1": ["#qiita", "aws", "cloudformation", "yq"],
+        "keyword2": ["ruby"]
+    },
+    {
+        "url": "https://qiita.com/suzuki-navi/items/b5f513f21d37365c248f",
+        "title": "Serverless FrameworkとAWS Lambda with Pythonの環境にpipインストール",
+        "posted": "2021/01/06",
+        "updated": "",
+        "keyword1": ["#qiita", "aws", "lambda", "serverless_framework", "#serverless"],
+        "keyword2": ["python", "cloudwatch"]
+    },
+    {
+        "url": "https://suzuki-navi.hatenablog.com/entry/2021/01/05/133109",
+        "title": "Serverless FrameworkとAWS Lambda with Python or Node.jsでS3アクセス",
+        "posted": "2021/01/05",
+        "updated": "",
+        "keyword1": ["#hatenablog", "aws", "lambda", "serverless_framework", "#serverless"],
+        "keyword2": ["s3", "python", "javascript", "cloudwatch", "boto3", "aws_sdk"]
+    },
+    {
+        "url": "https://suzuki-navi.hatenablog.com/entry/2021/01/04/211827",
+        "title": "太陽の地心直交座標系での位置計算",
+        "posted": "2021/01/04",
+        "updated": "",
+        "keyword1": ["#hatenablog", "#astronomy"],
+        "keyword2": ["rubyq"]
+    },
+    {
         "url": "https://qiita.com/suzuki-navi/items/1369b11a8f5d7f467645",
         "title": "Serverless FrameworkとAWS Lambda with Rubyの環境にgemインストール",
         "posted": "2021/01/03",
         "updated": "",
-        "keyword1": ["#qiita", "aws", "lambda", "serverless_framework"],
-        "keyword2": ["ruby"]
+        "keyword1": ["#qiita", "aws", "lambda", "serverless_framework", "#serverless"],
+        "keyword2": ["ruby", "cloudwatch"]
     },
     {
         "url": "https://suzuki-navi.hatenablog.com/entry/2021/01/02/213005",
@@ -20,7 +52,7 @@
         "title": "Serverless FrameworkとAWS Lambda with RubyでS3アクセス",
         "posted": "2020/12/30",
         "updated": "",
-        "keyword1": ["#hatenablog", "aws", "lambda", "serverless_framework"],
+        "keyword1": ["#hatenablog", "aws", "lambda", "serverless_framework", "#serverless"],
         "keyword2": ["s3", "ruby", "cloudwatch", "aws_sdk"]
     },
     {
@@ -53,14 +85,14 @@
         "posted": "2020/12/25",
         "updated": "",
         "keyword1": ["#hatenablog", "aws", "dynamodb", "#data_store"],
-        "keyword2": ["cloudformation", "python"]
+        "keyword2": ["cloudformation", "python", "boto3"]
     },
     {
         "url": "https://qiita.com/suzuki-navi/items/7d7625c8f6900f9082dc",
         "title": "API GatewayとLambdaを使ってS3の静的ホスティングをしてみる",
         "posted": "2020/12/24",
         "updated": "",
-        "keyword1": ["#qiita", "aws", "apigateway", "lambda", "s3"],
+        "keyword1": ["#qiita", "aws", "apigateway", "lambda", "s3", "#serverless"],
         "keyword2": ["javascript", "cloudformation", "aws_sdk", "awscli"]
     },
     {
@@ -76,7 +108,7 @@
         "title": "API GatewayをVPC内のプライベートに変更するとHTTP2非対応になる",
         "posted": "2020/12/22",
         "updated": "",
-        "keyword1": ["#qiita", "aws", "apigateway"],
+        "keyword1": ["#qiita", "aws", "apigateway", "#serverless"],
         "keyword2": ["python", "javascript", "cloudformation", "awscli"]
     },
     {
@@ -84,7 +116,7 @@
         "title": "API GatewayをVPC内のプライベートアクセスのみに限定",
         "posted": "2020/12/21",
         "updated": "",
-        "keyword1": ["#hatenablog", "aws", "apigateway"],
+        "keyword1": ["#hatenablog", "aws", "apigateway", "#serverless"],
         "keyword2": ["cloudformation", "curl"]
     },
     {
@@ -92,7 +124,7 @@
         "title": "CloudFormationでAPI Gatewayを変更しても反映されない",
         "posted": "2020/12/17",
         "updated": "",
-        "keyword1": ["#hatenablog", "aws", "cloudformation", "apigateway"],
+        "keyword1": ["#hatenablog", "aws", "cloudformation", "apigateway", "#serverless"],
         "keyword2": ["awscli"]
     },
     {
@@ -100,7 +132,7 @@
         "title": "AWS::ApiGateway::Stage と AWS::ApiGateway::Deployment の違い",
         "posted": "2020/12/16",
         "updated": "",
-        "keyword1": ["#hatenablog", "aws", "cloudformation", "apigateway"],
+        "keyword1": ["#hatenablog", "aws", "cloudformation", "apigateway", "#serverless"],
         "keyword2": []
     },
     {
@@ -132,7 +164,7 @@
         "title": "htmlWebpackPlugin.options.title を設定する方法",
         "posted": "2020/11/23",
         "updated": "",
-        "keyword1": ["#hatenablog", "vuejs"],
+        "keyword1": ["#hatenablog", "vuejs", "#front_end"],
         "keyword2": ["javascript"]
     },
     {
@@ -364,7 +396,7 @@
         "title": "AWS SAMとCloudFormationで同じ構成のAPI Gateway + Lambdaを構築",
         "posted": "2020/10/16",
         "updated": "",
-        "keyword1": ["#hatenablog", "aws", "lambda", "apigateway", "cloudformation"],
+        "keyword1": ["#hatenablog", "aws", "lambda", "apigateway", "cloudformation", "#serverless"],
         "keyword2": ["python", "awscli"]
     },
     {
@@ -372,7 +404,7 @@
         "title": "JavaScript AWS SDKでS3にある画像をブラウザに表示",
         "posted": "2020/10/15",
         "updated": "",
-        "keyword1": ["#hatenablog", "#visualization", "aws", "s3", "aws_sdk"],
+        "keyword1": ["#hatenablog", "#visualization", "aws", "s3", "aws_sdk", "#front_end"],
         "keyword2": ["javascript", "python", "python", "vuejs"]
     },
     {
@@ -715,7 +747,7 @@
         "title": "Vue.jsでページ中の複数の要素をクラスで指定してVueインスタンスを生成するには",
         "posted": "2020/07/19",
         "updated": "",
-        "keyword1": ["#hatenablog", "vuejs", "jquery"],
+        "keyword1": ["#hatenablog", "vuejs", "jquery", "#front_end"],
         "keyword2": ["javascript"]
     },
     {
@@ -1282,7 +1314,7 @@
         "title": "AWS SAMでの Lambda Functions with Node.js + API Gateway 最小構成",
         "posted": "2019/12/16",
         "updated": "",
-        "keyword1": ["#qiita", "aws", "lambda", "apigateway", "cloudformation"],
+        "keyword1": ["#qiita", "aws", "lambda", "apigateway", "cloudformation", "#serverless"],
         "keyword2": ["javascript"]
     },
     {
