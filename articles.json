@@ -1,11 +1,27 @@
 [
     {
+        "url": "https://suzuki-navi.hatenablog.com/entry/2021/01/10/170738",
+        "title": "満月・新月の日時をRubyで計算",
+        "posted": "2021/01/10",
+        "updated": "",
+        "keyword1": ["#hatenablog", "#astronomy"],
+        "keyword2": ["ruby"]
+    },
+    {
+        "url": "https://suzuki-navi.hatenablog.com/entry/2021/01/08/142206",
+        "title": "Serverless Frameworkのデプロイ用S3バケットの設定",
+        "posted": "2021/01/08",
+        "updated": "",
+        "keyword1": ["#hatenablog", "#serverless", "serverless_framework", "aws", "lambda"],
+        "keyword2": ["s3"]
+    },
+    {
         "url": "https://qiita.com/suzuki-navi/items/a16eca5b450c28e25671",
         "title": "AWS CloudFormationのデプロイ済みスタックのテンプレートをYAMLで取得",
         "posted": "2021/01/07",
         "updated": "",
         "keyword1": ["#qiita", "aws", "cloudformation", "yq"],
-        "keyword2": ["ruby"]
+        "keyword2": ["ruby", "jq"]
     },
     {
         "url": "https://qiita.com/suzuki-navi/items/b5f513f21d37365c248f",
@@ -29,7 +45,7 @@
         "posted": "2021/01/04",
         "updated": "",
         "keyword1": ["#hatenablog", "#astronomy"],
-        "keyword2": ["rubyq"]
+        "keyword2": ["ruby"]
     },
     {
         "url": "https://qiita.com/suzuki-navi/items/1369b11a8f5d7f467645",
