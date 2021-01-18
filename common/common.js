@@ -17,13 +17,18 @@ $(function(){
         return false;
     });
 
-    function calcScore(article, keywd) {
-        var score = 0;
-        if (keywd == "" || keywd == ".") {
-            score = 1;
+    function calcScore(article, keywd, githubWikiFlag) {
+        let score = 0;
+        if (keywd == "") {
             if (article.keyword1.find(k => k == "#unlisted")) {
                 score = 0;
+            } else if (article.posted == "") {
+                score = 0;
+            } else {
+                score = 1;
             }
+        } else if (keywd == ".") {
+            score = 1;
         } else if (article.keyword1.find(k => k == keywd)) {
             score = 2;
             if (article.keyword1.find(k => k == "#pickup")) {
@@ -31,14 +36,14 @@ $(function(){
             }
         } else {
             if (keywd == "java") {
-                let ex = "javascript";
+                const ex = "javascript";
                 if (article.keyword1.find(k => k.startsWith(keywd) && !k.startsWith(ex)) ||
                     article.keyword2.find(k => k.startsWith(keywd) && !k.startsWith(ex)) ||
                     article.title.toLowerCase().indexOf(keywd) >= 0 && article.title.toLowerCase().indexOf(ex) < 0) {
                     score = 1;
                 }
             } else if (keywd == "jq") {
-                let ex = "jquery";
+                const ex = "jquery";
                 if (article.keyword1.find(k => k.startsWith(keywd) && !k.startsWith(ex)) ||
                     article.keyword2.find(k => k.startsWith(keywd) && !k.startsWith(ex)) ||
                     article.title.toLowerCase().indexOf(keywd) >= 0 && article.title.toLowerCase().indexOf(ex) < 0) {
@@ -52,13 +57,16 @@ $(function(){
                 }
             }
         }
+        if (article.posted == "" && !githubWikiFlag) {
+            score = 0;
+        }
         return score;
     }
-    function searchByKeyword(keywd, articles) {
+    function searchByKeyword(keywd, articles, githubWikiFlag) {
         let result = [];
         for (let i in articles) {
             let article = articles[i];
-            let score = calcScore(article, keywd);
+            let score = calcScore(article, keywd, githubWikiFlag);
             if (score > article.score) score = article.score;
             if (score > 0) {
                 let article2 = {
@@ -91,6 +99,7 @@ $(function(){
             let article2 = {
                 score: 3,
                 title: article.title,
+                posted: article.posted,
                 date: article.date,
                 url: article.url,
                 keyword1: article.keyword1,
@@ -103,15 +112,16 @@ $(function(){
         }
         if (query == "") {
             const recent_count = 15;
-            result1 = searchByKeyword("", result1);
+            result1 = searchByKeyword("", result1, false);
             if (result1.length > recent_count) {
                 result1 = result1.slice(0, recent_count);
             }
         } else {
             let words = query.split(' ');
+            const githubWikiFlag = (words.length > 1);
             for (let i = 0; i < words.length; i++) {
                 let w = words[i];
-                result1 = searchByKeyword(w, result1);
+                result1 = searchByKeyword(w, result1, githubWikiFlag);
             }
         }
         for (let i = 0; i < result1.length; i++) {
@@ -272,7 +282,7 @@ $(function(){
             } else {
                 for (let i = 0; i < words.length; i++) {
                     let w = words[i];
-                    result1 = searchByKeyword(w, result1);
+                    result1 = searchByKeyword(w, result1, false);
                 }
             }
         }
@@ -339,16 +349,28 @@ $(function(){
     };
     axios.get(articles_json_url).then(response => {
         let list = response.data;
+        let list2 = [];
         let tags = {};
         for (let i = 0; i < list.length; i++) {
             let entry = list[i];
-            if (entry["updated"] == "") {
-                entry["date"] = entry["posted"];
+            if (entry["posted"] == "") {
+                if (entry["updated"] == "") {
+                    entry["date"] = "";
+                } else {
+                    entry["date"] = "(" + entry["updated"] + "更新)";
+                }
             } else {
-                entry["date"] = entry["posted"] + "投稿 " + entry["updated"] + "更新";
+                if (entry["updated"] == "") {
+                    entry["date"] = "(" + entry["posted"] + ")";
+                } else {
+                    entry["date"] = "(" + entry["posted"] + "投稿 " + entry["updated"] + "更新)";
+                }
             }
             if (!entry["keyword2"]) {
                 entry["keyword2"] = [];
+            }
+            if (!entry["keyword3"]) {
+                entry["keyword3"] = [];
             }
             entry["keyword1"] = entry["keyword1"].filter(function (x, i, self) {
                 return self.indexOf(x) === i;
@@ -357,13 +379,22 @@ $(function(){
                 return entry["keyword1"].indexOf(x) < 0 && self.indexOf(x) === i;
             });
             entry["keyword1"].concat(entry["keyword2"]).forEach(function (k) {
-                if (!(k in tags)) {
-                    tags[k] = 0;
+                if (entry["posted"] != "") {
+                    if (!(k in tags)) {
+                        tags[k] = 0;
+                    }
+                    tags[k]++;
                 }
-                tags[k]++;
             });
             entry["keyword1"] = extractSynonymIndex(entry["keyword1"]);
             entry["keyword2"] = extractSynonymIndex(entry["keyword2"]);
+
+            // keyword3はタグに入れないけど検索キーワード
+            for (const kw of entry["keyword3"]) {
+                entry["keyword2"].push(kw);
+            }
+
+            list2.push(entry);
         }
         tags = Object.entries(tags);
         tags.sort(function(a, b) {
@@ -375,7 +406,7 @@ $(function(){
                 return 0;
             }
         });
-        articles.list = list;
+        articles.list = list2;
         articles.tags = tags;
     });
     function loadSnippets(list) {
@@ -756,9 +787,9 @@ $(function(){
             <input v-model="global_query.query" placeholder="Search articles" onfocus="this.select()">
             <h1 v-if="title1">{{ title1 }} {{ count_str }}</h1>
             <p v-if="desc">{{ desc }}</p>
-            <ul v-if="!global_query.query.startsWith('.') && result.articles1.length > 0">
+            <ul v-if="result.articles1.length > 0">
               <li v-for="article in result.articles1" v-bind:style="article.liststyle">
-                <a v-bind:href="article.url" target="_blank">{{ article.title }}</a> ({{ article.date }})
+                <a v-bind:href="article.url" target="_blank">{{ article.title }}</a> {{ article.date }}
               </li>
             </ul>
             <template v-if="snippets_result.snippets.length > 0">
