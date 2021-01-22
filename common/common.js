@@ -185,7 +185,7 @@ $(function(){
             title1 = "AWSに関する記事";
             break;
         case "gcp":
-            title1 = "GCPに関する記事";
+            title1 = "Google Cloudに関する記事";
             break;
         case "aws_gcp":
             title1 = "AWS/GCP関係の記事";
