@@ -1,11 +1,35 @@
 [
     {
+        "url": "https://qiita.com/suzuki-navi/items/ffe449c95fb6e1faf891",
+        "title": "動画ファイルからサイズ情報やサムネイルをPythonのOpenCVで取得",
+        "posted": "2021/01/25",
+        "updated": "",
+        "keyword1": ["#qiita", "python", "#movie"],
+        "keyword2": []
+    },
+    {
+        "url": "https://suzuki-navi.hatenablog.com/entry/2021/01/24/135035",
+        "title": "大量の浮動小数点数のデータをJavaからバイナリ出力してPythonで読み込む",
+        "posted": "2021/01/24",
+        "updated": "",
+        "keyword1": ["#hatenablog", "#numerical_analysis", "java", "python"],
+        "keyword2": []
+    },
+    {
+        "url": "https://suzuki-navi.hatenablog.com/entry/2021/01/23/105204",
+        "title": "大量の浮動小数点数のデータをRubyからバイナリ出力してJavaで読み込む",
+        "posted": "2021/01/23",
+        "updated": "",
+        "keyword1": ["#hatenablog", "#numerical_analysis", "ruby", "java", "scala"],
+        "keyword2": []
+    },
+    {
         "url": "https://suzuki-navi.hatenablog.com/entry/2020/12/27/224601",
         "title": "JPG画像ファイルのサムネイルをPythonで生成",
         "posted": "2020/12/27",
         "updated": "2021/01/22",
-        "keyword1": ["#hatenablog", "python"],
-        "keyword2": ["image", "jpg"]
+        "keyword1": ["#hatenablog", "python", "#image"],
+        "keyword2": []
     },
     {
         "url": "https://suzuki-navi.hatenablog.com/entry/2021/01/20/235808",
@@ -20,8 +44,8 @@
         "title": "Range Requestsに対応したPythonの簡易HTTPサーバ",
         "posted": "2021/01/18",
         "updated": "",
-        "keyword1": ["#qiita", "python", "#movie", "#http"],
-        "keyword2": []
+        "keyword1": ["#qiita", "python", "#http"],
+        "keyword2": ["#movie"]
     },
     {
         "url": "https://suzuki-navi.hatenablog.com/entry/2021/01/17/203303",
@@ -500,7 +524,7 @@
         "posted": "2020/10/12",
         "updated": "",
         "keyword1": ["#hatenablog", "#machine_learning", "#deep_learning", "tensorflow", "mnist"],
-        "keyword2": ["python", "googlecolab", "image"]
+        "keyword2": ["python", "googlecolab", "#image"]
     },
     {
         "url": "https://suzuki-navi.hatenablog.com/entry/2020/10/11/075820",
@@ -580,7 +604,7 @@
         "posted": "2020/09/28",
         "updated": "",
         "keyword1": ["#hatenablog", "#machine_learning", "#deep_learning", "tensorflow", "mnist"],
-        "keyword2": ["python", "googlecolab", "matplotlib", "image"]
+        "keyword2": ["python", "googlecolab", "matplotlib", "#image"]
     },
     {
         "url": "https://github.com/suzuki-navi/atcoder/blob/master/cheetsheet/sort/READMD.md",
@@ -612,7 +636,7 @@
         "posted": "2020/09/23",
         "updated": "",
         "keyword1": ["#hatenablog", "#machine_learning", "#deep_learning", "tensorflow", "mnist"],
-        "keyword2": ["python", "googlecolab", "matplotlib", "image"]
+        "keyword2": ["python", "googlecolab", "matplotlib", "#image"]
     },
     {
         "url": "https://suzuki-navi.hatenablog.com/entry/2020/09/22/073756",
@@ -1602,13 +1626,31 @@
         "keyword3": []
     },
     {
+        "url": "https://hydrocul.github.io/wiki/programming_languages_diff/list/foreach.html",
+        "title": "配列(リスト)の要素を1つずつ処理するには",
+        "posted": "",
+        "updated": "",
+        "keyword1": ["#github_wiki", "#programming", "java", "scala", "javascript", "php", "perl", "coffeescript", "ruby", "python", "sh"],
+        "keyword2": [],
+        "keyword3": ["list", "array", "for", "foreach", "each"]
+    },
+    {
+        "url": "https://hydrocul.github.io/wiki/programming_languages_diff/list/size.html",
+        "title": "配列(リスト)の要素数を取得するには",
+        "posted": "",
+        "updated": "",
+        "keyword1": ["#github_wiki", "#programming", "java", "scala", "javascript", "php", "perl", "golang", "ruby", "python"],
+        "keyword2": [],
+        "keyword3": ["list", "array", "count", "len", "length", "size", "sizeof"]
+    },
+    {
         "url": "https://hydrocul.github.io/wiki/programming_languages_diff/map/contains-key.html",
         "title": "連想配列(マップ/ハッシュ/ディクショナリ)に特定のキーの有無を判定するには",
         "posted": "",
         "updated": "",
         "keyword1": ["#github_wiki", "#programming", "java", "scala", "javascript", "php", "perl", "ruby", "python"],
         "keyword2": [],
-        "keyword3": ["containsKey", "contains", "array_key_exists", "isset", "in", "has_key", "key", "include", "member", "exists"]
+        "keyword3": ["map", "hash", "dictionary", "containsKey", "contains", "array_key_exists", "isset", "in", "has_key", "key", "include", "member", "exists"]
     },
     {
         "url": "https://hydrocul.github.io/wiki/programming_languages_diff/map/size.html",
@@ -1617,7 +1659,7 @@
         "updated": "",
         "keyword1": ["#github_wiki", "#programming", "java", "scala", "javascript", "php", "perl", "ruby", "python"],
         "keyword2": [],
-        "keyword3": ["size", "count", "sizeof", "len", "length"]
+        "keyword3": ["map", "hash", "dictionary", "size", "count", "sizeof", "len", "length"]
     },
     {
         "url": "https://hydrocul.github.io/wiki/programming_languages_diff/exception/try.html",

@@ -111,7 +111,7 @@ $(function(){
             result1.push(article2);
         }
         if (query == "") {
-            const recent_count = 15;
+            const recent_count = 20;
             result1 = searchByKeyword("", result1, false);
             if (result1.length > recent_count) {
                 result1 = result1.slice(0, recent_count);
@@ -521,7 +521,7 @@ $(function(){
             {tag: "#my_open_sources",  categories: [["thema2", "作っているもの"]]},
             {tag: "#my_cases",         categories: [["thema2", "主な公開事例"]]},
 
-            {tag: "gcp",               categories: [["cloud_gcp", "GCP"]]},
+            {tag: "gcp",               categories: [["cloud_gcp", "Google Cloud"]]},
             {tag: "bigquery",          categories: [["cloud_gcp", "BigQuery"]]},
             {tag: "cloudsql",          categories: [["cloud_gcp", "Cloud SQL"]]},
             {tag: "computeengine",     categories: [["cloud_gcp", "Compute Engine"]]},
@@ -559,7 +559,7 @@ $(function(){
             {tag: "ruby",       categories: [["lang", "Ruby"]]},
             {tag: "python",     categories: [["lang", "Python"]]},
             {tag: "elixir",     categories: [["lang", "Elixir"]]},
-            {tag: "powershell", categories: [["lang", "PowerShell"]]},
+            {tag: "powershell", categories: [["other_more", "PowerShell"]]},
 
             {tag: "postgresql", categories: [["software", "PostgreSQL"]]},
             {tag: "fluentd", categories: [["software", "Fluentd"]]},
@@ -571,12 +571,13 @@ $(function(){
             {tag: "tableau", categories: [["software", "Tableau"]]},
             {tag: "jupyter", categories: [["software", "Jupyter Notebook"]]},
             {tag: "polynote", categories: [["software", "Polynote"]]},
+            {tag: "googlecolab", categories: [["software", "Google Colaboratory"]]},
             {tag: "tensorflow", categories: [["software", "TensorFlow"]]},
             {tag: "matplotlib", categories: [["software", "Matplotlib"]]},
             {tag: "talend", categories: [["software", "Talend"]]},
             {tag: "dbeaver", categories: [["software", "DBeaver"]]},
 
-            {tag: "command", categories: [["command", "Linuxコマンド"]]},
+            {tag: "command", categories: [["other", "Linuxコマンド"], ["command", "Linuxコマンド"]]},
             {tag: "git", categories: [["command", "git"]]},
             {tag: "diff", categories: [["command", "diff"]]},
             {tag: "sed", categories: [["command", "sed"]]},
@@ -613,14 +614,21 @@ $(function(){
             {tag: "#unlisted", categories: [["hidden", ""]]},
             {tag: "#natural_language_processing", categories: [["hidden", "自然言語処理"]]},
 
-            {tag: "raspberry_pi", categories: [["other", "Raspberry Pi"]]},
             {tag: "atcoder", categories: [["other", "AtCoder"]]},
+            {tag: "raspberry_pi", categories: [["other", "Raspberry Pi"]]},
+            {tag: "#serverless", categories: [["other", "サーバレス"]]},
+            {tag: "#front_end", categories: [["other", "フロントエンド"]]},
+            {tag: "#deep_learning", categories: [["other", "深層学習"]]},
+            {tag: "serverless_framework", categories: [["other", "Serverless Framework"]]},
+            {tag: "#image", categories: [["other", "画像処理"]]},
+            {tag: "#movie", categories: [["other", "動画処理"]]},
             {tag: "#numerical_analysis", categories: [["other_more", "数値計算"]]},
             {tag: "#probability_distribution", categories: [["other_more", "確率分布"]]},
             {tag: "#gradient_descent", categories: [["other_more", "勾配降下法"]]},
             {tag: "#network", categories: [["other_more", "ネットワーク"]]},
-            {tag: "googlecolab", categories: [["other_more", "Google Colaboratory"]]},
             {tag: "#piano", categories: [["other_more", "ピアノ"]]},
+            {tag: "aws_sdk", categories: [["other_more", "AWS SDK"]]},
+            {tag: "boto3", categories: [["other_more", "boto3"]]},
         ];
     }
     function keywordDatabaseByTag(tag) {
@@ -686,7 +694,7 @@ $(function(){
               </span></p>
             </div>
             <div>
-              <h2>クラウド環境記事 - GCP</h2>
+              <h2>クラウド環境記事 - Google Cloud</h2>
               <p><span v-for="(tag, idx) in categorized.cloud_gcp">
                 <span v-if="idx>0" class="font-small"> / </span>
                 <a v-bind:href="'#' + tag[0]" v-on:click.prevent.stop="gotoTagPage(tag[0]);" v-bind:class="(tag[1]<3)? 'font-small':''">{{ tag[2] }}({{ tag[1] }})</a>
@@ -713,6 +721,7 @@ $(function(){
                 <a v-bind:href="'#' + tag[0]" v-on:click.prevent.stop="gotoTagPage(tag[0]);" v-bind:class="(tag[1]<3)? 'font-small':''">{{ tag[2] }}({{ tag[1] }})</a>
               </span></p>
             </div>
+<!--
             <div>
               <h2>Linuxコマンドの記事</h2>
               <p><span v-for="(tag, idx) in categorized.command">
@@ -720,6 +729,7 @@ $(function(){
                 <a v-bind:href="'#' + tag[0]" v-on:click.prevent.stop="gotoTagPage(tag[0]);" v-bind:class="(tag[1]<3)? 'font-small':''">{{ tag[2] }}({{ tag[1] }})</a>
               </span></p>
             </div>
+-->
             <div>
               <h2>その他</h2>
               <p><span v-for="(tag, idx) in categorized.thema">
