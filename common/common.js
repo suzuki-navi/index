@@ -619,9 +619,9 @@ $(function(){
             {tag: "#serverless", categories: [["other", "サーバレス"]]},
             {tag: "#front_end", categories: [["other", "フロントエンド"]]},
             {tag: "#deep_learning", categories: [["other", "深層学習"]]},
-            {tag: "serverless_framework", categories: [["other", "Serverless Framework"]]},
+            {tag: "serverless_framework", categories: [["other", "Serverless Framework"], ["recently", "Serverless Framework"]]},
             {tag: "#image", categories: [["other", "画像処理"]]},
-            {tag: "#movie", categories: [["other", "動画処理"]]},
+            {tag: "#movie", categories: [["other", "動画処理"], ["recently", "動画関係"]]},
             {tag: "#numerical_analysis", categories: [["other_more", "数値計算"]]},
             {tag: "#probability_distribution", categories: [["other_more", "確率分布"]]},
             {tag: "#gradient_descent", categories: [["other_more", "勾配降下法"]]},
@@ -688,7 +688,8 @@ $(function(){
     function tagsTemplate(id) {
         return `
             <div>
-              <p><span v-for="(tag, idx) in categorized.thema2">
+              <h2>最近のテーマ</h2>
+              <p><span v-for="(tag, idx) in categorized.recently">
                 <span v-if="idx>0" class="font-small"> / </span>
                 <a v-bind:href="'#' + tag[0]" v-on:click.prevent.stop="gotoTagPage(tag[0]);">{{ tag[2] }}</a>
               </span></p>
@@ -748,6 +749,12 @@ $(function(){
                 <span v-if="idx>0" class="font-small"> / </span>
                 <a v-bind:href="'#' + tag[0]" v-on:click.prevent.stop="gotoTagPage(tag[0]);" v-bind:class="(tag[1]<3)? 'font-small':''">{{ tag[2] }}({{ tag[1] }})</a>
               </span>
+              </span></p>
+            </div>
+            <div>
+              <p><span v-for="(tag, idx) in categorized.thema2">
+                <span v-if="idx>0" class="font-small"> / </span>
+                <a v-bind:href="'#' + tag[0]" v-on:click.prevent.stop="gotoTagPage(tag[0]);">{{ tag[2] }}</a>
               </span></p>
             </div>
             <p>
@@ -883,7 +890,7 @@ $(function(){
                 <img src="search-2.png">
               </p>
             </section>
-            <section v-if="global_query.query=='#tags'">` + tagsTemplate(1) + `
+            <section v-if="global_query.query=='#tags'" class="tagsindex">` + tagsTemplate(1) + `
             </section>
             <section v-if="global_query.query==''">
               <p class="image">
@@ -923,7 +930,7 @@ $(function(){
                 });
             },
         },
-        template: "<div>" + tagsTemplate(2) + "</div>",
+        template: "<div class=\"tagsindex\">" + tagsTemplate(2) + "</div>",
     });
     Vue.component("articles-count", {
         props: ["query"],

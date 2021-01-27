@@ -168,3 +168,13 @@ label {
 #othertags-2-checkbox:checked ~ #othertags-2 {
   display: inline;
 }
+
+.tagsindex > div {
+  margin-bottom: 20px;
+}
+.tagsindex > div > h2 {
+  margin-bottom: 0px;
+}
+.tagsindex > div > h2 + p {
+  margin-top: 0px;
+}

@@ -1,11 +1,27 @@
 [
     {
+        "url": "https://suzuki-navi.hatenablog.com/entry/2021/01/27/170731",
+        "title": "OpenCVからPillowに画像データを変換",
+        "posted": "2021/01/27",
+        "updated": "",
+        "keyword1": ["#hatenablog", "#movie", "#image", "pillow", "opencv"],
+        "keyword2": ["numpy", "python"]
+    },
+    {
+        "url": "https://qiita.com/suzuki-navi/items/8cef957e3938ffd1f79e",
+        "title": "動画ファイルからフレームを並べてサムネイルを作成",
+        "posted": "2021/01/26",
+        "updated": "",
+        "keyword1": ["#qiita", "#movie", "opencv"],
+        "keyword2": ["python"]
+    },
+    {
         "url": "https://qiita.com/suzuki-navi/items/ffe449c95fb6e1faf891",
         "title": "動画ファイルからサイズ情報やサムネイルをPythonのOpenCVで取得",
         "posted": "2021/01/25",
         "updated": "",
-        "keyword1": ["#qiita", "python", "#movie"],
-        "keyword2": []
+        "keyword1": ["#qiita", "#movie", "opencv"],
+        "keyword2": ["python"]
     },
     {
         "url": "https://suzuki-navi.hatenablog.com/entry/2021/01/24/135035",
@@ -28,7 +44,7 @@
         "title": "JPG画像ファイルのサムネイルをPythonで生成",
         "posted": "2020/12/27",
         "updated": "2021/01/22",
-        "keyword1": ["#hatenablog", "python", "#image"],
+        "keyword1": ["#hatenablog", "python", "#image", "pillow"],
         "keyword2": []
     },
     {
@@ -1651,6 +1667,15 @@
         "keyword1": ["#github_wiki", "#programming", "java", "scala", "javascript", "php", "perl", "ruby", "python"],
         "keyword2": [],
         "keyword3": ["map", "hash", "dictionary", "containsKey", "contains", "array_key_exists", "isset", "in", "has_key", "key", "include", "member", "exists"]
+    },
+    {
+        "url": "https://hydrocul.github.io/wiki/programming_languages_diff/map/get.html",
+        "title": "連想配列(マップ/ハッシュ/ディクショナリ)の要素の値を参照するには",
+        "posted": "",
+        "updated": "",
+        "keyword1": ["#github_wiki", "#programming", "java", "scala", "javascript", "php", "perl", "ruby", "python"],
+        "keyword2": [],
+        "keyword3": ["map", "hash", "dictionary", "get", "getOrElse", "fetch", "[]"]
     },
     {
         "url": "https://hydrocul.github.io/wiki/programming_languages_diff/map/size.html",
