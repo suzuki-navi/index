@@ -1,5 +1,13 @@
 [
     {
+        "url": "https://suzuki-navi.hatenablog.com/entry/2021/01/29/181135",
+        "title": "AWS Lambda + Python + Serverless FrameworkのLayerにpipインストール",
+        "posted": "2021/01/29",
+        "updated": "",
+        "keyword1": ["#hatenablog", "aws", "lambda", "serverless_framework", "#serverless"],
+        "keyword2": ["python"]
+    },
+    {
         "url": "https://suzuki-navi.hatenablog.com/entry/2021/01/27/170731",
         "title": "OpenCVからPillowに画像データを変換",
         "posted": "2021/01/27",
@@ -1640,6 +1648,15 @@
         "keyword1": ["#github_wiki", "command", "sed"],
         "keyword2": ["perl", "tail"],
         "keyword3": []
+    },
+    {
+        "url": "https://hydrocul.github.io/wiki/programming_languages_diff/list/concat.html",
+        "title": "複数の配列(リスト)を連結するには",
+        "posted": "",
+        "updated": "",
+        "keyword1": ["#github_wiki", "#programming", "scala", "javascript", "php", "ruby"],
+        "keyword2": [],
+        "keyword3": ["list", "array", "array_merge", "concat", "+", "++", ":++", "++:"]
     },
     {
         "url": "https://hydrocul.github.io/wiki/programming_languages_diff/list/foreach.html",
