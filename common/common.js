@@ -824,9 +824,6 @@ $(function(){
             <section v-if="global_query.query=='#math'">
               <p class="image"><a href="https://tech.naviplus.co.jp/2014/02/27/%e4%b8%8d%e5%81%8f%e5%88%86%e6%95%a3%e3%81%af%e3%81%aa%e3%81%9c-n-1-%e3%81%a7%e5%89%b2%e3%82%8b%e3%81%ae%e3%81%8b%ef%bc%9f/"><img src="math.png"></a></p>
             </section>
-            <section v-if="global_query.query=='command'">
-              <p class="image"><a href="https://qiita.com/suzuki-navi/items/fdcb166f32b28bc0ff82"><img src="cli.png"></a></p>
-            </section>
             <section v-if="global_query.query=='git'">
               <p class="image"><a href="https://qiita.com/suzuki-navi/items/fdcb166f32b28bc0ff82"><img src="cli.png"></a></p>
             </section>
@@ -874,6 +871,9 @@ $(function(){
               <ul>
                 <li><a href="https://github.com/xsvutils/xsvutils">xsvutils (2017/12 〜)</a>
                   <p>CSVファイルやTSVファイルをCUIで扱うツール。</p>
+                </li>
+                <li><a href="https://github.com/suzuki-navi/suzuki-navi-calendar">suzuki-navi's calendar</a>
+                  <p>自分専用カレンダーコマンド</p>
                 </li>
               </ul>
             </section>

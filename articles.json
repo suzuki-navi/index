@@ -1,10 +1,37 @@
 [
     {
+        "url": "https://suzuki-navi.hatenablog.com/entry/2021/02/24/214413",
+        "title": "Pythonの自作パッケージにリソースファイルを含めるには",
+        "posted": "2021/02/24",
+        "updated": "",
+        "keyword1": ["#hatenablog", "python"],
+        "keyword2": [""],
+        "keyword3": ["pip", "install"]
+    },
+    {
+        "url": "https://github.com/suzuki-navi/suzuki-navi-calendar",
+        "title": "suzuki-navi's calendar",
+        "posted": "2021/02/21",
+        "updated": "",
+        "keyword1": ["command"],
+        "keyword2": ["ruby"],
+        "keyword3": ["gem", "holiday", "cal"]
+    },
+    {
+        "url": "https://suzuki-navi.hatenablog.com/entry/2021/02/15/211134",
+        "title": "S3バケットのオブジェクト数をawscliで確認",
+        "posted": "2021/02/15",
+        "updated": "",
+        "keyword1": ["#hatenablog", "#data_store", "aws", "s3", "awscli", "cloudwatch"],
+        "keyword2": [""],
+        "keyword3": ["s3", "ls", "tail", "wc", "cloudwatch", "get-metric-data"]
+    },
+    {
         "url": "https://suzuki-navi.hatenablog.com/entry/2021/02/14/170224",
         "title": "大きなファイルをS3にawsliでMultipart Upload",
         "posted": "2021/02/14",
         "updated": "",
-        "keyword1": ["#hatenablog", "aws", "s3", "awscli"],
+        "keyword1": ["#hatenablog", "#data_input", "aws", "s3", "awscli"],
         "keyword2": ["python", "boto3"],
         "keyword3": ["s3api", "create-multi-upload", "upload-part", "complete-multipart-upload", "head", "tail"]
     },
@@ -1688,6 +1715,24 @@
         "keyword3": ["list", "array", "for", "foreach", "each"]
     },
     {
+        "url": "https://hydrocul.github.io/wiki/programming_languages_diff/list/head.html",
+        "title": "配列(リスト)の先頭の要素を取得するには",
+        "posted": "",
+        "updated": "",
+        "keyword1": ["#github_wiki", "#programming", "java", "scala", "php", "perl", "golang", "ruby", "python"],
+        "keyword2": [],
+        "keyword3": ["list", "array", "first", "head", "headOption"]
+    },
+    {
+        "url": "https://hydrocul.github.io/wiki/programming_languages_diff/list/last.html",
+        "title": "配列(リスト)の最後の要素を取得するには",
+        "posted": "",
+        "updated": "",
+        "keyword1": ["#github_wiki", "#programming", "java", "scala", "perl", "golang", "ruby", "python"],
+        "keyword2": [],
+        "keyword3": ["list", "array", "last", "lastOption"]
+    },
+    {
         "url": "https://hydrocul.github.io/wiki/programming_languages_diff/list/size.html",
         "title": "配列(リスト)の要素数を取得するには",
         "posted": "",
@@ -1695,6 +1740,15 @@
         "keyword1": ["#github_wiki", "#programming", "java", "scala", "javascript", "php", "perl", "golang", "ruby", "python"],
         "keyword2": [],
         "keyword3": ["list", "array", "count", "len", "length", "size", "sizeof"]
+    },
+    {
+        "url": "https://hydrocul.github.io/wiki/programming_languages_diff/list/tail.html",
+        "title": "配列(リスト)の先頭以外の残りの要素を配列で取得するには",
+        "posted": "",
+        "updated": "",
+        "keyword1": ["#github_wiki", "#programming", "scala", "php", "golang", "ruby", "python", "sh"],
+        "keyword2": [],
+        "keyword3": ["list", "array", "tail", "array_slice", "drop"]
     },
     {
         "url": "https://hydrocul.github.io/wiki/programming_languages_diff/map/contains-key.html",
@@ -1713,6 +1767,15 @@
         "keyword1": ["#github_wiki", "#programming", "java", "scala", "javascript", "php", "perl", "ruby", "python"],
         "keyword2": [],
         "keyword3": ["map", "hash", "dictionary", "get", "getOrElse", "fetch", "[]"]
+    },
+    {
+        "url": "https://hydrocul.github.io/wiki/programming_languages_diff/map/overview.html",
+        "title": "連想配列(マップ/ハッシュ/ディクショナリ)の概要",
+        "posted": "",
+        "updated": "",
+        "keyword1": ["#github_wiki", "#programming", "java", "scala", "javascript", "php", "perl", "coffeescript", "ruby", "python"],
+        "keyword2": [],
+        "keyword3": ["map", "hash", "dictionary"]
     },
     {
         "url": "https://hydrocul.github.io/wiki/programming_languages_diff/map/size.html",
