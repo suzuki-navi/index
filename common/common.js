@@ -875,6 +875,9 @@ $(function(){
                 <li><a href="https://github.com/suzuki-navi/suzuki-navi-calendar">suzuki-navi's calendar</a>
                   <p>自分専用カレンダーコマンド</p>
                 </li>
+                <li><a href="https://github.com/suzuki-navi/aws-glue-job-history">aws-glue-job-history</a>
+                  <p>AWS Glue Jobの実行履歴を表示するコマンド</p>
+                </li>
               </ul>
             </section>
             <section v-if="global_query.query=='#my_cases'">

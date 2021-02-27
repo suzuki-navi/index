@@ -1,5 +1,32 @@
 [
     {
+        "url": "https://github.com/suzuki-navi/aws-glue-job-history",
+        "title": "aws-glue-job-history",
+        "posted": "2021/02/27",
+        "updated": "",
+        "keyword1": ["#github_repository", "command", "aws", "glue"],
+        "keyword2": ["python", "boto3"],
+        "keyword3": ["pip", "cli", "job", "history"]
+    },
+    {
+        "url": "https://suzuki-navi.hatenablog.com/entry/2021/02/27/154353",
+        "title": "Vue.jsやNuxt.jsの開発用サーバのポート番号を変更する",
+        "posted": "2021/02/27",
+        "updated": "",
+        "keyword1": ["#hatenablog", "#front_end", "vuejs", "nuxtjs"],
+        "keyword2": [],
+        "keyword3": ["npm", "dev", "serve", "port", "vue-cli-service"]
+    },
+    {
+        "url": "https://qiita.com/suzuki-navi/items/d58d402422b784264d95",
+        "title": "OpenCVをAWS Lambda + Python + Serverless Frameworkで動かす",
+        "posted": "2021/02/25",
+        "updated": "",
+        "keyword1": ["#qiita", "aws", "lambda", "serverless_framework", "#serverless", "#movie", "opencv"],
+        "keyword2": ["python", "apigateway", "docker"],
+        "keyword3": ["requirements"]
+    },
+    {
         "url": "https://suzuki-navi.hatenablog.com/entry/2021/02/24/214413",
         "title": "Pythonの自作パッケージにリソースファイルを含めるには",
         "posted": "2021/02/24",
@@ -13,9 +40,9 @@
         "title": "suzuki-navi's calendar",
         "posted": "2021/02/21",
         "updated": "",
-        "keyword1": ["command"],
+        "keyword1": ["#github_repository", "command"],
         "keyword2": ["ruby"],
-        "keyword3": ["gem", "holiday", "cal"]
+        "keyword3": ["gem", "cli", "cal", "holiday", "holiday_japan"]
     },
     {
         "url": "https://suzuki-navi.hatenablog.com/entry/2021/02/15/211134",
@@ -42,7 +69,7 @@
         "updated": "",
         "keyword1": ["#hatenablog", "aws", "lambda", "serverless_framework", "#serverless", "#image", "pillow"],
         "keyword2": ["python", "apigateway"],
-        "keyword3": ["base64"]
+        "keyword3": ["base64", "requirements"]
     },
     {
         "url": "https://suzuki-navi.hatenablog.com/entry/2021/01/29/181135",
@@ -68,7 +95,8 @@
         "posted": "2021/01/26",
         "updated": "",
         "keyword1": ["#qiita", "#movie", "opencv"],
-        "keyword2": ["python"]
+        "keyword2": ["python"],
+        "keyword3": ["cv2", "thumbnail", "hconcat", "vconcat", "resize", "imwrite"]
     },
     {
         "url": "https://qiita.com/suzuki-navi/items/ffe449c95fb6e1faf891",
@@ -76,7 +104,8 @@
         "posted": "2021/01/25",
         "updated": "",
         "keyword1": ["#qiita", "#movie", "opencv"],
-        "keyword2": ["python"]
+        "keyword2": ["python"],
+        "keyword3": ["cv2", "imwrite"]
     },
     {
         "url": "https://suzuki-navi.hatenablog.com/entry/2021/01/24/135035",
@@ -84,7 +113,8 @@
         "posted": "2021/01/24",
         "updated": "",
         "keyword1": ["#hatenablog", "#numerical_analysis", "java", "python"],
-        "keyword2": []
+        "keyword2": [],
+        "keyword3": ["outputstream", "unpack"]
     },
     {
         "url": "https://suzuki-navi.hatenablog.com/entry/2021/01/23/105204",
@@ -92,7 +122,8 @@
         "posted": "2021/01/23",
         "updated": "",
         "keyword1": ["#hatenablog", "#numerical_analysis", "ruby", "java", "scala"],
-        "keyword2": []
+        "keyword2": [],
+        "keyword3": ["pack", "inputstream"]
     },
     {
         "url": "https://suzuki-navi.hatenablog.com/entry/2020/12/27/224601",
@@ -100,7 +131,8 @@
         "posted": "2020/12/27",
         "updated": "2021/01/22",
         "keyword1": ["#hatenablog", "python", "#image", "pillow"],
-        "keyword2": []
+        "keyword2": [],
+        "keyword3": ["thumbnail", "save", "bytesio"]
     },
     {
         "url": "https://suzuki-navi.hatenablog.com/entry/2021/01/20/235808",
