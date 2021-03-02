@@ -1,5 +1,14 @@
 [
     {
+        "url": "https://suzuki-navi.hatenablog.com/entry/2021/03/02/212946",
+        "title": "Python/Perlからdiffコマンドを起動して2つの文字列の差分を表示",
+        "posted": "2021/03/02",
+        "updated": "",
+        "keyword1": ["#hatenablog", "python", "perl"],
+        "keyword2": ["command", "diff"],
+        "keyword3": ["fork", "exec", "pipe", "fifo", "tempfile", "mkdtemp", "tmpdir", "exit", "waitpid", "rmdir", "mkfifo", "unlink", "rm"]
+    },
+    {
         "url": "https://github.com/suzuki-navi/aws-glue-job-history",
         "title": "aws-glue-job-history",
         "posted": "2021/02/27",
@@ -227,7 +236,8 @@
         "posted": "2021/01/05",
         "updated": "",
         "keyword1": ["#hatenablog", "aws", "lambda", "serverless_framework", "#serverless"],
-        "keyword2": ["s3", "python", "javascript", "cloudwatch", "boto3", "aws_sdk"]
+        "keyword2": ["s3", "python", "javascript", "cloudwatch", "boto3", "aws_sdk"],
+        "keyword3": ["deploy", "promise", "get_object"]
     },
     {
         "url": "https://suzuki-navi.hatenablog.com/entry/2021/01/04/211827",
@@ -1781,6 +1791,15 @@
         "keyword1": ["#github_wiki", "#programming", "scala", "php", "golang", "ruby", "python", "sh"],
         "keyword2": [],
         "keyword3": ["list", "array", "tail", "array_slice", "drop"]
+    },
+    {
+        "url": "https://hydrocul.github.io/wiki/programming_languages_diff/list/take.html",
+        "title": "配列(リスト)から先頭のn個のみを配列で取得するには",
+        "posted": "",
+        "updated": "",
+        "keyword1": ["#github_wiki", "#programming", "scala", "php", "perl", "golang", "ruby", "sh"],
+        "keyword2": [],
+        "keyword3": ["list", "array", "take", "first", "array_slice", "splice"]
     },
     {
         "url": "https://hydrocul.github.io/wiki/programming_languages_diff/map/contains-key.html",
