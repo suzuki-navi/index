@@ -869,14 +869,17 @@ $(function(){
             </section>
             <section v-if="global_query.query=='#my_open_sources'">
               <ul>
-                <li><a href="https://github.com/xsvutils/xsvutils">xsvutils (2017/12 〜)</a>
+                <li><a href="https://github.com/xsvutils/xsvutils">xsvutils</a> (2017/12 〜)
                   <p>CSVファイルやTSVファイルをCUIで扱うツール。</p>
                 </li>
-                <li><a href="https://github.com/suzuki-navi/suzuki-navi-calendar">suzuki-navi's calendar</a>
+                <li><a href="https://github.com/suzuki-navi/suzuki-navi-calendar">suzuki-navi's calendar</a> (2021/02 ～)
                   <p>自分専用カレンダーコマンド</p>
                 </li>
-                <li><a href="https://github.com/suzuki-navi/aws-glue-job-history">aws-glue-job-history</a>
+                <li><a href="https://github.com/suzuki-navi/aws-glue-job-history">aws-glue-job-history</a> (2021/02 ～)
                   <p>AWS Glue Jobの実行履歴を表示するコマンド</p>
+                </li>
+                <li><a href="https://github.com/suzuki-navi/j2cli5">j2cli5</a> (2021/03 ～)
+                  <p>Pythonのjinja2の簡易CLI化</p>
                 </li>
               </ul>
             </section>

@@ -1,5 +1,23 @@
 [
     {
+        "url": "https://suzuki-navi.hatenablog.com/entry/2021/03/04/191934",
+        "title": "Vue.js / Nuxt.js / Vuexの書き方のメモ",
+        "posted": "2021/03/04",
+        "updated": "",
+        "keyword1": ["#hatenablog", "#front_end", "vuejs", "nuxtjs"],
+        "keyword2": ["javascript"],
+        "keyword3": ["vuex", "export", "components", "computed", "methods", "created", "state", "mutations", "actions"]
+    },
+    {
+        "url": "https://github.com/suzuki-navi/j2cli5",
+        "title": "j2cli5",
+        "posted": "2021/03/02",
+        "updated": "",
+        "keyword1": ["#github_repository", "command"],
+        "keyword2": ["python"],
+        "keyword3": ["pip", "cli", "jinja2", "template", "j2cli5"]
+    },
+    {
         "url": "https://suzuki-navi.hatenablog.com/entry/2021/03/02/212946",
         "title": "Python/Perlからdiffコマンドを起動して2つの文字列の差分を表示",
         "posted": "2021/03/02",
@@ -1746,6 +1764,15 @@
         "keyword1": ["#github_wiki", "#programming", "scala", "javascript", "php", "ruby"],
         "keyword2": [],
         "keyword3": ["list", "array", "array_merge", "concat", "+", "++", ":++", "++:"]
+    },
+    {
+        "url": "https://hydrocul.github.io/wiki/programming_languages_diff/list/drop.html",
+        "title": "配列(リスト)から先頭のn個を除く残りを配列で取得するには",
+        "posted": "",
+        "updated": "",
+        "keyword1": ["#github_wiki", "#programming", "scala", "php", "golang", "ruby", "python", "sh"],
+        "keyword2": [],
+        "keyword3": ["list", "array", "drop", "array_slice", "slice", "tail"]
     },
     {
         "url": "https://hydrocul.github.io/wiki/programming_languages_diff/list/foreach.html",
