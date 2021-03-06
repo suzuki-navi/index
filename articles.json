@@ -1,5 +1,14 @@
 [
     {
+        "url": "https://suzuki-navi.hatenablog.com/entry/2021/03/06/185133",
+        "title": "AWS SQSを試してみる",
+        "posted": "2021/03/06",
+        "updated": "",
+        "keyword1": ["#hatenablog", "#serverless", "aws", "sqs"],
+        "keyword2": ["python", "cloudformation", "boto3"],
+        "keyword3": ["queue", "output", "describe-stacks", "receive_message", "send_message", "delete_message_batch"]
+    },
+    {
         "url": "https://suzuki-navi.hatenablog.com/entry/2021/03/04/191934",
         "title": "Vue.js / Nuxt.js / Vuexの書き方のメモ",
         "posted": "2021/03/04",
