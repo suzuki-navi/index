@@ -1,5 +1,14 @@
 [
     {
+        "url": "https://qiita.com/suzuki-navi/items/b901ec9741253dfa7ecb",
+        "title": "AWS CloudFormationのデプロイ済みスタックのテンプレートを取得",
+        "posted": "2021/03/08",
+        "updated": "",
+        "keyword1": ["#qiita", "aws", "cloudformation", "jq", "yq", "oneliner"],
+        "keyword2": ["ruby", "python", "boto3"],
+        "keyword3": ["get-template", "yaml", "json"]
+    },
+    {
         "url": "https://suzuki-navi.hatenablog.com/entry/2021/03/06/185133",
         "title": "AWS SQSを試してみる",
         "posted": "2021/03/06",
@@ -85,7 +94,7 @@
         "title": "S3バケットのオブジェクト数をawscliで確認",
         "posted": "2021/02/15",
         "updated": "",
-        "keyword1": ["#hatenablog", "#data_store", "aws", "s3", "awscli", "cloudwatch"],
+        "keyword1": ["#hatenablog", "#data_store", "aws", "s3", "awscli", "cloudwatch", "oneliner"],
         "keyword2": [""],
         "keyword3": ["s3", "ls", "tail", "wc", "cloudwatch", "get-metric-data"]
     },
@@ -191,7 +200,7 @@
         "title": "Linuxのパイプの流れる速度を制限するには",
         "posted": "2021/01/17",
         "updated": "",
-        "keyword1": ["#hatenablog", "command", "pv"],
+        "keyword1": ["#hatenablog", "command", "pv", "oneliner"],
         "keyword2": []
     },
     {
@@ -199,7 +208,7 @@
         "title": "Linuxのパイプの流れの進捗を見守るには",
         "posted": "2019/10/21",
         "updated": "2021/01/17",
-        "keyword1": ["#qiita", "command", "pv"]
+        "keyword1": ["#qiita", "command", "pv", "oneliner"]
     },
     {
         "url": "https://suzuki-navi.hatenablog.com/entry/2021/01/16/201529",
@@ -246,7 +255,7 @@
         "title": "AWS CloudFormationのデプロイ済みスタックのテンプレートをYAMLで取得",
         "posted": "2021/01/07",
         "updated": "",
-        "keyword1": ["#qiita", "aws", "cloudformation", "yq"],
+        "keyword1": ["#qiita", "aws", "cloudformation", "yq", "oneliner"],
         "keyword2": ["ruby", "jq"]
     },
     {
@@ -615,7 +624,7 @@
         "title": "curlコマンドとwgetコマンドでバイナリをPOST",
         "posted": "2020/10/18",
         "updated": "",
-        "keyword1": ["#hatenablog", "command", "curl", "wget"],
+        "keyword1": ["#hatenablog", "command", "curl", "wget", "oneliner"],
         "keyword2": []
     },
     {
@@ -679,7 +688,7 @@
         "title": "sedコマンドでディレクトリ内の全ファイルをテキスト全置換するには",
         "posted": "2020/10/10",
         "updated": "",
-        "keyword1": ["#hatenablog", "command", "sed"],
+        "keyword1": ["#hatenablog", "command", "sed", "oneliner"],
         "keyword2": ["find", "grep", "xargs", "git"]
     },
     {
