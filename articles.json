@@ -1,11 +1,29 @@
 [
     {
+        "url": "https://suzuki-navi.hatenablog.com/entry/2021/03/11/081358",
+        "title": "AWS Step FunctionsのRetryとCatchを使ってみる",
+        "posted": "2021/03/11",
+        "updated": "",
+        "keyword1": ["#hatenablog", "#serverless", "aws", "stepfunctions", "serverless_framework"],
+        "keyword2": ["python"],
+        "keyword3": ["retry", "catch", "loggingconfig", "timeout"]
+    },
+    {
+        "url": "https://suzuki-navi.hatenablog.com/entry/2021/03/09/145419",
+        "title": "WindowsのWSLからテキストのコピペでSSH経由でファイルを送る方法",
+        "posted": "2021/03/09",
+        "updated": "",
+        "keyword1": ["#hatenablog", "command", "wsl"],
+        "keyword2": ["tar", "base64"],
+        "keyword3": ["clip"]
+    },
+    {
         "url": "https://qiita.com/suzuki-navi/items/b901ec9741253dfa7ecb",
         "title": "AWS CloudFormationのデプロイ済みスタックのテンプレートを取得",
         "posted": "2021/03/08",
         "updated": "",
         "keyword1": ["#qiita", "aws", "cloudformation", "jq", "yq", "oneliner"],
-        "keyword2": ["ruby", "python", "boto3"],
+        "keyword2": ["ruby", "python", "boto3", "rds"],
         "keyword3": ["get-template", "yaml", "json"]
     },
     {
@@ -77,7 +95,7 @@
         "posted": "2021/02/24",
         "updated": "",
         "keyword1": ["#hatenablog", "python"],
-        "keyword2": [""],
+        "keyword2": [],
         "keyword3": ["pip", "install"]
     },
     {
@@ -95,12 +113,12 @@
         "posted": "2021/02/15",
         "updated": "",
         "keyword1": ["#hatenablog", "#data_store", "aws", "s3", "awscli", "cloudwatch", "oneliner"],
-        "keyword2": [""],
+        "keyword2": [],
         "keyword3": ["s3", "ls", "tail", "wc", "cloudwatch", "get-metric-data"]
     },
     {
         "url": "https://suzuki-navi.hatenablog.com/entry/2021/02/14/170224",
-        "title": "大きなファイルをS3にawsliでMultipart Upload",
+        "title": "大きなファイルをS3にawscliでMultipart Upload",
         "posted": "2021/02/14",
         "updated": "",
         "keyword1": ["#hatenablog", "#data_input", "aws", "s3", "awscli"],
@@ -601,7 +619,7 @@
         "posted": "2020/10/23",
         "updated": "",
         "keyword1": ["#qiita", "aws"],
-        "keyword2": ["rds", "dynamodb", "dms"]
+        "keyword2": ["rds", "aurora", "dynamodb", "dms"]
     },
     {
         "url": "https://suzuki-navi.hatenablog.com/entry/2020/10/22/232345",
@@ -1527,9 +1545,10 @@
         "url": "https://qiita.com/suzuki-navi/items/b5f066db181092543854",
         "title": "Perlで warning: Setting locale failed. と警告された時の対処",
         "posted": "2020/01/13",
-        "updated": "",
+        "updated": "2021/03/08",
         "keyword1": ["#qiita", "perl"],
-        "keyword2": ["ubuntu"]
+        "keyword2": ["ubuntu", "centos", "docker"],
+        "keyword3": ["locale", "langpack", "glibc"]
     },
     {
         "url": "https://qiita.com/suzuki-navi/items/1609cfaefb5b4c16133e",

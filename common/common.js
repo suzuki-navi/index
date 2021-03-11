@@ -538,6 +538,9 @@ $(function(){
             {tag: "documentdb", categories: [["cloud_aws", "DocumentDB"]]},
             {tag: "lambda",     categories: [["cloud_aws", "Lambda"]]},
             {tag: "apigateway", categories: [["cloud_aws", "API Gateway"]]},
+            {tag: "sqs",        categories: [["cloud_aws", "SQS"]]},
+            {tag: "aws_sns",        categories: [["cloud_aws", "SNS"]]},
+            {tag: "stepfunctions",  categories: [["cloud_aws", "Step Functions"]]},
             {tag: "alb",        categories: [["cloud_aws", "ALB"]]},
             {tag: "cognito",    categories: [["cloud_aws", "Cognito"]]},
             {tag: "glue",       categories: [["cloud_aws", "Glue"]]},
@@ -545,6 +548,11 @@ $(function(){
             {tag: "cloudformation", categories: [["cloud_aws", "CloudFormation"]]},
             {tag: "cloudwatch", categories: [["cloud_aws", "CloudWatch"]]},
             {tag: "cloudtrail", categories: [["cloud_aws", "CloudTrail"]]},
+            {tag: "ec2",    categories: [["cloud_aws", "EC2"]]},
+            {tag: "dms",    categories: [["cloud_aws", "DMS"]]},
+            {tag: "athena",    categories: [["cloud_aws", "Athena"]]},
+            {tag: "aws_sdk", categories: [["cloud_aws", "SDK"]]},
+            {tag: "boto3", categories: [["cloud_aws", "boto3"]]},
 
             {tag: "scala",      categories: [["lang", "Scala"]]},
             {tag: "java",       categories: [["lang", "Java"]]},
@@ -602,7 +610,7 @@ $(function(){
             //{tag: "pwsh", categories: [["command", "pwsh"]]},
             //{tag: "gsutil",  categories: [["command", "gsutil"], ["cloud_gcp", "gsutil"]]},
             //{tag: "bq",      categories: [["command", "bq"],     ["cloud_gcp", "bq"]]},
-            //{tag: "awscli",  categories: [["command", "aws"],    ["cloud_aws", "awscli"]]},
+            {tag: "awscli",  categories: [["command", "aws"],    ["cloud_aws", "awscli"]]},
 
             {tag: "#naviplus", categories: [["hidden", ""]]},
             {tag: "#beex", categories: [["hidden", ""]]},
@@ -627,8 +635,6 @@ $(function(){
             {tag: "#gradient_descent", categories: [["other_more", "勾配降下法"]]},
             {tag: "#network", categories: [["other_more", "ネットワーク"]]},
             {tag: "#piano", categories: [["other_more", "ピアノ"]]},
-            {tag: "aws_sdk", categories: [["other_more", "AWS SDK"]]},
-            {tag: "boto3", categories: [["other_more", "boto3"]]},
         ];
     }
     function keywordDatabaseByTag(tag) {
