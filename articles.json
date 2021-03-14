@@ -1,5 +1,14 @@
 [
     {
+        "url": "https://qiita.com/suzuki-navi/items/ac6de24a138f4a5fd585",
+        "title": "エスケープシーケンスでターミナルにカラー表示するチートシート",
+        "posted": "2021/03/14",
+        "updated": "",
+        "keyword1": ["#qiita"],
+        "keyword2": ["ruby", "python", "php", "perl", "javascript", "scala", "java"],
+        "keyword3": ["escape"]
+    },
+    {
         "url": "https://suzuki-navi.hatenablog.com/entry/2021/03/11/081358",
         "title": "AWS Step FunctionsのRetryとCatchを使ってみる",
         "posted": "2021/03/11",
