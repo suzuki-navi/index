@@ -1,5 +1,14 @@
 [
     {
+        "url": "https://suzuki-navi.hatenablog.com/entry/2021/03/18/013426",
+        "title": "Python/Perlから子プロセスの標準入力にデータを渡す",
+        "posted": "2021/03/18",
+        "updated": "",
+        "keyword1": ["#hatenablog", "python", "perl"],
+        "keyword2": ["command", "wc"],
+        "keyword3": ["fork", "exec", "pipe", "waitpid", "dup2", "fdopen"]
+    },
+    {
         "url": "https://suzuki-navi.hatenablog.com/entry/2021/03/17/010746",
         "title": "gcloudコマンドをUbuntuにインストール",
         "posted": "2021/03/17",
