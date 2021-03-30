@@ -692,6 +692,7 @@ $(function(){
         }
     }
     function tagsTemplate(id) {
+        let thres = 4;
         return `
             <div>
               <h2>最近のテーマ</h2>
@@ -704,28 +705,28 @@ $(function(){
               <h2>クラウド環境記事 - Google Cloud</h2>
               <p><span v-for="(tag, idx) in categorized.cloud_gcp">
                 <span v-if="idx>0" class="font-small"> / </span>
-                <a v-bind:href="'#' + tag[0]" v-on:click.prevent.stop="gotoTagPage(tag[0]);" v-bind:class="(tag[1]<3)? 'font-small':''">{{ tag[2] }}({{ tag[1] }})</a>
+                <a v-bind:href="'#' + tag[0]" v-on:click.prevent.stop="gotoTagPage(tag[0]);" v-bind:class="(tag[1]<` + thres + `)? 'font-small':''">{{ tag[2] }}({{ tag[1] }})</a>
               </span></p>
             </div>
             <div>
               <h2>クラウド環境記事 - AWS</h2>
               <p><span v-for="(tag, idx) in categorized.cloud_aws">
                 <span v-if="idx>0" class="font-small"> / </span>
-                <a v-bind:href="'#' + tag[0]" v-on:click.prevent.stop="gotoTagPage(tag[0]);" v-bind:class="(tag[1]<3)? 'font-small':''">{{ tag[2] }}({{ tag[1] }})</a>
+                <a v-bind:href="'#' + tag[0]" v-on:click.prevent.stop="gotoTagPage(tag[0]);" v-bind:class="(tag[1]<` + thres + `)? 'font-small':''">{{ tag[2] }}({{ tag[1] }})</a>
               </span></p>
             </div>
             <div>
               <h2>プログラミング言語別記事</h2>
               <p><span v-for="(tag, idx) in categorized.lang">
                 <span v-if="idx>0" class="font-small"> / </span>
-                <a v-bind:href="'#' + tag[0]" v-on:click.prevent.stop="gotoTagPage(tag[0]);" v-bind:class="(tag[1]<3)? 'font-small':''">{{ tag[2] }}({{ tag[1] }})</a>
+                <a v-bind:href="'#' + tag[0]" v-on:click.prevent.stop="gotoTagPage(tag[0]);" v-bind:class="(tag[1]<` + thres + `)? 'font-small':''">{{ tag[2] }}({{ tag[1] }})</a>
               </span></p>
             </div>
             <div>
               <h2>ソフトウェア別記事</h2>
               <p><span v-for="(tag, idx) in categorized.software">
                 <span v-if="idx>0" class="font-small"> / </span>
-                <a v-bind:href="'#' + tag[0]" v-on:click.prevent.stop="gotoTagPage(tag[0]);" v-bind:class="(tag[1]<3)? 'font-small':''">{{ tag[2] }}({{ tag[1] }})</a>
+                <a v-bind:href="'#' + tag[0]" v-on:click.prevent.stop="gotoTagPage(tag[0]);" v-bind:class="(tag[1]<` + thres + `)? 'font-small':''">{{ tag[2] }}({{ tag[1] }})</a>
               </span></p>
             </div>
 <!--
@@ -733,7 +734,7 @@ $(function(){
               <h2>Linuxコマンドの記事</h2>
               <p><span v-for="(tag, idx) in categorized.command">
                 <span v-if="idx>0" class="font-small"> / </span>
-                <a v-bind:href="'#' + tag[0]" v-on:click.prevent.stop="gotoTagPage(tag[0]);" v-bind:class="(tag[1]<3)? 'font-small':''">{{ tag[2] }}({{ tag[1] }})</a>
+                <a v-bind:href="'#' + tag[0]" v-on:click.prevent.stop="gotoTagPage(tag[0]);" v-bind:class="(tag[1]<` + thres + `)? 'font-small':''">{{ tag[2] }}({{ tag[1] }})</a>
               </span></p>
             </div>
 -->
@@ -745,7 +746,7 @@ $(function(){
               </span></p>
               <p><span v-for="(tag, idx) in categorized.other">
                 <span v-if="idx>0" class="font-small"> / </span>
-                <a v-bind:href="'#' + tag[0]" v-on:click.prevent.stop="gotoTagPage(tag[0]);" v-bind:class="(tag[1]<3)? 'font-small':''">{{ tag[2] }}({{ tag[1] }})</a>
+                <a v-bind:href="'#' + tag[0]" v-on:click.prevent.stop="gotoTagPage(tag[0]);" v-bind:class="(tag[1]<` + thres + `)? 'font-small':''">{{ tag[2] }}({{ tag[1] }})</a>
               </span>
               <span class="font-small"> / </span>
               <input type="checkbox" id="othertags-` + id + `-checkbox">
@@ -753,7 +754,7 @@ $(function(){
               <span id="othertags-` + id + `">
               <span v-for="(tag, idx) in categorized.other_more">
                 <span v-if="idx>0" class="font-small"> / </span>
-                <a v-bind:href="'#' + tag[0]" v-on:click.prevent.stop="gotoTagPage(tag[0]);" v-bind:class="(tag[1]<3)? 'font-small':''">{{ tag[2] }}({{ tag[1] }})</a>
+                <a v-bind:href="'#' + tag[0]" v-on:click.prevent.stop="gotoTagPage(tag[0]);" v-bind:class="(tag[1]<` + thres + `)? 'font-small':''">{{ tag[2] }}({{ tag[1] }})</a>
               </span>
               </span></p>
             </div>
