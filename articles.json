@@ -1,5 +1,14 @@
 [
     {
+        "url": "https://qiita.com/suzuki-navi/items/b12e1e662b2dbd288929",
+        "title": "Google Cloud TranslationのAPIをローカルのNode.jsから試してみる",
+        "posted": "2021/04/03",
+        "updated": "",
+        "keyword1": ["#qiita", "#natural_language_processing", "gcp", "cloudtranslation"],
+        "keyword2": ["javascript"],
+        "keyword3": ["google-cloud/translate", "translationserviceclient", "translatetext", "detectlanguage"]
+    },
+    {
         "url": "https://qiita.com/suzuki-navi/items/c4a89d0cbd1f0e075fce",
         "title": "S3の特定のフォルダのみを許可するIAMポリシー",
         "posted": "2021/03/31",
@@ -1737,7 +1746,9 @@
         "title": "言語の判定をGoogle Cloud TranslationとAmazon Comprehendとで比較してみる",
         "posted": "2019/11/08",
         "updated": "",
-        "keyword1": ["#qiita", "#natural_language_processing", "aws", "gcp", "cloudtranslation", "comprehend"]
+        "keyword1": ["#qiita", "#natural_language_processing", "aws", "gcp", "cloudtranslation", "comprehend"],
+        "keyword2": ["python", "boto3"],
+        "keyword3": ["translate_v2", "detect_language", "google-cloud-translate", "detect_dominant_language"]
     },
     {
         "url": "https://qiita.com/suzuki-navi/items/37615024d4748aac6688",
