@@ -1,5 +1,14 @@
 [
     {
+        "url": "https://qiita.com/suzuki-navi/items/2600dc5c804daa4dc90c",
+        "title": "FirebaseのCloud FunctionsからGoogle Cloud Translationを試してみる",
+        "posted": "2021/04/04",
+        "updated": "",
+        "keyword1": ["#qiita", "#natural_language_processing", "#serverless", "gcp", "cloudtranslation", "firebase", "cloudfunctions"],
+        "keyword2": ["javascript"],
+        "keyword3": ["google-cloud/translate", "translationserviceclient", "translatetext", "detectlanguage"]
+    },
+    {
         "url": "https://qiita.com/suzuki-navi/items/b12e1e662b2dbd288929",
         "title": "Google Cloud TranslationのAPIをローカルのNode.jsから試してみる",
         "posted": "2021/04/03",

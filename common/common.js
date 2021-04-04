@@ -528,6 +528,8 @@ $(function(){
             {tag: "gcs",               categories: [["cloud_gcp", "Cloud Storage"]]},
             {tag: "dataflow",          categories: [["cloud_gcp", "Dataflow"]]},
             {tag: "cloudtranslation",  categories: [["cloud_gcp", "Cloud Translation"]]},
+            {tag: "cloudfunctions",    categories: [["cloud_gcp", "Cloud Functions"]]},
+            {tag: "firebase",          categories: [["cloud_gcp", "Firebase"]]},
 
             {tag: "aws", categories: [["cloud_aws", "AWS"]]},
             {tag: "s3", categories: [["cloud_aws", "S3"]]},
