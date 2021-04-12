@@ -1,5 +1,23 @@
 [
     {
+        "url": "https://suzuki-navi.hatenablog.com/entry/2021/04/12/231923",
+        "title": "Google Compute Engineのstartup scriptsを試してみる",
+        "posted": "2021/04/12",
+        "updated": "",
+        "keyword1": ["#hatenablog", "gcp", "computeengine", "command", "gcloud"],
+        "keyword2": [],
+        "keyword3": ["metadata", "startup-script"]
+    },
+    {
+        "url": "https://qiita.com/suzuki-navi/items/0373f479f5c6e4d98c80",
+        "title": "Google Cloud BuildをGitHubリポジトリで動かしてHello, World!",
+        "posted": "2021/04/09",
+        "updated": "",
+        "keyword1": ["#qiita", "gcp", "cloudbuild", "github"],
+        "keyword2": [],
+        "keyword3": []
+    },
+    {
         "url": "https://qiita.com/suzuki-navi/items/a613bc47fccff091374f",
         "title": "FirebaseのAuthenticationをVue.jsから試してみる",
         "posted": "2021/04/07",

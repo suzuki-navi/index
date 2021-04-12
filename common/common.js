@@ -521,7 +521,7 @@ $(function(){
             {tag: "#my_open_sources",  categories: [["thema2", "作っているもの"]]},
             {tag: "#my_cases",         categories: [["thema2", "主な公開事例"]]},
 
-            {tag: "gcp",               categories: [["cloud_gcp", "Google Cloud"]]},
+            {tag: "gcp",               categories: [["cloud_gcp", "Google Cloud"], ["recently", "Google Cloud"]]},
             {tag: "bigquery",          categories: [["cloud_gcp", "BigQuery"]]},
             {tag: "cloudsql",          categories: [["cloud_gcp", "Cloud SQL"]]},
             {tag: "computeengine",     categories: [["cloud_gcp", "Compute Engine"]]},
@@ -630,7 +630,7 @@ $(function(){
             {tag: "#deep_learning", categories: [["other", "深層学習"]]},
             {tag: "serverless_framework", categories: [["other", "Serverless Framework"], ["recently", "Serverless Framework"]]},
             {tag: "#image", categories: [["other", "画像処理"]]},
-            {tag: "#movie", categories: [["other", "動画処理"], ["recently", "動画関係"]]},
+            {tag: "#movie", categories: [["other", "動画処理"]]},
             {tag: "#natural_language_processing", categories: [["other_more", "自然言語処理"]]},
             {tag: "#numerical_analysis", categories: [["other_more", "数値計算"]]},
             {tag: "#probability_distribution", categories: [["other_more", "確率分布"]]},
@@ -872,9 +872,6 @@ $(function(){
                   <td><articles-count query="#hatenablog"></articles-count></td>
                 </tr>
               </table>
-              <p class="font-small">
-                ※このインデックスページには記事を重複ありで分類しています。
-              </p>
             </section>
             <section v-if="global_query.query=='#my_open_sources'">
               <ul>
