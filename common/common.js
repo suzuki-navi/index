@@ -529,6 +529,7 @@ $(function(){
             {tag: "dataflow",          categories: [["cloud_gcp", "Dataflow"]]},
             {tag: "cloudtranslation",  categories: [["cloud_gcp", "Cloud Translation"]]},
             {tag: "cloudfunctions",    categories: [["cloud_gcp", "Cloud Functions"]]},
+            // {tag: "gcp_container_registry", categories: [["cloud_gcp", "Container Registry"]]},
             {tag: "firebase",          categories: [["cloud_gcp", "Firebase"]]},
 
             {tag: "aws", categories: [["cloud_aws", "AWS"]]},
