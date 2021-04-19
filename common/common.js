@@ -529,7 +529,7 @@ $(function(){
             {tag: "dataflow",          categories: [["cloud_gcp", "Dataflow"]]},
             {tag: "cloudtranslation",  categories: [["cloud_gcp", "Cloud Translation"]]},
             {tag: "cloudfunctions",    categories: [["cloud_gcp", "Cloud Functions"]]},
-            // {tag: "gcp_container_registry", categories: [["cloud_gcp", "Container Registry"]]},
+            // {tag: "google_container_registry", categories: [["cloud_gcp", "Container Registry"]]},
             {tag: "firebase",          categories: [["cloud_gcp", "Firebase"]]},
 
             {tag: "aws", categories: [["cloud_aws", "AWS"]]},
@@ -551,7 +551,7 @@ $(function(){
             {tag: "cloudformation", categories: [["cloud_aws", "CloudFormation"]]},
             {tag: "cloudwatch", categories: [["cloud_aws", "CloudWatch"]]},
             {tag: "cloudtrail", categories: [["cloud_aws", "CloudTrail"]]},
-            {tag: "ec2",    categories: [["cloud_aws", "EC2"]]},
+            //{tag: "ec2",    categories: [["cloud_aws", "EC2"]]},
             {tag: "dms",    categories: [["cloud_aws", "DMS"]]},
             {tag: "athena",    categories: [["cloud_aws", "Athena"]]},
             {tag: "aws_sdk", categories: [["cloud_aws", "SDK"]]},
