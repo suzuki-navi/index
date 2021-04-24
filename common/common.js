@@ -542,7 +542,7 @@ $(function(){
             {tag: "lambda",     categories: [["cloud_aws", "Lambda"]]},
             {tag: "apigateway", categories: [["cloud_aws", "API Gateway"]]},
             {tag: "sqs",        categories: [["cloud_aws", "SQS"]]},
-            {tag: "aws_sns",        categories: [["cloud_aws", "SNS"]]},
+            {tag: "sns_aws",        categories: [["cloud_aws", "SNS"]]},
             {tag: "stepfunctions",  categories: [["cloud_aws", "Step Functions"]]},
             {tag: "alb",        categories: [["cloud_aws", "ALB"]]},
             {tag: "cognito",    categories: [["cloud_aws", "Cognito"]]},
@@ -554,6 +554,7 @@ $(function(){
             //{tag: "ec2",    categories: [["cloud_aws", "EC2"]]},
             {tag: "dms",    categories: [["cloud_aws", "DMS"]]},
             {tag: "athena",    categories: [["cloud_aws", "Athena"]]},
+            //{tag: "ecr",    categories: [["cloud_aws", "ECR"]]},
             {tag: "aws_sdk", categories: [["cloud_aws", "SDK"]]},
             {tag: "boto3", categories: [["cloud_aws", "boto3"]]},
 
@@ -611,8 +612,9 @@ $(function(){
             //{tag: "grep", categories: [["command", "grep"]]},
             //{tag: "arp", categories: [["command", "arp"]]},
             //{tag: "pwsh", categories: [["command", "pwsh"]]},
-            //{tag: "gsutil",  categories: [["command", "gsutil"], ["cloud_gcp", "gsutil"]]},
+            {tag: "gsutil",  categories: [["command", "gsutil"], ["cloud_gcp", "gsutil"]]},
             //{tag: "bq",      categories: [["command", "bq"],     ["cloud_gcp", "bq"]]},
+            {tag: "gcloud",  categories: [["command", "gcloud"],    ["cloud_gcp", "gcloud"]]},
             {tag: "awscli",  categories: [["command", "aws"],    ["cloud_aws", "awscli"]]},
 
             {tag: "#naviplus", categories: [["hidden", ""]]},

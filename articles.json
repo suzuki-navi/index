@@ -1,5 +1,32 @@
 [
     {
+        "url": "https://suzuki-navi.hatenablog.com/entry/2021/04/24/212256",
+        "title": "AWS SESでPythonからメール送信してみる",
+        "posted": "2021/04/24",
+        "updated": "",
+        "keyword1": ["#hatenablog", "aws", "ses", "boto3"],
+        "keyword2": ["python"],
+        "keyword3": ["email.mime", "MIMEMultipart", "mail"]
+    },
+    {
+        "url": "https://suzuki-navi.hatenablog.com/entry/2021/04/22/074509",
+        "title": "AWSのECR(Container Registry)にHello, WorldなDockerイメージを置いてみる",
+        "posted": "2021/04/22",
+        "updated": "",
+        "keyword1": ["#hatenablog", "aws", "ecr", "command", "awscli", "docker"],
+        "keyword2": [],
+        "keyword3": ["tag", "push", "container", "images", "dkr.ecr"]
+    },
+    {
+        "url": "https://suzuki-navi.hatenablog.com/entry/2021/04/21/013819",
+        "title": "S3ファイル作成をトリガーにしてLambda起動",
+        "posted": "2021/04/21",
+        "updated": "",
+        "keyword1": ["#hatenablog", "#serverless", "aws", "s3", "lambda", "sns_aws"],
+        "keyword2": ["javascript"],
+        "keyword3": ["event", "notification"]
+    },
+    {
         "url": "https://suzuki-navi.hatenablog.com/entry/2021/04/20/083630",
         "title": "Google Compute Engineのstartup scriptsをgcloudコマンドで取得",
         "posted": "2021/04/20",
@@ -691,7 +718,7 @@
         "posted": "2020/10/31",
         "updated": "",
         "keyword1": ["#hatenablog", "#data_store", "aws", "rds", "cloudwatch", "cloudformation"],
-        "keyword2": ["postgresql", "aws_sns"]
+        "keyword2": ["postgresql", "sns_aws"]
     },
     {
         "url": "https://www.youtube.com/watch?v=X127KHaoIBQ",
