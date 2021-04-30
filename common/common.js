@@ -391,7 +391,7 @@ $(function(){
 
             // keyword3はタグに入れないけど検索キーワード
             for (const kw of entry["keyword3"]) {
-                entry["keyword2"].push(kw);
+                entry["keyword2"].push(kw.toLowerCase());
             }
 
             list2.push(entry);
@@ -508,14 +508,6 @@ $(function(){
     ]);
     function keywordDatabase() {
         return  [
-            {tag: "#machine_learning", categories: [["thema", "機械学習の記事"]]},
-            {tag: "#statistics",       categories: [["thema", "統計の記事"]]},
-            {tag: "#visualization",    categories: [["thema", "データ可視化の記事"]]},
-            {tag: "#data_store",       categories: [["thema", "データ保管の記事"]]},
-            {tag: "#data_input",       categories: [["thema", "データ収集の記事"]]},
-            {tag: "#programming",      categories: [["thema", "プログラミング"]]},
-            {tag: "#math",             categories: [["thema", "数式のある記事"]]},
-
             {tag: "#certification",    categories: [["thema2", "取得した資格"]]},
             {tag: "#count",            categories: [["thema2", "書いた記事数"]]},
             {tag: "#my_open_sources",  categories: [["thema2", "作っているもの"]]},
@@ -551,7 +543,7 @@ $(function(){
             {tag: "cloudformation", categories: [["cloud_aws", "CloudFormation"]]},
             {tag: "cloudwatch", categories: [["cloud_aws", "CloudWatch"]]},
             {tag: "cloudtrail", categories: [["cloud_aws", "CloudTrail"]]},
-            //{tag: "ec2",    categories: [["cloud_aws", "EC2"]]},
+            {tag: "ec2",    categories: [["cloud_aws", "EC2"]]},
             {tag: "dms",    categories: [["cloud_aws", "DMS"]]},
             {tag: "athena",    categories: [["cloud_aws", "Athena"]]},
             //{tag: "ecr",    categories: [["cloud_aws", "ECR"]]},
@@ -588,6 +580,7 @@ $(function(){
             {tag: "matplotlib", categories: [["software", "Matplotlib"]]},
             {tag: "talend", categories: [["software", "Talend"]]},
             {tag: "dbeaver", categories: [["software", "DBeaver"]]},
+            {tag: "serverless_framework", categories: [["software", "Serverless Framework"], ["recently", "Serverless Framework"]]},
 
             {tag: "command", categories: [["other", "Linuxコマンド"], ["command", "Linuxコマンド"]]},
             //{tag: "git", categories: [["command", "git"]]},
@@ -631,7 +624,6 @@ $(function(){
             {tag: "#serverless", categories: [["other", "サーバレス開発"]]},
             {tag: "#front_end", categories: [["other", "フロントエンド"]]},
             {tag: "#deep_learning", categories: [["other", "深層学習"]]},
-            {tag: "serverless_framework", categories: [["other", "Serverless Framework"], ["recently", "Serverless Framework"]]},
             {tag: "#image", categories: [["other", "画像処理"]]},
             {tag: "#movie", categories: [["other", "動画処理"]]},
             {tag: "#natural_language_processing", categories: [["other_more", "自然言語処理"]]},
@@ -640,6 +632,14 @@ $(function(){
             {tag: "#gradient_descent", categories: [["other_more", "勾配降下法"]]},
             {tag: "#network", categories: [["other_more", "ネットワーク"]]},
             {tag: "#piano", categories: [["other_more", "ピアノ"]]},
+
+            {tag: "#machine_learning", categories: [["other", "機械学習"]]},
+            {tag: "#statistics",       categories: [["other", "統計"]]},
+            {tag: "#visualization",    categories: [["other", "データ可視化"]]},
+            {tag: "#data_store",       categories: [["other", "データ保管"]]},
+            {tag: "#data_input",       categories: [["other", "データ収集"]]},
+            {tag: "#programming",      categories: [["other", "プログラミング"]]},
+            {tag: "#math",             categories: [["other", "数式のある記事"]]},
         ];
     }
     function keywordDatabaseByTag(tag) {
@@ -745,10 +745,6 @@ $(function(){
 -->
             <div>
               <h2>その他</h2>
-              <p><span v-for="(tag, idx) in categorized.thema">
-                <span v-if="idx>0" class="font-small"> / </span>
-                <a v-bind:href="'#' + tag[0]" v-on:click.prevent.stop="gotoTagPage(tag[0]);">{{ tag[2] }}({{ tag[1] }})</a>
-              </span></p>
               <p><span v-for="(tag, idx) in categorized.other">
                 <span v-if="idx>0" class="font-small"> / </span>
                 <a v-bind:href="'#' + tag[0]" v-on:click.prevent.stop="gotoTagPage(tag[0]);" v-bind:class="(tag[1]<` + thres + `)? 'font-small':''">{{ tag[2] }}({{ tag[1] }})</a>
@@ -853,12 +849,14 @@ $(function(){
                 <li>全国珠算教育連盟 珠算検定 初段 (昔)</li>
                 <li>日本商工会議所 珠算検定 1級 (昔)</li>
               </ul>
+<!--
               <p class="image">
                 <img src="certification.png">
               </p>
               <p class="image">
                 <img src="toukei-kentei.png">
               </p>
+-->
             </section>
             <section v-if="global_query.query=='#count'">
               <table>

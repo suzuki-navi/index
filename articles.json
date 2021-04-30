@@ -1,5 +1,23 @@
 [
     {
+        "url": "https://suzuki-navi.hatenablog.com/entry/2021/04/30/145247",
+        "title": "一時クレデンシャルでServerless Frameworkを動かす",
+        "posted": "2021/04/30",
+        "updated": "",
+        "keyword1": ["#hatenablog", "#serverless", "aws", "serverless_framework", "ec2", "iam"],
+        "keyword2": ["awscli"],
+        "keyword3": ["sts", "assume-role"]
+    },
+    {
+        "url": "https://suzuki-navi.hatenablog.com/entry/2021/04/27/235837",
+        "title": "credential_sourceを使ったAWSのprofileではServerless Frameworkは動かせないのか",
+        "posted": "2021/04/27",
+        "updated": "",
+        "keyword1": ["#hatenablog", "#serverless", "aws", "serverless_framework", "ec2", "iam"],
+        "keyword2": ["awscli"],
+        "keyword3": ["credential_source", "config", "credentials", "Ec2InstanceMetadata"]
+    },
+    {
         "url": "https://suzuki-navi.hatenablog.com/entry/2021/04/24/212256",
         "title": "AWS SESでPythonからメール送信してみる",
         "posted": "2021/04/24",
