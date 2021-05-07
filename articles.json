@@ -1,5 +1,40 @@
 [
     {
+        "url": "https://qiita.com/suzuki-navi/items/9b69a39668826f28b85c",
+        "title": "AWS CodeBuildをGitHubリポジトリで動かしてHello, World!",
+        "posted": "2021/05/07",
+        "updated": "",
+        "keyword1": ["#qiita", "aws", "codebuild", "github"],
+        "keyword2": ["gcp", "cloudbuild"],
+        "keyword3": ["webhook"]
+    },
+    {
+        "url": "https://suzuki-navi.hatenablog.com/entry/2021/05/04/151421",
+        "title": "一時クレデンシャルを取得するserverlessコマンドのラッパースクリプト",
+        "posted": "2021/05/04",
+        "updated": "",
+        "keyword1": ["#hatenablog", "#serverless", "aws", "serverless_framework", "ec2", "iam"],
+        "keyword2": ["awscli", "python"],
+        "keyword3": ["sts", "assume-role", "credential_source", "config", "Ec2InstanceMetadata"]
+    },
+    {
+        "url": "https://suzuki-navi.hatenablog.com/entry/2021/05/02/173128",
+        "title": "数式のある記事をKibelaのフォーマットからはてなブログのフォーマットに変換",
+        "posted": "2020/05/02",
+        "updated": "",
+        "keyword1": ["#hatenablog", "hatenablog", "markdown", "tex", "kibela"],
+        "keyword2": ["#math", "javascript"]
+    },
+    {
+        "url": "https://suzuki-navi.hatenablog.com/entry/2021/05/01/225439",
+        "title": "チェビシェフ多項式(Chebyshev polynomials)でフィットさせた係数から値を復元",
+        "posted": "2021/05/01",
+        "updated": "",
+        "keyword1": ["#hatenablog", "#astronomy", "#math"],
+        "keyword2": ["scala"],
+        "keyword3": ["chebyshev", "polynomials", "jpl"]
+    },
+    {
         "url": "https://suzuki-navi.hatenablog.com/entry/2021/04/30/145247",
         "title": "一時クレデンシャルでServerless Frameworkを動かす",
         "posted": "2021/04/30",
@@ -431,7 +466,8 @@
         "posted": "2021/01/10",
         "updated": "",
         "keyword1": ["#hatenablog", "#astronomy"],
-        "keyword2": ["ruby"]
+        "keyword2": ["ruby"],
+        "keyword3": ["jpl", "gemfile"]
     },
     {
         "url": "https://suzuki-navi.hatenablog.com/entry/2021/01/08/142206",
@@ -472,7 +508,8 @@
         "posted": "2021/01/04",
         "updated": "",
         "keyword1": ["#hatenablog", "#astronomy"],
-        "keyword2": ["ruby"]
+        "keyword2": ["ruby"],
+        "keyword3": ["jpl", "gemfile"]
     },
     {
         "url": "https://qiita.com/suzuki-navi/items/1369b11a8f5d7f467645",
@@ -1574,7 +1611,8 @@
         "title": "はてなブログでのMarkdownでの数式の書き方 その2",
         "posted": "2020/05/19",
         "updated": "",
-        "keyword1": ["#hatenablog", "hatenablog", "markdown", "tex"]
+        "keyword1": ["#hatenablog", "hatenablog", "markdown", "tex"],
+        "keyword2": ["#math"]
     },
     {
         "url": "https://suzuki-navi.hatenablog.com/entry/2020/05/18/232822",
@@ -1596,7 +1634,8 @@
         "title": "はてなブログでのMarkdownでの数式の書き方とQiita、Kibelaとの比較",
         "posted": "2020/05/16",
         "updated": "",
-        "keyword1": ["#hatenablog", "hatenablog", "markdown", "tex", "qiita", "kibela"]
+        "keyword1": ["#hatenablog", "hatenablog", "markdown", "tex", "qiita", "kibela"],
+        "keyword2": ["#math"]
     },
     {
         "url": "https://qiita.com/suzuki-navi/items/2410ebdf92279996c516",

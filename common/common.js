@@ -111,7 +111,7 @@ $(function(){
             result1.push(article2);
         }
         if (query == "") {
-            const recent_count = 20;
+            const recent_count = 18;
             result1 = searchByKeyword("", result1, false);
             if (result1.length > recent_count) {
                 result1 = result1.slice(0, recent_count);
