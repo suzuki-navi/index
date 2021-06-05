@@ -1,11 +1,11 @@
 body {
   margin: 5px;
-  background-color: #fce3cd;
+  background-color: #99D0F0;
   font-family: sans-serif;
   overflow-anchor: none;n
 }
 .card {
-  box-shadow: 0 2px 5px #909080;
+  box-shadow: 0 2px 5px #709090;
 }
 
 img.profile-img {

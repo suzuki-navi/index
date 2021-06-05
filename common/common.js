@@ -516,13 +516,14 @@ $(function(){
             {tag: "gcp",               categories: [["cloud_gcp", "Google Cloud"], ["recently", "Google Cloud"]]},
             {tag: "bigquery",          categories: [["cloud_gcp", "BigQuery"]]},
             {tag: "cloudsql",          categories: [["cloud_gcp", "Cloud SQL"]]},
-            {tag: "computeengine",     categories: [["cloud_gcp", "Compute Engine"]]},
+            {tag: "gce",               categories: [["cloud_gcp", "Compute Engine"]]},
             {tag: "gcs",               categories: [["cloud_gcp", "Cloud Storage"]]},
             {tag: "dataflow",          categories: [["cloud_gcp", "Dataflow"]]},
             {tag: "cloudtranslation",  categories: [["cloud_gcp", "Cloud Translation"]]},
             {tag: "cloudfunctions",    categories: [["cloud_gcp", "Cloud Functions"]]},
-            // {tag: "google_container_registry", categories: [["cloud_gcp", "Container Registry"]]},
             {tag: "firebase",          categories: [["cloud_gcp", "Firebase"]]},
+            {tag: "google_container_registry", categories: [["cloud_gcp", "Container Registry"]]},
+            {tag: "cloud_deployment_manager",          categories: [["cloud_gcp", "Cloud Deployment Manager"]]},
 
             {tag: "aws", categories: [["cloud_aws", "AWS"]]},
             {tag: "s3", categories: [["cloud_aws", "S3"]]},
@@ -612,7 +613,7 @@ $(function(){
 
             {tag: "#naviplus", categories: [["hidden", ""]]},
             {tag: "#beex", categories: [["hidden", ""]]},
-            {tag: "#business_blog", categories: [["hidden", ""]]},
+            {tag: "#company_blog", categories: [["hidden", ""]]},
             {tag: "#qiita", categories: [["hidden", ""]]},
             {tag: "#hatenablog", categories: [["hidden", ""]]},
             {tag: "#github_markdown", categories: [["hidden", ""]]},
@@ -862,7 +863,7 @@ $(function(){
               <table>
                 <tr>
                   <td>会社ブログ(現職+前職)：</td>
-                  <td><articles-count query="#business_blog"></articles-count></td>
+                  <td><articles-count query="#company_blog"></articles-count></td>
                 </tr>
                 <tr>
                   <td><a href="https://qiita.com/suzuki-navi">Qiita</a>：</td>
@@ -879,6 +880,9 @@ $(function(){
                 <li><a href="https://github.com/xsvutils/xsvutils">xsvutils</a> (2017/12 〜)
                   <p>CSVファイルやTSVファイルをCUIで扱うツール。</p>
                 </li>
+                <li><a href="https://suzuki-navi.github.io/hoshizora_today/">星空bot</a> (2021/01 ～)
+                  <p>星空bot - 星空の様子をツイートするボット化</p>
+                </li>
                 <li><a href="https://github.com/suzuki-navi/suzuki-navi-calendar">suzuki-navi's calendar</a> (2021/02 ～)
                   <p>自分専用カレンダーコマンド</p>
                 </li>
@@ -887,6 +891,9 @@ $(function(){
                 </li>
                 <li><a href="https://github.com/suzuki-navi/j2cli5">j2cli5</a> (2021/03 ～)
                   <p>Pythonのjinja2の簡易CLI化</p>
+                </li>
+                <li><a href="https://suzuki-navi.github.io/suzuki-navi-converter/">suzuki-navi-converter</a> (2021/05 ～)
+                  <p>自分専用の各種変換ツール</p>
                 </li>
               </ul>
             </section>

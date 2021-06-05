@@ -1,5 +1,131 @@
 [
     {
+        "url": "https://qiita.com/suzuki-navi/items/f8eecf280dd3c2d0e90c",
+        "title": "DynamoDBのデータ型とPythonのデータ型の対応",
+        "posted": "2021/06/04",
+        "updated": "",
+        "keyword1": ["#qiita", "aws", "dynamodb", "boto3"],
+        "keyword2": ["python"],
+        "keyword3": []
+    },
+    {
+        "url": "https://qiita.com/suzuki-navi/items/cf25a14aab828f429320",
+        "title": "GCEのインスタンス一覧をPythonで取得",
+        "posted": "2021/06/02",
+        "updated": "",
+        "keyword1": ["#qiita", "gcp", "gcp_sdk"],
+        "keyword2": ["gcloud", "python"],
+        "keyword3": []
+    },
+    {
+        "url": "https://suzuki-navi.hatenablog.com/entry/2021/05/31/202522",
+        "title": "SMTPサーバでPythonからメール送信してみる",
+        "posted": "2021/05/31",
+        "updated": "",
+        "keyword1": ["#hatenablog"],
+        "keyword2": ["python"],
+        "keyword3": ["email.mime", "mail", "smtp"]
+    },
+    {
+        "url": "https://suzuki-navi.hatenablog.com/entry/2021/05/27/222828",
+        "title": "一時クレデンシャルを取得するserverlessコマンドのラッパースクリプト その2",
+        "posted": "2021/05/27",
+        "updated": "",
+        "keyword1": ["#hatenablog", "#serverless", "aws", "serverless_framework", "iam", "sts"],
+        "keyword2": ["awscli", "python"],
+        "keyword3": ["assume-role", "credential_source", "config", "Ec2InstanceMetadata", "source_profile"]
+    },
+    {
+        "url": "https://suzuki-navi.hatenablog.com/entry/2021/05/25/182622",
+        "title": "PythonのopenpyxlでExcelの一番下の行に追記",
+        "posted": "2021/05/25",
+        "updated": "",
+        "keyword1": ["#hatenablog", "python"],
+        "keyword2": [],
+        "keyword3": ["openpyxl"]
+    },
+    {
+        "url": "https://qiita.com/suzuki-navi/items/a3e94c46db46e12bd7a6",
+        "title": "Cloud Deployment Managerを使ってみる",
+        "posted": "2021/05/24",
+        "updated": "",
+        "keyword1": ["#qiita", "gcp", "cloud_deployment_manager"],
+        "keyword2": ["gcloud"],
+        "keyword3": []
+    },
+    {
+        "url": "https://suzuki-navi.hatenablog.com/entry/2021/05/22/233345",
+        "title": "PythonとopensslコマンドでHMAC-SHA256を計算する",
+        "posted": "2021/05/22",
+        "updated": "",
+        "keyword1": ["#hatenablog", "python", "openssl"],
+        "keyword2": ["base64"],
+        "keyword3": ["sha256", "hmac"]
+    },
+    {
+        "url": "https://qiita.com/suzuki-navi/items/bc10b8a1cea4993b12dd",
+        "title": "GCPとAWSのVPC・サブネットの違い",
+        "posted": "2021/05/21",
+        "updated": "",
+        "keyword1": ["#qiita", "aws", "gcp", "#network"],
+        "keyword2": [],
+        "keyword3": ["vpc", "subnet", "region", "az"]
+    },
+    {
+        "url": "https://suzuki-navi.hatenablog.com/entry/2021/05/20/145626",
+        "title": "FIFOタイプのAWS SNSはメール送信できない",
+        "posted": "2021/05/20",
+        "updated": "",
+        "keyword1": ["#hatenablog", "aws", "sns_aws"],
+        "keyword2": ["awscli"],
+        "keyword3": ["email"]
+    },
+    {
+        "url": "https://qiita.com/suzuki-navi/items/6cd681eeec39dde9c895",
+        "title": "AWS Lambdaの中からPythonでAWSアカウントIDを取得",
+        "posted": "2021/05/18",
+        "updated": "",
+        "keyword1": ["#qiita", "#serverless", "aws", "lambda", "boto3", "sts"],
+        "keyword2": ["python", "boto3", "serverless_framework"],
+        "keyword3": ["get_caller_identity"]
+    },
+    {
+        "url": "https://www.beex-inc.com/blog/sns-to-sns/",
+        "title": "AWS SNSから別のSNSに通知を転送",
+        "posted": "2020/05/17",
+        "updated": "",
+        "keyword1": ["#beex", "#company_blog", "aws", "sns_aws"],
+        "keyword2": ["python", "boto3"],
+        "keyword3": []
+    },
+    {
+        "url": "https://qiita.com/suzuki-navi/items/067d7cca3367fb821a63",
+        "title": "Google Cloud FunctionsからGoogle Cloud Translationを試してみる",
+        "posted": "2021/05/16",
+        "updated": "",
+        "keyword1": ["#qiita", "#natural_language_processing", "#serverless", "gcp", "cloudtranslation", "cloudfunctions"],
+        "keyword2": ["javascript"],
+        "keyword3": ["google-cloud/translate", "translationserviceclient", "translatetext", "detectlanguage"]
+    },
+    {
+        "url": "https://suzuki-navi.github.io/hoshizora_today/",
+        "title": "星空bot - 星空の様子をツイートするボット",
+        "posted": "2021/05/15",
+        "updated": "",
+        "keyword1": ["#github_repository", "#astronomy"],
+        "keyword2": ["scala", "python"],
+        "keyword3": ["bot"]
+    },
+    {
+        "url": "https://qiita.com/suzuki-navi/items/bc3ffc2c8967e58fbfc2",
+        "title": "AWS KMSをawscliから試してみる",
+        "posted": "2021/05/11",
+        "updated": "",
+        "keyword1": ["#qiita", "aws", "kms", "awscli"],
+        "keyword2": [],
+        "keyword3": ["create-key", "generate-data-key", "decrypt"]
+    },
+    {
         "url": "https://qiita.com/suzuki-navi/items/9b69a39668826f28b85c",
         "title": "AWS CodeBuildをGitHubリポジトリで動かしてHello, World!",
         "posted": "2021/05/07",
@@ -13,9 +139,9 @@
         "title": "一時クレデンシャルを取得するserverlessコマンドのラッパースクリプト",
         "posted": "2021/05/04",
         "updated": "",
-        "keyword1": ["#hatenablog", "#serverless", "aws", "serverless_framework", "ec2", "iam"],
+        "keyword1": ["#hatenablog", "#serverless", "aws", "serverless_framework", "ec2", "iam", "sts"],
         "keyword2": ["awscli", "python"],
-        "keyword3": ["sts", "assume-role", "credential_source", "config", "Ec2InstanceMetadata"]
+        "keyword3": ["assume-role", "credential_source", "config", "Ec2InstanceMetadata"]
     },
     {
         "url": "https://suzuki-navi.hatenablog.com/entry/2021/05/02/173128",
@@ -39,9 +165,9 @@
         "title": "一時クレデンシャルでServerless Frameworkを動かす",
         "posted": "2021/04/30",
         "updated": "",
-        "keyword1": ["#hatenablog", "#serverless", "aws", "serverless_framework", "ec2", "iam"],
+        "keyword1": ["#hatenablog", "#serverless", "aws", "serverless_framework", "ec2", "iam", "sts"],
         "keyword2": ["awscli"],
-        "keyword3": ["sts", "assume-role"]
+        "keyword3": ["assume-role"]
     },
     {
         "url": "https://suzuki-navi.hatenablog.com/entry/2021/04/27/235837",
@@ -75,7 +201,7 @@
         "title": "S3ファイル作成をトリガーにしてLambda起動",
         "posted": "2021/04/21",
         "updated": "",
-        "keyword1": ["#hatenablog", "#serverless", "aws", "s3", "lambda", "sns_aws"],
+        "keyword1": ["#hatenablog", "#serverless", "aws", "s3", "lambda"],
         "keyword2": ["javascript"],
         "keyword3": ["event", "notification"]
     },
@@ -84,8 +210,8 @@
         "title": "Google Compute Engineのstartup scriptsをgcloudコマンドで取得",
         "posted": "2021/04/20",
         "updated": "",
-        "keyword1": ["#hatenablog", "gcp", "computeengine", "command", "gcloud", "jq"],
-        "keyword2": [],
+        "keyword1": ["#hatenablog", "gcp", "gce", "command", "gcloud", "jq"],
+        "keyword2": ["curl"],
         "keyword3": ["metadata", "startup-script"]
     },
     {
@@ -93,7 +219,7 @@
         "title": "Google Container RegistryにVue.jsアプリを置いてCompute Engineにデプロイ",
         "posted": "2021/04/19",
         "updated": "",
-        "keyword1": ["#hatenablog", "gcp", "google_container_registry", "computeengine", "command", "gcloud", "docker", "vuejs"],
+        "keyword1": ["#hatenablog", "gcp", "google_container_registry", "gce", "command", "gcloud", "docker", "vuejs"],
         "keyword2": [],
         "keyword3": ["vue", "npm", "http-server", "tag", "push", "container", "images", "gcr.io", "create-with-container", "firewall"]
     },
@@ -111,7 +237,7 @@
         "title": "Google Compute Engineのstartup scriptsを試してみる",
         "posted": "2021/04/12",
         "updated": "",
-        "keyword1": ["#hatenablog", "gcp", "computeengine", "command", "gcloud"],
+        "keyword1": ["#hatenablog", "gcp", "gce", "command", "gcloud"],
         "keyword2": [],
         "keyword3": ["metadata", "startup-script"]
     },
@@ -192,7 +318,7 @@
         "posted": "2021/03/17",
         "updated": "",
         "keyword1": ["#hatenablog", "gcp", "command", "gcloud", "bq", "gsutil"],
-        "keyword2": ["aws", "ec2", "computeengine", "ubuntu"],
+        "keyword2": ["aws", "ec2", "gce", "ubuntu"],
         "keyword3": ["google-cloud-sdk"]
     },
     {
@@ -581,7 +707,8 @@
         "posted": "2020/12/22",
         "updated": "",
         "keyword1": ["#qiita", "aws", "apigateway", "#serverless", "#http"],
-        "keyword2": ["python", "javascript", "cloudformation", "awscli"]
+        "keyword2": ["python", "javascript", "cloudformation", "awscli"],
+        "keyword3": ["vpc"]
     },
     {
         "url": "https://suzuki-navi.hatenablog.com/entry/2020/12/21/081530",
@@ -589,7 +716,8 @@
         "posted": "2020/12/21",
         "updated": "",
         "keyword1": ["#hatenablog", "aws", "apigateway", "#serverless"],
-        "keyword2": ["cloudformation", "curl"]
+        "keyword2": ["cloudformation", "curl"],
+        "keyword3": ["vpc"]
     },
     {
         "url": "https://suzuki-navi.hatenablog.com/entry/2020/12/17/214538",
@@ -732,7 +860,7 @@
         "title": "PostgreSQLのデータ型とAWS Glue Crawlerのデータ型のマッピング",
         "posted": "2020/11/05",
         "updated": "",
-        "keyword1": ["#hatenablog", "#data_input", "aws", "glue", "postgresql"],
+        "keyword1": ["#hatenablog", "#data_input", "aws", "glue", "postgresql", "#datetime", "#timezone"],
         "keyword2": ["rds"]
     },
     {
@@ -764,7 +892,7 @@
         "title": "Parquetのデータ型とAWS Glue Crawlerのデータ型のマッピングとAthenaからのアクセス",
         "posted": "2020/11/01",
         "updated": "",
-        "keyword1": ["#hatenablog", "#data_input", "aws", "parquet", "athena", "glue"],
+        "keyword1": ["#hatenablog", "#data_input", "aws", "parquet", "athena", "glue", "#datetime", "#timezone"],
         "keyword2": []
     },
     {
@@ -1070,7 +1198,7 @@
         "title": "SAP基幹システムの会計データをGoogle BigQuery上に取り込んでMetabaseで可視化してみた",
         "posted": "2020/09/07",
         "updated": "",
-        "keyword1": ["#beex", "#business_blog", "#visualization", "gcp", "bigquery", "metabase"]
+        "keyword1": ["#beex", "#company_blog", "#visualization", "gcp", "bigquery", "metabase"]
     },
     {
         "url": "https://suzuki-navi.hatenablog.com/entry/2020/09/06/222351",
@@ -1190,7 +1318,7 @@
         "title": "PostgreSQLとAWS Glue Crawlerの日時のデータ型",
         "posted": "2020/07/23",
         "updated": "",
-        "keyword1": ["#hatenablog", "aws", "glue", "postgresql"],
+        "keyword1": ["#hatenablog", "aws", "glue", "postgresql", "#datetime", "#timezone"],
         "keyword2": ["python", "cloudsql", "rds"]
     },
     {
@@ -1245,7 +1373,7 @@
         "title": "オープンソースのデータ可視化ツールMetabaseのご紹介",
         "posted": "2020/07/16",
         "updated": "",
-        "keyword1": ["#beex", "#business_blog", "#pickup", "#visualization", "metabase"]
+        "keyword1": ["#beex", "#company_blog", "#pickup", "#visualization", "metabase"]
     },
     {
         "url": "https://suzuki-navi.hatenablog.com/entry/2020/07/15/235213",
@@ -1281,7 +1409,7 @@
         "title": "GCPのCompute Engine、Cloud SQLの最も安いマシンタイプ",
         "posted": "2020/07/11",
         "updated": "",
-        "keyword1": ["#hatenablog", "gcp", "cloudsql", "computeengine"]
+        "keyword1": ["#hatenablog", "gcp", "cloudsql", "gce"]
     },
     {
         "url": "https://suzuki-navi.hatenablog.com/entry/2020/07/10/234240",
@@ -1434,7 +1562,8 @@
         "posted": "2020/06/11",
         "updated": "",
         "keyword1": ["#qiita", "command", "diff"],
-        "keyword2": ["python"]
+        "keyword2": ["python"],
+        "keyword3": ["openpyxl"]
     },
     {
         "url": "https://suzuki-navi.hatenablog.com/entry/2020/06/10/113504",
@@ -1666,7 +1795,7 @@
         "title": "AWS CloudWatchログ容量の推移を確認するワンライナー",
         "posted": "2020/05/07",
         "updated": "",
-        "keyword1": ["#beex", "#business_blog", "command", "aws", "awscli", "jq", "cloudwatch", "oneliner"],
+        "keyword1": ["#beex", "#company_blog", "command", "aws", "awscli", "jq", "cloudwatch", "oneliner"],
         "keyword2": []
     },
     {
@@ -1955,21 +2084,21 @@
         "title": "Unicodeにあるたくさんの波線(全40文字)",
         "posted": "2014/12/12",
         "updated": "",
-        "keyword1": ["#naviplus", "#business_blog", "unicode"]
+        "keyword1": ["#naviplus", "#company_blog", "unicode"]
     },
     {
         "url": "https://tech.naviplus.co.jp/2014/12/05/%e3%83%8f%e3%82%a4%e3%83%95%e3%83%b3%e3%81%a8%e3%81%8b%e3%83%80%e3%83%83%e3%82%b7%e3%83%a5%e3%81%a8%e3%81%8bunicode%e3%81%ab%e3%81%82%e3%82%8b%e3%81%9f%e3%81%8f%e3%81%95%e3%82%93%e3%81%ae%e6%a8%aa/",
         "title": "ハイフンとかダッシュとかUnicodeにあるたくさんの横線(全135文字)",
         "posted": "2014/12/05",
         "updated": "",
-        "keyword1": ["#naviplus", "#business_blog", "unicode"]
+        "keyword1": ["#naviplus", "#company_blog", "unicode"]
     },
     {
         "url": "https://tech.naviplus.co.jp/2014/07/23/raspberry-pi%e3%81%a7ad%e3%82%b3%e3%83%b3%e3%83%90%e3%83%bc%e3%82%bfmcp3208%e3%82%92%e4%bd%bf%e3%81%86/",
         "title": "Raspberry PiでADコンバータ(MCP3208)を使う",
         "posted": "2014/07/23",
         "updated": "",
-        "keyword1": ["#naviplus", "#business_blog", "raspberry_pi"],
+        "keyword1": ["#naviplus", "#company_blog", "raspberry_pi"],
         "keyword2": ["python"]
     },
     {
@@ -1977,14 +2106,14 @@
         "title": "Raspberry Piを走らせる",
         "posted": "2014/07/04",
         "updated": "",
-        "keyword1": ["#naviplus", "#business_blog", "#pickup", "raspberry_pi"]
+        "keyword1": ["#naviplus", "#company_blog", "#pickup", "raspberry_pi"]
     },
     {
         "url": "https://tech.naviplus.co.jp/2014/02/27/%e4%b8%8d%e5%81%8f%e5%88%86%e6%95%a3%e3%81%af%e3%81%aa%e3%81%9c-n-1-%e3%81%a7%e5%89%b2%e3%82%8b%e3%81%ae%e3%81%8b%ef%bc%9f/",
         "title": "不偏分散はなぜ n – 1 で割るのか？",
         "posted": "2014/02/27",
         "updated": "",
-        "keyword1": ["#naviplus", "#business_blog", "#pickup", "#statistics", "#math"],
+        "keyword1": ["#naviplus", "#company_blog", "#pickup", "#statistics", "#math"],
         "keyword2": ["ruby"]
     },
 
