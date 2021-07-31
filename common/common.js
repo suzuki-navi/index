@@ -841,6 +841,10 @@ $(function(){
             </section>
             <section v-if="global_query.query=='#certification'">
               <ul>
+                <li>Google Cloud Certified Professional Data Engineer (2021/07/29) <a href="https://qiita.com/suzuki-navi/items/51c3cd0a1a4a154fc0e5">合格体験記事</a></li>
+                <li>Google Cloud Certified Professional Cloud Developer (2021/07/20) <a href="https://qiita.com/suzuki-navi/items/39b4744fb7e5dc5d0487">合格体験記事</a></li>
+                <li>Google Cloud Certified Professional Cloud Architect (2021/07/09) <a href="https://qiita.com/suzuki-navi/items/9b6d21a668225d9d21e5">合格体験記事</a></li>
+                <li>AWS Certified Developer - Associate (2021/07/06) <a href="https://qiita.com/suzuki-navi/items/dfb343130da83d560ce4">合格体験記事</a></li>
                 <li>AWS Certified Database - Specialty (2020/10/19) <a href="https://qiita.com/suzuki-navi/items/59f8a4a94ad9a22dd569">合格体験記事</a></li>
                 <li>日本ディープラーニング協会 G検定 (2020/07/04) <a href="https://qiita.com/suzuki-navi/items/fd3607f8f0e670bba887">合格体験記事</a></li>
                 <li>日本統計学会 統計検定 2級 (2020/05/31) <a href="https://qiita.com/suzuki-navi/items/e353b8dfbc6e872f9f41">合格体験記事</a></li>

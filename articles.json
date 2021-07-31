@@ -1,8 +1,49 @@
 [
     {
+        "url": "https://qiita.com/suzuki-navi/items/51c3cd0a1a4a154fc0e5",
+        "title": "Google Cloud Certified Professional Data Engineer 合格しました",
+        "posted": "2021/07/31",
+        "updated": "",
+        "keyword1": ["#qiita", "#machine_learning", "#data_store", "gcp"],
+        "keyword2": ["dataflow", "dataprep", "cloud_composer"]
+    },
+    {
+        "url": "https://qiita.com/suzuki-navi/items/39b4744fb7e5dc5d0487",
+        "title": "Google Cloud Certified Professional Cloud Developer 合格しました",
+        "posted": "2021/07/30",
+        "updated": "",
+        "keyword1": ["#qiita", "gcp"],
+        "keyword2": []
+    },
+    {
+        "url": "https://qiita.com/suzuki-navi/items/9b6d21a668225d9d21e5",
+        "title": "Google Cloud Certified Professional Cloud Architect 合格しました",
+        "posted": "2021/07/12",
+        "updated": "",
+        "keyword1": ["#qiita", "gcp"],
+        "keyword2": []
+    },
+    {
+        "url": "https://qiita.com/suzuki-navi/items/dfb343130da83d560ce4",
+        "title": "AWS Certified Developer - Associate 合格しました",
+        "posted": "2021/07/11",
+        "updated": "",
+        "keyword1": ["#qiita", "aws"],
+        "keyword2": ["elastic_beanstalk"]
+    },
+    {
+        "url": "https://suzuki-navi.hatenablog.com/entry/2021/06/07/233317",
+        "title": "HTMLメールに添付ファイルの画像を埋め込む",
+        "posted": "2021/06/07",
+        "updated": "",
+        "keyword1": ["#hatenablog"],
+        "keyword2": ["python", "aws", "ses"],
+        "keyword3": ["email.mime", "email", "smtp", "attachment", "content-id"]
+    },
+    {
         "url": "https://qiita.com/suzuki-navi/items/f8eecf280dd3c2d0e90c",
         "title": "DynamoDBのデータ型とPythonのデータ型の対応",
-        "posted": "2021/06/04",
+        "posted": "2021/06/05",
         "updated": "",
         "keyword1": ["#qiita", "aws", "dynamodb", "boto3"],
         "keyword2": ["python"],
@@ -24,7 +65,7 @@
         "updated": "",
         "keyword1": ["#hatenablog"],
         "keyword2": ["python"],
-        "keyword3": ["email.mime", "mail", "smtp"]
+        "keyword3": ["email.mime", "email", "smtp", "attachment"]
     },
     {
         "url": "https://suzuki-navi.hatenablog.com/entry/2021/05/27/222828",
