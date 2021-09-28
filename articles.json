@@ -1,5 +1,56 @@
 [
     {
+        "url": "https://qiita.com/suzuki-navi/items/cf07965bb59acf492db0",
+        "title": "もっぱらLinuxなエンジニアがWindowsのバッチファイルというものを試してみた",
+        "posted": "2021/09/28",
+        "updated": "",
+        "keyword1": ["#qiita", "windows"],
+        "keyword2": [],
+        "keyword3": []
+    },
+    {
+        "url": "https://qiita.com/suzuki-navi/items/f740776a9873791c6a5c",
+        "title": "AWS LambdaをRubyのコンテナで動かしてみる",
+        "posted": "2021/09/25",
+        "updated": "",
+        "keyword1": ["#qiita", "aws", "lambda", "docker", "ecr"],
+        "keyword2": ["ruby"],
+        "keyword3": []
+    },
+    {
+        "url": "https://suzuki-navi.hatenablog.com/entry/2021/09/23/174745",
+        "title": "AtCoder参戦日記 ABC185 2020/12/13 12回目",
+        "posted": "2021/09/23",
+        "updated": "",
+        "keyword1": ["#hatenablog", "#programming", "atcoder"],
+        "keyword2": ["javascript", "java", "scala", "ruby", "c++"]
+    },
+    {
+        "url": "https://suzuki-navi.hatenablog.com/entry/2021/09/11/124351",
+        "title": "AtCoder参戦日記 ARC110 2020/12/05 11回目",
+        "posted": "2021/09/11",
+        "updated": "",
+        "keyword1": ["#hatenablog", "#programming", "atcoder"],
+        "keyword2": ["ruby", "scala", "java"]
+    },
+    {
+        "url": "https://suzuki-navi.hatenablog.com/entry/2021/09/04/232320",
+        "title": "AtCoder参戦日記 ARC108 2020/11/21 10回目",
+        "posted": "2021/09/04",
+        "updated": "",
+        "keyword1": ["#hatenablog", "#programming", "atcoder"],
+        "keyword2": ["ruby", "javascript", "java"]
+    },
+    {
+        "url": "https://suzuki-navi.hatenablog.com/entry/2021/08/22/235656",
+        "title": "SORACOM S+ Camera Basicの開発環境をUbuntuに構築",
+        "posted": "2021/08/22",
+        "updated": "",
+        "keyword1": ["#hatenablog", "soracom"],
+        "keyword2": [],
+        "keyword3": ["pip", "pyenv"]
+    },
+    {
         "url": "https://qiita.com/suzuki-navi/items/51c3cd0a1a4a154fc0e5",
         "title": "Google Cloud Certified Professional Data Engineer 合格しました",
         "posted": "2021/07/31",
@@ -385,7 +436,7 @@
         "title": "WindowsのWSLからテキストのコピペでSSH経由でファイルを送る方法",
         "posted": "2021/03/09",
         "updated": "",
-        "keyword1": ["#hatenablog", "command", "wsl"],
+        "keyword1": ["#hatenablog", "command", "wsl", "windows"],
         "keyword2": ["tar", "base64"],
         "keyword3": ["clip"]
     },
