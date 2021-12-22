@@ -1,5 +1,14 @@
 [
     {
+        "url": "https://qiita.com/suzuki-navi/items/525b530f115f832453da",
+        "title": "three.jsで線がギザギザになったら",
+        "posted": "2021/10/21",
+        "updated": "",
+        "keyword1": ["#qiita", "threejs"],
+        "keyword2": ["javascript"],
+        "keyword3": []
+    },
+    {
         "url": "https://qiita.com/suzuki-navi/items/cf07965bb59acf492db0",
         "title": "もっぱらLinuxなエンジニアがWindowsのバッチファイルというものを試してみた",
         "posted": "2021/09/28",
@@ -1423,7 +1432,7 @@
     },
     {
         "url": "https://suzuki-navi.hatenablog.com/entry/2020/07/21/235123",
-        "title": "Perl / Powershell / JavaScriptのワンライナーでどこでもパスワードを生成",
+        "title": "Perl / PowerShell / JavaScriptのワンライナーでどこでもパスワードを生成",
         "posted": "2020/07/21",
         "updated": "",
         "keyword1": ["#hatenablog", "oneliner", "perl", "javascript", "powershell"],
@@ -2207,160 +2216,5 @@
         "updated": "",
         "keyword1": ["#naviplus", "#company_blog", "#pickup", "#statistics", "#math"],
         "keyword2": ["ruby"]
-    },
-
-
-    {
-        "url": "https://hydrocul.github.io/wiki/commands/date.html",
-        "title": "date コマンド",
-        "posted": "",
-        "updated": "",
-        "keyword1": ["#github_wiki", "command", "date"],
-        "keyword2": ["#datetime", "#timezone"],
-        "keyword3": []
-    },
-    {
-        "url": "https://hydrocul.github.io/wiki/commands/jq.html",
-        "title": "jq コマンド",
-        "posted": "",
-        "updated": "",
-        "keyword1": ["#github_wiki", "command", "jq"],
-        "keyword2": ["less"],
-        "keyword3": []
-    },
-    {
-        "url": "https://hydrocul.github.io/wiki/commands/sed.html",
-        "title": "sed コマンド",
-        "posted": "",
-        "updated": "",
-        "keyword1": ["#github_wiki", "command", "sed"],
-        "keyword2": ["perl", "tail"],
-        "keyword3": []
-    },
-    {
-        "url": "https://hydrocul.github.io/wiki/programming_languages_diff/list/concat.html",
-        "title": "複数の配列(リスト)を連結するには",
-        "posted": "",
-        "updated": "",
-        "keyword1": ["#github_wiki", "#programming", "scala", "javascript", "php", "ruby"],
-        "keyword2": [],
-        "keyword3": ["list", "array", "array_merge", "concat", "+", "++", ":++", "++:"]
-    },
-    {
-        "url": "https://hydrocul.github.io/wiki/programming_languages_diff/list/drop.html",
-        "title": "配列(リスト)から先頭のn個を除く残りを配列で取得するには",
-        "posted": "",
-        "updated": "",
-        "keyword1": ["#github_wiki", "#programming", "scala", "php", "golang", "ruby", "python", "sh"],
-        "keyword2": [],
-        "keyword3": ["list", "array", "drop", "array_slice", "slice", "tail"]
-    },
-    {
-        "url": "https://hydrocul.github.io/wiki/programming_languages_diff/list/foreach.html",
-        "title": "配列(リスト)の要素を1つずつ処理するには",
-        "posted": "",
-        "updated": "",
-        "keyword1": ["#github_wiki", "#programming", "java", "scala", "javascript", "php", "perl", "coffeescript", "ruby", "python", "sh"],
-        "keyword2": [],
-        "keyword3": ["list", "array", "for", "foreach", "each"]
-    },
-    {
-        "url": "https://hydrocul.github.io/wiki/programming_languages_diff/list/head.html",
-        "title": "配列(リスト)の先頭の要素を取得するには",
-        "posted": "",
-        "updated": "",
-        "keyword1": ["#github_wiki", "#programming", "java", "scala", "php", "perl", "golang", "ruby", "python"],
-        "keyword2": [],
-        "keyword3": ["list", "array", "first", "head", "headOption"]
-    },
-    {
-        "url": "https://hydrocul.github.io/wiki/programming_languages_diff/list/last.html",
-        "title": "配列(リスト)の最後の要素を取得するには",
-        "posted": "",
-        "updated": "",
-        "keyword1": ["#github_wiki", "#programming", "java", "scala", "perl", "golang", "ruby", "python"],
-        "keyword2": [],
-        "keyword3": ["list", "array", "last", "lastOption"]
-    },
-    {
-        "url": "https://hydrocul.github.io/wiki/programming_languages_diff/list/size.html",
-        "title": "配列(リスト)の要素数を取得するには",
-        "posted": "",
-        "updated": "",
-        "keyword1": ["#github_wiki", "#programming", "java", "scala", "javascript", "php", "perl", "golang", "ruby", "python"],
-        "keyword2": [],
-        "keyword3": ["list", "array", "count", "len", "length", "size", "sizeof"]
-    },
-    {
-        "url": "https://hydrocul.github.io/wiki/programming_languages_diff/list/tail.html",
-        "title": "配列(リスト)の先頭以外の残りの要素を配列で取得するには",
-        "posted": "",
-        "updated": "",
-        "keyword1": ["#github_wiki", "#programming", "scala", "php", "golang", "ruby", "python", "sh"],
-        "keyword2": [],
-        "keyword3": ["list", "array", "tail", "array_slice", "drop"]
-    },
-    {
-        "url": "https://hydrocul.github.io/wiki/programming_languages_diff/list/take.html",
-        "title": "配列(リスト)から先頭のn個のみを配列で取得するには",
-        "posted": "",
-        "updated": "",
-        "keyword1": ["#github_wiki", "#programming", "scala", "php", "perl", "golang", "ruby", "sh"],
-        "keyword2": [],
-        "keyword3": ["list", "array", "take", "first", "array_slice", "splice"]
-    },
-    {
-        "url": "https://hydrocul.github.io/wiki/programming_languages_diff/map/contains-key.html",
-        "title": "連想配列(マップ/ハッシュ/ディクショナリ)に特定のキーの有無を判定するには",
-        "posted": "",
-        "updated": "",
-        "keyword1": ["#github_wiki", "#programming", "java", "scala", "javascript", "php", "perl", "ruby", "python"],
-        "keyword2": [],
-        "keyword3": ["map", "hash", "dictionary", "containsKey", "contains", "array_key_exists", "isset", "in", "has_key", "key", "include", "member", "exists"]
-    },
-    {
-        "url": "https://hydrocul.github.io/wiki/programming_languages_diff/map/get.html",
-        "title": "連想配列(マップ/ハッシュ/ディクショナリ)の要素の値を参照するには",
-        "posted": "",
-        "updated": "",
-        "keyword1": ["#github_wiki", "#programming", "java", "scala", "javascript", "php", "perl", "ruby", "python"],
-        "keyword2": [],
-        "keyword3": ["map", "hash", "dictionary", "get", "getOrElse", "fetch", "[]"]
-    },
-    {
-        "url": "https://hydrocul.github.io/wiki/programming_languages_diff/map/overview.html",
-        "title": "連想配列(マップ/ハッシュ/ディクショナリ)の概要",
-        "posted": "",
-        "updated": "",
-        "keyword1": ["#github_wiki", "#programming", "java", "scala", "javascript", "php", "perl", "coffeescript", "ruby", "python"],
-        "keyword2": [],
-        "keyword3": ["map", "hash", "dictionary"]
-    },
-    {
-        "url": "https://hydrocul.github.io/wiki/programming_languages_diff/map/size.html",
-        "title": "連想配列(マップ/ハッシュ/ディクショナリ)の要素数を取得するには",
-        "posted": "",
-        "updated": "",
-        "keyword1": ["#github_wiki", "#programming", "java", "scala", "javascript", "php", "perl", "ruby", "python"],
-        "keyword2": [],
-        "keyword3": ["map", "hash", "dictionary", "size", "count", "sizeof", "len", "length"]
-    },
-    {
-        "url": "https://hydrocul.github.io/wiki/programming_languages_diff/exception/try.html",
-        "title": "例外をキャッチする構文",
-        "posted": "",
-        "updated": "",
-        "keyword1": ["#github_wiki", "#programming", "java", "scala", "javascript", "coffeescript", "php", "c++", "perl", "ruby", "python"],
-        "keyword2": [],
-        "keyword3": ["try", "catch", "finally", "rescue", "ensure", "except", "else"]
-    },
-    {
-        "url": "https://hydrocul.github.io/wiki/programming_languages_diff/exception/throw.html",
-        "title": "例外をスローする構文",
-        "posted": "",
-        "updated": "",
-        "keyword1": ["#github_wiki", "#programming", "java", "scala", "javascript", "coffeescript", "php", "perl", "ruby", "python"],
-        "keyword2": [],
-        "keyword3": ["throw", "raise", "die"]
     }
 ]
