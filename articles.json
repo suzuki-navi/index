@@ -1,5 +1,50 @@
 [
     {
+        "url": "https://qiita.com/suzuki-navi/items/936741e02a5869856ad8",
+        "title": "AWS Certified Data Analytics - Specialty 合格しました",
+        "posted": "2021/12/19",
+        "updated": "",
+        "keyword1": ["#qiita", "aws"],
+        "keyword2": [],
+        "keyword3": []
+    },
+    {
+        "url": "https://qiita.com/suzuki-navi/items/bd01e3f6937b35d143c2",
+        "title": "EmbulkでPostgreSQLからS3にデータを転送してみた",
+        "posted": "2021/12/18",
+        "updated": "",
+        "keyword1": ["#qiita", "embulk"],
+        "keyword2": ["aws", "postgresql", "s3"],
+        "keyword3": []
+    },
+    {
+        "url": "https://qiita.com/suzuki-navi/items/b12fa3dac7c37a4cfa08",
+        "title": "awscliのよく使うコマンド",
+        "posted": "2021/12/05",
+        "updated": "",
+        "keyword1": ["#qiita", "aws", "awscli"],
+        "keyword2": [],
+        "keyword3": []
+    },
+    {
+        "url": "https://qiita.com/suzuki-navi/items/6b448d34bf2633a06346",
+        "title": "ルービックキューブを半自動でぐりぐりさせるthree.jsのサンプルプログラム",
+        "posted": "2021/12/02",
+        "updated": "",
+        "keyword1": ["#qiita", "threejs"],
+        "keyword2": ["javascript"],
+        "keyword3": []
+    },
+    {
+        "url": "https://qiita.com/suzuki-navi/items/bbf62ac6de3e4419dbf3",
+        "title": "Vue.jsのstoreの中のgettersからgettersを呼び出すには",
+        "posted": "2021/11/03",
+        "updated": "",
+        "keyword1": ["#qiita", "vuejs"],
+        "keyword2": ["javascript"],
+        "keyword3": []
+    },
+    {
         "url": "https://qiita.com/suzuki-navi/items/525b530f115f832453da",
         "title": "three.jsで線がギザギザになったら",
         "posted": "2021/10/21",
