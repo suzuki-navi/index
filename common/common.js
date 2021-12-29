@@ -841,6 +841,10 @@ $(function(){
             </section>
             <section v-if="global_query.query=='#certification'">
               <ul>
+                <li>AWS Certified Cloud Practitioner (2021/12/24) <a href="https://qiita.com/suzuki-navi/items/3dd71a4f7f1aadc442e6">合格体験記事</a></li>
+                <li>AWS Certified Advanced Networking - Specialty (2021/12/24) <a href="https://qiita.com/suzuki-navi/items/94f0d4092cc113d82a2f">合格体験記事</a></li>
+                <li>AWS Certified Security - Specialty (2021/12/20) <a href="https://qiita.com/suzuki-navi/items/867c7f48b1c39e179808">合格体験記事</a></li>
+                <li>AWS Certified SysOps Administrator - Associate (2021/12/12) <a href="https://qiita.com/suzuki-navi/items/ebfde17bfed3eec97261">合格体験記事</a></li>
                 <li>AWS Certified Data Analytics - Specialty (2021/12/05) <a href="https://qiita.com/suzuki-navi/items/936741e02a5869856ad8">合格体験記事</a></li>
                 <li>Google Cloud Certified Professional Data Engineer (2021/07/29) <a href="https://qiita.com/suzuki-navi/items/51c3cd0a1a4a154fc0e5">合格体験記事</a></li>
                 <li>Google Cloud Certified Professional Cloud Developer (2021/07/20) <a href="https://qiita.com/suzuki-navi/items/39b4744fb7e5dc5d0487">合格体験記事</a></li>

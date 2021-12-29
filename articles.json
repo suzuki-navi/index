@@ -1,5 +1,41 @@
 [
     {
+        "url": "https://qiita.com/suzuki-navi/items/3dd71a4f7f1aadc442e6",
+        "title": "AWS Certified Cloud Practitioner 合格しました",
+        "posted": "2021/12/28",
+        "updated": "",
+        "keyword1": ["#qiita", "aws"],
+        "keyword2": [],
+        "keyword3": []
+    },
+    {
+        "url": "https://qiita.com/suzuki-navi/items/94f0d4092cc113d82a2f",
+        "title": "AWS Certified Advanced Networking - Specialty 合格しました",
+        "posted": "2021/12/27",
+        "updated": "",
+        "keyword1": ["#qiita", "aws"],
+        "keyword2": ["vpc"],
+        "keyword3": []
+    },
+    {
+        "url": "https://qiita.com/suzuki-navi/items/867c7f48b1c39e179808",
+        "title": "AWS Certified Security - Specialty 合格しました",
+        "posted": "2021/12/26",
+        "updated": "",
+        "keyword1": ["#qiita", "aws"],
+        "keyword2": ["iam", "vpc", "kms"],
+        "keyword3": []
+    },
+    {
+        "url": "https://qiita.com/suzuki-navi/items/ebfde17bfed3eec97261",
+        "title": "AWS Certified SysOps Administrator - Associate 合格しました",
+        "posted": "2021/12/25",
+        "updated": "",
+        "keyword1": ["#qiita", "aws"],
+        "keyword2": [],
+        "keyword3": []
+    },
+    {
         "url": "https://qiita.com/suzuki-navi/items/936741e02a5869856ad8",
         "title": "AWS Certified Data Analytics - Specialty 合格しました",
         "posted": "2021/12/19",
