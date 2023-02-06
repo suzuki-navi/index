@@ -132,44 +132,51 @@ window.addEventListener("load", (event) => {
         articles: null,
         categories: ["other"],
     });
-    tagList.set("#my_cases", {
-        title: "これまでに携わった主な公開事例",
-        stitle: "主な公開事例",
+    tagList.set("#job_history", {
+        title: "これまでの経歴の概要",
+        stitle: "経歴の概要",
         articles: null,
         categories: ["other"],
     });
 
-    tagList.set("clang", {
-        title: "C言語 - 言語別記事",
-        desc: "私にとって始めてさわったプログラミング言語",
-        categories: ["lang"],
-    });
-    tagList.set("c++", {
-        title: "C++ - 言語別記事",
-        categories: ["lang"],
-    });
-    tagList.set("rust", {
-        stitle: "Rust",
-        categories: ["lang"],
-    });
     tagList.set("scala", {
         title: "Scala - 言語別記事",
+        desc: "もっとも気に入っているプログラミング言語",
         categories: ["lang"],
     });
     tagList.set("java", {
         title: "Java - 言語別記事",
         categories: ["lang"],
     });
-    tagList.set("c#", {
-        title: "C# - 言語別記事",
+    tagList.set("rust", {
+        stitle: "Rust",
+        categories: ["lang"],
+    });
+    tagList.set("php", {
+        title: "PHP - 言語別記事",
+        desc: "もっとも付き合いの長いプログラミング言語",
         categories: ["lang"],
     });
     tagList.set("javascript", {
         title: "JavaScript - 言語別記事",
         categories: ["lang"],
     });
-    tagList.set("php", {
-        title: "PHP - 言語別記事",
+    tagList.set("ruby", {
+        title: "Ruby - 言語別記事",
+        categories: ["lang"],
+    });
+    tagList.set("clang", {
+        title: "C言語 - 言語別記事",
+        desc: "私が始めて触れたプログラミング言語",
+        categories: ["lang"],
+    });
+    tagList.set("c++", {
+        title: "C++ - 言語別記事",
+        desc: "C言語とともに私が始めて触れたプログラミング言語",
+        categories: ["lang"],
+    });
+    tagList.set("c#", {
+        title: "C# - 言語別記事",
         categories: ["lang"],
     });
     tagList.set("perl", {
@@ -180,12 +187,9 @@ window.addEventListener("load", (event) => {
         stitle: "Go言語",
         categories: ["lang"],
     });
-    tagList.set("ruby", {
-        title: "Ruby - 言語別記事",
-        categories: ["lang"],
-    });
     tagList.set("python", {
         title: "Python - 言語別記事",
+        desc: "ここ数年はもっともよく使っているプログラミング言語",
         categories: ["lang"],
     });
     tagList.set("elixir", {
@@ -294,7 +298,7 @@ window.addEventListener("load", (event) => {
         stitle: "Git",
         imageLink: "https://qiita.com/suzuki-navi/items/fdcb166f32b28bc0ff82",
         imageUrl: "cli.png",
-        categories: ["command"],
+        categories: ["command", "software"],
     });
     tagList.set("curl", {
         stitle: "curlコマンド",
@@ -443,11 +447,6 @@ window.addEventListener("load", (event) => {
         categories: ["cloud_gcp"],
     });
 
-    tagList.set("aws_gcp", {
-        title: "AWS/GCPに関する記事",
-        categories: ["cloud_aws", "cloud_gcp"],
-    });
-
     tagList.set("#qiita", {
         title: "Qiita - 媒体別記事",
         categories: ["media"],
@@ -519,7 +518,7 @@ window.addEventListener("load", (event) => {
     });
     tagList.set("#gradient_descent", {
         stitle: "勾配降下法",
-        categories: ["other"],
+        //categories: ["other"],
     });
     tagList.set("#deep_learning", {
         stitle: "深層学習",
@@ -674,7 +673,7 @@ window.addEventListener("load", (event) => {
         for (let i = 0; i < articles.length; i++) {
             let article = articles[i];
             let article2 = {
-                score: 3,
+                score: 4,
                 title: article.title,
                 posted: article.posted,
                 date: article.date,
@@ -696,8 +695,8 @@ window.addEventListener("load", (event) => {
         }
         for (let i = 0; i < result1.length; i++) {
             let article = result1[i];
-            let liststyle = (article.score >= 3)? "★" : (article.score >= 2)? "\\2714" : "・";
-            article.liststyle = "list-style-type:\"" + liststyle + "\"";
+            let liststyle = (article.score >= 4)? "\"★ \"" : (article.score >= 3)? "\"\\2714  \"" : (article.score >= 2)? "disc" : "circle";
+            article.liststyle = "list-style-type:" + liststyle;
         }
         return result1;
     }
@@ -734,16 +733,14 @@ window.addEventListener("load", (event) => {
     function calcScore(article, keywd) {
         let score = 0;
         if (keywd == "") {
-            if (article.posted == "") {
-                score = 0;
-            } else {
-                score = 1;
-            }
+            score = 1;
         } else if (article.keyword1.find(k => k == keywd)) {
-            score = 2;
+            score = 3;
             if (article.keyword1.find(k => k == "#pickup")) {
-                score = 3;
+                score = 4;
             }
+        } else if (article.keyword2.find(k => k == keywd)) {
+            score = 2;
         } else {
             if (keywd == "java") {
                 const ex = "javascript";
@@ -766,9 +763,6 @@ window.addEventListener("load", (event) => {
                     score = 1;
                 }
             }
-        }
-        if (article.posted == "") {
-            score = 0;
         }
         return score;
     }
@@ -845,6 +839,16 @@ window.addEventListener("load", (event) => {
                 sub(event.target);
             },
             tags(category) {
+                const app = this;
+                if (category == null) {
+                    const tags = [...getTagsByCategory(category, app._tagList).keys()];
+                    tags.sort(function(a, b) {
+                        const ac = getTagInfo(a, app._tagList).count;
+                        const bc = getTagInfo(b, app._tagList).count;
+                        return bc - ac;
+                    });
+                    return tags;
+                }
                 return getTagsByCategory(category, this._tagList).keys();
             },
             cardGoto(query) {
@@ -908,7 +912,7 @@ window.addEventListener("load", (event) => {
         },
         template: `
           <span class="tag-holder" v-on:click="tagClicked" :data-tag="tag">
-            <span class="tag">{{tagTitle}}</span><span v-if="count" class="tag-count">({{count}})</span>
+            <span class="tag">{{tagTitle}}</span><span v-if="count" class="tag-count">{{count}}</span>
           </span>
         `,
     });

@@ -29,17 +29,17 @@
     <p>
       <taglink v-on:tag-clicked="tagClicked" tag="#certification"></taglink>
       <taglink v-on:tag-clicked="tagClicked" tag="#my_open_sources"></taglink>
-      <taglink v-on:tag-clicked="tagClicked" tag="#my_cases"></taglink>
+      <taglink v-on:tag-clicked="tagClicked" tag="#job_history"></taglink>
       <taglink v-on:tag-clicked="tagClicked" tag="#tags"></taglink>
     </p>
     <p>
-      <taglink v-on:tag-clicked="tagClicked" tag="c++"></taglink>
-      <taglink v-on:tag-clicked="tagClicked" tag="rust"></taglink>
       <taglink v-on:tag-clicked="tagClicked" tag="scala"></taglink>
       <taglink v-on:tag-clicked="tagClicked" tag="java"></taglink>
-      <taglink v-on:tag-clicked="tagClicked" tag="javascript"></taglink>
+      <taglink v-on:tag-clicked="tagClicked" tag="rust"></taglink>
       <taglink v-on:tag-clicked="tagClicked" tag="php"></taglink>
+      <taglink v-on:tag-clicked="tagClicked" tag="javascript"></taglink>
       <taglink v-on:tag-clicked="tagClicked" tag="ruby"></taglink>
+      <taglink v-on:tag-clicked="tagClicked" tag="c++"></taglink>
     </p>
     <p>
       <taglink v-on:tag-clicked="tagClicked" tag="#math"></taglink>
@@ -52,7 +52,6 @@
       <taglink v-on:tag-clicked="tagClicked" tag="#astronomy"></taglink>
     </p>
   </div>
-  <h2 v-if="query==''">最近の主な記事</h2>
   <div v-if="query=='#certification'">
     <ul>
       <li>AWS Certified SAP on AWS - Specialty (2022/10/31)</li>
@@ -97,7 +96,7 @@
         <p>CSVファイルやTSVファイルをCUIで扱うツール</p>
       </li>
       <li><a href="https://suzuki-navi.github.io/hoshizora_today/">星空bot</a> (2021/01 ～)
-        <p>星空bot - 星空の様子をツイートするボット化</p>
+        <p>星空bot - 星空の様子をツイートするボット</p>
       </li>
       <li><a href="https://github.com/suzuki-navi/suzuki-navi-calendar">suzuki-navi's calendar</a> (2021/02 ～)
         <p>自分専用カレンダーコマンド</p>
@@ -119,17 +118,52 @@
       </li>
     </ul>
   </div>
-  <div v-if="query=='#my_cases'">
-    <ul>
-      <li><a href="https://www.naviplus.co.jp/search/">ECサイトの検索エンジン</a> (2013/05 〜 2019/07)
-        <p>多数のECサイトの検索エンジン開発/導入/運用に携わる</p>
-        <ul>
-          <li><a href="https://www.naviplus.co.jp/search/interview_surugaya.html">主な導入事例</a></li>
-        </ul>
+  <div v-if="query=='#job_history'">
+    <ul class="job-history">
+      <li>
+        ウェブアプリケーション開発、助言の案件 (2020年～現在)<br>
+        言語はPython, JavaScriptが多い。Pythonは好きなわけではない<br>
+        たまにプリセールス<br>
+      </li>
+      <li>
+        データ分析基盤構築の案件 (2019年～現在)<br>
+        AWS環境を扱うようになった<br>
+        AWS資格をすべて取得したが、AWSにそんなに詳しいわけではない<br>
+        ブログを始めた<br>
+        言語はPythonが多いが好きなわけではない<br>
+        たまにプリセールス<br>
+      </li>
+      <li>
+        <div style="float:right;">
+          <img src="img/search-2.png">
+        </div>
+        <a href="https://www.naviplus.co.jp/search/">ECサイトの検索エンジン</a> (2013年〜2019年)<br>
+        多数のECサイトの検索エンジン開発/導入/運用、プリセールスに携わる<br>
+        <a href="https://www.naviplus.co.jp/search/interview_surugaya.html">主な導入事例</a><br>
+        形態素解析も作った<br>
+        PHP、Java、Scala、Perlなどを書いていた。Ruby、Python、Go言語にも触れた<br>
+        仕事で開発作業ができたのは楽しかった<br>
+        プリセールスとして営業といっしょにお客さんに向いて仕事するのも楽しかった<br>
+      </li>
+      <li>
+        ウェブ制作 (社会人初期 ～ 2013年)<br>
+        IRサイト、投資家向けサイトなどを中心に、ウェブサイト制作ディレクション、ウェブアプリ開発ディレクションをしていた<br>
+        PHPが多かったが、自分でプログラムを書くことはまれだった<br>
+        このころに趣味でScalaを覚えてScalaがお気に入りになった<br>
+      </li>
+      <li>
+        フリーランス時代 (学生時代 ～ 社会人初期)<br>
+        ウェブアプリ開発など<br>
+        仕事しつつJava、PHPなどで遊んでいた<br>
+      </li>
+      <li>
+        学生時代<br>
+        C++、Java、PHPなどで遊んでいた<br>
+        専門は物理学だったけど卒論はJavaのおもちゃプログラムを書いた<br>
       </li>
     </ul>
-    <p class="image">
-      <img src="img/search-2.png">
+    <p>
+      ※この記述の最終更新: 2023/02
     </p>
   </div>
   <div v-if="query=='#tags'">
@@ -165,6 +199,7 @@
       <taglink v-for="tag in tags(null)" v-on:tag-clicked="tagClicked" :tag="tag" count-view="on"></taglink>
     </p>
   </div>
+  <h2 v-if="query==''">主な記事</h2>
   <p v-if="tagDesc">{{tagDesc}}</p>
   <ul v-if="articles">
     <li v-for="article in articles" :style="article.liststyle">
