@@ -2,34 +2,199 @@
 <html>
 <head>
 <meta charset="utf-8"/>
+<!-- <meta name="viewport" content="width=1000"> -->
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>suzuki-navi</title>
 <link rel="canonical" href="https://suzuki-navi.github.io/index/">
-<link rel="stylesheet" href="common/common.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" defer></script>
-<script src="https://cdn.jsdelivr.net/npm/vue@2.6.11" defer></script>
+<link rel="stylesheet" href="common.css">
+<script src="https://unpkg.com/vue@3/dist/vue.global.prod.js" defer></script>
+<!-- <script src="https://unpkg.com/vue@3/dist/vue.global.js" defer></script> -->
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js" defer></script>
-<script src="common/common.js" defer></script>
+<script src="common.js" defer></script>
 <script>const articles_json_url="articles.json";</script>
-<script>const multilangs_snippets_url="snippets/multilangs.txt";</script>
-<script>const cpp_snippets_url="snippets/cpp.cpp";</script>
-<script>const scala_snippets_url="snippets/scala.scala";</script>
-<script>const java_snippets_url="snippets/java.java";</script>
-<script>const javascript_snippets_url="snippets/javascript.js";</script>
-<script>const ruby_snippets_url="snippets/ruby.rb";</script>
-<script>const python_snippets_url="snippets/python.py";</script>
-<script>const shell_snippets_url="snippets/shell.sh";</script>
-<script>const other_snippets_url="snippets/others.txt";</script>
-
 </head>
 <body>
+<div id="body" style="display:none;">
 
-<div id="body">
-<h1><a href="./"><img src="icon.png" class="profile-img"></a> <span class="title">これまでに書いたもの/してきたこと</span></h1>
-<div class="grid">
-  <articles-tags id="card-tags" class="card card-size5"></articles-tags>
-  <search-articles-search class="card card-size5" id="card-search"></search-articles-search>
+<div class="search">
+  <taglink v-if="query!='#tags'" v-on:tag-clicked="tagClicked" tag="#tags"></taglink>
+  <input v-model="query" id="search-box" placeholder="Search articles">
 </div>
+
+<h1><span v-on:click="tagClicked" data-tag="#"><img src="img/su.png" class="profile-img"></span> <span class="title">これまでに書いたもの / 作ったもの / してきたこと</span></h1>
+
+<div id="content">
+  <h2 v-if="title">{{title}}</h2>
+  <div v-if="query==''">
+    <p>
+      <taglink v-on:tag-clicked="tagClicked" tag="#certification"></taglink>
+      <taglink v-on:tag-clicked="tagClicked" tag="#my_open_sources"></taglink>
+      <taglink v-on:tag-clicked="tagClicked" tag="#my_cases"></taglink>
+      <taglink v-on:tag-clicked="tagClicked" tag="#tags"></taglink>
+    </p>
+    <p>
+      <taglink v-on:tag-clicked="tagClicked" tag="c++"></taglink>
+      <taglink v-on:tag-clicked="tagClicked" tag="rust"></taglink>
+      <taglink v-on:tag-clicked="tagClicked" tag="scala"></taglink>
+      <taglink v-on:tag-clicked="tagClicked" tag="java"></taglink>
+      <taglink v-on:tag-clicked="tagClicked" tag="javascript"></taglink>
+      <taglink v-on:tag-clicked="tagClicked" tag="php"></taglink>
+      <taglink v-on:tag-clicked="tagClicked" tag="ruby"></taglink>
+    </p>
+    <p>
+      <taglink v-on:tag-clicked="tagClicked" tag="#math"></taglink>
+      <taglink v-on:tag-clicked="tagClicked" tag="#programming"></taglink>
+      <taglink v-on:tag-clicked="tagClicked" tag="#serverless"></taglink>
+      <taglink v-on:tag-clicked="tagClicked" tag="command"></taglink>
+      <taglink v-on:tag-clicked="tagClicked" tag="aws"></taglink>
+      <taglink v-on:tag-clicked="tagClicked" tag="gcp"></taglink>
+      <taglink v-on:tag-clicked="tagClicked" tag="#machine_learning"></taglink>
+      <taglink v-on:tag-clicked="tagClicked" tag="#astronomy"></taglink>
+    </p>
+  </div>
+  <h2 v-if="query==''">最近の主な記事</h2>
+  <div v-if="query=='#certification'">
+    <ul>
+      <li>AWS Certified SAP on AWS - Specialty (2022/10/31)</li>
+      <li>AWS Certified DevOps Engineer - Professional (2022/01/10) <a href="https://qiita.com/suzuki-navi/items/07b0bda47662340efda3">合格体験記事</a></li>
+      <li>AWS Certified Solutions Architect - Professional (2022/01/06) <a href="https://qiita.com/suzuki-navi/items/eeac0099cd7bdcb12847">合格体験記事</a></li>
+      <li>AWS Certified Cloud Practitioner (2021/12/24) <a href="https://qiita.com/suzuki-navi/items/3dd71a4f7f1aadc442e6">合格体験記事</a></li>
+      <li>AWS Certified Advanced Networking - Specialty (2021/12/24) <a href="https://qiita.com/suzuki-navi/items/94f0d4092cc113d82a2f">合格体験記事</a></li>
+      <li>AWS Certified Security - Specialty (2021/12/20) <a href="https://qiita.com/suzuki-navi/items/867c7f48b1c39e179808">合格体験記事</a></li>
+      <li>AWS Certified SysOps Administrator - Associate (2021/12/12) <a href="https://qiita.com/suzuki-navi/items/ebfde17bfed3eec97261">合格体験記事</a></li>
+      <li>AWS Certified Data Analytics - Specialty (2021/12/05) <a href="https://qiita.com/suzuki-navi/items/936741e02a5869856ad8">合格体験記事</a></li>
+      <li>Google Cloud Certified Professional Data Engineer (2021/07/29) <a href="https://qiita.com/suzuki-navi/items/51c3cd0a1a4a154fc0e5">合格体験記事</a></li>
+      <li>Google Cloud Certified Professional Cloud Developer (2021/07/20) <a href="https://qiita.com/suzuki-navi/items/39b4744fb7e5dc5d0487">合格体験記事</a></li>
+      <li>Google Cloud Certified Professional Cloud Architect (2021/07/09) <a href="https://qiita.com/suzuki-navi/items/9b6d21a668225d9d21e5">合格体験記事</a></li>
+      <li>AWS Certified Developer - Associate (2021/07/06) <a href="https://qiita.com/suzuki-navi/items/dfb343130da83d560ce4">合格体験記事</a></li>
+      <li>AWS Certified Database - Specialty (2020/10/19) <a href="https://qiita.com/suzuki-navi/items/59f8a4a94ad9a22dd569">合格体験記事</a> (2022/10/17 更新)</li>
+      <li>日本ディープラーニング協会 G検定 (2020/07/04) <a href="https://qiita.com/suzuki-navi/items/fd3607f8f0e670bba887">合格体験記事</a></li>
+      <li>日本統計学会 統計検定 2級 (2020/05/31) <a href="https://qiita.com/suzuki-navi/items/e353b8dfbc6e872f9f41">合格体験記事</a></li>
+      <li>AWS Certified Machine Learning - Specialty (2019/11/20) <a href="https://qiita.com/suzuki-navi/items/3664bfbc102052717426">合格体験記事</a> (2022/11/14 更新)</li>
+      <li>AWS Certified Big Data - Specialty (2019/10/31) <a href="https://qiita.com/suzuki-navi/items/8b2fe5a35a4439013461">合格体験記事</a></li>
+      <li>AWS Certified Solutions Architect - Associate (2019/09/26)</li>
+      <li>全国珠算教育連盟 珠算検定 初段 (昔)</li>
+      <li>日本商工会議所 珠算検定 1級 (昔)</li>
+    </ul>
+    <h3>そのほか</h3>
+    <ul>
+      <li>2022 APN ALL AWS Certifications Engineers 受賞 (2022/05)<br>
+        <a href="https://aws.amazon.com/jp/blogs/psa/2022-apn-all-aws-certifications-engineers/" target="_blank">2022 APN ALL AWS Certifications Engineers の発表 | AWS JAPAN APN ブログ</a> (2022/05)</li>
+      <li>日本数学オリンピック 予選通過 (昔)<br>全国で上位100名</li>
+    </ul>
+<!--
+    <p class="image">
+      <img src="certification.png">
+    </p>
+    <p class="image">
+      <img src="toukei-kentei.png">
+    </p>
+-->
+  </div>
+  <div v-if="query=='#my_open_sources'">
+    <ul>
+      <li><a href="https://github.com/xsvutils/xsvutils">xsvutils</a> (2017/12 〜)
+        <p>CSVファイルやTSVファイルをCUIで扱うツール</p>
+      </li>
+      <li><a href="https://suzuki-navi.github.io/hoshizora_today/">星空bot</a> (2021/01 ～)
+        <p>星空bot - 星空の様子をツイートするボット化</p>
+      </li>
+      <li><a href="https://github.com/suzuki-navi/suzuki-navi-calendar">suzuki-navi's calendar</a> (2021/02 ～)
+        <p>自分専用カレンダーコマンド</p>
+      </li>
+      <li><a href="https://github.com/suzuki-navi/aws-glue-job-history">aws-glue-job-history</a> (2021/02 ～)
+        <p>AWS Glue Jobの実行履歴を表示するコマンドラインツール</p>
+      </li>
+      <li><a href="https://github.com/suzuki-navi/j2cli5">j2cli5</a> (2021/03 ～)
+        <p>Pythonのjinja2の簡易CLI化</p>
+      </li>
+      <li><a href="https://suzuki-navi.github.io/suzuki-navi-converter/">suzuki-navi-converter</a> (2021/05 ～)
+        <p>自分専用の各種変換ツール</p>
+      </li>
+      <li><a href="https://github.com/suzuki-navi/aws-list-subnets">aws-list-subnets</a> (2022/05 ～)
+        <p>AWSのサブネット一覧と使用中IP一覧を見るコマンドラインツール</p>
+      </li>
+      <li><a href="https://suzuki-navi.github.io/domino/202212/">セルオートマトンによるCPU</a> (2022/12 ～)
+        <p>ブラウザ上で動くセルオートマトンでCPUを作成した記録</p>
+      </li>
+    </ul>
+  </div>
+  <div v-if="query=='#my_cases'">
+    <ul>
+      <li><a href="https://www.naviplus.co.jp/search/">ECサイトの検索エンジン</a> (2013/05 〜 2019/07)
+        <p>多数のECサイトの検索エンジン開発/導入/運用に携わる</p>
+        <ul>
+          <li><a href="https://www.naviplus.co.jp/search/interview_surugaya.html">主な導入事例</a></li>
+        </ul>
+      </li>
+    </ul>
+    <p class="image">
+      <img src="img/search-2.png">
+    </p>
+  </div>
+  <div v-if="query=='#tags'">
+    <h3>プログラミング言語別記事</h3>
+    <p>
+      <taglink v-for="tag in tags('lang')" v-on:tag-clicked="tagClicked" :tag="tag" count-view="on"></taglink>
+    </p>
+    <h3>ソフトウェア別記事</h3>
+    <p>
+      <taglink v-for="tag in tags('software')" v-on:tag-clicked="tagClicked" :tag="tag" count-view="on"></taglink>
+    </p>
+    <h3>Linuxコマンド別記事</h3>
+    <p>
+      <taglink v-for="tag in tags('command')" v-on:tag-clicked="tagClicked" :tag="tag" count-view="on"></taglink>
+    </p>
+    <h3>AWS - クラウド環境の記事</h3>
+    <p>
+      <taglink v-for="tag in tags('cloud_aws')" v-on:tag-clicked="tagClicked" :tag="tag" count-view="on"></taglink>
+    </p>
+    <h3>Google Cloud - クラウド環境の記事</h3>
+    <p>
+      <taglink v-for="tag in tags('cloud_gcp')" v-on:tag-clicked="tagClicked" :tag="tag" count-view="on"></taglink>
+    </p>
+    <h3>媒体別記事</h3>
+    <p>
+      <taglink v-for="tag in tags('media')" v-on:tag-clicked="tagClicked" :tag="tag" count-view="on"></taglink>
+    </p>
+    <h3>その他</h3>
+    <p>
+      <taglink v-for="tag in tags('other')" v-on:tag-clicked="tagClicked" :tag="tag" count-view="on"></taglink>
+    </p>
+    <p>
+      <taglink v-for="tag in tags(null)" v-on:tag-clicked="tagClicked" :tag="tag" count-view="on"></taglink>
+    </p>
+  </div>
+  <p v-if="tagDesc">{{tagDesc}}</p>
+  <ul v-if="articles">
+    <li v-for="article in articles" :style="article.liststyle">
+      <a :href="article.url" target="_blank" class="article-link">{{article.title}}</a>
+      <span class="article-date">{{article.date}}</span>
+      <span class="article-tags">
+        <taglink v-for="tag in article.tags" v-on:tag-clicked="tagClicked" :tag="tag"></taglink>
+      </span>
+    </li>
+  </ul>
+  <p v-if="queryImageUrl" class="image">
+    <a v-if="queryImageLink" :href="queryImageLink" target="_blank"><img :src="queryImageUrl"></a>
+    <img v-if="!queryImageLink" :src="queryImageUrl">
+  </p>
+  <p v-if="query=='raspberry_pi'" class="youtube">
+    <iframe width="352" height="198" src="https://www.youtube-nocookie.com/embed/wFTvOIsHmQo?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </p>
+  <div v-if="query==''">
+    <p class="image">
+      <taglink v-on:tag-clicked="tagClicked" tag="atcoder"></taglink><br>
+      <a href="https://atcoder.jp/users/suzukinavi" target="_blank"><img src="img/atcoder2.png"></a>
+    </p>
+  </div>
+  <div v-if="query=='atcoder'">
+    <p class="image">
+      <a href="https://atcoder.jp/users/suzukinavi" target="_blank"><img src="img/atcoder2.png"></a>
+    </p>
+  </div>
+</div>
+
 </div>
 </body>
 </html>
