@@ -86,18 +86,24 @@ ul {
     padding-left: 20px;
 }
 
-h2 .article-count {
+.article-count {
+    float: right;
     font-size: 60%;
 }
-h2 .article-count:before {
+.article-count:before {
     content: "(";
 }
-h2 .article-count:after {
+.article-count:after {
     content: ")";
 }
 
+ul li.article {
+    margin-top: 4px;
+    margin-bottom: 4px;
+    line-height: 1.2;
+}
+
 ul li .article-link {
-    
 }
 
 ul li .article-date {
@@ -113,7 +119,6 @@ ul li .article-date:after {
 }
 
 ul li .article-tags {
-    
 }
 
 ul.job-history li {
@@ -121,26 +126,46 @@ ul.job-history li {
     margin-bottom: 10px;
 }
 
-.tag-holder {
+ul.job-history li p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 40px;
+}
+
+div.tags {
+}
+
+a.tag-holder {
     display: inline-block;
-    margin: 6px 8px 6px 8px;
+    margin: 0 8px 0 8px;
     font-size: 80%;
     cursor: pointer;
+    text-decoration: none;
+    color: #000000;
 }
-.tag {
+.tags a.tag-holder {
+    margin: 4px 8px 4px 8px;
+}
+a.tag-holder:hover {
+    text-decoration: underline;
+}
+a.tag-holder .tag {
     display: inline-block;
     padding: 2px 4px 2px 4px;
     border-radius: 4px;
     background-color: #dddddd;
 }
+a.tag-holder .tag:hover {
+    text-decoration: underline;
+}
 
-.tag-count {
+a.tag-holder .tag-count {
     font-size: 80%;
 }
-.tag-count:before {
+a.tag-holder .tag-count:before {
     content: "(";
 }
-.tag-count:after {
+a.tag-holder .tag-count:after {
     content: ")";
 }
 

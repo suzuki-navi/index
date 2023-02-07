@@ -135,8 +135,8 @@ window.addEventListener("load", (event) => {
         categories: ["other"],
     });
     tagList.set("#job_history", {
-        title: "これまでの経歴の概要",
-        stitle: "経歴の概要",
+        title: "職歴の概要と私の連絡先",
+        stitle: "職歴の概要と私の連絡先",
         articles: null,
         categories: ["other"],
     });
@@ -199,6 +199,10 @@ window.addEventListener("load", (event) => {
         categories: ["lang"],
     });
 
+    tagList.set("serverless_framework", {
+        stitle: "Serverless Framework",
+        categories: ["software"],
+    });
     tagList.set("postgresql", {
         title: "PostgreSQL - ソフトウェア別記事",
         categories: ["software"],
@@ -259,8 +263,8 @@ window.addEventListener("load", (event) => {
         stitle: "DBeaver",
         categories: ["software"],
     });
-    tagList.set("serverless_framework", {
-        stitle: "Serverless Framework",
+    tagList.set("embulk", {
+        stitle: "Embulk",
         categories: ["software"],
     });
     tagList.set("tex", {
@@ -604,16 +608,14 @@ window.addEventListener("load", (event) => {
             };
         }
         const ret = {};
-        if (t.title) {
+        if (tag == "") {
+            ret.title = "これまでに書いたもの / 作ったもの / してきたこと";
+        } else if (t.title) {
             ret.title = t.title;
         } else if (t.stitle) {
             ret.title = t.stitle + "の記事";
         } else {
-            if (tag == "") {
-                ret.title = "";
-            } else {
-                ret.title = "\"" + tag + "\" の記事";
-            }
+            ret.title = "\"" + tag + "\" の記事";
         }
         if (t.stitle) {
             ret.stitle = t.stitle;
@@ -838,6 +840,10 @@ window.addEventListener("load", (event) => {
                 return getTagInfo(this.tag, this._tagList).stitle;
             },
             tagClicked(event) {
+                if (event.ctrlKey) {
+                    return;
+                }
+                event.preventDefault();
                 const app = this;
                 function sub(elem) {
                     if (elem.dataset.tag) {
@@ -921,9 +927,9 @@ window.addEventListener("load", (event) => {
             });
         },
         template: `
-          <span class="tag-holder" v-on:click="tagClicked" :data-tag="tag">
+          <a v-on:click="tagClicked" :data-tag="tag" :href="'./#' + tag" class="tag-holder">
             <span class="tag">{{tagTitle}}</span><span v-if="count" class="tag-count">{{count}}</span>
-          </span>
+          </a>
         `,
     });
 

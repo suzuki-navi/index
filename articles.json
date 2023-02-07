@@ -310,7 +310,7 @@
         "title": "EmbulkでPostgreSQLからS3にデータを転送してみた",
         "posted": "2021/12/18",
         "updated": "",
-        "keyword1": ["#pickup", "embulk"],
+        "keyword1": ["embulk"],
         "keyword2": ["aws", "postgresql", "s3"],
         "keyword3": []
     },

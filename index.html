@@ -21,18 +21,17 @@
   <input v-model="query" id="search-box" placeholder="Search articles">
 </div>
 
-<h1><span v-on:click="tagClicked" data-tag="#"><img src="img/su.png" class="profile-img"></span> <span class="title">これまでに書いたもの / 作ったもの / してきたこと</span></h1>
+<h1><a v-on:click="tagClicked" data-tag="#" href="./"><img src="img/su.png" class="profile-img"></a> <span class="title">{{title}}</span></h1>
 
 <div id="content">
-  <h2 v-if="title">{{title}} <span v-if="articleCount" class="article-count">{{articleCount}}</span></h2>
-  <div v-if="query==''">
+  <div v-if="articleCount && query" class="article-count">{{articleCount}}</div>
+  <div v-if="query==''" class="tags">
     <p>
+      <taglink v-on:tag-clicked="tagClicked" tag="#job_history"></taglink>
       <taglink v-on:tag-clicked="tagClicked" tag="#certification"></taglink>
       <taglink v-on:tag-clicked="tagClicked" tag="#my_open_sources"></taglink>
-      <taglink v-on:tag-clicked="tagClicked" tag="#job_history"></taglink>
       <taglink v-on:tag-clicked="tagClicked" tag="#tags"></taglink>
-    </p>
-    <p>
+      <br>
       <taglink v-on:tag-clicked="tagClicked" tag="scala"></taglink>
       <taglink v-on:tag-clicked="tagClicked" tag="java"></taglink>
       <taglink v-on:tag-clicked="tagClicked" tag="rust"></taglink>
@@ -40,8 +39,7 @@
       <taglink v-on:tag-clicked="tagClicked" tag="javascript"></taglink>
       <taglink v-on:tag-clicked="tagClicked" tag="ruby"></taglink>
       <taglink v-on:tag-clicked="tagClicked" tag="c++"></taglink>
-    </p>
-    <p>
+      <br>
       <taglink v-on:tag-clicked="tagClicked" tag="#math"></taglink>
       <taglink v-on:tag-clicked="tagClicked" tag="#programming"></taglink>
       <taglink v-on:tag-clicked="tagClicked" tag="#serverless"></taglink>
@@ -53,6 +51,7 @@
     </p>
   </div>
   <div v-if="query=='#certification'">
+    <h2>資格取得の履歴</h2>
     <ul>
       <li>AWS Certified SAP on AWS - Specialty (2022/10/31)</li>
       <li>AWS Certified DevOps Engineer - Professional (2022/01/10) <a href="https://qiita.com/suzuki-navi/items/07b0bda47662340efda3">合格体験記事</a></li>
@@ -75,7 +74,7 @@
       <li>全国珠算教育連盟 珠算検定 初段 (昔)</li>
       <li>日本商工会議所 珠算検定 1級 (昔)</li>
     </ul>
-    <h3>そのほか</h3>
+    <h2>受賞の履歴</h2>
     <ul>
       <li>2022 APN ALL AWS Certifications Engineers 受賞 (2022/05)<br>
         <a href="https://aws.amazon.com/jp/blogs/psa/2022-apn-all-aws-certifications-engineers/" target="_blank">2022 APN ALL AWS Certifications Engineers の発表 | AWS JAPAN APN ブログ</a> (2022/05)</li>
@@ -92,106 +91,134 @@
   </div>
   <div v-if="query=='#my_open_sources'">
     <ul>
-      <li><a href="https://github.com/xsvutils/xsvutils">xsvutils</a> (2017/12 〜)
+      <li><a href="https://github.com/xsvutils/xsvutils">xsvutils</a> (2017/12)
         <p>CSVファイルやTSVファイルをCUIで扱うツール</p>
       </li>
-      <li><a href="https://suzuki-navi.github.io/hoshizora_today/">星空bot</a> (2021/01 ～)
+      <li><a href="https://suzuki-navi.github.io/hoshizora_today/">星空bot</a> (2021/01)
         <p>星空bot - 星空の様子をツイートするボット</p>
       </li>
-      <li><a href="https://github.com/suzuki-navi/suzuki-navi-calendar">suzuki-navi's calendar</a> (2021/02 ～)
+      <li><a href="https://github.com/suzuki-navi/suzuki-navi-calendar">suzuki-navi's calendar</a> (2021/02)
         <p>自分専用カレンダーコマンド</p>
       </li>
-      <li><a href="https://github.com/suzuki-navi/aws-glue-job-history">aws-glue-job-history</a> (2021/02 ～)
+      <li><a href="https://github.com/suzuki-navi/aws-glue-job-history">aws-glue-job-history</a> (2021/02)
         <p>AWS Glue Jobの実行履歴を表示するコマンドラインツール</p>
       </li>
-      <li><a href="https://github.com/suzuki-navi/j2cli5">j2cli5</a> (2021/03 ～)
+      <li><a href="https://github.com/suzuki-navi/j2cli5">j2cli5</a> (2021/03)
         <p>Pythonのjinja2の簡易CLI化</p>
       </li>
-      <li><a href="https://suzuki-navi.github.io/suzuki-navi-converter/">suzuki-navi-converter</a> (2021/05 ～)
+      <li><a href="https://suzuki-navi.github.io/suzuki-navi-converter/">suzuki-navi-converter</a> (2021/05)
         <p>自分専用の各種変換ツール</p>
       </li>
-      <li><a href="https://github.com/suzuki-navi/aws-list-subnets">aws-list-subnets</a> (2022/05 ～)
+      <li><a href="https://github.com/suzuki-navi/aws-list-subnets">aws-list-subnets</a> (2022/05)
         <p>AWSのサブネット一覧と使用中IP一覧を見るコマンドラインツール</p>
       </li>
-      <li><a href="https://suzuki-navi.github.io/domino/202212/">セルオートマトンによるCPU</a> (2022/12 ～)
+      <li><a href="https://suzuki-navi.github.io/domino/202212/">セルオートマトンによるCPU</a> (2022/12)
         <p>ブラウザ上で動くセルオートマトンでCPUを作成した記録</p>
+      </li>
+      <li><a href="https://suzuki-navi.github.io/analogclock/">情報量の多いアナログ時計</a> (2023/01)
+        <p>ブラウザ上で動く天文時計・星座早見盤・世界時計・万年カレンダーを兼ねたアナログ時計</p>
       </li>
     </ul>
   </div>
   <div v-if="query=='#job_history'">
+    <h2>職歴の概要</h2>
     <ul class="job-history">
       <li>
-        ウェブアプリケーション開発、助言の案件 (2020年～現在)<br>
-        言語はPython, JavaScriptが多い。Pythonは好きなわけではない<br>
-        たまにプリセールス<br>
+        ウェブアプリケーション開発、助言の案件 (2020年～現在)
+        <p>
+          言語はPython, JavaScriptが多い。Pythonは好きなわけではない。<br>
+          たまにプリセールス。<br>
+        </p>
       </li>
       <li>
-        データ分析基盤構築の案件 (2019年～現在)<br>
-        AWS環境を扱うようになった<br>
-        AWS資格をすべて取得したが、AWSにそんなに詳しいわけではない<br>
-        ブログを始めた<br>
-        言語はPythonが多いが好きなわけではない<br>
-        たまにプリセールス<br>
+        データ分析基盤構築の案件 (2019年～現在)
+        <p>
+          AWS環境を扱うようになった。<br>
+          AWS資格をすべて取得したが、AWSにそんなに詳しいわけではない。<br>
+          ブログを始めた。<br>
+          言語はPythonが多いが好きなわけではない。<br>
+          たまにプリセールス。<br>
+        </p>
       </li>
       <li>
         <div style="float:right;">
           <img src="img/search-2.png">
         </div>
-        <a href="https://www.naviplus.co.jp/search/">ECサイトの検索エンジン</a> (2013年〜2019年)<br>
-        多数のECサイトの検索エンジン開発/導入/運用、プリセールスに携わる<br>
-        <a href="https://www.naviplus.co.jp/search/interview_surugaya.html">主な導入事例</a><br>
-        形態素解析も作った<br>
-        PHP、Java、Scala、Perlなどを書いていた。Ruby、Python、Go言語にも触れた<br>
-        仕事で開発作業ができたのは楽しかった<br>
-        プリセールスとして営業といっしょにお客さんに向いて仕事するのも楽しかった<br>
+        <a href="https://www.naviplus.co.jp/search/">ECサイトの検索エンジン</a> (2013年〜2019年)
+        <p>
+          多数のECサイトの検索エンジン開発/導入/運用、プリセールスに携わる。<br>
+          <a href="https://www.naviplus.co.jp/search/interview_surugaya.html">主な導入事例</a><br>
+          形態素解析も作った。<br>
+          PHP、Java、Scala、Perlなどを書いていた。Ruby、Python、Go言語にも触れた。<br>
+          仕事で開発作業ができたのは楽しかった。<br>
+          プリセールスとして営業といっしょにお客さんに向いて仕事するのも楽しかった。<br>
+        </p>
       </li>
       <li>
-        ウェブ制作 (社会人初期 ～ 2013年)<br>
-        IRサイト、投資家向けサイトなどを中心に、ウェブサイト制作ディレクション、ウェブアプリ開発ディレクションをしていた<br>
-        PHPが多かったが、自分でプログラムを書くことはまれだった<br>
-        このころに趣味でScalaを覚えてScalaがお気に入りになった<br>
+        <div style="float:right;">
+          <img src="img/hard-work2.png">
+        </div>
+        ウェブ制作 (社会人初期 ～ 2013年)
+        <p>
+          IRサイト、投資家向けサイトなどを中心に、ウェブサイト制作ディレクション、ウェブアプリ開発ディレクションをしていた。<br>
+          PHPが多かったが、自分でプログラムを書くことはまれだった。<br>
+          このころに趣味でScalaを覚えてScalaがお気に入りになった。<br>
+        </p>
       </li>
       <li>
-        フリーランス時代 (学生時代 ～ 社会人初期)<br>
-        ウェブアプリ開発など<br>
-        仕事しつつJava、PHPなどで遊んでいた<br>
+        フリーランス時代 (学生時代 ～ 社会人初期)
+        <p>
+          ウェブアプリ開発など。<br>
+          仕事しつつJava、PHPなどで遊んでいた。<br>
+        </p>
       </li>
       <li>
-        学生時代<br>
-        C++、Java、PHPなどで遊んでいた<br>
-        専門は物理学だったけど卒論はJavaのおもちゃプログラムを書いた<br>
+        学生時代
+        <p>
+          C++、Java、PHPなどで遊んでいた。<br>
+          専門は物理学だったけど卒論はJavaのおもちゃプログラムを書いた。<br>
+        </p>
       </li>
     </ul>
+    <hr>
+    <h2>私の連絡先</h2>
     <p>
-      ※この記述の最終更新: 2023/02
+      もしも私に仕事の相談をしたいという方がいましたら、私の現在の所属会社であるBeeXにご連絡ください。このページを見て連絡したと伝えいただければ私に繋がると思います。
+    </p>
+    <p>
+      ただし、私のブログやQiitaの記事など私個人が発信している情報は所属会社の見解ではありません。GitHubレポジトリの内容も私個人に属します。記事に誤り等ございましたら会社宛ではなく記事へのコメントなどそれぞれ適切な方法でご指摘いただければ幸いです。GitHubのコミットログを探せば私のメールアドレスも見つかります。
+    </p>
+    <hr>
+    <p>
+      ※このページの最終更新: 2023/02
     </p>
   </div>
-  <div v-if="query=='#tags'">
-    <h3>プログラミング言語別記事</h3>
+  <div v-if="query=='#tags'" class="tags">
+    <h2>プログラミング言語別記事</h2>
     <p>
       <taglink v-for="tag in tags('lang')" v-on:tag-clicked="tagClicked" :tag="tag" count-view="on"></taglink>
     </p>
-    <h3>ソフトウェア別記事</h3>
+    <h2>ソフトウェア別記事</h2>
     <p>
       <taglink v-for="tag in tags('software')" v-on:tag-clicked="tagClicked" :tag="tag" count-view="on"></taglink>
     </p>
-    <h3>Linuxコマンド別記事</h3>
+    <h2>Linuxコマンド別記事</h2>
     <p>
       <taglink v-for="tag in tags('command')" v-on:tag-clicked="tagClicked" :tag="tag" count-view="on"></taglink>
     </p>
-    <h3>AWS - クラウド環境の記事</h3>
+    <h2>AWS - クラウド環境の記事</h2>
     <p>
       <taglink v-for="tag in tags('cloud_aws')" v-on:tag-clicked="tagClicked" :tag="tag" count-view="on"></taglink>
     </p>
-    <h3>Google Cloud - クラウド環境の記事</h3>
+    <h2>Google Cloud - クラウド環境の記事</h2>
     <p>
       <taglink v-for="tag in tags('cloud_gcp')" v-on:tag-clicked="tagClicked" :tag="tag" count-view="on"></taglink>
     </p>
-    <h3>媒体別記事</h3>
+    <h2>媒体別記事</h2>
     <p>
       <taglink v-for="tag in tags('media')" v-on:tag-clicked="tagClicked" :tag="tag" count-view="on"></taglink>
     </p>
-    <h3>その他</h3>
+    <h2>その他</h2>
     <p>
       <taglink v-for="tag in tags('other')" v-on:tag-clicked="tagClicked" :tag="tag" count-view="on"></taglink>
     </p>
@@ -199,10 +226,10 @@
       <taglink v-for="tag in tags(null)" v-on:tag-clicked="tagClicked" :tag="tag" count-view="on"></taglink>
     </p>
   </div>
-  <h2 v-if="query==''">主な記事</h2>
+  <h2 v-if="query==''">主な記事と最近の記事</h2>
   <p v-if="tagDesc">{{tagDesc}}</p>
   <ul v-if="articles">
-    <li v-for="article in articles" :style="article.liststyle">
+    <li v-for="article in articles" :style="article.liststyle" class="article">
       <a :href="article.url" target="_blank" class="article-link">{{article.title}}</a>
       <span class="article-date">{{article.date}}</span>
       <span class="article-tags">
@@ -217,7 +244,8 @@
   <p v-if="query=='raspberry_pi'" class="youtube">
     <iframe width="352" height="198" src="https://www.youtube-nocookie.com/embed/wFTvOIsHmQo?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </p>
-  <div v-if="query==''">
+  <div v-if="query=='' && articles && articles.length > 0">
+    <h2>競技プログラミング</h2>
     <p class="image">
       <taglink v-on:tag-clicked="tagClicked" tag="atcoder"></taglink><br>
       <a href="https://atcoder.jp/users/suzukinavi" target="_blank"><img src="img/atcoder2.png"></a>
