@@ -37,6 +37,8 @@ window.addEventListener("load", (event) => {
                 entry["keyword3"].push("beex");
             } else if (entry["url"].startsWith("https://qiita.com/")) {
                 entry["keyword2"].push("#qiita");
+            } else if (entry["url"].startsWith("https://dev.to/")) {
+                entry["keyword1"].push("#devto");
             } else if (entry["url"].startsWith("https://suzuki-navi.hatenablog.com/")) {
                 entry["keyword2"].push("#hatenablog");
             } else if (entry["url"].startsWith("https://www.youtube.com/")) {
@@ -451,6 +453,10 @@ window.addEventListener("load", (event) => {
         title: "Qiita - 媒体別記事",
         categories: ["media"],
     });
+    tagList.set("#devto", {
+        title: "dev.to - 媒体別記事",
+        categories: ["media"],
+    });
     tagList.set("#hatenablog", {
         title: "はてなブログ - 媒体別記事",
         categories: ["media"],
@@ -821,6 +827,10 @@ window.addEventListener("load", (event) => {
             },
             articles() {
                 return queryArticles(this.query, this._articles, this._tagList);
+            },
+            articleCount() {
+                const articles = queryArticles(this.query, this._articles, this._tagList);
+                return articles ? articles.length : 0;
             },
         },
         methods: {

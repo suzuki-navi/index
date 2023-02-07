@@ -24,7 +24,7 @@
 <h1><span v-on:click="tagClicked" data-tag="#"><img src="img/su.png" class="profile-img"></span> <span class="title">これまでに書いたもの / 作ったもの / してきたこと</span></h1>
 
 <div id="content">
-  <h2 v-if="title">{{title}}</h2>
+  <h2 v-if="title">{{title}} <span v-if="articleCount" class="article-count">{{articleCount}}</span></h2>
   <div v-if="query==''">
     <p>
       <taglink v-on:tag-clicked="tagClicked" tag="#certification"></taglink>

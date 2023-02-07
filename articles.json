@@ -1,5 +1,14 @@
 [
     {
+        "url": "https://dev.to/suzukinavi/add-a-where-clause-to-the-jdbc-data-source-of-a-glue-job-3c88",
+        "title": "Add a WHERE clause to the JDBC data source of a Glue Job",
+        "posted": "2023/02/07",
+        "updated": "",
+        "keyword1": ["aws", "glue"],
+        "keyword2": [],
+        "keyword3": []
+    },
+    {
         "url": "https://qiita.com/suzuki-navi/items/467264b480038ddcd428",
         "title": "シェルスクリプトの配列を定義するには",
         "posted": "2023/02/06",
