@@ -1,5 +1,14 @@
 [
     {
+        "url": "https://suzuki-navi.hatenablog.com/entry/2023/02/08/233732",
+        "title": "Twitterで星空botを運用しています",
+        "posted": "2023/02/08",
+        "updated": "",
+        "keyword1": ["#astronomy"],
+        "keyword2": ["scala", "python", "ruby", "javascript"],
+        "keyword3": ["bot"]
+    },
+    {
         "url": "https://dev.to/suzukinavi/add-a-where-clause-to-the-jdbc-data-source-of-a-glue-job-3c88",
         "title": "Add a WHERE clause to the JDBC data source of a Glue Job",
         "posted": "2023/02/07",
@@ -549,15 +558,6 @@
         "keyword1": ["#natural_language_processing", "#serverless", "gcp", "cloudtranslation", "cloudfunctions"],
         "keyword2": ["javascript"],
         "keyword3": ["google-cloud/translate", "translationserviceclient", "translatetext", "detectlanguage"]
-    },
-    {
-        "url": "https://suzuki-navi.github.io/hoshizora_today/",
-        "title": "星空bot - 星空の様子をツイートするボット",
-        "posted": "2021/05/15",
-        "updated": "",
-        "keyword1": ["#github_repository", "#astronomy"],
-        "keyword2": ["scala", "python"],
-        "keyword3": ["bot"]
     },
     {
         "url": "https://qiita.com/suzuki-navi/items/bc3ffc2c8967e58fbfc2",

@@ -122,6 +122,12 @@ window.addEventListener("load", (event) => {
         title: "すべての記事",
         categories: ["other"],
     });
+    tagList.set("#job_history", {
+        title: "職歴の概要",
+        stitle: "職歴の概要",
+        articles: null,
+        categories: ["other"],
+    });
     tagList.set("#certification", {
         title: "これまでに取得した資格",
         stitle: "取得した資格",
@@ -134,9 +140,9 @@ window.addEventListener("load", (event) => {
         articles: null,
         categories: ["other"],
     });
-    tagList.set("#job_history", {
-        title: "職歴の概要と私の連絡先",
-        stitle: "職歴の概要と私の連絡先",
+    tagList.set("#mailto", {
+        title: "私の連絡先",
+        stitle: "連絡先",
         articles: null,
         categories: ["other"],
     });
@@ -156,7 +162,7 @@ window.addEventListener("load", (event) => {
     });
     tagList.set("php", {
         title: "PHP - 言語別記事",
-        desc: "もっとも付き合いの長いプログラミング言語",
+        desc: "私にとってもっとも付き合いの長いプログラミング言語",
         categories: ["lang"],
     });
     tagList.set("javascript", {
@@ -191,7 +197,7 @@ window.addEventListener("load", (event) => {
     });
     tagList.set("python", {
         title: "Python - 言語別記事",
-        desc: "ここ数年はもっともよく使っているプログラミング言語",
+        desc: "ここ数年は私がもっともよく使っているプログラミング言語",
         categories: ["lang"],
     });
     tagList.set("elixir", {
@@ -480,6 +486,8 @@ window.addEventListener("load", (event) => {
     });
     tagList.set("atcoder", {
         stitle: "AtCoder",
+        imageLink: "https://atcoder.jp/users/suzukinavi",
+        imageUrl: "atcoder2.png",
         categories: ["other"],
     });
     tagList.set("#serverless", {
@@ -928,7 +936,7 @@ window.addEventListener("load", (event) => {
         },
         template: `
           <a v-on:click="tagClicked" :data-tag="tag" :href="'./#' + tag" class="tag-holder">
-            <span class="tag">{{tagTitle}}</span><span v-if="count" class="tag-count">{{count}}</span>
+            <span class="tag">{{tagTitle}}</span><span v-if="count>0 && countView=='on'" class="tag-count">{{count}}</span>
           </a>
         `,
     });

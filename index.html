@@ -4,6 +4,7 @@
 <meta charset="utf-8"/>
 <!-- <meta name="viewport" content="width=1000"> -->
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" href="/img/su.png" />
 <title>suzuki-navi</title>
 <link rel="canonical" href="https://suzuki-navi.github.io/index/">
 <link rel="stylesheet" href="common.css">
@@ -30,24 +31,25 @@
       <taglink v-on:tag-clicked="tagClicked" tag="#job_history"></taglink>
       <taglink v-on:tag-clicked="tagClicked" tag="#certification"></taglink>
       <taglink v-on:tag-clicked="tagClicked" tag="#my_open_sources"></taglink>
+      <taglink v-on:tag-clicked="tagClicked" tag="#mailto"></taglink>
       <taglink v-on:tag-clicked="tagClicked" tag="#tags"></taglink>
       <br>
-      <taglink v-on:tag-clicked="tagClicked" tag="scala"></taglink>
-      <taglink v-on:tag-clicked="tagClicked" tag="java"></taglink>
-      <taglink v-on:tag-clicked="tagClicked" tag="rust"></taglink>
-      <taglink v-on:tag-clicked="tagClicked" tag="php"></taglink>
-      <taglink v-on:tag-clicked="tagClicked" tag="javascript"></taglink>
-      <taglink v-on:tag-clicked="tagClicked" tag="ruby"></taglink>
-      <taglink v-on:tag-clicked="tagClicked" tag="c++"></taglink>
+      <taglink v-on:tag-clicked="tagClicked" tag="scala" count-view="on"></taglink>
+      <taglink v-on:tag-clicked="tagClicked" tag="java" count-view="on"></taglink>
+      <taglink v-on:tag-clicked="tagClicked" tag="rust" count-view="on"></taglink>
+      <taglink v-on:tag-clicked="tagClicked" tag="php" count-view="on"></taglink>
+      <taglink v-on:tag-clicked="tagClicked" tag="javascript" count-view="on"></taglink>
+      <taglink v-on:tag-clicked="tagClicked" tag="ruby" count-view="on"></taglink>
+      <taglink v-on:tag-clicked="tagClicked" tag="c++" count-view="on"></taglink>
       <br>
-      <taglink v-on:tag-clicked="tagClicked" tag="#math"></taglink>
-      <taglink v-on:tag-clicked="tagClicked" tag="#programming"></taglink>
-      <taglink v-on:tag-clicked="tagClicked" tag="#serverless"></taglink>
-      <taglink v-on:tag-clicked="tagClicked" tag="command"></taglink>
-      <taglink v-on:tag-clicked="tagClicked" tag="aws"></taglink>
-      <taglink v-on:tag-clicked="tagClicked" tag="gcp"></taglink>
-      <taglink v-on:tag-clicked="tagClicked" tag="#machine_learning"></taglink>
-      <taglink v-on:tag-clicked="tagClicked" tag="#astronomy"></taglink>
+      <taglink v-on:tag-clicked="tagClicked" tag="#math" count-view="on"></taglink>
+      <taglink v-on:tag-clicked="tagClicked" tag="#programming" count-view="on"></taglink>
+      <taglink v-on:tag-clicked="tagClicked" tag="#serverless" count-view="on"></taglink>
+      <taglink v-on:tag-clicked="tagClicked" tag="command" count-view="on"></taglink>
+      <taglink v-on:tag-clicked="tagClicked" tag="aws" count-view="on"></taglink>
+      <taglink v-on:tag-clicked="tagClicked" tag="gcp" count-view="on"></taglink>
+      <taglink v-on:tag-clicked="tagClicked" tag="#machine_learning" count-view="on"></taglink>
+      <taglink v-on:tag-clicked="tagClicked" tag="#astronomy" count-view="on"></taglink>
     </p>
   </div>
   <div v-if="query=='#certification'">
@@ -121,23 +123,28 @@
     </ul>
   </div>
   <div v-if="query=='#job_history'">
-    <h2>職歴の概要</h2>
     <ul class="job-history">
       <li>
-        ウェブアプリケーション開発、助言の案件 (2020年～現在)
+        ウェブアプリケーション開発、内製開発支援 (2021年～現在)
         <p>
-          言語はPython, JavaScriptが多い。Pythonは好きなわけではない。<br>
+          言語はPython, JavaScriptが多いが、ほかの言語も歓迎。<br>
+          AWS環境でサーバレスな設計が多い。<br>
+          <a href="https://www.beex-inc.com/case/agc_resvsite" target="_blank">3日でアプリを作った</a>こともあった。<br>
           たまにプリセールス。<br>
         </p>
       </li>
       <li>
-        データ分析基盤構築の案件 (2019年～現在)
+        データ分析基盤の設計・構築、内製開発支援 (2019年～現在)
         <p>
           AWS環境を扱うようになった。<br>
-          AWS資格をすべて取得したが、AWSにそんなに詳しいわけではない。<br>
-          ブログを始めた。<br>
-          言語はPythonが多いが好きなわけではない。<br>
           たまにプリセールス。<br>
+          所属会社からの補助もありAWS資格をすべて取得した。<br>
+          このころにブログを始めた。
+          <taglink v-on:tag-clicked="tagClicked" tag="#data_input"></taglink>
+          <taglink v-on:tag-clicked="tagClicked" tag="#data_store"></taglink>
+          <taglink v-on:tag-clicked="tagClicked" tag="#visualization"></taglink>
+          <taglink v-on:tag-clicked="tagClicked" tag="#machine_learning"></taglink>
+          などの記事があるのはこういった案件をやっているため。<br>
         </p>
       </li>
       <li>
@@ -151,7 +158,7 @@
           形態素解析も作った。<br>
           PHP、Java、Scala、Perlなどを書いていた。Ruby、Python、Go言語にも触れた。<br>
           仕事で開発作業ができたのは楽しかった。<br>
-          プリセールスとして営業といっしょにお客さんに向いて仕事するのも楽しかった。<br>
+          プリセールスとして営業といっしょにお客さんに向き合って仕事するのも楽しかった。<br>
         </p>
       </li>
       <li>
@@ -180,18 +187,28 @@
         </p>
       </li>
     </ul>
-    <hr>
-    <h2>私の連絡先</h2>
     <p>
-      もしも私に仕事の相談をしたいという方がいましたら、私の現在の所属会社であるBeeXにご連絡ください。このページを見て連絡したと伝えいただければ私に繋がると思います。
+      ※この記述の最終更新: 2023/02
+    </p>
+    <p>
+      もしも私に仕事の相談をしたいという方がいましたら、<taglink v-on:tag-clicked="tagClicked" tag="#mailto"></taglink>をご覧ください。
+    </p>
+  </div>
+  <div v-if="query=='#mailto'">
+    <p>
+      もしも私に仕事の相談をしたいという方がいましたら、私の現在の所属会社である<a href="https://www.beex-inc.com/" target="_blank">株式会社BeeX</a>にお問い合わせください。このページを見て連絡したと伝えいただければたぶん私に繋がるんじゃないかと思います。
     </p>
     <p>
       ただし、私のブログやQiitaの記事など私個人が発信している情報は所属会社の見解ではありません。GitHubレポジトリの内容も私個人に属します。記事に誤り等ございましたら会社宛ではなく記事へのコメントなどそれぞれ適切な方法でご指摘いただければ幸いです。GitHubのコミットログを探せば私のメールアドレスも見つかります。
     </p>
-    <hr>
     <p>
-      ※このページの最終更新: 2023/02
+      以下は私のアカウントへのリンクです。
     </p>
+    <ul>
+      <li><a href="https://qiita.com/suzuki-navi" target="_blank">Qiita</a></li>
+      <li><a href="https://suzuki-navi.hatenablog.com/" target="_blank">はてなブログ</a></li>
+      <li><a href="https://github.com/suzuki-navi" target="_blank">GitHub</a></li>
+    </ul>
   </div>
   <div v-if="query=='#tags'" class="tags">
     <h2>プログラミング言語別記事</h2>
@@ -233,7 +250,7 @@
       <a :href="article.url" target="_blank" class="article-link">{{article.title}}</a>
       <span class="article-date">{{article.date}}</span>
       <span class="article-tags">
-        <taglink v-for="tag in article.tags" v-on:tag-clicked="tagClicked" :tag="tag"></taglink>
+        <taglink v-for="tag in article.tags" v-on:tag-clicked="tagClicked" :tag="tag" count-view="on"></taglink>
       </span>
     </li>
   </ul>
@@ -251,9 +268,16 @@
       <a href="https://atcoder.jp/users/suzukinavi" target="_blank"><img src="img/atcoder2.png"></a>
     </p>
   </div>
-  <div v-if="query=='atcoder'">
-    <p class="image">
-      <a href="https://atcoder.jp/users/suzukinavi" target="_blank"><img src="img/atcoder2.png"></a>
+  <div v-if="query=='' && articles && articles.length > 0">
+    <hr>
+    <p>
+      このサイトはエンジニアである私suzuki-naviの発信情報をまとめたものです。連絡先は <taglink v-on:tag-clicked="tagClicked" tag="#mailto"></taglink> で説明しています。
+    </p>
+  </div>
+  <div v-if="query!=''">
+    <hr>
+    <p>
+      <a v-on:click="tagClicked" data-tag="#" href="./">トップページに戻る</a>
     </p>
   </div>
 </div>
