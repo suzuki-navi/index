@@ -1,11 +1,20 @@
 [
     {
+        "url": "https://dev.to/suzukinavi/script-to-check-the-timeout-value-and-recent-execution-time-of-a-glue-job-48k",
+        "title": "Script to Check the Timeout Value and Recent Execution Time of a Glue Job",
+        "posted": "2023/02/09",
+        "updated": "",
+        "keyword1": ["aws", "glue"],
+        "keyword2": ["python"],
+        "keyword3": []
+    },
+    {
         "url": "https://suzuki-navi.hatenablog.com/entry/2023/02/08/233732",
         "title": "Twitterで星空botを運用しています",
         "posted": "2023/02/08",
         "updated": "",
         "keyword1": ["#astronomy"],
-        "keyword2": ["scala", "python", "ruby", "javascript"],
+        "keyword2": ["scala", "python", "ruby", "javascript", "aws", "lambda"],
         "keyword3": ["bot"]
     },
     {
