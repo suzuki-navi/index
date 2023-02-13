@@ -4,7 +4,7 @@
 <meta charset="utf-8"/>
 <!-- <meta name="viewport" content="width=1000"> -->
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<link rel="icon" href="/img/su.png" />
+<link rel="icon" href="./img/su.png" />
 <title>suzuki-navi</title>
 <link rel="canonical" href="https://suzuki-navi.github.io/index/">
 <link rel="stylesheet" href="common.css">
@@ -125,7 +125,7 @@
   <div v-if="query=='#job_history'">
     <ul class="job-history">
       <li>
-        ウェブアプリケーション開発、内製開発支援 (2021年～現在)
+        ウェブアプリケーション開発、内製開発支援 (2020年～現在)
         <p>
           言語はPython, JavaScriptが多いが、ほかの言語も歓迎。<br>
           AWS環境でサーバレスな設計が多い。<br>
@@ -134,11 +134,11 @@
         </p>
       </li>
       <li>
-        データ分析基盤の設計・構築、内製開発支援 (2019年～現在)
+        データ分析基盤の設計・構築、設計支援 (2019年～現在)
         <p>
-          AWS環境を扱うようになった。<br>
+          AWS環境を扱うようになった。チームのテックリード。<br>
           たまにプリセールス。<br>
-          所属会社からの補助もありAWS資格をすべて取得した。<br>
+          所属会社からの補助もありAWS資格をすべて取得した。→<taglink v-on:tag-clicked="tagClicked" tag="#certification"></taglink><br>
           このころにブログを始めた。
           <taglink v-on:tag-clicked="tagClicked" tag="#data_input"></taglink>
           <taglink v-on:tag-clicked="tagClicked" tag="#data_store"></taglink>
@@ -153,7 +153,7 @@
         </div>
         <a href="https://www.naviplus.co.jp/search/">ECサイトの検索エンジン</a> (2013年〜2019年)
         <p>
-          多数のECサイトの検索エンジン開発/導入/運用、プリセールスに携わる。<br>
+          開発運用チームでテックリードをしつつ、営業とともにプリセールス活動、導入支援をしていた。<br>
           <a href="https://www.naviplus.co.jp/search/interview_surugaya.html">主な導入事例</a><br>
           形態素解析も作った。<br>
           PHP、Java、Scala、Perlなどを書いていた。Ruby、Python、Go言語にも触れた。<br>
@@ -168,6 +168,7 @@
         ウェブ制作 (社会人初期 ～ 2013年)
         <p>
           IRサイト、投資家向けサイトなどを中心に、ウェブサイト制作ディレクション、ウェブアプリ開発ディレクションをしていた。<br>
+          お客さんへの提案から受注、開発・制作進行管理、納品、請求まで一貫対応のほぼ個人商店。<br>
           PHPが多かったが、自分でプログラムを書くことはまれだった。<br>
           このころに趣味でScalaを覚えてScalaがお気に入りになった。<br>
         </p>
@@ -191,12 +192,12 @@
       ※この記述の最終更新: 2023/02
     </p>
     <p>
-      もしも私に仕事の相談をしたいという方がいましたら、<taglink v-on:tag-clicked="tagClicked" tag="#mailto"></taglink>をご覧ください。
+      お仕事はいつも募集中です。もし私に仕事のご相談をいただけるのならば、<taglink v-on:tag-clicked="tagClicked" tag="#mailto"></taglink>をご覧ください。
     </p>
   </div>
   <div v-if="query=='#mailto'">
     <p>
-      もしも私に仕事の相談をしたいという方がいましたら、私の現在の所属会社である<a href="https://www.beex-inc.com/" target="_blank">株式会社BeeX</a>にお問い合わせください。このページを見て連絡したと伝えいただければたぶん私に繋がるんじゃないかと思います。
+      私に仕事の相談をしたいという場合は、私の現在の所属会社である<a href="https://www.beex-inc.com/" target="_blank">株式会社BeeX</a>にお問い合わせください。このページを見て連絡したと伝えていただければたぶん私に繋がるんじゃないかと思います。
     </p>
     <p>
       ただし、私のブログやQiitaの記事など私個人が発信している情報は所属会社の見解ではありません。GitHubレポジトリの内容も私個人に属します。記事に誤り等ございましたら会社宛ではなく記事へのコメントなどそれぞれ適切な方法でご指摘いただければ幸いです。GitHubのコミットログを探せば私のメールアドレスも見つかります。
@@ -268,18 +269,14 @@
       <a href="https://atcoder.jp/users/suzukinavi" target="_blank"><img src="img/atcoder2.png"></a>
     </p>
   </div>
-  <div v-if="query=='' && articles && articles.length > 0">
-    <hr>
-    <p>
-      このサイトはエンジニアである私suzuki-naviの発信情報をまとめたものです。連絡先は <taglink v-on:tag-clicked="tagClicked" tag="#mailto"></taglink> で説明しています。
-    </p>
-  </div>
-  <div v-if="query!=''">
-    <hr>
-    <p>
-      <a v-on:click="tagClicked" data-tag="#" href="./">トップページに戻る</a>
-    </p>
-  </div>
+</div>
+<div id="footer">
+  <p v-if="query=='' && articles && articles.length > 0">
+    このサイトはエンジニアである私suzuki-naviの発信情報をまとめたものです。連絡先は <taglink v-on:tag-clicked="tagClicked" tag="#mailto"></taglink> で説明しています。
+  </p>
+  <p v-if="query!=''">
+    <a v-on:click="tagClicked" data-tag="#" href="./">トップページに戻る</a>
+  </p>
 </div>
 
 </div>

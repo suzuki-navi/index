@@ -1,5 +1,14 @@
 [
     {
+        "url": "https://qiita.com/suzuki-navi/items/840de61bd82626ac53e8",
+        "title": "Glue JobのTimeout値と最近の実行時間実績を調べるスクリプト",
+        "posted": "2023/02/13",
+        "updated": "",
+        "keyword1": ["aws", "glue"],
+        "keyword2": ["python"],
+        "keyword3": []
+    },
+    {
         "url": "https://dev.to/suzukinavi/script-to-check-the-timeout-value-and-recent-execution-time-of-a-glue-job-48k",
         "title": "Script to Check the Timeout Value and Recent Execution Time of a Glue Job",
         "posted": "2023/02/09",
@@ -553,7 +562,7 @@
     {
         "url": "https://www.beex-inc.com/blog/sns-to-sns/",
         "title": "AWS SNSから別のSNSに通知を転送",
-        "posted": "2020/05/17",
+        "posted": "2021/05/17",
         "updated": "",
         "keyword1": ["aws", "sns_aws"],
         "keyword2": ["python", "boto3"],
