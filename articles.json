@@ -1,5 +1,23 @@
 [
     {
+        "url": "https://qiita.com/suzuki-navi/items/fa928cadd8700d556d32",
+        "title": "Glue Job bookmarkにはどんな情報が入っているのかawscliで見てみる",
+        "posted": "2023/02/22",
+        "updated": "",
+        "keyword1": ["aws", "glue"],
+        "keyword2": [],
+        "keyword3": []
+    },
+    {
+        "url": "https://qiita.com/suzuki-navi/items/60ef241b2dca499df794",
+        "title": "回転行列のサンプル（2次元・3次元）のメモ",
+        "posted": "2023/02/16",
+        "updated": "",
+        "keyword1": ["#astronomy", "#math"],
+        "keyword2": [],
+        "keyword3": []
+    },
+    {
         "url": "https://qiita.com/suzuki-navi/items/840de61bd82626ac53e8",
         "title": "Glue JobのTimeout値と最近の実行時間実績を調べるスクリプト",
         "posted": "2023/02/13",
@@ -23,7 +41,7 @@
         "posted": "2023/02/08",
         "updated": "",
         "keyword1": ["#astronomy"],
-        "keyword2": ["scala", "python", "ruby", "javascript", "aws", "lambda"],
+        "keyword2": ["#pickup", "scala", "python", "ruby", "javascript", "aws", "lambda"],
         "keyword3": ["bot"]
     },
     {
