@@ -1,5 +1,32 @@
 [
     {
+        "url": "https://qiita.com/suzuki-navi/items/6a448823be4b62b87349",
+        "title": "CSSだけで簡易的なくるくる回転するローディングアニメーション",
+        "posted": "2023/04/27",
+        "updated": "",
+        "keyword1": ["css", "html"],
+        "keyword2": [],
+        "keyword3": []
+    },
+    {
+        "url": "https://qiita.com/suzuki-navi/items/b00deaa45ff631d142b0",
+        "title": "OpenAIのAPIを使ったチュートリアルアプリを試してみる",
+        "posted": "2023/04/24",
+        "updated": "",
+        "keyword1": ["openai"],
+        "keyword2": ["javascript", "nextjs"],
+        "keyword3": []
+    },
+    {
+        "url": "https://qiita.com/suzuki-navi/items/5a4a7a6486137288ce5d",
+        "title": "Scalaのcirceで出てくる Maximal number of successive inlines (32) exceeded というコンパイルエラー",
+        "posted": "2023/03/28",
+        "updated": "",
+        "keyword1": ["scala"],
+        "keyword2": [],
+        "keyword3": []
+    },
+    {
         "url": "https://qiita.com/suzuki-navi/items/d57be390dcdb0a238735",
         "title": "テキストファイルからN行おきに行を抽出するには",
         "posted": "2023/03/20",
@@ -930,7 +957,7 @@
         "url": "https://suzuki-navi.hatenablog.com/entry/2021/02/27/154353",
         "title": "Vue.jsやNuxt.jsの開発用サーバのポート番号を変更する",
         "posted": "2021/02/27",
-        "updated": "",
+        "updated": "2023/04/11",
         "keyword1": ["#front_end", "vuejs", "nuxtjs"],
         "keyword2": [],
         "keyword3": ["npm", "dev", "serve", "port", "vue-cli-service"]
