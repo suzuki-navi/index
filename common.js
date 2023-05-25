@@ -231,15 +231,15 @@ window.addEventListener("load", (event) => {
     });
     tagList.set("redash", {
         stitle: "Redash",
-        categories: ["software"],
+        //categories: ["software"],
     });
     tagList.set("superset", {
         stitle: "Superset",
-        categories: ["software"],
+        //categories: ["software"],
     });
     tagList.set("tableau", {
         stitle: "Tableau",
-        categories: ["software"],
+        //categories: ["software"],
     });
     tagList.set("jupyter", {
         stitle: "Jupyter Notebook",
@@ -247,11 +247,11 @@ window.addEventListener("load", (event) => {
     });
     tagList.set("polynote", {
         stitle: "Polynote",
-        categories: ["software"],
+        //categories: ["software"],
     });
     tagList.set("googlecolab", {
         stitle: "Google Colaboratory",
-        categories: ["software"],
+        //categories: ["software"],
     });
     tagList.set("tensorflow", {
         stitle: "TensorFlow",
@@ -263,20 +263,20 @@ window.addEventListener("load", (event) => {
     });
     tagList.set("talend", {
         stitle: "Talend",
-        categories: ["software"],
+        //categories: ["software"],
     });
     tagList.set("dbeaver", {
         stitle: "DBeaver",
-        categories: ["software"],
+        //categories: ["software"],
     });
     tagList.set("embulk", {
         stitle: "Embulk",
-        categories: ["software"],
+        //categories: ["software"],
     });
     tagList.set("tex", {
         title: "TeX - ツール別記事",
         stitle: "TeX",
-        categories: ["software"],
+        //categories: ["software"],
     });
 
     tagList.set("aws", {

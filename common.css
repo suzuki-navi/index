@@ -182,6 +182,9 @@ a.tag-holder .tag-count:after {
   margin: 1em 0 1em 0;
   text-align: center;
 }
+.image_text {
+  font-size: 80%;
+}
 .youtube {
   margin: 1em 0 1em 0;
   text-align: center;
