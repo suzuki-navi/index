@@ -381,6 +381,10 @@ window.addEventListener("load", (event) => {
         stitle: "Glue",
         categories: ["cloud_aws"],
     });
+    tagList.set("dms", {
+        stitle: "DMS",
+        categories: ["cloud_aws"],
+    });
     tagList.set("comprehend", {
         stitle: "Comprehend",
         categories: ["cloud_aws"],
@@ -401,8 +405,12 @@ window.addEventListener("load", (event) => {
         stitle: "EC2",
         categories: ["cloud_aws"],
     });
-    tagList.set("dms", {
-        stitle: "DMS",
+    tagList.set("ecr", {
+        stitle: "ECR",
+        categories: ["cloud_aws"],
+    });
+    tagList.set("codebuild", {
+        stitle: "CodeBuild",
         categories: ["cloud_aws"],
     });
     tagList.set("athena", {
