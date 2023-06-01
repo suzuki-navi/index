@@ -27,6 +27,7 @@
 <div id="content">
   <div v-if="articleCount && query" class="article-count">{{articleCount}}</div>
   <div v-if="query==''" class="tags">
+    <h2>タグ</h2>
     <p>
       <taglink v-on:tag-clicked="tagClicked" tag="#job_history"></taglink>
       <taglink v-on:tag-clicked="tagClicked" tag="#certification"></taglink>
