@@ -1,5 +1,32 @@
 [
     {
+        "url": "https://www.beex-inc.com/blog/slackbot-aws-lambda-python",
+        "title": "SlackbotのAWS Lambdaでの作り方 - Python編",
+        "posted": "2023/06/21",
+        "updated": "",
+        "keyword1": ["aws", "lambda", "slack", "bot"],
+        "keyword2": ["python"],
+        "keyword3": []
+    },
+    {
+        "url": "https://qiita.com/suzuki-navi/items/bc54c3e7e8ace569d37d",
+        "title": "Twitter APIが You currently have access to a subset of Twitter API v2 endpoints and limited v1.1 endpoints (e.g. media post, oauth) only. と言ってきた",
+        "posted": "2023/06/20",
+        "updated": "",
+        "keyword1": ["twitter", "bot"],
+        "keyword2": ["python", "aws", "lambda", "serverless_framework"],
+        "keyword3": []
+    },
+    {
+        "url": "https://www.beex-inc.com/blog/slackbot-aws-lambda",
+        "title": "SlackbotのAWS Lambdaでの作り方 - メンションに反応させてみる",
+        "posted": "2023/06/14",
+        "updated": "",
+        "keyword1": ["aws", "lambda", "slack", "bot"],
+        "keyword2": ["apigateway", "ecr", "javascript"],
+        "keyword3": []
+    },
+    {
         "url": "https://qiita.com/suzuki-navi/items/e5c58a2889262b6148db",
         "title": "CodeBuildでのS3キャッシュのタイムスタンプの扱いを調べてみる",
         "posted": "2023/06/01",
@@ -157,9 +184,9 @@
         "title": "Twitterで星空botを運用しています",
         "posted": "2023/02/08",
         "updated": "",
-        "keyword1": ["#pickup", "#astronomy"],
-        "keyword2": ["scala", "python", "ruby", "javascript", "aws", "lambda"],
-        "keyword3": ["bot"]
+        "keyword1": ["#pickup", "#astronomy", "bot"],
+        "keyword2": ["scala", "python", "ruby", "javascript", "aws", "lambda", "twitter"],
+        "keyword3": []
     },
     {
         "url": "https://dev.to/suzukinavi/add-a-where-clause-to-the-jdbc-data-source-of-a-glue-job-3c88",

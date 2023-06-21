@@ -780,6 +780,13 @@ window.addEventListener("load", (event) => {
                     article.title.toLowerCase().indexOf(keywd) >= 0 && article.title.toLowerCase().indexOf(ex) < 0) {
                     score = 1;
                 }
+            } else if (keywd == "bot") {
+                const ex = "boto3";
+                if (article.keyword1.find(k => k.startsWith(keywd) && !k.startsWith(ex)) ||
+                    article.keyword2.find(k => k.startsWith(keywd) && !k.startsWith(ex)) ||
+                    article.title.toLowerCase().indexOf(keywd) >= 0 && article.title.toLowerCase().indexOf(ex) < 0) {
+                    score = 1;
+                }
             } else {
                 if (article.keyword1.find(k => k.startsWith(keywd)) ||
                     article.keyword2.find(k => k.startsWith(keywd)) ||
