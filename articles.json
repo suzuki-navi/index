@@ -1,10 +1,19 @@
 [
     {
+        "url": "https://qiita.com/suzuki-navi/items/cfd054b931ff3cb12cdf",
+        "title": "TerraformでCloudFront + Lambdaの構成テンプレート",
+        "posted": "2023/06/22",
+        "updated": "",
+        "keyword1": ["#serverless", "terraform", "cloudfront", "lambda"],
+        "keyword2": [],
+        "keyword3": []
+    },
+    {
         "url": "https://www.beex-inc.com/blog/slackbot-aws-lambda-python",
         "title": "SlackbotのAWS Lambdaでの作り方 - Python編",
         "posted": "2023/06/21",
         "updated": "",
-        "keyword1": ["aws", "lambda", "slack", "bot"],
+        "keyword1": ["#serverless", "aws", "lambda", "slack", "bot"],
         "keyword2": ["python"],
         "keyword3": []
     },
@@ -22,7 +31,7 @@
         "title": "SlackbotのAWS Lambdaでの作り方 - メンションに反応させてみる",
         "posted": "2023/06/14",
         "updated": "",
-        "keyword1": ["aws", "lambda", "slack", "bot"],
+        "keyword1": ["#serverless", "aws", "lambda", "slack", "bot"],
         "keyword2": ["apigateway", "ecr", "javascript"],
         "keyword3": []
     },
@@ -64,7 +73,7 @@
     },
     {
         "url": "https://qiita.com/suzuki-navi/items/6a896a6577deaa858210",
-        "title": "TerraformでAPI Gateway + Lambdaの最小構成テンプレート",
+        "title": "TerraformでAPI Gateway + Lambdaの構成テンプレート",
         "posted": "2023/05/23",
         "updated": "",
         "keyword1": ["#serverless", "terraform", "apigateway", "lambda"],
