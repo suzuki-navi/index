@@ -245,7 +245,7 @@
       <taglink v-for="tag in tags(null)" v-on:tag-clicked="tagClicked" :tag="tag" count-view="on"></taglink>
     </p>
   </div>
-  <h2 v-if="query==''">主な記事と最近の記事</h2>
+  <h2 v-if="query==''">最近の記事と過去の主な記事</h2>
   <p v-if="tagDesc">{{tagDesc}}</p>
   <ul v-if="articles">
     <li v-for="article in articles" :style="article.liststyle" class="article">

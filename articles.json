@@ -1,5 +1,14 @@
 [
     {
+        "url": "https://qiita.com/suzuki-navi/items/29401a7e865d85a4a775",
+        "title": "気軽に使えるScalaのsbt環境をDockerで作ってみた",
+        "posted": "2023/06/27",
+        "updated": "",
+        "keyword1": ["scala", "sbt", "docker"],
+        "keyword2": [],
+        "keyword3": []
+    },
+    {
         "url": "https://qiita.com/suzuki-navi/items/cfd054b931ff3cb12cdf",
         "title": "TerraformでCloudFront + Lambdaの構成テンプレート",
         "posted": "2023/06/22",
