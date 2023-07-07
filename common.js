@@ -39,6 +39,8 @@ window.addEventListener("load", (event) => {
                 entry["keyword2"].push("#qiita");
             } else if (entry["url"].startsWith("https://dev.to/")) {
                 entry["keyword1"].push("#devto");
+            } else if (entry["url"].startsWith("https://zenn.dev/suzuki_navi/scraps/")) {
+                entry["keyword1"].push("#zenn_scrap");
             } else if (entry["url"].startsWith("https://suzuki-navi.hatenablog.com/")) {
                 entry["keyword2"].push("#hatenablog");
             } else if (entry["url"].startsWith("https://www.youtube.com/")) {
@@ -477,6 +479,10 @@ window.addEventListener("load", (event) => {
     });
     tagList.set("#hatenablog", {
         title: "はてなブログ - 媒体別記事",
+        categories: ["media"],
+    });
+    tagList.set("#zenn_scrap", {
+        title: "Zenn Scrap - 媒体別記事",
         categories: ["media"],
     });
     tagList.set("#company_blog", {

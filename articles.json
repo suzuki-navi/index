@@ -1,5 +1,41 @@
 [
     {
+        "url": "https://zenn.dev/suzuki_navi/scraps/e08087099ec6c8",
+        "title": "create-react-appの環境でSCSSを使えるようにする",
+        "posted": "2023/07/07",
+        "updated": "",
+        "keyword1": ["react", "css"],
+        "keyword2": [],
+        "keyword3": []
+    },
+    {
+        "url": "https://zenn.dev/suzuki_navi/scraps/771ee6911f9771",
+        "title": "create-react-appでTypeScript環境を見てみる",
+        "posted": "2023/07/07",
+        "updated": "",
+        "keyword1": ["react"],
+        "keyword2": ["typescript"],
+        "keyword3": []
+    },
+    {
+        "url": "https://zenn.dev/suzuki_navi/scraps/4c50b3e3bb3b2f",
+        "title": "create-react-appを試してみる",
+        "posted": "2023/07/07",
+        "updated": "",
+        "keyword1": ["react"],
+        "keyword2": ["javascript"],
+        "keyword3": []
+    },
+    {
+        "url": "https://zenn.dev/suzuki_navi/scraps/d49c369eadbac7",
+        "title": "LangChainとLlamaIndexで作成したインデックスでOpenAIを試す",
+        "posted": "2023/07/07",
+        "updated": "",
+        "keyword1": ["openai"],
+        "keyword2": ["azure", "python"],
+        "keyword3": []
+    },
+    {
         "url": "https://zenn.dev/suzuki_navi/scraps/ec262139d90da1",
         "title": "自分のアイコンをHTMLとCSSで作る",
         "posted": "2023/07/07",
