@@ -1,5 +1,23 @@
 [
     {
+        "url": "https://zenn.dev/suzuki_navi/scraps/ccda6ac3dacc7b",
+        "title": "terraform initが面倒でbackend情報の別管理もしたくないのでMakefile化してみる",
+        "posted": "2023/07/08",
+        "updated": "",
+        "keyword1": ["terraform"],
+        "keyword2": ["aws", "s3", "make"],
+        "keyword3": []
+    },
+    {
+        "url": "https://zenn.dev/suzuki_navi/scraps/33633ef72e1a20",
+        "title": "シェル変数の一覧を見るワンライナーを作る",
+        "posted": "2023/07/08",
+        "updated": "",
+        "keyword1": ["shellscript", "sed"],
+        "keyword2": [],
+        "keyword3": []
+    },
+    {
         "url": "https://zenn.dev/suzuki_navi/scraps/e08087099ec6c8",
         "title": "create-react-appの環境でSCSSを使えるようにする",
         "posted": "2023/07/07",
@@ -40,7 +58,7 @@
         "title": "自分のアイコンをHTMLとCSSで作る",
         "posted": "2023/07/07",
         "updated": "",
-        "keyword1": ["css"],
+        "keyword1": ["css", "html"],
         "keyword2": [],
         "keyword3": []
     },
@@ -58,7 +76,7 @@
         "title": "TerraformでCloudFront + Lambdaの構成テンプレート",
         "posted": "2023/06/22",
         "updated": "",
-        "keyword1": ["#serverless", "terraform", "cloudfront", "lambda"],
+        "keyword1": ["#serverless", "terraform", "aws", "cloudfront", "lambda"],
         "keyword2": [],
         "keyword3": []
     },
@@ -1732,7 +1750,7 @@
         "posted": "2020/10/10",
         "updated": "",
         "keyword1": ["command", "sed", "oneliner"],
-        "keyword2": ["find", "grep", "xargs", "git"]
+        "keyword2": ["find", "grep", "xargs", "git", "shellscript"]
     },
     {
         "url": "https://suzuki-navi.hatenablog.com/entry/2020/10/09/233700",
