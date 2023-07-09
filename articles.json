@@ -1,5 +1,23 @@
 [
     {
+        "url": "https://zenn.dev/suzuki_navi/scraps/1c9fad5afcd4cd",
+        "title": "TypeScriptのts-nodeでのコマンドライン実行からnpmパッケージを使ってみる",
+        "posted": "2023/07/09",
+        "updated": "",
+        "keyword1": ["typescript"],
+        "keyword2": [],
+        "keyword3": []
+    },
+    {
+        "url": "https://zenn.dev/suzuki_navi/scraps/3cfeabce318af3",
+        "title": "TypeScriptをts-nodeでコマンドラインで実行してみる",
+        "posted": "2023/07/09",
+        "updated": "",
+        "keyword1": ["typescript"],
+        "keyword2": [],
+        "keyword3": []
+    },
+    {
         "url": "https://zenn.dev/suzuki_navi/scraps/ccda6ac3dacc7b",
         "title": "terraform initが面倒でbackend情報の別管理もしたくないのでMakefile化してみる",
         "posted": "2023/07/08",
@@ -925,7 +943,7 @@
         "updated": "",
         "keyword1": ["gcp", "google_container_registry", "gce", "command", "gcloud", "docker", "vuejs"],
         "keyword2": [],
-        "keyword3": ["vue", "npm", "http-server", "tag", "push", "container", "images", "gcr.io", "create-with-container", "firewall"]
+        "keyword3": ["vue", "http-server", "tag", "push", "container", "images", "gcr.io", "create-with-container", "firewall"]
     },
     {
         "url": "https://suzuki-navi.hatenablog.com/entry/2021/04/18/213115",
@@ -1113,7 +1131,7 @@
         "updated": "2023/04/11",
         "keyword1": ["#front_end", "vuejs", "nuxtjs"],
         "keyword2": [],
-        "keyword3": ["npm", "dev", "serve", "port", "vue-cli-service"]
+        "keyword3": ["dev", "serve", "port", "vue-cli-service"]
     },
     {
         "url": "https://qiita.com/suzuki-navi/items/d58d402422b784264d95",

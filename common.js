@@ -167,6 +167,10 @@ window.addEventListener("load", (event) => {
         desc: "私にとってもっとも付き合いの長いプログラミング言語",
         categories: ["lang"],
     });
+    tagList.set("typescript", {
+        title: "TypeScript - 言語別記事",
+        categories: ["lang"],
+    });
     tagList.set("javascript", {
         title: "JavaScript - 言語別記事",
         categories: ["lang"],
