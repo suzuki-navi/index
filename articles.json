@@ -1,5 +1,32 @@
 [
     {
+        "url": "https://zenn.dev/suzuki_navi/scraps/5c2aa3ab257559",
+        "title": "openai.log を使ってLlamaIndexからOpenAIへのAPIリクエストの内容を見てみる",
+        "posted": "2023/07/13",
+        "updated": "",
+        "keyword1": ["openai", "llamaindex"],
+        "keyword2": ["python"],
+        "keyword3": []
+    },
+    {
+        "url": "https://zenn.dev/suzuki_navi/scraps/7fec9bf6e8a22a",
+        "title": "LlamaIndexのSimpleDirectoryReaderのソースを読む",
+        "posted": "2023/07/13",
+        "updated": "",
+        "keyword1": ["llamaindex"],
+        "keyword2": ["python"],
+        "keyword3": []
+    },
+    {
+        "url": "https://zenn.dev/suzuki_navi/scraps/bf06d712fa17c2",
+        "title": "docker-composeをチュートリアルで試す",
+        "posted": "2023/07/10",
+        "updated": "",
+        "keyword1": ["docker"],
+        "keyword2": ["python", "flask", "redis"],
+        "keyword3": []
+    },
+    {
         "url": "https://zenn.dev/suzuki_navi/scraps/1c9fad5afcd4cd",
         "title": "TypeScriptのts-nodeでのコマンドライン実行からnpmパッケージを使ってみる",
         "posted": "2023/07/09",
@@ -67,7 +94,7 @@
         "title": "LangChainとLlamaIndexで作成したインデックスでOpenAIを試す",
         "posted": "2023/07/07",
         "updated": "",
-        "keyword1": ["openai"],
+        "keyword1": ["openai", "langchain", "llamaindex"],
         "keyword2": ["azure", "python"],
         "keyword3": []
     },
