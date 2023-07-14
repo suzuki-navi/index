@@ -1,5 +1,14 @@
 [
     {
+        "url": "https://qiita.com/suzuki-navi/items/1ab62eb598f106a8360e",
+        "title": "gitコミットにはタイムスタンプのほかタイムゾーンも記録されている",
+        "posted": "2023/07/14",
+        "updated": "",
+        "keyword1": ["git"],
+        "keyword2": ["ruby", "perl", "python"],
+        "keyword3": []
+    },
+    {
         "url": "https://zenn.dev/suzuki_navi/scraps/5c2aa3ab257559",
         "title": "openai.log を使ってLlamaIndexからOpenAIへのAPIリクエストの内容を見てみる",
         "posted": "2023/07/13",
