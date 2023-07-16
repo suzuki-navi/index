@@ -1,5 +1,7 @@
 window.addEventListener("load", (event) => {
 
+    const recentArticleCount = 16;
+
     const articleRetriever = [];
     axios.get(articles_json_url).then(response => {
         let list = response.data;
@@ -674,9 +676,8 @@ window.addEventListener("load", (event) => {
 
     function queryArticles(query, articles, tagList) {
         if (query == "") {
-            const recentCount = 8;
             const articles2 = [].concat(
-                searchArticles("", articles).slice(0, recentCount),
+                searchArticles("", articles).slice(0, recentArticleCount),
                 searchArticles("#pickup", articles),
             );
             const articles3 = [];

@@ -1,11 +1,74 @@
 [
     {
+      "url": "https://zenn.dev/suzuki_navi/scraps/bb1ad8f481e24a",
+      "title": "「JavaScript 第7版」を読む（15章：ブラウザ上のJavaScript）",
+        "posted": "2023/07/16",
+        "updated": "",
+        "keyword1": ["#front_end", "javascript", "html"],
+        "keyword2": [],
+        "keyword3": []
+    },
+    {
+        "url": "https://zenn.dev/suzuki_navi/scraps/566e4b0dd8f35f",
+        "title": "「JavaScript 第7版」を読む（10章：モジュール）",
+        "posted": "2023/07/16",
+        "updated": "",
+        "keyword1": ["javascript"],
+        "keyword2": [],
+        "keyword3": []
+    },
+    {
+        "url": "https://zenn.dev/suzuki_navi/scraps/f3830c37353be8",
+        "title": "「JavaScript 第7版」を読む（8章～9章：関数とクラス）",
+        "posted": "2023/07/16",
+        "updated": "",
+        "keyword1": ["javascript"],
+        "keyword2": [],
+        "keyword3": []
+    },
+    {
+        "url": "https://zenn.dev/suzuki_navi/scraps/099f848e14f7c9",
+        "title": "「JavaScript 第7版」を読む（6章～7章：オブジェクトと配列）",
+        "posted": "2023/07/15",
+        "updated": "",
+        "keyword1": ["javascript"],
+        "keyword2": ["scala"],
+        "keyword3": []
+    },
+    {
+        "url": "https://zenn.dev/suzuki_navi/scraps/fef34cda93e9bb",
+        "title": "「JavaScript 第7版」を読む（4章～5章：式と文）",
+        "posted": "2023/07/15",
+        "updated": "",
+        "keyword1": ["javascript"],
+        "keyword2": [],
+        "keyword3": []
+    },
+    {
+        "url": "https://zenn.dev/suzuki_navi/scraps/77fa0ba3e51f16",
+        "title": "「JavaScript 第7版」を読む（3章まで）",
+        "posted": "2023/07/15",
+        "updated": "",
+        "keyword1": ["javascript", "#math"],
+        "keyword2": ["unicode"],
+        "keyword3": []
+    },
+    {
+        "url": "https://zenn.dev/suzuki_navi/scraps/1664865740ee5a",
+        "title": "「プログラミングTypeScript」を読む その1",
+        "posted": "2023/07/15",
+        "updated": "",
+        "keyword1": ["typescript"],
+        "keyword2": ["javascript"],
+        "keyword3": []
+    },
+    {
         "url": "https://suzuki-navi.hatenablog.com/entry/2023/07/15/103346",
         "title": "MarkdownのHTMLレンダリングをNuxt.jsのアプリに実装してみる",
         "posted": "2023/07/15",
         "updated": "",
         "keyword1": ["#front_end", "nuxtjs", "markdown"],
-        "keyword2": ["javascript", "css"],
+        "keyword2": ["javascript", "css", "html"],
         "keyword3": []
     },
     {
@@ -772,7 +835,7 @@
         "posted": "2021/06/07",
         "updated": "",
         "keyword1": [],
-        "keyword2": ["python", "aws", "ses"],
+        "keyword2": ["python", "aws", "ses", "html"],
         "keyword3": ["email.mime", "email", "smtp", "attachment", "content-id"]
     },
     {
