@@ -1,5 +1,14 @@
 [
     {
+        "url": "https://zenn.dev/suzuki_navi/scraps/ce63811138c0b9",
+        "title": "connectedCallbackの呼び出される順番を見てみる",
+        "posted": "2023/07/18",
+        "updated": "",
+        "keyword1": ["#front_end", "javascript", "html", "web_components"],
+        "keyword2": [],
+        "keyword3": []
+    },
+    {
         "url": "https://qiita.com/suzuki-navi/items/191a013b08d2aee15cfe",
         "title": "TerraformでCloudFront + S3静的サイトの構成テンプレート",
         "posted": "2023/07/18",
@@ -9,11 +18,11 @@
         "keyword3": []
     },
     {
-      "url": "https://zenn.dev/suzuki_navi/scraps/bb1ad8f481e24a",
-      "title": "「JavaScript 第7版」を読む（15章：ブラウザ上のJavaScript）",
+        "url": "https://zenn.dev/suzuki_navi/scraps/bb1ad8f481e24a",
+        "title": "「JavaScript 第7版」を読む（15章：ブラウザ上のJavaScript）",
         "posted": "2023/07/16",
         "updated": "",
-        "keyword1": ["#front_end", "javascript", "html"],
+        "keyword1": ["#front_end", "javascript", "html", "web_components"],
         "keyword2": [],
         "keyword3": []
     },
