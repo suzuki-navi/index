@@ -1,5 +1,14 @@
 [
     {
+        "url": "https://qiita.com/suzuki-navi/items/191a013b08d2aee15cfe",
+        "title": "TerraformでCloudFront + S3静的サイトの構成テンプレート",
+        "posted": "2023/07/18",
+        "updated": "",
+        "keyword1": ["#serverless", "terraform", "aws", "cloudfront", "s3"],
+        "keyword2": ["javascript"],
+        "keyword3": []
+    },
+    {
       "url": "https://zenn.dev/suzuki_navi/scraps/bb1ad8f481e24a",
       "title": "「JavaScript 第7版」を読む（15章：ブラウザ上のJavaScript）",
         "posted": "2023/07/16",
