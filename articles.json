@@ -1,5 +1,14 @@
 [
     {
+        "url": "https://qiita.com/suzuki-navi/items/61b9eda362f28a94c62d",
+        "title": "Markdown表示のコードスニペットのコピー機能をNuxt.jsアプリに実装してみる",
+        "posted": "2023/07/29",
+        "updated": "",
+        "keyword1": ["#front_end", "nuxtjs", "markdown"],
+        "keyword2": ["javascript"],
+        "keyword3": []
+    },
+    {
         "url": "https://qiita.com/suzuki-navi/items/2b36804e8d68d1eae156",
         "title": "Markdown表示のコードスニペットのシンタックスハイライトをNuxt.jsアプリに実装してみる",
         "posted": "2023/07/25",
