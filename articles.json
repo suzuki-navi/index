@@ -1,5 +1,14 @@
 [
     {
+        "url": "https://www.beex-inc.com/blog/aws-firstwebserver",
+        "title": "AWSでウェブサーバを立ててみよう【AWS初心者向け】",
+        "posted": "2023/07/31",
+        "updated": "",
+        "keyword1": ["aws", "ec2"],
+        "keyword2": [],
+        "keyword3": []
+    },
+    {
         "url": "https://qiita.com/suzuki-navi/items/61b9eda362f28a94c62d",
         "title": "Markdown表示のコードスニペットのコピー機能をNuxt.jsアプリに実装してみる",
         "posted": "2023/07/29",
