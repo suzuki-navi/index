@@ -1,5 +1,14 @@
 [
     {
+        "url": "https://suzuki-navi.hatenablog.com/entry/2023/08/04/234558",
+        "title": "textareaの高さを自動調整する仕組みをNuxt.jsアプリに実装してみる",
+        "posted": "2023/08/04",
+        "updated": "",
+        "keyword1": ["#front_end", "nuxtjs"],
+        "keyword2": ["css", "html"],
+        "keyword3": []
+    },
+    {
         "url": "https://zenn.dev/suzuki_navi/scraps/7a2892be8adde4",
         "title": "「JavaScript 第7版」を読む（16章：Node.js）",
         "posted": "2023/08/01",
