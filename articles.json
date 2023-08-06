@@ -1,5 +1,41 @@
 [
     {
+        "url": "https://zenn.dev/suzuki_navi/scraps/98077aea618d91",
+        "title": "Djangoのチュートリアルをなぞってみる その3：データベース",
+        "posted": "2023/08/05",
+        "updated": "",
+        "keyword1": ["django", "sqlite"],
+        "keyword2": ["python"],
+        "keyword3": []
+    },
+    {
+        "url": "https://zenn.dev/suzuki_navi/scraps/410b4e4bfec6b9",
+        "title": "Djangoのチュートリアルをなぞってみる その2：ブラウザ表示まで",
+        "posted": "2023/08/05",
+        "updated": "",
+        "keyword1": ["django"],
+        "keyword2": ["python"],
+        "keyword3": []
+    },
+    {
+        "url": "https://zenn.dev/suzuki_navi/scraps/0424e489235b90",
+        "title": "lsコマンドのソート順が変だったのを直す",
+        "posted": "2023/08/05",
+        "updated": "",
+        "keyword1": ["command", "ls"],
+        "keyword2": [],
+        "keyword3": []
+    },
+    {
+        "url": "https://zenn.dev/suzuki_navi/scraps/4a155cdb2360d4",
+        "title": "Djangoのチュートリアルをなぞってみる その1：Djangoインストール",
+        "posted": "2023/08/05",
+        "updated": "",
+        "keyword1": ["django"],
+        "keyword2": ["python"],
+        "keyword3": []
+    },
+    {
         "url": "https://suzuki-navi.hatenablog.com/entry/2023/08/04/234558",
         "title": "textareaの高さを自動調整する仕組みをNuxt.jsアプリに実装してみる",
         "posted": "2023/08/04",
