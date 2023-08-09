@@ -269,6 +269,10 @@ window.addEventListener("load", (event) => {
         stitle: "Matplotlib",
         categories: ["software"],
     });
+    tagList.set("docker", {
+        stitle: "Docker",
+        categories: ["software"],
+    });
     tagList.set("talend", {
         stitle: "Talend",
         //categories: ["software"],

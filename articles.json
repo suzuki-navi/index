@@ -1,5 +1,50 @@
 [
     {
+        "url": "https://suzuki-navi.hatenablog.com/entry/2023/08/09/220232",
+        "title": "JavaScriptのブラウザ上でのデバッグログをconsole.logのかわりにHTMLに表示",
+        "posted": "2023/08/09",
+        "updated": "",
+        "keyword1": ["#front_end", "javascript"],
+        "keyword2": ["html"],
+        "keyword3": ["json"]
+    },
+    {
+        "url": "https://zenn.dev/suzuki_navi/scraps/458c6a710ea797",
+       "title": "Djangoのチュートリアルをなぞってみる その7：テスト",
+        "posted": "2023/08/06",
+        "updated": "",
+        "keyword1": ["django"],
+        "keyword2": ["python"],
+        "keyword3": []
+    },
+    {
+        "url": "https://zenn.dev/suzuki_navi/scraps/29fa26bfdf55b3",
+        "title": "Djangoのチュートリアルをなぞってみる その6：フォーム",
+        "posted": "2023/08/06",
+        "updated": "",
+        "keyword1": ["django"],
+        "keyword2": ["python"],
+        "keyword3": []
+    },
+    {
+        "url": "https://zenn.dev/suzuki_navi/scraps/216b40cb3146f1",
+        "title": "Djangoのチュートリアルをなぞってみる その5：ビュー作成",
+        "posted": "2023/08/06",
+        "updated": "",
+        "keyword1": ["django"],
+        "keyword2": ["python"],
+        "keyword3": []
+    },
+    {
+        "url": "https://zenn.dev/suzuki_navi/scraps/ad70ec8c9cf0bd",
+        "title": "Djangoのチュートリアルをなぞってみる その4：管理画面",
+        "posted": "2023/08/06",
+        "updated": "",
+        "keyword1": ["django"],
+        "keyword2": ["python"],
+        "keyword3": []
+    },
+    {
         "url": "https://zenn.dev/suzuki_navi/scraps/98077aea618d91",
         "title": "Djangoのチュートリアルをなぞってみる その3：データベース",
         "posted": "2023/08/05",
@@ -58,7 +103,7 @@
         "title": "AWSでウェブサーバを立ててみよう【AWS初心者向け】",
         "posted": "2023/07/31",
         "updated": "",
-        "keyword1": ["aws", "ec2"],
+        "keyword1": ["#pickup", "aws", "ec2"],
         "keyword2": [],
         "keyword3": []
     },
@@ -1273,9 +1318,9 @@
         "title": "WindowsのWSLからテキストのコピペでSSH経由でファイルを送る方法",
         "posted": "2021/03/09",
         "updated": "",
-        "keyword1": ["command", "wsl", "windows"],
+        "keyword1": ["command", "wsl", "windows", "clip.exe"],
         "keyword2": ["tar", "base64"],
-        "keyword3": ["clip"]
+        "keyword3": []
     },
     {
         "url": "https://qiita.com/suzuki-navi/items/b901ec9741253dfa7ecb",
