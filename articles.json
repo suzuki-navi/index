@@ -1,5 +1,14 @@
 [
     {
+        "url": "https://zenn.dev/suzuki_navi/scraps/0243af54a445d4",
+        "title": "MySQLのCharacter Sets, Collations, Unicodeのページを読んでみる その1",
+        "posted": "2023/08/11",
+        "updated": "",
+        "keyword1": ["mysql"],
+        "keyword2": ["unicode"],
+        "keyword3": []
+    },
+    {
         "url": "https://suzuki-navi.hatenablog.com/entry/2023/08/09/220232",
         "title": "JavaScriptのブラウザ上でのデバッグログをconsole.logのかわりにHTMLに表示",
         "posted": "2023/08/09",
@@ -10,7 +19,7 @@
     },
     {
         "url": "https://zenn.dev/suzuki_navi/scraps/458c6a710ea797",
-       "title": "Djangoのチュートリアルをなぞってみる その7：テスト",
+        "title": "Djangoのチュートリアルをなぞってみる その7：テスト",
         "posted": "2023/08/06",
         "updated": "",
         "keyword1": ["django"],

@@ -26,6 +26,10 @@
 
 <div id="content">
   <div v-if="articleCount && query" class="article-count">{{articleCount}}</div>
+  <div v-if="query==''" class="sns-icons">
+    <a href="https://qiita.com/suzuki-navi" target="_blank"><img src="https://cdn.qiita.com/assets/favicons/public/apple-touch-icon-ec5ba42a24ae923f16825592efdc356f.png" width="54" height="54" style="margin-bottom:-3px"></a>
+    <a href="https://github.com/suzuki-navi" target="_blank"><img src="https://github.com/fluidicon.png" width="48" height="48"></a>
+  </div>
   <div v-if="query==''" class="tags">
     <h2>タグ</h2>
     <p>

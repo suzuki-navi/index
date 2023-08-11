@@ -1,6 +1,7 @@
 window.addEventListener("load", (event) => {
 
-    const recentArticleCount = 16;
+    const recentArticleCount = 12;
+    const recentZennScrapCount = 4;
 
     const articleRetriever = [];
     axios.get(articles_json_url).then(response => {
@@ -219,6 +220,10 @@ window.addEventListener("load", (event) => {
     });
     tagList.set("postgresql", {
         title: "PostgreSQL - ソフトウェア別記事",
+        categories: ["software"],
+    });
+    tagList.set("mysql", {
+        title: "MySQL - ソフトウェア別記事",
         categories: ["software"],
     });
     tagList.set("fluentd", {
@@ -680,8 +685,27 @@ window.addEventListener("load", (event) => {
 
     function queryArticles(query, articles, tagList) {
         if (query == "") {
+            const articles1 = (() => {
+                const a1 = searchArticles("", articles);
+                const a2 = [];
+                let zennScrapCount = 0;
+                for (let i = 0; i < a1.length; i++) {
+                    if (a1[i].keyword1.find(k => k == "#zenn_scrap")) {
+                        if (zennScrapCount < recentZennScrapCount) {
+                            zennScrapCount++;
+                            a2.push(a1[i]);
+                        }
+                    } else {
+                        a2.push(a1[i]);
+                    }
+                    if (a2.length >= recentArticleCount) {
+                        break;
+                    }
+                }
+                return a2;
+            })();
             const articles2 = [].concat(
-                searchArticles("", articles).slice(0, recentArticleCount),
+                articles1,
                 searchArticles("#pickup", articles),
             );
             const articles3 = [];
