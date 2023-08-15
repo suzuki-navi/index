@@ -1,5 +1,23 @@
 [
     {
+        "url": "https://qiita.com/suzuki-navi/items/be32899027a4b7b7f6b4",
+        "title": "mysqlコマンドでDockerのMySQLに接続できない！ (Can't connect to local MySQL server through socket ...)",
+        "posted": "2023/08/15",
+        "updated": "",
+        "keyword1": ["mysql"],
+        "keyword2": ["docker"],
+        "keyword3": []
+    },
+    {
+        "url": "https://zenn.dev/suzuki_navi/scraps/cb7e75e42ef74f",
+        "title": "MySQLのCharacter Sets, Collations, Unicodeのページを読んでみる その2",
+        "posted": "2023/08/11",
+        "updated": "",
+        "keyword1": ["mysql"],
+        "keyword2": ["unicode"],
+        "keyword3": []
+    },
+    {
         "url": "https://zenn.dev/suzuki_navi/scraps/0243af54a445d4",
         "title": "MySQLのCharacter Sets, Collations, Unicodeのページを読んでみる その1",
         "posted": "2023/08/11",
