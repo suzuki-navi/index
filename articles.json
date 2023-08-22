@@ -1,5 +1,14 @@
 [
     {
+        "url": "https://qiita.com/suzuki-navi/items/f340c69ccada84a3ece3",
+        "title": "WSLの環境からWindowsにclip.exeするときの文字化け対処",
+        "posted": "2023/08/22",
+        "updated": "",
+        "keyword1": ["wsl", "windows", "clip.exe"],
+        "keyword2": ["nkf", "iconv"],
+        "keyword3": []
+    },
+    {
         "url": "https://qiita.com/suzuki-navi/items/be32899027a4b7b7f6b4",
         "title": "mysqlコマンドでDockerのMySQLに接続できない！ (Can't connect to local MySQL server through socket ...)",
         "posted": "2023/08/15",
