@@ -1,5 +1,14 @@
 [
     {
+        "url": "https://qiita.com/suzuki-navi/items/13d266738d91f14b7aa7",
+        "title": "改行を含むログをgrepフレンドリーにするPerlスクリプト",
+        "posted": "2023/08/31",
+        "updated": "",
+        "keyword1": ["perl", "grep"],
+        "keyword2": ["less"],
+        "keyword3": []
+    },
+    {
         "url": "https://qiita.com/suzuki-navi/items/ca13ba95b2fc97d8b6d7",
         "title": "Pythonでスタックトレースをログ出力するには",
         "posted": "2023/08/28",
